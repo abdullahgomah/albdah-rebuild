@@ -446,8 +446,105 @@
             <div class="property__features__container">
                 <p>مزايا العقار</p>
                 <div class="property__features__wrapper">
+                    {% if   property_type == 'apartment_rent' or property_type == 'floor_rent' %}
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="furnished" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>مؤثثة</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="kitchen" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>مطبخ</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="extenstion" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>ملحق</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="car_entrance" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>مدخل سيارة</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="elevator" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>مصعد</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="ac" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>مكيف</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="water_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>توفر الماء</p>
+                    </div>
 
-                    {% if property_type == 'shop_rent' %}
+
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="power_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>توفر الكهرباء</p>
+                    </div>
+
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="sanitation_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>توفر الصرف</p>
+                    </div>
+
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="private_surface" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>سطح خاص</p>
+                    </div>
+                    
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="in_villa" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>في فيلا</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="two_enternace" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>مدخلين</p>
+                    </div>
+
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="private_enternace" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>مدخل خاص</p>
+                    </div>
+                    {% elif property_type == 'shop_rent' %}
                     <div class="property__feature__item">
                         <label class="toggle-container">
                             <input type="checkbox" name="water_exist" class="toggle-switch">
