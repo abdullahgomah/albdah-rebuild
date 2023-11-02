@@ -164,7 +164,7 @@ class Property(models.Model):
 
 
 class PropertyImage(models.Model): 
-    property = models.ForeignKey(Property, on_delete=models.CASCADE )
+    property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='imgs' )
     img = models.ImageField(upload_to="property/images/")
     main = models.BooleanField(default=0, null=True, blank=True, verbose_name="صورة رئيسية" ) 
 
