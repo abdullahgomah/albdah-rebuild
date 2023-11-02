@@ -9,7 +9,7 @@ def index(request):
     context = {
         'all_properties': all_properties
     } 
-    return render(request, 'pages/index.html ', context)
+    return render(request, 'pages/index.html', context)
 
 
 def about(request): 
