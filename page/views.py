@@ -5,7 +5,7 @@ from property.models import *
 
 
 def index(request): 
-    all_properties = Property.objects.all()
+    all_properties = Property.objects.all()[::-1]
     context = {
         'all_properties': all_properties
     } 
