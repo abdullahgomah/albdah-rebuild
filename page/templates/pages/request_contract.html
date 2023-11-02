@@ -1,0 +1,93 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    البداح | طلب عقد إلكتروني
+{% endblock title %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/pages/request_contract.css' %}">
+{% endblock stylesheets %}
+    
+
+
+{% block content %}
+    
+    
+
+    <section class="heading__section">
+        <h2>
+            عقود الإيجار السكني والتجاري
+        </h2>
+        <!-- <img src="./assets/imgs/توثيق عقد ايجار الموحد.jpg" alt=""> -->
+    </section>
+
+
+    <section class="request_contract__section">
+        <div class="container">
+            <div class="request_contract__heading">
+                <img src="{% static 'imgs/ايقونة عقد ايجار موحد.png' %}" alt="">
+
+                <p>
+                    تمكنك هذه الخدمة من توثيق عقود الإيجار من خلال منصة إيجار 
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="request_contract__requirements">
+                <h2 >
+                    <i class="fa-solid fa-circle"></i>
+                    لعمل عقد إيجار رسمي، الرجاء إرسال المستندات التالية عبر الواتساب
+                </h2>
+
+                <div class="request_contract__requirements__wrapper">
+
+                    <div>
+                        
+                        <i class="fa-solid fa-square-check"></i>
+                        <p>صورة بطاقة المستأجر</p>
+                    </div>
+                    <div>
+                        
+                        <i class="fa-solid fa-square-check"></i>
+                        <p>صورة بطاقة المالك</p>
+                    </div>
+                    <div>
+                        
+                        <i class="fa-solid fa-square-check"></i>
+                        <p>صورة الصك</p>
+                    </div>
+                </div>
+
+                <div class="request_contract__working__hours">
+                    <h2>
+                        <i class="fa-solid fa-circle"></i>
+                        ساعات العمل
+                    </h2>
+                    <p>
+                        من الأحد إلى الخميس
+                    </p>
+                    <p class="working_hours__paragraph">من الساعة 9 صباحاً إلى 9 مساء</p>
+                </div>
+
+
+                <div class="request_contract__cta">
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        966 50 729 3666
+                    </a>
+                </div>
+
+            </div>
+            
+
+
+
+        </div>
+    </section>
+
+
+{% endblock content %}

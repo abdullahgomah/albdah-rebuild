@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    مكتب البداح
+{% endblock title %}
+    
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/users/authenticate.css' %}">
+{% endblock stylesheets %}
+    
+
+
+{% block content %}
+
+<div class="content">
+
+    <div class="container mainContainer">
+
+        <div class="outline">
+
+
+            
+
+        <div class="grid tabs">
+
+
+            
+            {% if status == 'login' %}
+            <div class="item filled" id="login-tab-btn" data-sec="login">
+                تسجيل دخول
+            </div>
+            <div class="item" id="signup-tab-btn" data-sec="signup">
+                إنشاء حساب
+            </div>
+            {% else %}
+            <div class="item " id="login-tab-btn" data-sec="login">
+                تسجيل دخول
+            </div>
+            <div class="item filled" id="signup-tab-btn" data-sec="signup">
+                إنشاء حساب
+            </div>
+            {% endif %}
+                
+            
+
+        </div>
+
+        <section class="auth-section" id="login" {% if status == 'login' %} style="display: block;" {% endif %}>
+            <form action="{% url 'custom-login' %}" method="POST">
+                {% csrf_token %}
+                
+                <div class="field">
+                    <input type="text" name="phone_number" placeholder="أدخل رقم الجوال" autocomplete="off">
+                </div>
+                <div class="field">
+                    <input type="password" name="password" placeholder="ادخل كلمة المرور" autocomplete="off">
+                </div>
+
+
+                <a href="#" style="margin-bottom: .4rem; display: inline-block;">هل نسيت كلمة المرور؟</a>
+
+                
+                {% if error_message %}
+                    <p class="error_message">{{error_message}}</p>                    
+                {% endif %}
+                    
+
+                <input type="submit" class="btn btn-solid" value="تسجيل دخول">
+                <input type="hidden" name="next" value="{{ next }}">
+
+            </form>
+        </section>
+
+
+        <section class="auth-section" id="signup" {% if status == 'signup' %} style="display: block;" {% endif %}>
+            
+            
+            {% if complete_signup == 'true' %}
+
+            <!-- here is signup form -->
+
+            <form action="{% url 'signup' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-fields">
+
+                    <p>
+                        <label>رقم الهاتف:</label>
+                        <input type="text" value="{{phone_numebr}}" name="phone_number">
+                    </p>
+                    <p>
+                        <label >رمز التحقق:</label>
+                        <input type="text" name="otp">
+                    </p>
+                    {{form.as_p}}
+                </div>
+
+
+                <button type="submit" class="btn btn-solid">تسجيل</button>
+            </form>
+
+            {% else %}
+
+            <form action="{% url 'send-otp' %}" method="POST">
+                {% csrf_token %}
+                <div class="field">
+                    <input type="text" autocomplete="new-password" name="phone_number" placeholder="أدخل رقم الجوال">
+                </div>
+
+                <input type="submit" value="أرسل رمز التحقق" class="btn btn-solid">
+            
+            </form>
+
+            {% endif %}
+                
+            
+
+        </section>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+
+    let gridTabs = document.querySelector('.grid.tabs') 
+    let gridTabsBtn = gridTabs.querySelectorAll('.item'); 
+    let authSections = document.querySelectorAll('.auth-section') 
+
+    gridTabsBtn.forEach((btn) => {
+        btn.addEventListener('click', ()=> {
+            gridTabsBtn.forEach((x) => {
+                x.classList.remove('filled') 
+            })
+
+
+            btn.classList.add('filled') 
+            let tab = document.querySelector("#"+btn.dataset.sec); 
+            authSections.forEach((sec) => {
+                sec.style.display = 'none' ; 
+            })
+
+            tab.style.display = 'block'
+        })
+    })
+
+</script>
+
+{% endblock content %}
+    

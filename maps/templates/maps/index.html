@@ -1,0 +1,1257 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block title %}
+    البداح | البحث بالخريطة
+{% endblock title %}
+
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/maps/style.css' %}">
+
+
+    
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<style>
+
+
+.swiper {
+    display: block !important;
+    min-width: 100% ; 
+    height: 100%;
+  }
+
+  .swiper.hide {
+    display: none !important;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; 
+    width: fit-content !important;
+  }
+
+
+  .property_type {
+    background: transparent; 
+    position: absolute;
+    top: 80px; 
+    left:0; 
+    width: 100%; 
+    height: 50px; 
+  }
+
+  .property_type .btn {
+    width: fit-content !important; 
+    background: #f9f9f9;
+    color: #1e2957; 
+    border-radius: 2rem; 
+    box-shadow: 2px 4px 20px #1e1e1e60;
+    margin: 0 !important;
+  }
+
+</style>
+
+
+{% endblock stylesheets %}
+    
+
+
+{% block content %}
+<section class="property_type">
+    <div class="container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                </div>
+            
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">دور للاإيجار</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">فيلا للاإيجار</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">محل للاإيجار</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">استراحة للاإيجار</a>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">مكتب تجاري للاإيجار</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">أرض للاإيجار</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">عمارة للاإيجار</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">مستودع للاإيجار</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">شقة مفروشة للاإيجار</a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">شاليه للاإيجار</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">أرض للبيع</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">فيلا للبيع</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">شقة للبيع</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">عمارة للبيع</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">استراحة للبيع</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">مزرعة للبيع</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">محل للبيع</a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="btn btn-solid">دور للبيع</a>
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+</section>
+
+<div id="map"></div>
+<div class="map-options"> 
+    <a href="#" id="btn_satellite" class="">قمر صناعي</a>
+    <a href="#" id="btn_roadmap" class="">طريق</a>
+    <a href="#" id="btn_terrain" class="">تضاريس</a>
+</div>
+
+
+<div class="info-card">
+    <div class="content">
+        <h3 id="property_title">
+            <a href="#">CityName</a>
+        </h3>
+        <p id="property_description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo non ut, dolorum deserunt labore cumque est! Libero nemo unde voluptatum!
+        </p>
+        <i id="close-btn" class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="cover">
+        <img src="" alt="">
+    </div>
+
+</div>
+
+
+<script>
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1, 
+        spaceBetween: 1, 
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+</script>
+
+
+<script>
+
+let infoCard = document.querySelector('.info-card'); 
+let infoCardP = infoCard.querySelector('p');
+let infoCardH3 = infoCard.querySelector('h3 a'); 
+
+let infoCardCloseBtn = infoCard.querySelector('#close-btn'); 
+let mapOptions = document.querySelector('.map-options'); 
+
+let coverImg = document.querySelector('.cover img') 
+
+let apartments_rent_data = []; 
+let floors_rent_data = []; 
+let villas_rent_data = []; 
+let shops_rent_data = [] ; 
+let resthouses_rent_data = []; 
+let commercial_offices_rent_data = []; 
+let lands_rent_data = []; 
+let buildings_rent_data = []; 
+let warehouses_rent_data = [] ; 
+let furnished_apartements_rent_data =[]; 
+let chalets_rent_data = []; 
+
+function get_chalets_rent() {
+    chalets_rent_data = [
+    {% for property in chalets_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "chalets_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_furnished_apartements_rent() { 
+    furnished_apartements_rent_data = [
+    {% for property in furnished_apartements_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "furnished_apartements_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_warehouses_rent() {
+    warehouses_rent_data = [
+    {% for property in warehouses_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "warehouse_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_buildings_rent() {
+    buildings_rent_data = [
+    {% for property in buildings_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "building_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_lands_rent() {
+    lands_rent_data = [
+    {% for property in lands_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "land_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_commercial_offices_rent() {
+    commercial_offices_rent_data = [
+    {% for property in commercial_offices_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "commercial_offices_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_resthouses_rent() {
+    resthouses_rent_data = [
+    {% for property in resthouses_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "resthouse_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_shops_rent() {
+    shops_rent_data = [
+    {% for property in shops_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "shop_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_villas_rent() {
+    villas_rent_data = [
+    {% for property in villas_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "villa_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_apartment_rent() { 
+    apartments_rent_data = [
+    {% for property in apartments_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "apartment_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+function get_floors_rent() {
+    floors_rent_data = [
+    {% for property in floors_rent %}
+        {
+            title: "{{property.title}}", 
+            position: "{{ property.position }}",
+            price: "{{ property.price }}", 
+            description: "{{property.description|truncatewords:5}}",
+            cover_img: "{{property.imgs.first.img.url}}",
+            number: "{{property.number}}", 
+            property_type: "floor_rent" 
+        },
+    {% endfor %}
+    ];
+}
+
+infoCardCloseBtn.addEventListener('click', () => {
+    infoCard.style.display = 'none';
+    mapOptions.style.display ='flex';
+})
+
+async function initMap() {
+
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        mapId: "6a7f4f4e7a7f5b47",
+        center: { lat: 23.885942, lng: 45.079163 }, // Coordinates for Saudi Arabia
+        zoom: 6, 
+        zoomControl: false, 
+        // mapTypeControl: true,
+        mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'terrain', 'satellite']
+        },
+        mapTypeControl: false, 
+        mapTypeId: "terrain",
+        fullscreenControl: false, 
+        gestureHandling: "greedy"
+    });
+
+
+    const priceTag = document.createElement("div");
+
+    priceTag.className = "price-tag";
+
+
+//    var apartmentsData = [
+  //  {% for apartment in apartments_rent %}
+    //    {
+      //      title: "{{apartment.title}}", 
+        //    position: "{{ apartment.position }}",
+          //  price: "{{ apartment.price }}", 
+            //description: "{{apartment.description|truncatewords:5}}",
+            //cover_img: "{{apartment.imgs.first.img.url}}",
+            //number: "{{apartment.number}}", 
+            //property_type: "apartment" 
+        //},
+    //{% endfor %}
+    //];
+
+
+
+    get_apartment_rent() 
+    get_floors_rent() 
+    get_villas_rent() 
+    get_shops_rent() 
+    get_resthouses_rent() 
+    get_commercial_offices_rent() 
+    get_lands_rent() 
+    get_buildings_rent() 
+    get_warehouses_rent() 
+    get_furnished_apartements_rent() 
+    get_chalets_rent() 
+
+
+
+    for (let i=0; i<commercial_offices_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = commercial_offices_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+    for (let i=0; i<chalets_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = chalets_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+        
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+
+
+    for (let i=0; i<furnished_apartements_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = furnished_apartements_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+
+    for (let i=0; i<warehouses_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = warehouses_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+        
+    for (let i=0; i<buildings_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = buildings_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+    
+    for (let i=0; i<lands_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = lands_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+    
+    for (let i=0; i<resthouses_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = resthouses_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+    
+    for (let i=0; i<shops_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = shops_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+
+    for (let i=0; i<villas_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = villas_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+    
+    for (let i=0; i<apartments_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = apartments_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+    for (let i=0; i<floors_rent_data.length; i++ ) {
+
+
+        const priceTag = document.createElement("div");
+
+        priceTag.className = "price-tag";
+
+        // get the apartment 
+        let property = floors_rent_data[i], 
+            propertytPrice = property.price, 
+            propertyTitle = property.title, 
+            propertyDescription = property.description, 
+            propertyCoverImg = property.cover_img,
+            lat = Number(property.position.split(',')[0])
+            lng = Number(property.position.split(',')[1])
+
+        priceTag.textContent = propertytPrice
+
+
+
+        var marker = new AdvancedMarkerElement ({
+            map,
+            position: { lat: lat, lng:lng  },
+            content: priceTag, 
+            // icon: './house(1).png',
+        });
+
+        marker.addListener('click', function () {
+            let propertyNumber = property.number; 
+            
+            infoCard.style.display = 'flex'; 
+            infoCardH3.textContent = propertyTitle 
+            infoCardH3.href = `/property/${propertyNumber}/details/`; 
+            infoCardP.textContent = propertyDescription 
+            coverImg.src = propertyCoverImg; 
+            mapOptions.style.display = 'none'; 
+            
+        });
+
+
+    }
+
+
+    document.querySelector("#btn_satellite").addEventListener('click', function() {
+        map.setMapTypeId('satellite')
+    })
+
+
+    document.querySelector("#btn_roadmap").addEventListener('click', function() {
+        map.setMapTypeId('roadmap')
+    })
+
+    document.querySelector("#btn_terrain").addEventListener('click', function() {
+        map.setMapTypeId('terrain')
+    })
+
+
+}
+
+
+
+window.initMap = initMap;
+// initMap(); 
+
+
+
+
+</script>
+
+<!-- <script src="{% static 'js/maps/app.js' %}" ></script> -->
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKt6ozfNbfbA7RIWbNeIvy3Rj4NT7RpO4&callback=initMap"></script>
+
+{% endblock content %}
+    
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps Tutorial</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/maps/style.css' %}">
+
+
+    
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<style>
+
+
+.swiper {
+    min-width: 100%; 
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .4rem;
+    padding: 1rem; 
+  }
+
+
+  .property_type {
+    background: transparent; 
+    position: absolute;
+    top: 1rem; 
+    left:0; 
+    width: 100%; 
+    height: 50px; 
+  }
+
+  .property_type .btn {
+    width: fit-content !important; 
+    background: #f9f9f9;
+    color: #1e2957; 
+    border-radius: 2rem; 
+    box-shadow: 2px 4px 20px #1e1e1e60;
+    margin: 0 !important;
+  }
+
+</style>
+
+
+</head>
+<body>
+
+
+    <section class="property_type">
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+    </section>
+
+    <div id="map"></div>
+    <div class="map-options"> 
+        <a href="#" id="btn_satellite" class="">قمر صناعي</a>
+        <a href="#" id="btn_roadmap" class="">طريق</a>
+        <a href="#" id="btn_terrain" class="">تضاريس</a>
+    </div>
+
+    
+    <div class="info-card">
+        <div class="content">
+            <h3 id="property_title">
+                <a href="#">CityName</a>
+            </h3>
+            <p id="property_description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo non ut, dolorum deserunt labore cumque est! Libero nemo unde voluptatum!
+            </p>
+            <i id="close-btn" class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="cover">
+            <img src="" alt="">
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 12,
+            spaceBetween: 1, 
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+
+    </script>
+    
+
+    <script>
+
+    let infoCard = document.querySelector('.info-card'); 
+    let infoCardP = infoCard.querySelector('p');
+    let infoCardH3 = infoCard.querySelector('h3 a'); 
+    
+    let infoCardCloseBtn = infoCard.querySelector('#close-btn'); 
+    let mapOptions = document.querySelector('.map-options'); 
+
+    let coverImg = document.querySelector('.cover img') 
+    
+    
+    infoCardCloseBtn.addEventListener('click', () => {
+        infoCard.style.display = 'none';
+        mapOptions.style.display ='flex';
+    })
+    
+    async function initMap() {
+    
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    
+        const map = new google.maps.Map(document.getElementById("map"), {
+            mapId: "6a7f4f4e7a7f5b47",
+            center: { lat: 23.885942, lng: 45.079163 }, // Coordinates for Saudi Arabia
+            zoom: 6, 
+            zoomControl: false, 
+            // mapTypeControl: true,
+            mapTypeControlOptions: {
+                mapTypeIds: ['roadmap', 'terrain', 'satellite']
+            },
+            mapTypeControl: false, 
+            mapTypeId: "terrain",
+            fullscreenControl: false, 
+            gestureHandling: "greedy"  
+        });
+    
+    
+        const priceTag = document.createElement("div");
+    
+        priceTag.className = "price-tag";
+
+
+        var apartmentsData = [
+        {% for apartment in apartments_rent %}
+            {
+                title: "{{apartment.title}}", 
+                position: "{{ apartment.position }}",
+                price: "{{ apartment.price }}", 
+                description: "{{apartment.description|truncatewords:5}}",
+                cover_img: "{{apartment.imgs.first.img.url}}"
+            },
+        {% endfor %}
+        ];
+ 
+ 
+
+        for (let i=0; i<apartmentsData.length; i++ ) {
+            <!-- console.log(apartmentsData[i]) -->
+
+
+            const priceTag = document.createElement("div");
+    
+            priceTag.className = "price-tag";
+
+            // get the apartment 
+            let apartment = apartmentsData[i], 
+                apartmentPrice = apartment.price, 
+                apartmentTitle = apartment.title, 
+                apartmentDescription = apartment.description, 
+                apartmentCoverImg = apartment.cover_img
+                lat = Number(apartment.position.split(',')[0])
+                lng = Number(apartment.position.split(',')[1])
+
+            priceTag.textContent = apartmentPrice
+
+
+            var marker = new AdvancedMarkerElement ({
+                map,
+                position: { lat: lat, lng:lng  },
+                content: priceTag, 
+                // icon: './house(1).png',
+            });
+
+            marker.addListener('click', function () {
+                // alert(city[0]) 
+                infoCard.style.display = 'flex'; 
+                infoCardH3.textContent = apartmentTitle 
+                infoCardP.textContent = apartmentDescription 
+                coverImg.src = apartmentCoverImg; 
+                mapOptions.style.display = 'none'; 
+                
+            });
+
+
+        }
+
+
+    
+        document.querySelector("#btn_satellite").addEventListener('click', function() {
+            map.setMapTypeId('satellite')
+        })
+    
+    
+        document.querySelector("#btn_roadmap").addEventListener('click', function() {
+            map.setMapTypeId('roadmap')
+        })
+    
+        document.querySelector("#btn_terrain").addEventListener('click', function() {
+            map.setMapTypeId('terrain')
+        })
+    
+    
+    }
+    
+    
+    
+    window.initMap = initMap;
+    // initMap(); 
+    
+    
+    
+    
+    </script>
+
+    <!-- <script src="{% static 'js/maps/app.js' %}" ></script> -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKt6ozfNbfbA7RIWbNeIvy3Rj4NT7RpO4&callback=initMap"></script>
+
+</body>
+</html>

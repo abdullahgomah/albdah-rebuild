@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block title %}
+        البداح | من نحن
+    {% endblock title %}
+        
+
+    
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{% static 'css/pages/about.css' %}">
+    {% endblock stylesheets %}
+        
+
+
+
+
+{% block content %}
+    
+        
+<main class="about-us">
+    <div class="container">
+        <h1 class="about__title">من نحن؟</h1>
+        <p class="about__description">
+            مكتب البداح للعقارات يقدم لكم حلول متكاملة وخدمات منافسة 
+        </p>
+    </div>
+</main>
+
+
+<section class="section gallery">
+    <div class="container">
+        <img src="./assets/imgs/albdah-gallery-1.jpeg" alt="">
+        <img src="./assets/imgs/albdah-gallery-2.jpeg" alt="">
+        <img src="./assets/imgs/albdah-gallery-3.jpeg" alt="">
+    </div>
+</section>
+
+
+{% endblock content %}

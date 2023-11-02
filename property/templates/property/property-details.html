@@ -1,0 +1,471 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    {{property.title}}
+{% endblock title %}
+    
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/property/property-details.css' %}">
+
+    <!-- swiper -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+
+{% endblock stylesheets %}
+    
+
+
+{% block content %}
+
+<section class="property">
+    <div class="container">
+
+        <h3 class="property__title">{{property.title}}</h3>
+
+
+
+        <div class="gallery">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    
+                    {% for img in property.imgs.all %}
+                        
+                        
+                    <div class="swiper-slide">
+                        <img src="{{img.img.url}}" class="property__img__item" alt="">
+                    </div>
+                    {% endfor %}
+
+                    <!-- <div class="swiper-slide">
+                        <img src="./assets/imgs/property_img_2.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/imgs/property_img_3.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/imgs/property_img_4.webp" alt="">
+                    </div> -->
+                </div>
+            </div>
+            <p class="pics__count">
+                <i class="fa-solid fa-border-none"></i>
+                
+                {% if property.imgs.all.count == 1 %}
+                    <span>صورة واحدة</span>
+                {% else %}
+                    <span>{{property.imgs.all.count}}</span>
+                    <span>صور</span>
+                {% endif %}
+                    
+            </p>
+        </div>
+
+        <div class="popup">
+            <span class="close-button">&times;</span>
+            <img class="popup-content" id="popup-image">
+        </div>
+
+        <h3 class="property__cost">
+            {{property.price}} ريال / <span id="type">{{property.get_rent_type_display}}</span>
+        </h3>
+
+        
+        <p class="property__details">
+            {{property.description|safe}}
+        </p>
+
+
+        <br>
+
+        <div class="property__features">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+
+                            <p>المساحة</p>
+                            <p><span>{{property.space}}</span> م</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>    
+                            <p>عوائل أم عزاب</p>
+                            
+                            {% if property.families == True %}
+                                <p>عوائل</p>
+                            {% else %}
+                                <p>عزاب</p>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>العرض</p>
+                            <p>{{property.width}} م</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>الطول</p>
+                            <p>{{property.length}} م</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>عرض الشارع</p>
+                            <p>{{property.street_width}} م</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>مؤثثة</p>
+                            
+                            {% if property.furnished == True %}
+                            <i class="fa-solid fa-check"></i>
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                            <!-- <p>{{property.furnished}}</p> -->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>مدخل سيارة</p>
+                            
+                            {% if property.car_entrance == True %}
+                            <i class="fa-solid fa-check"></i>
+                                
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>سطح خاص</p>
+                            
+                            {% if property.private_surface == True %}
+                            <i class="fa-solid fa-check"></i>
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>الغرف</p>
+                            <p>{{property.rooms}}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+
+                            <p>الصالات</p>
+                            <p>{{property.lounges}}</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+
+                            <p>عمر العقار</p>
+                            <p>{{property.property_age}}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>مطبخ</p>
+                            <p>موجود</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>مصعد</p>
+                            
+                            {% if property.elevator == True %}
+                                <i class="fa-solid fa-check"></i>
+                            {% else %}
+                                <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>مكيف</p>
+                            
+                            {% if property.ac == True %}
+                            <i class="fa-solid fa-check"></i>
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>رقم الإعلان</p>
+                            <p>{{property.number}}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>آخر تحديث</p>
+                            <p>قبل دقيقة</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>عدد دورات المياه</p>
+                            <p>{{property.bathroom}}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>الدور</p>
+                            <p>{{property.floor}}</p>
+                                
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>في فيلا</p>
+                            
+                            {% if property.in_villa == True %}
+                                <i class="fa-solid fa-check"></i>
+                            {% else %}
+                                <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>مدخلين</p>
+                            
+                            {% if property.two_enternace == True %}
+                                <i class="fa-solid fa-check"></i>
+                            {% else %}
+                                <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>مدخل خاص</p>
+                            
+                            {% if property.private_enternace == True %}
+                                <i class="fa-solid fa-check"></i>
+                            {% else %}
+                                <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>ملحق</p>
+                            
+                            {% if property.extenstion == True %}
+                                <i class="fa-solid fa-check"></i>
+                            {% else %}
+                                <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>توفر الماء</p>
+                            
+                            {% if property.water_exist == True %}
+                                <i class="fa-solid fa-check"></i>
+                            {% else %}
+                                <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <p>توفر الكهرباء</p>
+                            
+                            {% if property.power_exist == True %}
+                            <i class="fa-solid fa-check"></i>
+                            
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>توفر الصرف</p>
+                            
+                            {% if property.sanitation_exist == True %}
+                            <i class="fa-solid fa-check"></i>
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            {% endif %}
+                                
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <p>المشاهدات</p>
+                            <p>1600</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div>       
+                            <p>رخصة الإعلان</p>
+                            <p>7100019916</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="property__video">
+            
+            {% if property.video %}
+                
+            <video controls>
+                <source src="{{property.video.url}}" type="video/mp4">
+            </video>
+            {% endif %}
+
+        </div>
+
+        <div class="property__actions">
+            <div class="container">
+
+                <ul>
+                    <li><a href="#" class="list-item">
+                        <i class="fa-regular fa-heart"></i>
+                        المفضلة
+                    </a></li>
+                    <li><a style="cursor: pointer;" id="btn-share" class="list-item">
+                        <i class="fa-solid fa-share" id="share"></i>
+                        شارك
+                    </a></li>
+                    <li><a href="#" class="list-item" >
+                        <i class="fa-solid fa-flag" id="report"></i>
+                        إبلاغ
+                    </a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        
+    </div>
+</section>
+
+<section class="advertiser">
+    <div class="container">
+        <img src="./assets/imgs/profile-pic.svg" alt="" class="advertiser_pic">
+        
+        <h2 class="advertiser__name">مؤسسة منازل أبحر العقارية</h2>
+
+        <div class="advertiser__contact">
+            <a href="#" id="btn__call">إظهار رقم الجوال</a>
+            <a href="#" id="btn__whatsapp">تواصل واتساب</a>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    let btnShare = document.querySelector('#btn-share'); 
+    btnShare.addEventListener('click', ()=> {
+        var currentURL = window.location.href;
+        // Create a temporary input element to hold the URL
+        var tempInput = document.createElement("input");
+        tempInput.value = currentURL;
+        document.body.appendChild(tempInput);
+
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the selected text to the clipboard
+        document.execCommand("copy");
+
+        // Remove the temporary input element
+        document.body.removeChild(tempInput);
+
+    })
+</script>
+
+<script src="{% static 'js/pages/app.js' %}"></script>
+<script>
+
+    const popup = document.querySelector(".popup");
+    const popupImage = document.querySelector("#popup-image");
+    const closeBtn = document.querySelector(".close-button");
+    const images = document.querySelectorAll(".popup-image");
+
+    function openPopup(imgSrc) { 
+        popup.style.display = 'block'; 
+        popupImage.src = imgSrc 
+    }
+
+    function closePopup() {
+        popup.style.display = "none";
+    }
+    
+    closeBtn.addEventListener('click', () => {
+        closePopup() 
+    })
+
+    document.querySelectorAll('.property__img__item').forEach((item) => {
+        item.addEventListener('click', () => {
+            openPopup(item.src) 
+        })
+    })
+</script>
+{% endblock content %}
+    

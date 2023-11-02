@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    مكتب البداح للعقارات | الصفحة الرئيسية
+{% endblock title %}
+    
+
+
+{% block stylesheets %}
+    <!-- <link rel="stylesheet" href="{% static 'css/pages/main.css' %}"> -->
+    
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+  <style>
+
+
+    .swiper {
+        min-width: 100%; 
+        height: 100%;
+      }
+  
+      .swiper-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content !important;
+      }
+      .swiper-wrapper {
+        column-gap: 1rem;
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  </style>
+{% endblock stylesheets %}
+    
+
+
+
+{% block content %}
+    
+    
+
+
+    <main>
+        <div class="container">
+            <div class="intro">
+                <h1 class="intro__title">البداح ... حلِّك بحِلِّك وترحالك </h1>
+                <p>
+                    تجربة آمنة تقدمها لكم مكاتب البداح للعقارات من خلال تقديم أفضل الخدمات والحلول التسويقية
+                </p>
+            </div>
+            <div class="cta">
+                <a href="#" class="btn btn-solid-success">ابحث عن عقار</a>
+                <a href="{% url 'maps:search-with-map' %}" class="btn btn-solid-success">بحث بالخريطة</a>
+                <a href="{% url 'property:add-property-interface' %}" class="btn btn-solid-success">إضافة عقار</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="property_type">
+        <div class="container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقق للاإيجار</a>
+                    </div>
+                
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">دور للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">فيلا للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">محل للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">استراحة للاإيجار</a>
+                    </div>
+
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">مكتب تجاري للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">أرض للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">عمارة للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">مستودع للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقة مفروشة للاإيجار</a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شاليه للاإيجار</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">أرض للبيع</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">فيلا للبيع</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">شقة للبيع</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">عمارة للبيع</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">استراحة للبيع</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">مزرعة للبيع</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">محل للبيع</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="btn btn-solid">دور للبيع</a>
+                    </div>
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="property_list">
+        <div class="container">
+
+            <div class="grid property_grid">
+                
+
+
+                {% for property in all_properties %}
+                    
+                <div class="item property">
+                    <div class="property__info">
+                        <h4 class="property__title">
+                            <a href="{% url 'property:property-details' property.number %}">{{property.title}}</a>
+                        </h4>
+                        <p class="property__price">
+                            {{property.price}} ريال / <span>{{property.get_rent_type_display }}</span>
+                        </p>
+                        <p class="property__description">
+                            {{property.description|safe|truncatewords:10}}
+                        </p>
+                    </div>
+                    <div class="property__cover_img">
+                        <img src="{{property.imgs.all.first.img.url}}" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
+                    
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="{% static 'js/pages/app.js' %}"></script>
+
+
+    {% endblock content %}
+

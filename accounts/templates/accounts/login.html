@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    تسجيل دخول
+{% endblock title %}
+    
+
+{% block content %}
+
+<div class="container">
+    
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+      <p>Please login to see this page.</p>
+    {% endif %}
+  {% endif %}
+  
+  
+
+
+  <form method="post" >
+    {% csrf_token %}
+
+
+    <input type="text" name="phone_number" placeholder="أدخل رقم الجوال" autocomplete="off">
+    <input type="password" name="password" placeholder="ادخل كلمة المرور" autocomplete="off">
+
+    {% if error_message %}
+        <h4>{{error_message}}</h4>
+    {% endif %}
+    
+
+    <input type="submit" class="btn btn-solid" value="تسجيل دخول">
+    <input type="hidden" name="next" value="{{ next }}">
+  </form>
+
+  {# Assumes you setup the password_reset view in your URLconf #}
+  <p><a href="{% url 'password_reset' %}">هل نسيت كلمة المرور</a></p>
+
+</div>
+
+
+{% endblock %}
