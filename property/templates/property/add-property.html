@@ -902,7 +902,21 @@
 </div>
 
 
-    <script src="{% static 'js/pages/app.js' %}"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 1, 
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+        
+        
+        // Make navbar responsive 
+        
+        
+    </script>
     <script src="{% static 'js/property/add-property.js' %}"></script>
     
     <script>

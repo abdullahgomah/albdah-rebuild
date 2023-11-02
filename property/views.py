@@ -397,6 +397,16 @@ def add_property(request, property_type):
             family_part = request.POST.get('family_part') 
             kitchen = request.POST.get('kitchen') 
 
+        # upload images 
+        
+        for i in range(len(images)): 
+            PropertyImage.objects.create(
+                property = property_obj, 
+                img = images[i] , 
+                main = images_status[i]
+            ).save() 
+
+
 
 
         
