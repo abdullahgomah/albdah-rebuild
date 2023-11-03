@@ -53,7 +53,6 @@ def custom_login(request):
         if user is not None: 
             login(request, user, backend='accounts.backends.PhoneNumberBackend')  
             request.session['pk'] = user.pk 
-            send_sms(user.code, user.phone_number)
             return redirect('/accounts/profile')
         else: 
             return render(request, 'accounts/authenticate.html', {'status': 'login', 'error_message': "يوجد خطأ في اسم المستخدم أو كلمة المرور"} )

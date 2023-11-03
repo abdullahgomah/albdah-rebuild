@@ -104,8 +104,23 @@ body {
 
 .property__features table td div {
     display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    text-align: center;
     width: 100%;
     justify-content: space-between;
+}
+
+.property__features table td i {
+    background: var(--primary-color); 
+    color: var(--secondary-color);
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px !important; 
+    height: 30px !important;
+    border-radius: 40px;
 }
 
 .property__features table td p:last-child {

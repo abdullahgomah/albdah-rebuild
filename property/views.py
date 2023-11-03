@@ -1,10 +1,11 @@
 from django.shortcuts import render
-
+from django.contrib.auth.decorators import login_required
 from .models import * 
 
 # Create your views here.
 
 
+@login_required(login_url='/auth/')
 def add_property_interface(request):
     context = {} 
     return render(request, 'property/add-property-interface.html', context)
@@ -17,7 +18,7 @@ def property_details(request, number):
     } 
     return render(request, 'property/property-details.html', context ) 
 
-
+@login_required(login_url='/auth/')
 def add_property(request, property_type): 
 
     
