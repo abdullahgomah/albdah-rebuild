@@ -108,6 +108,10 @@
                         </div>
                     </td>
                 </tr>
+                
+                {% if property.p_type == 'land_rent' or property.p_type == 'land_sale' %}
+                    
+                    
                 <tr>
                     <td>
                         <div>
@@ -122,6 +126,8 @@
                         </div>
                     </td>
                 </tr>
+                {% endif %}
+
                 <tr>
                     <td>
                         <div>
