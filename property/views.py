@@ -146,6 +146,8 @@ def add_property(request, property_type):
                 power_exist = features[1], 
                 sanitation_exist = features[2], 
                 private_enternace = features[13], 
+                lat = lat, 
+                lng = lng  
         )
 
         
@@ -193,6 +195,8 @@ def add_property(request, property_type):
                 water_exist = features[0], 
                 power_exist = features[1], 
                 sanitation_exist = features[2], 
+                lat = lat, 
+                lng = lng  
                 # private_enternace = features[13], 
         )
 
@@ -317,6 +321,8 @@ def add_property(request, property_type):
                     features[i] = 0 
         
             property_obj = Property.objects.create( 
+                lat = lat, 
+                lng = lng  , 
                 amusement = features[7], 
                 football_field = features[4], 
                 volly_field = features[5], 
@@ -350,6 +356,7 @@ def add_property(request, property_type):
 
         elif property_type == 'commercial_office_rent': 
             
+            interface = request.POST.get('interface-input') 
 
             floor = request.POST.get('extra-floor-input') 
             if floor == None or floor == '' or floor == 0: 
@@ -357,9 +364,78 @@ def add_property(request, property_type):
 
             furnished = request.POST.get('furnished') 
 
+            features.append(furnished) 
+
+            for i in range(len(features)) : 
+                if features[i] == 'on': 
+                    features[i] = 1 
+                else: 
+                    features[i] = 0 
+
+            property_obj = Property.objects.create( 
+                lat = lat, 
+                lng = lng  , 
+                p_type = property_type, 
+                neighborhood = neighborhood, 
+                city = city, 
+                price = price, 
+                space = space, 
+                advertiser_relation= advertiser_relation, 
+                exclusive = exclusive, 
+                video = video, 
+                interface= interface, 
+                street_width = street_width, 
+                rooms = rooms , 
+                lounges = lounges, 
+                bathroom = bathrooms, 
+                floor =floor, 
+                property_age = property_age, 
+                rent_type = rent_type ,
+                # purpose = purpose, 
+                description = description, 
+                water_exist = features[0], 
+                power_exist = features[1], 
+                sanitation_exist = features[2],  
+                furnished = features[3] 
+            )
+
+
+
 
         elif property_type == 'land_rent': 
             purpose = request.POST.get('purpose-input')
+            interface = request.POST.get('interface-input') 
+            
+            for i in range(len(features)) : 
+                if features[i] == 'on': 
+                    features[i] = 1 
+                else: 
+                    features[i] = 0 
+
+            property_obj = Property.objects.create( 
+                purpose = purpose, 
+                lat = lat, 
+                lng = lng  , 
+                p_type = property_type, 
+                neighborhood = neighborhood, 
+                city = city, 
+                price = price, 
+                space = space, 
+                advertiser_relation= advertiser_relation, 
+                exclusive = exclusive, 
+                video = video, 
+                # interface= interface, 
+                street_width = street_width, 
+                # property_age = property_age, 
+                # family_part = features[8], 
+                rent_type = rent_type, 
+                # purpose = purpose, 
+                description = description, 
+                water_exist = features[0], 
+                power_exist = features[1], 
+                sanitation_exist = features[2],  
+            )
+
         
         elif property_type =='building_rent': 
             interface = request.POST.get('interface-input') 

@@ -106,6 +106,7 @@ let fillProgress = function (item) {
 let interfaceOptions = document.querySelectorAll('.interface-field a.btn'); 
 let interfaceInput = document.querySelector('[name=interface-input]'); 
 
+
 interfaceOptions.forEach((btn) => {
     btn.addEventListener('click', () => {
         interfaceOptions.forEach((item) => {
@@ -115,12 +116,14 @@ interfaceOptions.forEach((btn) => {
         btn.classList.remove('btn-outline')
         btn.classList.add('btn-solid')
         interfaceInput.value = btn.textContent; 
-        console.log(interfaceInput.value); 
+        
     })
 })
 
 let propertyInfoNextPrev = document.querySelector('.property__info__next-prev'); 
 propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => {
+
+    let limit = 4; 
 
     // check form validation 
     let inputs = propertyInfoSection.querySelectorAll('.input') 
@@ -157,7 +160,29 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
         counter +=1; 
     }
 
-    if (counter == 4) { 
+    if (document.querySelector('[name=property_type]').value == "shop_rent") {
+        limit +=1; 
+        if (interfaceInput.value == "") { 
+            document.querySelector('.interface-field').style.border = "1px solid #dc3546" 
+        } else { 
+            document.querySelector('.interface-field').style.border = "none"; 
+            counter +=1; 
+        }
+    } else if (document.querySelector('[name=property_type]').value == 'land_rent') {
+        limit = 7 ;
+        if (interfaceInput.value == "") { 
+            document.querySelector('.interface-field').style.border = "1px solid #dc3546" 
+        } else { 
+            document.querySelector('.interface-field').style.border = "none"; 
+            counter +=1; 
+        } 
+        
+    }
+
+
+
+
+    if (counter == limit) { 
         propertyInfoSection.style.display = 'none' ; 
         propertyImgs.style.display = 'flex'; 
         let completedTimelineElement = document.querySelector('.timeline-item:first-child'); 
@@ -498,6 +523,14 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     // check all these inputs
 
     let counter = 0 ; 
+    let limit = 6; 
+
+    if (document.querySelector(['name=property_type']).value == 'land_rent') { 
+        limit = 3; 
+    }
+
+    // check purpose input, move interface validation functions from propertyInfo to propertyDetails
+    
 
     //1 
     if (roomInput.value == "") {
@@ -553,7 +586,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     }
 
 
-    if (counter == 6) { 
+    if (counter == limit) { 
         propertyDetailsSection.style.display = 'none'; 
         propertyFeatures.style.display = 'block'; 
 

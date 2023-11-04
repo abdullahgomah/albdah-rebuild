@@ -55,6 +55,7 @@
 
 
 <div class="container form-container">
+    <input type="hidden" value="{{property_type}}" name="property_type">
 
     <!-- popup -->
 
@@ -114,7 +115,7 @@
 
 
             
-            {% if property_type == 'shop_rent' %}
+            {% if property_type == 'shop_rent' or property_type == 'land_rent' %}
             <input type="hidden" name="interface-input">
             <div class="field interface-field">
                 <p>الواجهة*</p>
@@ -154,6 +155,19 @@
             </div>
 
             <br>
+
+            
+            {% if property_type == 'land_rent' %}
+            <div class="input" >
+                <p class="input-label">الطول <span class="input-label-highlight">(ريال سعودي)</span></p>
+                <input type="text" name="length-input" placeholder="الرجاء كتابة الطول...">
+            </div>
+            <div class="input" >
+                <p class="input-label">العرض <span class="input-label-highlight">(ريال سعودي)</span></p>
+                <input type="text" name="width-input" placeholder="الرجاء كتابة العرض...">
+            </div>
+            {% endif %}
+                
 
             {% endif %}
                 
@@ -274,6 +288,10 @@
         </div>
 
         <div class="property__details">
+            
+
+
+                
             <div class="box" style="margin-top: 1rem;">
                 <input type="hidden" name="street-width-input">
                 <div class="info">
@@ -425,6 +443,7 @@
                 </div>
             </div>
 
+
             <div class="property__details__next-prev next-prev">
                 <a  class="btn-prev btn btn-solid-light">السابق</a>
                 <a  class="btn-next btn btn-solid-success">التالي</a>
@@ -545,7 +564,16 @@
                         </label>
                         <p>مدخل خاص</p>
                     </div>
-                    {% elif property_type == 'shop_rent' %}
+                    {% elif property_type == 'shop_rent' or property_type == "commercial_office_rent" or property_type == 'land_rent' %}
+                    {% if property_type == "commercial_office_rent" %}
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="sanitation_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>مؤثثة</p>
+                    </div>
+                    {% endif %}
                     <div class="property__feature__item">
                         <label class="toggle-container">
                             <input type="checkbox" name="water_exist" class="toggle-switch">
@@ -569,6 +597,10 @@
                         </label>
                         <p>توفر الصرف</p>
                     </div>
+
+                    
+
+                        
                     
                     {% elif property_type == 'villa_rent' %}
                     <div class="property__feature__item">
