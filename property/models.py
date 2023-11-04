@@ -84,7 +84,7 @@ class Property(models.Model):
 
     video = models.FileField(upload_to='rent/apartment/video', verbose_name="فيديو", null=True, blank=True)
     interface = models.CharField(max_length=100, verbose_name="الواجهة", choices=INTERFACE_CHOICES, null=True, blank=True) 
-    sotres_count = models.CharField(default=0, verbose_name="عدد المحلات", max_length=10, null=True, blank=True)
+    stores_count = models.CharField(default=0, verbose_name="عدد المحلات", max_length=10, null=True, blank=True)
     apartments_count = models.CharField(default=0, verbose_name="عدد الشقق", max_length=10, null=True, blank=True)
 
     street_width = models.FloatField(verbose_name="عرض الشارع", null=True, blank=True)  

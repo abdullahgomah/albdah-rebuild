@@ -55,7 +55,8 @@
 
 
 <div class="container form-container">
-    <input type="hidden" value="{{property_type}}" name="property_type">
+    <input type="hidden" value={{property_type}} name="property_type">
+    <!-- <div hidden name="property_type" >{{property_type}}</div> -->
 
     <!-- popup -->
 
@@ -115,48 +116,7 @@
 
 
             
-            {% if property_type == 'shop_rent' or property_type == 'land_rent' %}
-            <input type="hidden" name="interface-input">
-            <div class="field interface-field">
-                <p>الواجهة*</p>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#" class="btn btn-outline">شمالية</a>
-                        </div>
-                    
-                        <div class="swiper-slide">
-                            <a href="#" class="btn btn-outline">جنوبية</a>
-                        </div>
 
-                        <div class="swiper-slide">
-                            <a href="#" class="btn btn-outline">شرقية</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="btn btn-outline">غربية</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="btn btn-outline">شمالية شرقية</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="btn btn-outline">شمالية غربية</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="btn btn-outline">جنوبية شرقية</a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="btn btn-outline">جنوبية غربية</a>
-                        </div>
-
-                    </div>
-                    <!-- <div class="swiper-pagination"></div> -->
-                </div>
-
-            </div>
-
-            <br>
-
-            
             {% if property_type == 'land_rent' %}
             <div class="input" >
                 <p class="input-label">الطول <span class="input-label-highlight">(ريال سعودي)</span></p>
@@ -169,7 +129,6 @@
             {% endif %}
                 
 
-            {% endif %}
                 
 
 
@@ -290,8 +249,53 @@
         <div class="property__details">
             
 
+            {% if property_type == 'shop_rent' or property_type == 'land_rent' or property_type == 'building_rent' %}
+
+            <input type="hidden" name="interface-input">
+            <div class="field interface-field">
+                <p>الواجهة*</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="btn btn-outline">شمالية</a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a href="#" class="btn btn-outline">جنوبية</a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="#" class="btn btn-outline">شرقية</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="btn btn-outline">غربية</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="btn btn-outline">شمالية شرقية</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="btn btn-outline">شمالية غربية</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="btn btn-outline">جنوبية شرقية</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="btn btn-outline">جنوبية غربية</a>
+                        </div>
+
+                    </div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+
+            </div>
+            
+
+
 
                 
+
+            {% endif %}
+
             <div class="box" style="margin-top: 1rem;">
                 <input type="hidden" name="street-width-input">
                 <div class="info">
@@ -306,7 +310,72 @@
                 </div>
             </div>
 
+            {% if property_type == 'building_rent' %}
+            <div class="box" style="margin-top: 1rem;">
+                <input type="hidden" name="stores-count-input">
+                <div class="info">
+                    <p>عدد المحلات</p>
+                    <p class="value">
+                        <span name="stores-count">0</span>
+                        م
+                    </p>
+                </div>
+                <div class="slider">
+                    <input class="slider_input" type="range" max="100" value="0">
+                </div>
+            </div>
+            {% endif %}
 
+            <div class="box">
+                <div class="info">
+                    <p>عدد الشقق</p>
+                </div>
+                <div class="grid apartments-count">
+                    <input type="hidden" name="apartments-count-input">
+                    <!-- <div class="item">جديد</div> -->
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item item_more">
+                        <!-- أكثر <i class="fa-solid fa-sort"></i> -->
+                        <select name="extra-apartments-count-input" id="custom_select">
+                            <option disabled selected hidden>أكثر</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="+8">+8</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="box">
+                <p>الغرض</p>
+                <br>
+                <div class="select">
+                    <select name="purpose-input" id="">
+                        <option selected disabled value="commercial">غير محدد</option>
+                        <option value="commercial">تجاري</option>
+                        <option value="residential">سكني</option>
+                        <option value="commercial-residential">تجاري وسكني</option>
+                    </select>
+                    <i class="fa-solid fa-sort"></i>
+                </div>
+            </div>
+            
+            
+            {% if not property_type == 'land_rent' %}
+
+
+
+                
+            
+
+
+            {% if not property_type == "building_rent" %}
             <div class="box">
                 <div class="info">
                     <p>عدد الغرف</p>
@@ -332,7 +401,7 @@
                 </div>
 
             </div>
-            
+
             <div class="box">
                 <div class="info">
                     <p>الصالات</p>
@@ -355,7 +424,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="box">
                 <div class="info">
                     <p>عدد دورات المياه</p>
@@ -378,9 +447,7 @@
                     </div>
                 </div>
             </div>
-            
-
-
+ 
             <div class="box">
                 <div class="info">
                     <p>الدور</p>
@@ -403,6 +470,9 @@
                     </div>
                 </div>
             </div>
+            {% endif %}
+                
+
 
             <div class="box">
                 <div class="info">
@@ -442,6 +512,14 @@
                     </div>
                 </div>
             </div>
+
+
+            {% endif %}
+                 
+                
+
+            
+
 
 
             <div class="property__details__next-prev next-prev">
@@ -794,6 +872,48 @@
                     </div>
                     
                     {% endif %}
+
+                    
+                    {% if property_type == "building_rent" %}
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="furnished" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>مؤثثة</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="basement" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>قبو</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="water_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>توفر الماء</p>
+                    </div>
+
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="power_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>توفر الكهرباء</p>
+                    </div>
+
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="sanitation_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>توفر الصرف</p>
+                    </div>
+                    {% endif %}
+                        
 
                     <!-- <div class="property__feature__item">
                         <label class="toggle-container">

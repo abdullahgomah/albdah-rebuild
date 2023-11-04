@@ -405,7 +405,9 @@ def add_property(request, property_type):
         elif property_type == 'land_rent': 
             purpose = request.POST.get('purpose-input')
             interface = request.POST.get('interface-input') 
-            
+            length = request.POST.get('length-input') 
+            width = request.POST.get('width-input') 
+
             for i in range(len(features)) : 
                 if features[i] == 'on': 
                     features[i] = 1 
@@ -413,6 +415,8 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                length = length, 
+                width = width, 
                 purpose = purpose, 
                 lat = lat, 
                 lng = lng  , 
@@ -443,10 +447,49 @@ def add_property(request, property_type):
             furnished = request.POST.get('furnished') 
             basement = request.POST.get('basement')
             stores_count = request.POST.get('stores-count-input')
-            apartments_count = request.POST.get('apartments-count-input')
 
-            features.append(furnished) 
-            features.append(basement) 
+            apartments_count = request.POST.get('extra-apartments-count-input') 
+            if apartments_count == None or apartments_count == "" or apartments_count == 0: 
+                apartments_count = request.POST.get("apartments-count-input")  
+            
+
+            features.append(furnished) # 3 
+            features.append(basement)  # 4 
+
+
+            for i in range(len(features)) : 
+                if features[i] == 'on': 
+                    features[i] = 1 
+                else: 
+                    features[i] = 0 
+
+            property_obj = Property.objects.create( 
+                lat = lat, 
+                lng = lng  , 
+                p_type = property_type, 
+                neighborhood = neighborhood, 
+                city = city, 
+                price = price, 
+                space = space, 
+                advertiser_relation= advertiser_relation, 
+                exclusive = exclusive, 
+                video = video, 
+                interface= interface, 
+                street_width = street_width, 
+                property_age = property_age, 
+                rent_type = rent_type ,
+                # purpose = purpose, 
+                description = description, 
+                water_exist = features[0], 
+                power_exist = features[1], 
+                sanitation_exist = features[2],  
+                furnished = features[3], 
+                basement = features[4], 
+                stores_count = stores_count, 
+                apartments_count = apartments_count
+
+            )
+
 
         elif property_type == 'branch_rent': 
             interface = request.POST.get('interface-input')
@@ -490,6 +533,7 @@ def add_property(request, property_type):
 
         
         
+    print(property_type) 
     context = {
         'property_type': property_type
     }
