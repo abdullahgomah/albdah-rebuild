@@ -36,7 +36,11 @@ let extraPropertyAgeInput = document.querySelector('[name=extra-property-age-inp
 sliderInputs.forEach((input) => {
     input.addEventListener('input', () => {
         input.parentElement.parentElement.querySelector('.value').querySelector('span').textContent = input.value ;
-        streetWidthSliderValueInput.value = input.value; 
+        if (input.parentElement.parentElement.querySelector('[name=street-width-input]')) {
+            streetWidthSliderValueInput.value = input.value; 
+        } else if (input.parentElement.parentElement.querySelector('[name=stores-count-input]')) {
+            document.querySelector('[name=stores-count-input]').value = input.value
+        }
     })
 })
 
@@ -124,6 +128,11 @@ let propertyInfoNextPrev = document.querySelector('.property__info__next-prev');
 propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => {
 
     let limit = 4; 
+    console.log(document.querySelector('[name=property_type]'));
+    
+    if (document.querySelector("[name=property_type]").value == 'land_rent') {
+        limit = 6; 
+    }
 
     // check form validation 
     let inputs = propertyInfoSection.querySelectorAll('.input') 
@@ -138,6 +147,7 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
         } else {
             counter = counter + 1; 
             inputElement.style.border = "1px solid #00000040"
+            // console.log(counter) 
             // console.log(inputElement.value); 
         }
 
@@ -160,24 +170,8 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
         counter +=1; 
     }
 
-    if (document.querySelector('[name=property_type]').value == "shop_rent") {
-        limit +=1; 
-        if (interfaceInput.value == "") { 
-            document.querySelector('.interface-field').style.border = "1px solid #dc3546" 
-        } else { 
-            document.querySelector('.interface-field').style.border = "none"; 
-            counter +=1; 
-        }
-    } else if (document.querySelector('[name=property_type]').value == 'land_rent') {
-        limit = 7 ;
-        if (interfaceInput.value == "") { 
-            document.querySelector('.interface-field').style.border = "1px solid #dc3546" 
-        } else { 
-            document.querySelector('.interface-field').style.border = "none"; 
-            counter +=1; 
-        } 
-        
-    }
+
+    
 
 
 
@@ -429,43 +423,54 @@ propertyFeaturesNextPrev.querySelector('.btn-prev').addEventListener('click', ()
 
 
 
+if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != "building_rent") { 
 
-let roomCountGrid = document.querySelector('.room-count'); 
-roomCountGrid.querySelectorAll('.item').forEach((item) => {
-    item.addEventListener('click', () => {
-        if (item.classList.contains('item_more') == false) { 
-            extraRoomInput.value = "أكثر" ;
-        }
-        item.parentElement.querySelector("[name=room-input]").value = item.textContent; 
-        // console.log(item.parentElement.querySelector('[name=room-input]').value)
+    let roomCountGrid = document.querySelector('.room-count'); 
+    roomCountGrid.querySelectorAll('.item').forEach((item) => {
+        item.addEventListener('click', () => {
+            if (item.classList.contains('item_more') == false) { 
+                extraRoomInput.value = "أكثر" ;
+            }
+            item.parentElement.querySelector("[name=room-input]").value = item.textContent; 
+            // console.log(item.parentElement.querySelector('[name=room-input]').value)
+        })
     })
-})
 
 
 
 
-let loungesCountGrid = document.querySelector('.lounges-count'); 
-loungesCountGrid.querySelectorAll('.item').forEach((item) => {
-    item.addEventListener('click', () => {
-        if (item.classList.contains('item_more') == false) {
-            extraLoungesInput.value = 'أكثر';
-        }
-        item.parentElement.querySelector("[name=lounges-input]").value = item.textContent; 
-        // console.log(item.parentElement.querySelector('[name=lounges-input]').value)
+    let loungesCountGrid = document.querySelector('.lounges-count'); 
+    loungesCountGrid.querySelectorAll('.item').forEach((item) => {
+        item.addEventListener('click', () => {
+            if (item.classList.contains('item_more') == false) {
+                extraLoungesInput.value = 'أكثر';
+            }
+            item.parentElement.querySelector("[name=lounges-input]").value = item.textContent; 
+            // console.log(item.parentElement.querySelector('[name=lounges-input]').value)
+        })
     })
-})
 
 
-let bathroomCountGrid = document.querySelector('.bathroom-count'); 
-bathroomCountGrid.querySelectorAll('.item').forEach((item) => {
-    item.addEventListener('click', () => {
-        if (item.classList.contains('item_more') == false) { 
-            extraBathroomInput.value = 'أكثر'; 
-        }
-        item.parentElement.querySelector("[name=bathroom-input]").value = item.textContent; 
-        // console.log(item.parentElement.querySelector('[name=bathroom-input]').value)
+    let bathroomCountGrid = document.querySelector('.bathroom-count'); 
+    bathroomCountGrid.querySelectorAll('.item').forEach((item) => {
+        item.addEventListener('click', () => {
+            if (item.classList.contains('item_more') == false) { 
+                extraBathroomInput.value = 'أكثر'; 
+            }
+            item.parentElement.querySelector("[name=bathroom-input]").value = item.textContent; 
+            // console.log(item.parentElement.querySelector('[name=bathroom-input]').value)
+        })
     })
-})
+
+
+    let floorNumberGrid = document.querySelector('.floor-number'); 
+    floorNumberGrid.querySelectorAll('.item').forEach((item) => {
+        item.addEventListener('click', () => {
+            item.parentElement.querySelector("[name=floor-input]").value = item.textContent; 
+            // console.log(item.parentElement.querySelector('[name=floor-input]').value)
+        })
+    })
+
 
 
 let propertyAgeGrid = document.querySelector('.property-age'); 
@@ -477,13 +482,33 @@ propertyAgeGrid.querySelectorAll('.item').forEach((item) => {
 })
 
 
-let floorNumberGrid = document.querySelector('.floor-number'); 
-floorNumberGrid.querySelectorAll('.item').forEach((item) => {
-    item.addEventListener('click', () => {
-        item.parentElement.querySelector("[name=floor-input]").value = item.textContent; 
-        // console.log(item.parentElement.querySelector('[name=floor-input]').value)
+}
+
+
+if (document.querySelector('[name=property_type]').value == 'building_rent') { 
+    let apartmentsCountGrid = document.querySelectorAll('.apartments-count .item'); 
+    let apartmentsCountInput = document.querySelector('[name=apartments-count-input]'); 
+    apartmentsCountGrid.forEach((item) => {
+        item.addEventListener('click', () => {
+            item.parentElement.querySelector('[name=apartments-count-input]').value = item.textContent; 
+        })
     })
-})
+
+    let extraApartmentsCountInput = document.querySelector('[name=extra-apartments-count-input]'); 
+    extraApartmentsCountInput.addEventListener('change', () => {
+        apartmentsCountInput.value = "" // after that I will modify this in the views 
+    })
+
+
+
+    let propertyAgeGrid = document.querySelector('.property-age'); 
+    propertyAgeGrid.querySelectorAll('.item').forEach((item) => {
+        item.addEventListener('click', () => {
+            item.parentElement.querySelector("[name=property-age-input]").value = item.textContent; 
+            // console.log(item.parentElement.querySelector('[name=property-age-input]').value)
+        })
+    })
+}
 
 let rentTypeGrid = document.querySelector('.rent-type') 
 rentTypeGrid.querySelectorAll('.item').forEach((item) => {
@@ -501,22 +526,29 @@ let bathroomInput = document.querySelector("[name=bathroom-input]")
 let floorInput = document.querySelector('[name=floor-input]'); 
 let propertyAgeInput = document.querySelector('[name=property-age-input]'); 
 
-extraRoomInput.addEventListener('change', () => { 
-    roomInput.value = "";
-})
 
-extraLoungesInput.addEventListener('change', () => {
-    loungesInput.value = ''; 
-})
+if (document.querySelector("[name=property_type]").textContent =! "land_rent") { 
 
-extraBathroomInput.addEventListener('change', () => {
-    bathroomInput.value = ''; 
-})
+    extraRoomInput.addEventListener('change', () => { 
+        roomInput.value = "";
+    })
+
+    extraLoungesInput.addEventListener('change', () => {
+        loungesInput.value = ''; 
+    })
+
+    extraBathroomInput.addEventListener('change', () => {
+        bathroomInput.value = ''; 
+    })
+
+    extraPropertyAgeInput.addEventListener('change', () => {
+        propertyAgeInput.value = ''; 
+    })
+}
 
 
-extraPropertyAgeInput.addEventListener('change', () => {
-    propertyAgeInput.value = ''; 
-})
+
+
 
 
 propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () => {
@@ -525,57 +557,133 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     let counter = 0 ; 
     let limit = 6; 
 
-    if (document.querySelector(['name=property_type']).value == 'land_rent') { 
+    if (document.querySelector('[name=property_type]').value == 'land_rent') { 
         limit = 3; 
+        console.log(limit) ; 
+    }
+
+
+    if (document.querySelector('[name=property_type]').value == "shop_rent" || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'building_rent') { 
+        if (interfaceInput.value == "") { 
+            document.querySelector('.interface-field').style.border = "1px solid #dc3546" 
+        } else { 
+            document.querySelector('.interface-field').style.border = "none"; 
+            counter +=1; 
+
+            console.log(counter) 
+        }
+    }
+
+    if (document.querySelector('[name=property_type]').value == "land_rent" || document.querySelector('[name=property_type]').value == 'building_rent') {
+        let purposeInput = document.querySelector('[name=purpose-input]'); 
+        if (purposeInput.value == "") { 
+            purposeInput.style.border = "1px solid #dc3546" 
+        } else { 
+            purposeInput.parentElement.style.border = '1px solid #1e295750'; 
+            counter +=1; 
+            console.log("purpose")
+            console.log(counter) 
+            console.log("=====")  
+        }
+
+        if (document.querySelector("[name=property_type]").value == 'building_rent') {
+            if (document.querySelector('[name=stores-count-input]').value == "") { 
+                document.querySelector('[name=stores-count-input]').parentElement.style.border = "1px solid #dc3546" 
+            } else { 
+                document.querySelector('[name=stores-count-input]').style.border = "none"; 
+                counter +=1; 
+                console.log('stores count') 
+                console.log(counter) ; 
+                console.log("=====") ;
+            }
+
+            let apartmentsCountInput = document.querySelector('[name=apartments-count-input]'); 
+            let extraApartmentsCountInput = document.querySelector('[name=extra-apartments-count-input]');
+
+            if (apartmentsCountInput.value != "" || extraApartmentsCountInput.value != '') { 
+                // not empty condition 
+                document.querySelector('.grid.apartments-count').style.border = '1px solid #1e295750'; 
+                counter +=1; 
+                console.log("apartments count") 
+                console.log(counter) 
+                console.log("======") 
+            } else { 
+                // empty condition 
+                document.querySelector('.grid.apartments-count').style.border = " 1px solid #dc3546"; 
+            }
+        }
+
     }
 
     // check purpose input, move interface validation functions from propertyInfo to propertyDetails
+
+    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'building_rent') {
+        if (document.querySelector("[name=building_rent]").value != 'building_rent') {
+            //1 
+            if (roomInput.value == "") {
+                roomInput.parentElement.style.border = "1px solid #dc3546"
+            } else { 
+                roomInput.parentElement.style.border = "1px solid #00000040"
+                counter = counter+1 ;
+            }
+
+            //2 
+            if (loungesInput.value == "") {
+                loungesInput.parentElement.style.border = "1px solid #dc3546"
+            } else { 
+                loungesInput.parentElement.style.border = "1px solid #00000040"
+                counter = counter+1 ;
+            }
+
+            //3
+            if (bathroomInput.value == "") {
+                bathroomInput.parentElement.style.border = "1px solid #dc3546"
+            } else { 
+                bathroomInput.parentElement.style.border = "1px solid #00000040"
+                counter = counter+1 ;
+            }
+
+            //4
+            if (floorInput.value == "") {
+                floorInput.parentElement.style.border = "1px solid #dc3546"
+            } else { 
+                floorInput.parentElement.style.border = "1px solid #00000040"
+                counter = counter+1 ;
+            }
+        }
     
 
-    //1 
-    if (roomInput.value == "") {
-        roomInput.parentElement.style.border = "1px solid #dc3546"
-    } else { 
-        roomInput.parentElement.style.border = "1px solid #00000040"
-        counter = counter+1 ;
-    }
 
 
 
 
-    //2 
-    if (loungesInput.value == "") {
-        loungesInput.parentElement.style.border = "1px solid #dc3546"
-    } else { 
-        loungesInput.parentElement.style.border = "1px solid #00000040"
-        counter = counter+1 ;
-    }
-
-    //3
-    if (bathroomInput.value == "") {
-        bathroomInput.parentElement.style.border = "1px solid #dc3546"
-    } else { 
-        bathroomInput.parentElement.style.border = "1px solid #00000040"
-        counter = counter+1 ;
-    }
-
-    //4
-    if (floorInput.value == "") {
-        floorInput.parentElement.style.border = "1px solid #dc3546"
-    } else { 
-        floorInput.parentElement.style.border = "1px solid #00000040"
-        counter = counter+1 ;
-    }
 
 
-    // 5
-    if (propertyAgeInput.value == "") {
-        propertyAgeInput.parentElement.style.border = "1px solid #dc3546"
-    } else { 
-        propertyAgeInput.parentElement.style.border = "1px solid #00000040"
-        counter = counter+1 ;
-    }
 
+        
+        // 5
+        if (propertyAgeInput.value == "") {
+            propertyAgeInput.parentElement.style.border = "1px solid #dc3546"
+        } else { 
+            propertyAgeInput.parentElement.style.border = "1px solid #00000040"
+            counter = counter+1 ;
+        }
+
+
+    } 
+
+
+
+    if (document.querySelector('[name=property_type]').value == 'building_rent') {
+                
+        // 5
+        if (propertyAgeInput.value == "") {
+            propertyAgeInput.parentElement.style.border = "1px solid #dc3546"
+        } else { 
+            propertyAgeInput.parentElement.style.border = "1px solid #00000040"
+            counter = counter+1 ;
+        }
+    } 
 
     //6 
     if (streetWidthSliderValueInput.value == "") {
