@@ -60,6 +60,9 @@ def generate():
 
 
 class Property(models.Model): 
+    lat = models.CharField(max_length=200, null=True, blank=True) 
+    lng = models.CharField(max_length=200, null=True, blank=True)  
+    
     date_published = models.DateTimeField(auto_now_add=True, verbose_name="تاريخ الإضافة", null=True, blank=True) 
     p_type = models.CharField(max_length=250, verbose_name="نوع العقار", null=True, blank=True , choices=PROPERTY_TYPE_CHOICES) 
     title = models.CharField(max_length=255, verbose_name="عنوان الإعلان", null=True, blank=True) 
