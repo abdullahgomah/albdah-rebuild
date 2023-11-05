@@ -150,7 +150,6 @@ header .container nav:last-child ul {
 main {
     /* height: calc(100vh - 85px);  */
     min-height: 200px;
-    background: url('../imgs/main-section.jpg'); 
     background-size: cover;
     background-position: center center;
     position: relative;
