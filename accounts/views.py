@@ -6,7 +6,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from .models import Profile, User 
 from codes.models import Otp 
 from .forms import UserUpdateForm, UpdateProfileForm, SignupForm
-from .utils import send_sms
+# from .utils import send_sms
 
 # Create your views here.
 
@@ -98,7 +98,7 @@ def send_otp(request):
         request.session['phone_number'] = otp.phone_number 
 
 
-        send_sms(otp.otp, otp.phone_number) 
+        # send_sms(otp.otp, otp.phone_number) 
 
         context ={
             'complete_signup': 'true', 
