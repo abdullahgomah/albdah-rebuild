@@ -618,7 +618,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     // check purpose input, move interface validation functions from propertyInfo to propertyDetails
 
     if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'building_rent') {
-        if (document.querySelector("[name=building_rent]").value != 'building_rent') {
+        if (document.querySelector("[name=property_type]").value != 'building_rent') {
             //1 
             if (roomInput.value == "") {
                 roomInput.parentElement.style.border = "1px solid #dc3546"

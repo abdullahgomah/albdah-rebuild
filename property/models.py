@@ -158,7 +158,41 @@ class Property(models.Model):
             self.number = generate()
         
         if not self.title: 
-            self.title = str(f"شقة في مدينة {self.city} في حي {self.neighborhood}")
+            start = "" 
+            mid = "" 
+
+            if self.p_type.startswith("apartment"):
+                start = "شقة" 
+            elif self.p_type.startswith("floor"): 
+                start = "دور" 
+            elif self.p_type.startswith("villa"): 
+                start = "فيلا" 
+            elif self.p_type.startswith("shop"): 
+                start = "محل" 
+            elif self.p_type.startswith("resthouse"): 
+                start = 'استراحة' 
+            elif self.p_type.startswith("commercial_office"): 
+                start = 'مكتب تجاري'
+            elif self.p_type.startswith("land"): 
+                start = 'أرض' 
+            elif self.p_type.startswith("building"): 
+                start = "عمارة" 
+            elif self.p_type.startswith("branch"): 
+                start = "مستودع" 
+            elif self.p_type.startswith("furnished_apartment"): 
+                start = "شقة مفروشة" 
+            elif self.p_type.startswith("chalet"): 
+                start = "شاليه"      
+
+            if self.p_type.endswith("sale"): 
+                mid = "للبيع" 
+            else: 
+                mid = "للإيجار"   
+
+
+            sentence = f"{start} {mid} في {self.city} في {self.neighborhood}"
+
+            self.title = sentence 
         super(Property, self).save(*args, **kwargs)
 
     class Meta: 
