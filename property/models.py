@@ -2,6 +2,7 @@ from django.db import models
 import random 
 import string 
 
+
 # Create your models here.
 
 
@@ -60,6 +61,8 @@ def generate():
 
 
 class Property(models.Model): 
+    profile = models.ForeignKey("accounts.Profile", on_delete=models.CASCADE, null=True, blank=True)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True) 
     lat = models.CharField(max_length=200, null=True, blank=True) 
     lng = models.CharField(max_length=200, null=True, blank=True)  
     
@@ -201,9 +204,14 @@ class Property(models.Model):
 
 
 class PropertyImage(models.Model): 
-    property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='imgs' )
+    property = models.ForeignKey( Property, on_delete=models.CASCADE, related_name='imgs' , verbose_name="العقار")
     img = models.ImageField(upload_to="property/images/")
     main = models.BooleanField(default=0, null=True, blank=True, verbose_name="صورة رئيسية" ) 
 
     def __str__(self):
-        return self.property 
+        return str(self.property.number  ) 
+
+
+    class Meta: 
+        verbose_name = 'صورة عقار'
+        verbose_name_plural = "صور العقارات"

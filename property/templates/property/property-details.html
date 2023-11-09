@@ -387,7 +387,7 @@
             <div class="container">
 
                 <ul>
-                    <li><a href="#" class="list-item">
+                    <li><a href="{% url 'property:add-to-favourite' property.number %}" class="list-item">
                         <i class="fa-regular fa-heart"></i>
                         المفضلة
                     </a></li>
@@ -414,10 +414,10 @@
     <div class="container">
         <img src="./assets/imgs/profile-pic.svg" alt="" class="advertiser_pic">
         
-        <h2 class="advertiser__name">مؤسسة منازل أبحر العقارية</h2>
+        <h2 class="advertiser__name">{{property.user}}</h2>
 
         <div class="advertiser__contact">
-            <a href="#" id="btn__call">إظهار رقم الجوال</a>
+            <a id="btn__call">نسخ رقم الجوال</a>
             <a href="#" id="btn__whatsapp">تواصل واتساب</a>
         </div>
     </div>
