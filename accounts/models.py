@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from property.models import Property
 
 
 # Create your models here.
@@ -20,4 +21,10 @@ class Profile(models.Model):
         verbose_name='ملف شخصي'
         verbose_name_plural ='الملفات الشخصية'
 
+
+
+class Favourite(models.Model): 
+    property = models.ForeignKey(Property, on_delete=models.CASCADE) 
+    user = models.ForeignKey("accounts.User", on_delete=models.CASCADE, null=True ,blank=True) 
+    date  = models.DateTimeField(auto_now_add=True) 
 

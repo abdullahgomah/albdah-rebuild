@@ -1,6 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse 
 from django.contrib.auth.decorators import login_required
 from .models import * 
+from accounts.models import Favourite
+
 
 # Create your views here.
 
@@ -24,7 +27,7 @@ def add_property(request, property_type):
     
     if request.POST: 
 
-
+        user = request.user 
         # GENERAL FIELDS 
         sale = request.POST.get("sale") 
         lat = request.POST.get('lat')
@@ -115,6 +118,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                user= user, 
                 p_type = property_type, 
                 neighborhood = neighborhood, 
                 city = city, 
@@ -165,6 +169,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                user = user, 
                 p_type = property_type, 
                 neighborhood = neighborhood, 
                 city = city, 
@@ -251,6 +256,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                user = user, 
                 driver_room = features[14], 
                 maid_room = features[15],
                 duplex = features[16], 
@@ -321,6 +327,7 @@ def add_property(request, property_type):
                     features[i] = 0 
         
             property_obj = Property.objects.create( 
+                user = user, 
                 lat = lat, 
                 lng = lng  , 
                 amusement = features[7], 
@@ -373,6 +380,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                user = user , 
                 lat = lat, 
                 lng = lng  , 
                 p_type = property_type, 
@@ -415,6 +423,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                user = user, 
                 length = length, 
                 width = width, 
                 purpose = purpose, 
@@ -464,6 +473,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                user = user, 
                 lat = lat, 
                 lng = lng  , 
                 p_type = property_type, 
@@ -527,6 +537,11 @@ def add_property(request, property_type):
             ).save() 
 
 
+        
+        ## redirect to sucessfully uploaded ad 
+        return redirect(reverse('property:ad-uploaded'))
+
+
 
 
         
@@ -543,3 +558,17 @@ def add_property(request, property_type):
 def ad_uploaded(request): 
     context = {} 
     return render(request, 'pages/ad-uploaded-successfully.html', context)
+
+
+@login_required(login_url='/auth/')
+def add_to_favourite(request, property_number): 
+    user = request.user 
+    property = Property.objects.get(number = property_number)  
+
+    Favourite.objects.create(property=property, user=user).save() 
+
+
+    return redirect(reverse('property:property-details', kwargs={'number': property.number}))
+    
+
+    ## return to previous page 
