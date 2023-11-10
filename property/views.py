@@ -503,6 +503,36 @@ def add_property(request, property_type):
 
         elif property_type == 'branch_rent': 
             interface = request.POST.get('interface-input')
+            
+            for i in range(len(features)) : 
+                if features[i] == 'on': 
+                    features[i] = 1 
+                else: 
+                    features[i] = 0 
+
+            property_obj = Property.objects.create( 
+                user = user, 
+                lat = lat, 
+                lng = lng  , 
+                p_type = property_type, 
+                neighborhood = neighborhood, 
+                city = city, 
+                price = price, 
+                space = space, 
+                advertiser_relation= advertiser_relation, 
+                exclusive = exclusive, 
+                video = video, 
+                interface= interface, 
+                street_width = street_width, 
+                property_age = property_age, 
+                rent_type = rent_type ,
+                # purpose = purpose, 
+                description = description, 
+                water_exist = features[0], 
+                power_exist = features[1], 
+                sanitation_exist = features[2],  
+            )
+
 
         elif property_type =='furnished_apartment_rent': 
             floor = request.POST.get('extra-floor-input') 
@@ -514,18 +544,96 @@ def add_property(request, property_type):
             car_entrance = request.POST.get('car_entrance') 
             ac = request.POST.get('ac') 
 
-            features.append(families) 
-            features.append(extenstion)
-            features.append(car_entrance)
-            features.append(ac) 
+            features.append(families)  # 3 
+            features.append(extenstion) # 4 
+            features.append(car_entrance) # 5
+            features.append(ac)  # 6
+
+            for i in range(len(features)) : 
+                if features[i] == 'on': 
+                    features[i] = 1 
+                else: 
+                    features[i] = 0 
+
+            property_obj = Property.objects.create( 
+                user = user, 
+                lat = lat, 
+                lng = lng  , 
+                p_type = property_type, 
+                neighborhood = neighborhood, 
+                city = city, 
+                price = price, 
+                space = space, 
+                advertiser_relation= advertiser_relation, 
+                exclusive = exclusive, 
+                video = video, 
+                street_width = street_width, 
+                property_age = property_age, 
+                rent_type = rent_type ,
+                # purpose = purpose, 
+                description = description, 
+                water_exist = features[0], 
+                power_exist = features[1], 
+                sanitation_exist = features[2],  
+                families = features[3], 
+                extenstion = features[4], 
+                car_entrance= features[5], 
+                ac = features[6], 
+
+            )
+            
+
 
         elif property_type =='chalet_rent': 
-            football_field = request.POST.get('football_field') 
-            volly_field = request.POST.get('volly_field') 
-            hair_tent_house = request.POST.get('hair_tent_house')
-            amusement = request.POST.get('amusement') 
-            family_part = request.POST.get('family_part') 
-            kitchen = request.POST.get('kitchen') 
+            football_field = request.POST.get('football_field') # 3
+            volly_field = request.POST.get('volly_field') # 4 
+            hair_tent_house = request.POST.get('hair_tent_house') # 5
+            amusement = request.POST.get('amusement') # 6
+            family_part = request.POST.get('family_part') # 7
+            kitchen = request.POST.get('kitchen') # 8 
+
+
+            features.append(football_field)
+            features.append(volly_field)
+            features.append(hair_tent_house)
+            features.append(amusement)
+            features.append(family_part)
+            features.append(kitchen)
+
+            for i in range(len(features)) : 
+                if features[i] == 'on': 
+                    features[i] = 1 
+                else: 
+                    features[i] = 0 
+
+            property_obj = Property.objects.create( 
+                user = user, 
+                lat = lat, 
+                lng = lng  , 
+                p_type = property_type, 
+                neighborhood = neighborhood, 
+                city = city, 
+                price = price, 
+                space = space, 
+                advertiser_relation= advertiser_relation, 
+                exclusive = exclusive, 
+                video = video, 
+                street_width = street_width, 
+                property_age = property_age, 
+                rent_type = rent_type ,
+                # purpose = purpose, 
+                description = description, 
+                water_exist = features[0], 
+                power_exist = features[1], 
+                sanitation_exist = features[2],  
+                football_field = features[3], 
+                volly_field = features[4], 
+                hair_tent_house = features[5], 
+                amusement = features[6], 
+                family_part = features[7], 
+                kitchen = features[8], 
+            )
+
 
         # upload images 
         

@@ -28,3 +28,10 @@ class Favourite(models.Model):
     user = models.ForeignKey("accounts.User", on_delete=models.CASCADE, null=True ,blank=True) 
     date  = models.DateTimeField(auto_now_add=True) 
 
+    class Meta: 
+        verbose_name = 'عنصر مفضلة'
+        verbose_name_plural = 'قائمة المفضلة'
+
+
+    def __str__(self): 
+        return self.property
