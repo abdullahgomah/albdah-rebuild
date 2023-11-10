@@ -631,7 +631,6 @@ def add_property(request, property_type):
                 kitchen = features[8], 
                 stores_count = stores_count, 
                 apartments_count = apartments_count
-
             )
 
 
