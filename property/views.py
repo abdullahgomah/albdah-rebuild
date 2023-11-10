@@ -588,12 +588,52 @@ def add_property(request, property_type):
 
 
         elif property_type =='chalet_rent': 
-            football_field = request.POST.get('football_field') 
-            volly_field = request.POST.get('volly_field') 
-            hair_tent_house = request.POST.get('hair_tent_house')
-            amusement = request.POST.get('amusement') 
-            family_part = request.POST.get('family_part') 
-            kitchen = request.POST.get('kitchen') 
+            football_field = request.POST.get('football_field') # 3
+            volly_field = request.POST.get('volly_field') # 4 
+            hair_tent_house = request.POST.get('hair_tent_house') # 5
+            amusement = request.POST.get('amusement') # 6
+            family_part = request.POST.get('family_part') # 7
+            kitchen = request.POST.get('kitchen') # 8 
+
+
+            for i in range(len(features)) : 
+                if features[i] == 'on': 
+                    features[i] = 1 
+                else: 
+                    features[i] = 0 
+
+            property_obj = Property.objects.create( 
+                user = user, 
+                lat = lat, 
+                lng = lng  , 
+                p_type = property_type, 
+                neighborhood = neighborhood, 
+                city = city, 
+                price = price, 
+                space = space, 
+                advertiser_relation= advertiser_relation, 
+                exclusive = exclusive, 
+                video = video, 
+                interface= interface, 
+                street_width = street_width, 
+                property_age = property_age, 
+                rent_type = rent_type ,
+                # purpose = purpose, 
+                description = description, 
+                water_exist = features[0], 
+                power_exist = features[1], 
+                sanitation_exist = features[2],  
+                football_field = features[3], 
+                volly_field = features[4], 
+                hair_tent_house = features[5], 
+                amusement = features[6], 
+                family_part = features[7], 
+                kitchen = features[8], 
+                stores_count = stores_count, 
+                apartments_count = apartments_count
+
+            )
+
 
         # upload images 
         
