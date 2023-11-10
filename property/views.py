@@ -567,7 +567,6 @@ def add_property(request, property_type):
                 advertiser_relation= advertiser_relation, 
                 exclusive = exclusive, 
                 video = video, 
-                interface= interface, 
                 street_width = street_width, 
                 property_age = property_age, 
                 rent_type = rent_type ,
@@ -580,8 +579,6 @@ def add_property(request, property_type):
                 extenstion = features[4], 
                 car_entrance= features[5], 
                 ac = features[6], 
-                stores_count = stores_count, 
-                apartments_count = apartments_count
 
             )
             
@@ -595,6 +592,13 @@ def add_property(request, property_type):
             family_part = request.POST.get('family_part') # 7
             kitchen = request.POST.get('kitchen') # 8 
 
+
+            features.append(football_field)
+            features.append(volly_field)
+            features.append(hair_tent_house)
+            features.append(amusement)
+            features.append(family_part)
+            features.append(kitchen)
 
             for i in range(len(features)) : 
                 if features[i] == 'on': 
@@ -614,7 +618,6 @@ def add_property(request, property_type):
                 advertiser_relation= advertiser_relation, 
                 exclusive = exclusive, 
                 video = video, 
-                interface= interface, 
                 street_width = street_width, 
                 property_age = property_age, 
                 rent_type = rent_type ,
@@ -629,8 +632,6 @@ def add_property(request, property_type):
                 amusement = features[6], 
                 family_part = features[7], 
                 kitchen = features[8], 
-                stores_count = stores_count, 
-                apartments_count = apartments_count
             )
 
 
