@@ -114,7 +114,11 @@ async function initMap() {
     // })
 
 
-    document.getElementById('myLocationButton').addEventListener('click', function() {
+    
+
+    let myLocationButton = document.getElementById('myLocationButton')
+
+    myLocationButton.addEventListener('click', function() {
         // Check if geolocation is available in the user's browser
         if (navigator.geolocation) {
             // Get the user's current location
@@ -139,8 +143,14 @@ async function initMap() {
     });
 
 
-    document.querySelector(".btn-terrain").addEventListener('click', () => {
-        map.setMapTypeId(google.maps.MapTypeId.TERRAIN); 
+    let btnTerrain = document.querySelector(".btn-terrain")
+    btnTerrain.addEventListener('click', () => {
+        btnTerrain.classList.toggle('enabled')
+        if (btnTerrain.classList.contains("enabled")) { 
+            map.setMapTypeId(google.maps.MapTypeId.ROADMAP); 
+        } else { 
+            mapsetMapTypeId(google.maps.MapTypeId.TERRAIN); 
+        }
     })
   
 
