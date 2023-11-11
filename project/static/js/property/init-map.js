@@ -149,7 +149,7 @@ async function initMap() {
         if (btnTerrain.classList.contains("enabled")) { 
             map.setMapTypeId(google.maps.MapTypeId.ROADMAP); 
         } else { 
-            mapsetMapTypeId(google.maps.MapTypeId.TERRAIN); 
+            map.setMapTypeId(google.maps.MapTypeId.TERRAIN); 
         }
     })
   
