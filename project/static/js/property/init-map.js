@@ -9,21 +9,31 @@ function reverseGeocode(lat, lng) {
         if (status === 'OK') {
             if (results[0]) {
 
+                
                 var addressComponents = results[0].address_components;
+
+                console.log(addressComponents); 
+
                 var neighborhood, city;
 
                 let neighborhoodInput = document.querySelector('[name=neighborhood-input]')
                 let cityInput = document.querySelector('[name=city-input]'); 
 
                 
-                neighborhood = results[0].address_components[1].long_name; 
-                city= results[0].address_components[2].long_name; 
+                for (var i = 0; i < results[0].address_components.length; i++) {
+                    var component = results[0].address_components[i];
+                    if (component.types.includes('sublocality')) {
+                      neighborhood = component.long_name;
+                    } else if (component.types.includes('locality')) {
+                      city = component.long_name;
+                    }
+                }
 
                 neighborhoodInput.value = neighborhood; 
                 cityInput.value = city; 
 
-                console.log(neighborhoodInput) ; 
-                console.log(cityInput); 
+                // console.log(neighborhoodInput) ; 
+                // console.log(cityInput); 
                 
 
         //         for (var i = 0; i < addressComponents.length; i++) {
@@ -59,7 +69,7 @@ async function initMap() {
 
     const map = new google.maps.Map(document.getElementById("map"), {
         mapId: "6a7f4f4e7a7f5b47",
-        center: { lat: 23.885942, lng: 45.079163 }, // Coordinates for Saudi Arabia
+        center: { lat: 26.403121781303653, lng: 43.917549974016744 }, // Coordinates for Saudi Arabia
         zoom: 24, 
         zoomControl: false, 
         mapTypeId: "roadmap",
@@ -149,7 +159,7 @@ async function initMap() {
         if (btnTerrain.classList.contains("enabled")) { 
             map.setMapTypeId(google.maps.MapTypeId.ROADMAP); 
         } else { 
-            map.setMapTypeId(google.maps.MapTypeId.TERRAIN); 
+            map.setMapTypeId(google.maps.MapTypeId.SATELLITE); 
         }
     })
   
