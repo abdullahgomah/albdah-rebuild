@@ -71,25 +71,47 @@ async function initMap() {
 
     var userMarker = new google.maps.Marker({
         map: map,
-        draggable: true, 
-        title: "Your Location",
+        draggable: false, 
         animation: google.maps.Animation.DROP, 
-        position: {lat: 23.885942, lng: 45.079163}
+        position: map.getCenter(),
     });
 
-
-    userMarker.addListener('dragend', function () {
+    google.maps.event.addListener(map, 'drag', function() {
+        // Update the marker position to the center of the map
+        userMarker.setPosition(map.getCenter());
         const position = userMarker.position 
         const lat = position.lat(); // دوائر العرض
         const lng = position.lng(); // خطوط الطول
         latInput.value = lat ;
         lngInput.value = lng; 
-
-        console.log(lat) ;
-        console.log(lng) ; 
-        
         reverseGeocode(lat, lng) 
-    })
+    });
+
+
+    google.maps.event.addListener(map, 'zoom_changed', function () {
+        userMarker.setPosition(map.getCenter());
+        const position = userMarker.position 
+        const lat = position.lat(); // دوائر العرض
+        const lng = position.lng(); // خطوط الطول
+        latInput.value = lat ;
+        lngInput.value = lng; 
+        reverseGeocode(lat, lng) 
+    });
+
+
+
+    // userMarker.addListener('dragend', function () {
+    //     const position = userMarker.position 
+    //     const lat = position.lat(); // دوائر العرض
+    //     const lng = position.lng(); // خطوط الطول
+    //     latInput.value = lat ;
+    //     lngInput.value = lng; 
+
+    //     console.log(lat) ;
+    //     console.log(lng) ; 
+        
+    //     reverseGeocode(lat, lng) 
+    // })
 
 
     document.getElementById('myLocationButton').addEventListener('click', function() {
@@ -115,6 +137,11 @@ async function initMap() {
             alert('Geolocation is not supported in your browser.');
         }
     });
+
+
+    document.querySelector(".btn-terrain").addEventListener('click', () => {
+        map.setMapTypeId(google.maps.MapTypeId.TERRAIN); 
+    })
   
 
 }
