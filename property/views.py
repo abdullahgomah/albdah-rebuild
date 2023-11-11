@@ -32,7 +32,7 @@ def add_property(request, property_type):
         sale = request.POST.get("sale") 
         lat = request.POST.get('lat')
         lng = request.POST.get('lng')
-        neighborhood = request.POST.get('neighborhood')
+        neighborhood = request.POST.get('neighborhood-input')
         city = request.POST.get('city-input')
         price = request.POST.get('price-input') 
         space = request.POST.get('space-input')
