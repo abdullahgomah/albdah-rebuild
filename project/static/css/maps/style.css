@@ -117,6 +117,7 @@ body {
 
 .map-options { 
     width: 350px; 
+    max-width: 90% !important;
     height: 60px; 
     background: #f9f9f9; 
     position: absolute;

@@ -198,193 +198,28 @@ let mapOptions = document.querySelector('.map-options');
 
 let coverImg = document.querySelector('.cover img') 
 
-let apartments_rent_data = []; 
-let floors_rent_data = []; 
-let villas_rent_data = []; 
-let shops_rent_data = [] ; 
-let resthouses_rent_data = []; 
-let commercial_offices_rent_data = []; 
-let lands_rent_data = []; 
-let buildings_rent_data = []; 
-let warehouses_rent_data = [] ; 
-let furnished_apartements_rent_data =[]; 
-let chalets_rent_data = []; 
 
-function get_chalets_rent() {
-    chalets_rent_data = [
-    {% for property in chalets_rent %}
+
+function get_properties() {
+    properties_data = [
+    {% for property in properties %}
         {
             title: "{{property.title}}", 
-            position: "{{ property.position }}",
+            lat: "{{property.lat}}", 
+            lng: "{{property.lng}}", 
             price: "{{ property.price }}", 
             description: "{{property.description|truncatewords:5}}",
             cover_img: "{{property.imgs.first.img.url}}",
             number: "{{property.number}}", 
-            property_type: "chalets_rent" 
+            property_type: "{{property.p_type}}" 
         },
     {% endfor %}
     ];
 }
 
-function get_furnished_apartements_rent() { 
-    furnished_apartements_rent_data = [
-    {% for property in furnished_apartements_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "furnished_apartements_rent" 
-        },
-    {% endfor %}
-    ];
-}
 
-function get_warehouses_rent() {
-    warehouses_rent_data = [
-    {% for property in warehouses_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "warehouse_rent" 
-        },
-    {% endfor %}
-    ];
-}
 
-function get_buildings_rent() {
-    buildings_rent_data = [
-    {% for property in buildings_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "building_rent" 
-        },
-    {% endfor %}
-    ];
-}
 
-function get_lands_rent() {
-    lands_rent_data = [
-    {% for property in lands_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "land_rent" 
-        },
-    {% endfor %}
-    ];
-}
-
-function get_commercial_offices_rent() {
-    commercial_offices_rent_data = [
-    {% for property in commercial_offices_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "commercial_offices_rent" 
-        },
-    {% endfor %}
-    ];
-}
-
-function get_resthouses_rent() {
-    resthouses_rent_data = [
-    {% for property in resthouses_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "resthouse_rent" 
-        },
-    {% endfor %}
-    ];
-}
-
-function get_shops_rent() {
-    shops_rent_data = [
-    {% for property in shops_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "shop_rent" 
-        },
-    {% endfor %}
-    ];
-}
-
-function get_villas_rent() {
-    villas_rent_data = [
-    {% for property in villas_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "villa_rent" 
-        },
-    {% endfor %}
-    ];
-}
-
-function get_apartment_rent() { 
-    apartments_rent_data = [
-    {% for property in apartments_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "apartment_rent" 
-        },
-    {% endfor %}
-    ];
-}
-
-function get_floors_rent() {
-    floors_rent_data = [
-    {% for property in floors_rent %}
-        {
-            title: "{{property.title}}", 
-            position: "{{ property.position }}",
-            price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
-            cover_img: "{{property.imgs.first.img.url}}",
-            number: "{{property.number}}", 
-            property_type: "floor_rent" 
-        },
-    {% endfor %}
-    ];
-}
 
 infoCardCloseBtn.addEventListener('click', () => {
     infoCard.style.display = 'none';
@@ -431,22 +266,10 @@ async function initMap() {
     //];
 
 
-
-    get_apartment_rent() 
-    get_floors_rent() 
-    get_villas_rent() 
-    get_shops_rent() 
-    get_resthouses_rent() 
-    get_commercial_offices_rent() 
-    get_lands_rent() 
-    get_buildings_rent() 
-    get_warehouses_rent() 
-    get_furnished_apartements_rent() 
-    get_chalets_rent() 
+    get_properties() 
 
 
-
-    for (let i=0; i<commercial_offices_rent_data.length; i++ ) {
+    for (let i=0; i<properties_data.length; i++ ) {
 
 
         const priceTag = document.createElement("div");
@@ -454,475 +277,44 @@ async function initMap() {
         priceTag.className = "price-tag";
 
         // get the apartment 
-        let property = commercial_offices_rent_data[i], 
+        let property = properties_data[i], 
             propertytPrice = property.price, 
             propertyTitle = property.title, 
             propertyDescription = property.description, 
             propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
-    }
-
-
-    for (let i=0; i<chalets_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = chalets_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
+            // lat = Number(property.position.split(',')[0])
+            lat = Number(property.lat), 
+            // lng = Number(property.position.split(',')[1])
+            lng = Number(property.lng)
 
         priceTag.textContent = propertytPrice
 
         
 
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
+        if ( lat != NaN && lng != NaN ) { 
 
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
+                
+            var marker = new AdvancedMarkerElement ({
+                map,
+                position: { lat: lat, lng:lng  },
+                content: priceTag, 
+                // icon: './house(1).png',
+            });
+
             
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
+            marker.addListener('click', function () {
+                let propertyNumber = property.number; 
+                
+                infoCard.style.display = 'flex'; 
+                infoCardH3.textContent = propertyTitle 
+                infoCardH3.href = `/property/${propertyNumber}/details/`; 
+                infoCardP.textContent = propertyDescription 
+                coverImg.src = propertyCoverImg; 
+                mapOptions.style.display = 'none'; 
+                
+            });
     }
 
-
-
-
-    for (let i=0; i<furnished_apartements_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = furnished_apartements_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
-    }
-
-
-
-    for (let i=0; i<warehouses_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = warehouses_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
-    }
-
-
-        
-    for (let i=0; i<buildings_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = buildings_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
-    }
-
-
-    
-    for (let i=0; i<lands_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = lands_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
-    }
-
-
-    
-    for (let i=0; i<resthouses_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = resthouses_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
-    }
-
-
-    
-    for (let i=0; i<shops_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = shops_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
-    }
-
-
-
-    for (let i=0; i<villas_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = villas_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
-    }
-
-
-    
-    for (let i=0; i<apartments_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = apartments_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
-
-
-    }
-
-
-    for (let i=0; i<floors_rent_data.length; i++ ) {
-
-
-        const priceTag = document.createElement("div");
-
-        priceTag.className = "price-tag";
-
-        // get the apartment 
-        let property = floors_rent_data[i], 
-            propertytPrice = property.price, 
-            propertyTitle = property.title, 
-            propertyDescription = property.description, 
-            propertyCoverImg = property.cover_img,
-            lat = Number(property.position.split(',')[0])
-            lng = Number(property.position.split(',')[1])
-
-        priceTag.textContent = propertytPrice
-
-
-
-        var marker = new AdvancedMarkerElement ({
-            map,
-            position: { lat: lat, lng:lng  },
-            content: priceTag, 
-            // icon: './house(1).png',
-        });
-
-        marker.addListener('click', function () {
-            let propertyNumber = property.number; 
-            
-            infoCard.style.display = 'flex'; 
-            infoCardH3.textContent = propertyTitle 
-            infoCardH3.href = `/property/${propertyNumber}/details/`; 
-            infoCardP.textContent = propertyDescription 
-            coverImg.src = propertyCoverImg; 
-            mapOptions.style.display = 'none'; 
-            
-        });
 
 
     }
