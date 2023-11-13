@@ -562,6 +562,10 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
         console.log(limit) ; 
     }
 
+    if (document.querySelector('[name=property_type]').value == 'shop_rent') {
+        limit = 7; 
+    }
+
 
     if (document.querySelector('[name=property_type]').value == "shop_rent" || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'building_rent') { 
         if (interfaceInput.value == "") { 
