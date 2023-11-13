@@ -154,7 +154,7 @@ class Property(models.Model):
     family_part = models.BooleanField(default=False, verbose_name="قسم عوائل")
 
     def __str__(self):
-        return self.title 
+        return str(self.title )
 
     def save(self, *args, **kwargs): 
         if not self.number: 
