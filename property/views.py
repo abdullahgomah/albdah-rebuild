@@ -43,7 +43,10 @@ def add_property(request, property_type):
         else: 
             exclusive = request.POST.get('exclusive') 
         
-        video = request.POST.get('video')
+        video = request.FILES.get('property__video')
+        print('video') 
+        print(video) 
+        print('*' * 30) 
         street_width = request.POST.get('street-width-input') 
         property_age = request.POST.get('extra-property-age-input') 
         if property_age == None or property_age == '' or property_age == 0: 

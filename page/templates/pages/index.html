@@ -170,7 +170,15 @@
                         </p>
                     </div>
                     <div class="property__cover_img">
-                        <img src="{{property.imgs.all.first.img.url}}" alt="">
+                        
+                        {% for img in property.imgs.all %}
+                            
+                            {% if img.main == True %}
+                            <img src="{{img.img.url}}" alt="">
+                            {% endif %}
+                                
+                        {% endfor %}
+                            
                     </div>
                 </div>
                 {% endfor %}
