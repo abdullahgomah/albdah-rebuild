@@ -113,6 +113,11 @@ body {
 }
 
 
+.property_title a {
+    color: var(--primary-color) !important; 
+    text-decoration: none;
+}
+
 /* map options styling */
 
 .map-options { 
