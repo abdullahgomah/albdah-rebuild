@@ -25,7 +25,7 @@ body {
     height: fit-content;
     position: absolute;
     background: #f9f9f9; 
-    bottom: 7rem; 
+    bottom: 3rem; 
     left: 50%; 
     transform: translateX(-50%);
     display: none;
@@ -68,7 +68,7 @@ body {
 }
 
 #map {
-    height: 100vh;
+    height: calc(100vh - 260px)
 }
 
 .btn {
