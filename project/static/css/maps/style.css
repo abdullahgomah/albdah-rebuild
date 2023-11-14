@@ -127,7 +127,7 @@ body {
     background: #f9f9f9; 
     position: absolute;
     /* top: 11rem !important; */
-    top: 6rem !important;
+    top: 4rem !important;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
