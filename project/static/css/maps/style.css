@@ -150,6 +150,9 @@ body {
     .info-card {
         width: 90%; 
     }
+    #map {
+        height: calc(100vh - 50px) !important;
+    }
 }
 
 
