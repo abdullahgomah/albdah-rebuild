@@ -25,7 +25,7 @@ body {
     height: fit-content;
     position: absolute;
     background: #f9f9f9; 
-    bottom: 2rem; 
+    bottom: 7rem; 
     left: 50%; 
     transform: translateX(-50%);
     display: none;
@@ -121,7 +121,8 @@ body {
     height: 60px; 
     background: #f9f9f9; 
     position: absolute;
-    top: 11rem !important;
+    /* top: 11rem !important; */
+    top: 6rem !important;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
