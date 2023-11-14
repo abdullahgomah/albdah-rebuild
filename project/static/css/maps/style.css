@@ -158,6 +158,6 @@ body {
 
 @media screen and (min-width: 1200px) {
     #map {
-        height: calc(100vh - 50px);
+        height: calc(100vh - 100px);
     }
 }
