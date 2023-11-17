@@ -73,6 +73,9 @@
             <img class="popup-content" id="popup-image">
         </div>
 
+
+        <div style="background-color: #fff; padding: 1rem;">
+
         <h3 class="property__cost">
             {{property.price}} ريال / <span id="type">{{property.get_rent_type_display}}</span>
         </h3>
@@ -83,293 +86,618 @@
         </p>
 
 
-        <br>
-
         <div class="property__features">
-            <table>
-                <tr>
-                    <td>
-                        <div>
-
-                            <p>المساحة</p>
-                            <p><span>{{property.space}}</span> م</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>    
-                            <p>عوائل أم عزاب</p>
-                            
-                            {% if property.families == True %}
-                                <p>عوائل</p>
-                            {% else %}
-                                <p>عزاب</p>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                </tr>
+            <div class="features__grid">
                 
-                {% if property.p_type == 'land_rent' or property.p_type == 'land_sale' %}
+                {% if property.p_type == 'furnished_apartment_rent' %}
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-road"></i>
+                        عرض الشارع
+                    </p>
+                    <p>{{property.street_width}} م</p>
+                </div>
+
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>
+                        {{property.space}} م
+                    </p>
+                </div>
                     
-                    
-                <tr>
-                    <td>
-                        <div>
-                            <p>العرض</p>
-                            <p>{{property.width}} م</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>الطول</p>
-                            <p>{{property.length}} م</p>
-                        </div>
-                    </td>
-                </tr>
+
+                <div class="col">
+                    <p>عوائل أم عزاب</p>
+                    <p>
+                        
+                        {% if property.families %}
+                            عوائل
+                        {% else %}
+                            عزاب
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-bed"></i>
+                        الغرف
+                    </p>
+                    <p>{{property.rooms}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-couch"></i>
+                        الصالات
+                    </p>
+                    <p>{{property.lounges}}</p>
+                </div>
+                <div class="col">
+                    <p>الدور</p>
+                    <p>{{property.floor}}</p>
+                </div>
+
+                {% endif %}
+                
+                
+                {% if property.p_type == 'branch_rent' %}
+                <div class="col">
+                    <p>الواجهة</p>
+                    <p>{{property.interface}}</p>
+                </div>
+
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>{{property.space}}</p>
+                </div>
                 {% endif %}
 
-                <tr>
-                    <td>
-                        <div>
-                            <p>عرض الشارع</p>
-                            <p>{{property.street_width}} م</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>مؤثثة</p>
-                            
-                            {% if property.furnished == True %}
-                            <i class="fa-solid fa-check"></i>
-                            {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                            <!-- <p>{{property.furnished}}</p> -->
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>مدخل سيارة</p>
-                            
-                            {% if property.car_entrance == True %}
-                            <i class="fa-solid fa-check"></i>
-                                
-                            {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>سطح خاص</p>
-                            
-                            {% if property.private_surface == True %}
-                            <i class="fa-solid fa-check"></i>
-                            {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>الغرف</p>
-                            <p>{{property.rooms}}</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
+                
+                {% if property.p_type == 'building_rent' %}
+                <div class="col">
+                    <p>الواجهة</p>
+                    <p>{{property.interface}}</p>
+                </div>
+                <div class="col">
+                    <p>الغرض</p>
+                    <p>{{property.purpose}}</p>
+                </div>
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+                <div class="col">
+                    <p>عدد المحلات</p>
+                    <p>{{property.stores_count}}</p>
+                </div>
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>{{property.space}}</p>
+                </div>
+                {% endif %}
 
-                            <p>الصالات</p>
-                            <p>{{property.lounges}}</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
+                
+                {% if property.p_type == 'land_rent' %}
+                <div class="col">
+                    <p>الواجهة</p>
+                    <p>{{property.interface}}</p>
+                </div>
+                <div class="col">
+                    <p>الغرض</p>
+                    <p>{{property.purpose}}</p>
+                </div>
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>{{property.space}}</p>
+                </div>
+                <div class="col">
+                    <p>سعر المتر</p>
+                    <p>1500.50</p>
+                </div>
+                {% endif %}
 
-                            <p>عمر العقار</p>
-                            <p>{{property.property_age}}</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>مطبخ</p>
-                            <p>موجود</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>مصعد</p>
-                            
-                            {% if property.elevator == True %}
-                                <i class="fa-solid fa-check"></i>
-                            {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>مكيف</p>
-                            
-                            {% if property.ac == True %}
-                            <i class="fa-solid fa-check"></i>
-                            {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>رقم الإعلان</p>
-                            <p>{{property.number}}</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>آخر تحديث</p>
-                            <p>قبل دقيقة</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>عدد دورات المياه</p>
-                            <p>{{property.bathroom}}</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>الدور</p>
-                            <p>{{property.floor}}</p>
-                                
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>في فيلا</p>
-                            
-                            {% if property.in_villa == True %}
-                                <i class="fa-solid fa-check"></i>
-                            {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>مدخلين</p>
-                            
-                            {% if property.two_enternace == True %}
-                                <i class="fa-solid fa-check"></i>
-                            {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>مدخل خاص</p>
-                            
-                            {% if property.private_enternace == True %}
-                                <i class="fa-solid fa-check"></i>
-                            {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>ملحق</p>
-                            
-                            {% if property.extenstion == True %}
-                                <i class="fa-solid fa-check"></i>
-                            {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>توفر الماء</p>
-                            
-                            {% if property.water_exist == True %}
-                                <i class="fa-solid fa-check"></i>
-                            {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                    <td>
-                        <div>
-                            <p>توفر الكهرباء</p>
-                            
-                            {% if property.power_exist == True %}
-                            <i class="fa-solid fa-check"></i>
-                            
-                            {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>توفر الصرف</p>
-                            
-                            {% if property.sanitation_exist == True %}
-                            <i class="fa-solid fa-check"></i>
-                            {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {% endif %}
-                                
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <p>المشاهدات</p>
-                            <p>1600</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div>       
-                            <p>رخصة الإعلان</p>
-                            <p>7100019916</p>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                
+                {% if property.p_type == 'commercial_office_rent' %}
+                <div class="col">
+                    <p>الواجهة</p>
+                    <p>{{property.interface}}</p>
+                </div>
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>{{property.space}}</p>
+                </div>
+                <div class="col">
+                    <p>سعر المتر</p>
+                    <p>1500.50</p>
+                </div>
+                {% endif %}
+
+                
+                {% if property.p_type == 'resthouse_rent' %}
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-couch"></i>
+                        الصالات
+                    </p>
+                    <p>{{property.lounges}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-bed"></i>
+                        الغرف
+                    </p>
+                    <p>{{property.rooms}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        عدد دورات المياه
+                    </p>
+                    <p>
+                        {{property.bathroom}}
+                    </p>
+                </div>
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>{{property.space}}</p>
+                </div>
+                {% endif %}
+
+                
+                {% if property.p_type == 'shop_rent' %}
+                <div class="col">
+                    <p>الواجهة</p>
+                    <p>{{property.interface}}</p>
+                </div>
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>{{property.space}}</p>
+                </div>
+                {% endif %}
+
+                
+                {% if property.p_type == 'villa_rent' %}
+                <div class="col">
+                    <p>الواجهة</p>
+                    <p>{{property.interface}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-bed"></i>
+                        الغرف
+                    </p>
+                    <p>{{property.rooms}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-couch"></i>
+                        الصالات
+                    </p>
+                    <p>{{property.lounges}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        عدد دورات المياه
+                    </p>
+                    <p>
+                        {{property.bathroom}}
+                    </p>
+                </div>
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>{{property.space}}</p>
+                </div>
+                {% endif %}
+
+                
+                {% if property.p_type == 'floor_rent' %}
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+                <div class="col">
+                    <p>الواجهة</p>
+                    <p>{{property.interface}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-bed"></i>
+                        الغرف
+                    </p>
+                    <p>{{property.rooms}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-couch"></i>
+                        الصالات
+                    </p>
+                    <p>{{property.lounges}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        عدد دورات المياه
+                    </p>
+                    <p>
+                        {{property.bathroom}}
+                    </p>
+                </div>
+                <div class="col">
+                    <p>الدور</p>
+                    <p>{{property.floor}}</p>
+                </div>
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>
+                        {{property.space}} م
+                    </p>
+                </div>
+
+                {% endif %}
+                
+                
+                {% if property.p_type == 'apartment_rent' %}
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>
+                        {{property.space}} م
+                    </p>
+                </div>
+                <div class="col">
+                    <p>عوائل أم عزاب</p>
+                    <p>
+                        
+                        {% if property.families %}
+                            عوائل
+                        {% else %}
+                            عزاب
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-bed"></i>
+                        الغرف
+                    </p>
+                    <p>{{property.rooms}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-couch"></i>
+                        الصالات
+                    </p>
+                    <p>{{property.lounges}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        عدد دورات المياه
+                    </p>
+                    <p>
+                        {{property.bathroom}}
+                    </p>
+                </div>
+                <div class="col">
+                    <p>الدور</p>
+                    <p>{{property.floor}}</p>
+                </div>
+                {% endif %}
+
+                
+                {% if property.p_type == 'chalet_rent' %}
+                <div class="col">
+                    <p>عرض الشارع</p>
+                    <p>{{property.street_width}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-couch"></i>
+                        الصالات
+                    </p>
+                    <p>{{property.lounges}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        <i class="fa-solid fa-bed"></i>
+                        الغرف
+                    </p>
+                    <p>{{property.rooms}}</p>
+                </div>
+                <div class="col">
+                    <p>
+                        عدد دورات المياه
+                    </p>
+                    <p>
+                        {{property.bathroom}}
+                    </p>
+                </div>
+                <div class="col">
+                    <p>المساحة</p>
+                    <p>
+                        {{property.space}} م
+                    </p>
+                </div>
+                {% endif %}
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                
+                {% if property.furnished == True %}
+                    <div class="col">
+                        <p>
+                            مؤثثة
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+                
+                {% if property.kitchen == True %}
+                    <div class="col">
+                        <p>
+                            مطبخ
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+                
+                {% if property.extenstion == True %}
+                    <div class="col">
+                        <p>ملحق</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                
+                {% if property.car_entrance == True %}
+                    <div class="col">
+                        <p>مدخل سيارة</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                
+                {% if property.elevator == True %}
+                    <div class="col">
+                        <p>مصعد</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                
+                {% if property.ac == True %}
+                    <div class="col">
+                        <p>مكيف</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+                    
+                
+                {% if property.water_exist %}
+                    <div class="col">
+                        <p>توفر الماء</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                
+                {% if property.power_exist %}
+                    <div class="col">
+                        <p>توفر الكهرباء</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+
+                {% if property.sanitation_exist %}
+                    <div class="col">
+                        <p>
+                            توفر الصرف
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+                    
+                {% if property.private_surface %}
+                    <div class="col">
+                        <p>
+                            سطح خاص
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+                    
+                {% if property.in_villa %}
+                    <div class="col">
+                        <p>في فيلا</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+                    
+                {% if property.two_enternace %}
+                    <div class="col">
+                        <p>مدخلين</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.private_enternace %}
+                    <div class="col">
+                        <p>مدخل خاص</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.driver_room %}
+                    <div class="col">
+                        <p>
+                            غرفة سائق
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+
+                {% if property.maid_room %}
+                    <div class="col">
+                        <p>غرفة خادمة</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+
+                {% if property.duplex %}
+                    <div class="col">
+                        <p>دوبلكس</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.basement %}
+                    <div class="col">
+                        <p>قبو</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.yard %}
+                    <div class="col">
+                        <p>حوش</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.hair_tent_house %}
+                    <div class="col">
+                        <p>بيت شعر</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.pool %}
+                    <div class="col">
+                        <p>مسبح</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.football_field %}
+                    <div class="col">
+                        <p>ملعب كرة قدم</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.volly_field %}
+                    <div class="col">
+                        <p>ملعب كرة طائرة</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+
+                {% if property.amusement %}
+                    <div class="col">
+                        <p>ملاهي</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+
+                {% if property.family_part %}
+                    <div class="col">
+                        <p>قسم عوائل</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+
+                    
+                    
+                    
+                    
+            </div>
+        </div>
+
         </div>
 
         <div class="property__video">
