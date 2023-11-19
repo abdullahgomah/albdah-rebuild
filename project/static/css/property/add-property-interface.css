@@ -26,13 +26,15 @@ section.content {
 
 .wrapper {
     background: #f9f9f9;
-    border: 1px solid #1e1e1e20; 
+    /* border: 1px solid #1e1e1e20;  */
+    border: 1px solid #1e295750; 
     border-radius: 5px ;
     padding: 1rem;
 }
 
 .wrpper__heading {
-    border: 1px solid #1e1e1e20; 
+    /* border: 1px solid #1e1e1e20;  */
+    border: 1px solid #1e295750; 
 }
 
 .wrpper__heading .grid {
