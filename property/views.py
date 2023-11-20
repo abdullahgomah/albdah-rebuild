@@ -3,6 +3,8 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from .models import * 
 from accounts.models import Favourite
+import uuid 
+import os 
 
 
 # Create your views here.
@@ -44,9 +46,16 @@ def add_property(request, property_type):
             exclusive = request.POST.get('exclusive') 
         
         video = request.FILES.get('property__video')
-        print('video') 
-        print(video) 
-        print('*' * 30) 
+        unique_filename = str(uuid.uuid4()) 
+        _, file_extension = os.path.splitext(video.name)
+        new_filename = f"{unique_filename}{file_extension}"
+
+
+        with open(os.path.join('media', new_filename), 'wb+') as destination:
+            for chunk in video.chunks():
+                destination.write(chunk)
+
+
         street_width = request.POST.get('street-width-input') 
         property_age = request.POST.get('extra-property-age-input') 
         if property_age == None or property_age == '' or property_age == 0: 
@@ -129,7 +138,7 @@ def add_property(request, property_type):
                 space = space, 
                 advertiser_relation= advertiser_relation, 
                 exclusive = exclusive, 
-                video = video, 
+                video = new_filename, 
                 # interface= interface, 
                 # stores_count = stores_count, 
                 # apartments_count = apartments_count, 
