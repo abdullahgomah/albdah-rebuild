@@ -47,6 +47,8 @@ def add_property(request, property_type):
         
         
         video = request.FILES.get('property__video')
+        new_filename = None 
+        
         if video != None: 
 
             unique_filename = str(uuid.uuid4()) 
