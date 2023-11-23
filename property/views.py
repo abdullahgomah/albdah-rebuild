@@ -45,15 +45,19 @@ def add_property(request, property_type):
         else: 
             exclusive = request.POST.get('exclusive') 
         
+        
         video = request.FILES.get('property__video')
-        unique_filename = str(uuid.uuid4()) 
-        _, file_extension = os.path.splitext(video.name)
-        new_filename = f"{unique_filename}{file_extension}"
+        if video != None: 
+
+            unique_filename = str(uuid.uuid4()) 
+            _, file_extension = os.path.splitext(video.name)
+            new_filename = f"{unique_filename}{file_extension}"
+        
 
 
-        with open(os.path.join('media', new_filename), 'wb+') as destination:
-            for chunk in video.chunks():
-                destination.write(chunk)
+            with open(os.path.join('media', new_filename), 'wb+') as destination:
+                for chunk in video.chunks():
+                    destination.write(chunk)
 
 
         street_width = request.POST.get('street-width-input') 
