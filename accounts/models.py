@@ -34,4 +34,4 @@ class Favourite(models.Model):
 
 
     def __str__(self): 
-        return self.property
+        return  str(self.property) 
