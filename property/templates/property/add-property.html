@@ -142,10 +142,19 @@
                 <input type="text" name="space-input" placeholder="الرجاء كتابة المساحة...">
             </div>
 
+
+            
+            {% if property_type == 'land_rent' %}
+                
+                
+
             <div class="input">
                 <p class="input-label">سعر المتر <span class="input-label-highlight">(ريال سعودي)</span></p>
                 <input type="text" name="unit-price-input" placeholder="">
             </div>
+
+            {% endif %}
+
 
             
 
