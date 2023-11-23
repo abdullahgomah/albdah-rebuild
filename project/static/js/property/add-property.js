@@ -132,7 +132,7 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
     console.log(document.querySelector('[name=property_type]'));
     
     if (document.querySelector("[name=property_type]").value == 'land_rent') {
-        limit = 6; 
+        limit = 7; 
 
 
 
