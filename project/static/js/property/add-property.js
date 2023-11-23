@@ -124,6 +124,7 @@ interfaceOptions.forEach((btn) => {
     })
 })
 
+
 let propertyInfoNextPrev = document.querySelector('.property__info__next-prev'); 
 propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => {
 
@@ -132,6 +133,9 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
     
     if (document.querySelector("[name=property_type]").value == 'land_rent') {
         limit = 6; 
+
+
+
     }
 
     // check form validation 
@@ -723,3 +727,31 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
             inputElement.style.border = "1px solid #00000040"
 
 */
+
+let calc_meter_price_input_value = function () {
+    let input = document.querySelector('[name=unit-price-input]');
+    let priceInputValue = Number(document.querySelector('[name=price-input]').value); 
+    let spaceInputValue = Number(document.querySelector('[name=space-input]').value); 
+
+    input.value = priceInputValue / spaceInputValue; 
+
+}
+
+
+if (document.querySelector("[name=property_type]").value == 'land_rent') {
+
+    let priceInput = document.querySelector('[name=price-input]'); 
+    let spaceInput = document.querySelector('[name=space-input]');
+    
+    console.log('land_rent');
+    
+    priceInput.addEventListener('input', () => {
+        calc_meter_price_input_value(); 
+    })
+    
+    spaceInput.addEventListener('input', () => {
+        calc_meter_price_input_value(); 
+    })
+
+} 
+
