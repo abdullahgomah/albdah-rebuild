@@ -84,6 +84,9 @@ def add_property(request, property_type):
         if lounges == None or lounges == "" or lounges == 0: 
             lounges = request.POST.get('lounges-input') 
         
+        print('lounges')
+        print(lounges) 
+        print('#'* 30)
 
         bathrooms = request.POST.get('extra-bathroom-input') 
         if bathrooms == None or bathrooms == '' or bathrooms == 0 : 
@@ -224,6 +227,7 @@ def add_property(request, property_type):
         )
 
         elif property_type == 'villa_rent': 
+            # interface = request.POST.get('interface-input') 
             floor = request.POST.get('extra-floor-input') 
             if floor == None or floor == '' or floor == 0: 
                 floor = request.POST.get('floor-input') 
