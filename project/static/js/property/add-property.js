@@ -640,6 +640,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
     if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'building_rent') {
         if (document.querySelector("[name=property_type]").value != 'building_rent') {
+            let floorInput = document.querySelector('[name=floor-input]'); 
             //1 
             if (roomInput.value == "") {
                 roomInput.parentElement.style.border = "1px solid #dc3546"
@@ -664,20 +665,19 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
                 counter = counter+1 ;
             }
 
-            //4
-            // if (floorInput.value == "") {
-            //     floorInput.parentElement.style.border = "1px solid #dc3546"
-            // } else { 
-            //     floorInput.parentElement.style.border = "1px solid #00000040"
-            //     counter = counter+1 ;
-            // }
+            // 4
+            if (document.querySelector('[name=property_type]').value != 'chalet_rent') { 
+                if (floorInput.value == "") {
+                    floorInput.parentElement.style.border = "1px solid #dc3546"
+                } else { 
+                    floorInput.parentElement.style.border = "1px solid #00000040"
+                    counter = counter+1 ;
+                }
+            }
+            
+
         }
     
-
-
-
-
-
 
 
 

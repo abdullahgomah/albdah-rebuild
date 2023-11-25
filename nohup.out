@@ -4005,3 +4005,14 @@ shop_rent
 shop_rent
 building_rent
 Watching for file changes with StatReloader
+[25/Nov/2023 18:26:05] "GET / HTTP/1.1" 200 11538
+/albdah-rebuild/albdah-rebuild/property/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 25, 2023 - 18:24:14
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
