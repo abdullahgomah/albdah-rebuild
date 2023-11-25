@@ -617,6 +617,7 @@ def add_property(request, property_type):
             amusement = request.POST.get('amusement') # 6
             family_part = request.POST.get('family_part') # 7
             kitchen = request.POST.get('kitchen') # 8 
+            furnished = request.POST.get('furnished') # 9
 
 
             features.append(football_field)
@@ -625,6 +626,7 @@ def add_property(request, property_type):
             features.append(amusement)
             features.append(family_part)
             features.append(kitchen)
+            features.append(furnished)
 
             for i in range(len(features)) : 
                 if features[i] == 'on': 
@@ -661,6 +663,7 @@ def add_property(request, property_type):
                 amusement = features[6], 
                 family_part = features[7], 
                 kitchen = features[8], 
+                furnished = features[9], 
             )
 
 
