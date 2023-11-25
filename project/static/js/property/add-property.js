@@ -467,13 +467,16 @@ if (document.querySelector('[name=property_type]').value != 'land_rent' && docum
     })
 
 
-    let floorNumberGrid = document.querySelector('.floor-number'); 
-    floorNumberGrid.querySelectorAll('.item').forEach((item) => {
-        item.addEventListener('click', () => {
-            item.parentElement.querySelector("[name=floor-input]").value = item.textContent; 
-            // console.log(item.parentElement.querySelector('[name=floor-input]').value)
+    if (document.querySelector('[name=property_type]').value != 'chalet_rent') {
+        let floorNumberGrid = document.querySelector('.floor-number'); 
+        floorNumberGrid.querySelectorAll('.item').forEach((item) => {
+            item.addEventListener('click', () => {
+                item.parentElement.querySelector("[name=floor-input]").value = item.textContent; 
+                // console.log(item.parentElement.querySelector('[name=floor-input]').value)
+            })
         })
-    })
+    }
+
 
 
 
@@ -527,7 +530,12 @@ rentTypeGrid.querySelectorAll('.item').forEach((item) => {
 let roomInput = document.querySelector('[name=room-input]'); 
 let loungesInput = document.querySelector("[name=lounges-input]")
 let bathroomInput = document.querySelector("[name=bathroom-input]")
-let floorInput = document.querySelector('[name=floor-input]'); 
+
+if (document.querySelector("[name=property_type]").textContent =! "chalet_rent") {
+    let floorInput = document.querySelector('[name=floor-input]'); 
+} 
+
+
 let propertyAgeInput = document.querySelector('[name=property-age-input]'); 
 
 
@@ -560,6 +568,11 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
     let counter = 0 ; 
     let limit = 6; 
+
+    if (document.querySelector('[name=property_type]').value == 'chalet_rent') { 
+        limit = 5; 
+        console.log(limit) ; 
+    }
 
     if (document.querySelector('[name=property_type]').value == 'land_rent') { 
         limit = 3; 
@@ -652,12 +665,12 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
             }
 
             //4
-            if (floorInput.value == "") {
-                floorInput.parentElement.style.border = "1px solid #dc3546"
-            } else { 
-                floorInput.parentElement.style.border = "1px solid #00000040"
-                counter = counter+1 ;
-            }
+            // if (floorInput.value == "") {
+            //     floorInput.parentElement.style.border = "1px solid #dc3546"
+            // } else { 
+            //     floorInput.parentElement.style.border = "1px solid #00000040"
+            //     counter = counter+1 ;
+            // }
         }
     
 
