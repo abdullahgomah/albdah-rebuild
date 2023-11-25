@@ -506,7 +506,7 @@ def add_property(request, property_type):
                 street_width = street_width, 
                 property_age = property_age, 
                 rent_type = rent_type ,
-                # purpose = purpose, 
+                purpose = purpose, 
                 description = description, 
                 water_exist = features[0], 
                 power_exist = features[1], 
