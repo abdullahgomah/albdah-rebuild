@@ -112,6 +112,8 @@ body {
     /* border-bottom: 1px solid var(--primary-color); */
 }
 
+
+
 .features__grid .col:nth-child(odd) { 
     border-left: 1px solid #e6e6e6;
 }
@@ -123,6 +125,11 @@ body {
     justify-content: flex-start;
     align-items: center;
     column-gap: 1rem !important;
+}
+
+.features__grid .col p:first-child img {
+    /* height: fit-content !important; */
+    height: 30px !important;
 }
 
 .features__grid .col p:last-child {

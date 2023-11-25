@@ -142,11 +142,13 @@
                 
                 {% if property.p_type == 'branch_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
                     <p>{{property.interface}}</p>
                 </div>
 
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
@@ -160,14 +162,16 @@
                 
                 {% if property.p_type == 'building_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
                     <p>{{property.interface}}</p>
                 </div>
                 <div class="col  ">
                     <p>الغرض</p>
-                    <p>{{property.purpose}}</p>
+                    <p>{{ property.purpose }}</p>
                 </div>
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
@@ -184,14 +188,17 @@
                 
                 {% if property.p_type == 'land_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
                     <p>{{property.interface}}</p>
                 </div>
                 <div class="col  ">
                     <p>الغرض</p>
-                    <p>{{property.purpose}}</p>
+                    <p>{{ property.purpose }}</p>
                 </div>
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
+
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
@@ -208,10 +215,12 @@
                 
                 {% if property.p_type == 'commercial_office_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
                     <p>{{property.interface}}</p>
                 </div>
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
@@ -228,6 +237,8 @@
                 
                 {% if property.p_type == 'resthouse_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
+
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
@@ -247,6 +258,7 @@
                 </div>
                 <div class="col  ">
                     <p>
+                        <i class="fa-solid fa-bath"></i>
                         عدد دورات المياه
                     </p>
                     <p>
@@ -262,10 +274,13 @@
                 
                 {% if property.p_type == 'shop_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
                     <p>{{property.interface}}</p>
                 </div>
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
+
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
@@ -278,6 +293,7 @@
                 
                 {% if property.p_type == 'villa_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
                     <p>{{property.interface}}</p>
                 </div>
@@ -297,6 +313,7 @@
                 </div>
                 <div class="col  ">
                     <p>
+                        <i class="fa-solid fa-bath"></i>
                         عدد دورات المياه
                     </p>
                     <p>
@@ -304,6 +321,8 @@
                     </p>
                 </div>
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
+
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
@@ -316,10 +335,13 @@
                 
                 {% if property.p_type == 'floor_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
+
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
                 <div class="col  ">
+                    <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
                     <p>{{property.interface}}</p>
                 </div>
@@ -339,6 +361,7 @@
                 </div>
                 <div class="col  ">
                     <p>
+                        <i class="fa-solid fa-bath"></i>
                         عدد دورات المياه
                     </p>
                     <p>
@@ -361,6 +384,8 @@
                 
                 {% if property.p_type == 'apartment_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
+
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
@@ -397,6 +422,7 @@
                 </div>
                 <div class="col  ">
                     <p>
+                        <i class="fa-solid fa-bath"></i>
                         عدد دورات المياه
                     </p>
                     <p>
@@ -412,6 +438,8 @@
                 
                 {% if property.p_type == 'chalet_rent' %}
                 <div class="col  ">
+                    <i class="fa-solid fa-road"></i>
+
                     <p>عرض الشارع</p>
                     <p>{{property.street_width}}</p>
                 </div>
@@ -431,6 +459,7 @@
                 </div>
                 <div class="col  ">
                     <p>
+                        <i class="fa-solid fa-bath"></i>
                         عدد دورات المياه
                     </p>
                     <p>
@@ -489,7 +518,10 @@
                 
                 {% if property.car_entrance == True %}
                     <div class="col  ">
-                        <p>مدخل سيارة</p>
+                        <p>
+                            <img src="{% static 'imgs/مدخل_سيارة-removebg-preview.png' %}" alt="">
+                            مدخل سيارة
+                        </p>
                         <p>
                             <i class="fa-solid fa-circle-check"></i>
                         </p>
@@ -499,7 +531,10 @@
                 
                 {% if property.elevator == True %}
                     <div class="col  ">
-                        <p>مصعد</p>
+                        <p>
+                            <img src="{% static 'imgs/مصعد-removebg-preview.png' %}" alt="">
+                            مصعد
+                        </p>
                         <p>
                             <i class="fa-solid fa-circle-check"></i>
                         </p>
@@ -509,7 +544,10 @@
                 
                 {% if property.ac == True %}
                     <div class="col  ">
-                        <p>مكيف</p>
+                        <p>
+                            <img src="{% static 'imgs/مكيف-removebg-preview.png' %}" alt="">
+                            مكيف
+                        </p>
                         <p>
                             <i class="fa-solid fa-circle-check"></i>
                         </p>
