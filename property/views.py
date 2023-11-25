@@ -92,6 +92,10 @@ def add_property(request, property_type):
         if bathrooms == None or bathrooms == '' or bathrooms == 0 : 
             bathrooms = request.POST.get('bathroom-input') 
 
+                
+        print('bathrooms')
+        print(bathrooms) 
+        print('#'* 30)
 
         features = [
             water_exist,
@@ -633,7 +637,10 @@ def add_property(request, property_type):
                 lat = lat, 
                 lng = lng  , 
                 p_type = property_type, 
+                bathroom = bathrooms, 
                 neighborhood = neighborhood, 
+                lounges = lounges, 
+                rooms = rooms, 
                 city = city, 
                 price = price, 
                 space = space, 

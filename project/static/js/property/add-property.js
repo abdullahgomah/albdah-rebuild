@@ -666,13 +666,16 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
             }
 
             // 4
-            
-            if (floorInput.value == "") {
-                floorInput.parentElement.style.border = "1px solid #dc3546"
-            } else { 
-                floorInput.parentElement.style.border = "1px solid #00000040"
-                counter = counter+1 ;
+            if (document.querySelector('[name=property_type]').value != 'chalet_rent') { 
+                if (floorInput.value == "") {
+                    floorInput.parentElement.style.border = "1px solid #dc3546"
+                } else { 
+                    floorInput.parentElement.style.border = "1px solid #00000040"
+                    counter = counter+1 ;
+                }
             }
+            
+
         }
     
 
