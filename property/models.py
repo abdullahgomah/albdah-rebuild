@@ -1,6 +1,7 @@
 from django.db import models
 import random 
 import string 
+from markdownx.models import MarkdownxField
 
 
 # Create your models here.
@@ -108,6 +109,7 @@ class Property(models.Model):
 
 
     description = models.TextField(verbose_name="وصف العقار", default="   ", null=True, blank=True) 
+    description = MarkdownxField(null=True, blank=True)
 
     furnished = models.BooleanField(default=False, verbose_name="مؤثثة") 
 

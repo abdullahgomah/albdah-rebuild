@@ -7,6 +7,7 @@ from django.conf import settings
 from accounts.views import custom_login, signup, authenticate_page, send_otp
 
 urlpatterns = [
+    path('markdownx/', include('markdownx.urls')),
     path('login/', custom_login, name='custom-login'), 
     path('signup/', signup, name='signup'),
     path('auth/', authenticate_page, name='authenticate'), 

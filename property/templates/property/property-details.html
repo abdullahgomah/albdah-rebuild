@@ -81,8 +81,9 @@
         </h3>
 
         
+        <input type="hidden" name="property_details_markdown" value="{{property.description|safe}}">
         <p class="property__details">
-            {{property.description|safe}}
+            
         </p>
 
 
@@ -751,6 +752,8 @@
     </div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/marked@2.0.3/marked.min.js"></script>
+
 
 
 <script>
@@ -772,6 +775,12 @@
         document.body.removeChild(tempInput);
 
     })
+
+
+    let property_details_markdown_value = document.querySelector('[name=property_details_markdown]')
+    let property__details_p = document.querySelector('.property__details'); 
+    property__details_p.innerHTML= marked(property_details_markdown_value.value)
+
 </script>
 
 <script src="{% static 'js/pages/app.js' %}"></script>

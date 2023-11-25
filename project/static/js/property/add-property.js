@@ -755,3 +755,8 @@ if (document.querySelector("[name=property_type]").value == 'land_rent') {
 
 } 
 
+document.querySelector('form').onsubmit = function () { 
+    // var description = `{% autoescape off %}{{ property.description }}{% endautoescape %}`; 
+    var description = document.querySelector('[name=property__description__input]').value; 
+    document.querySelector('[name=property__description__input]').value = marked(description); 
+}

@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['198.199.90.212', '*']
 # Application definition
 
 INSTALLED_APPS = [
+    'markdownx',
     'accounts', 
     'codes',
     'django.contrib.admin',
