@@ -164,7 +164,7 @@ main::before {
     top: 0;
     left: 0; 
     background: var(--primary-color); 
-    opacity: .9;
+    /* opacity: .9; */
     z-index: 1;
 }
 
