@@ -176,6 +176,10 @@ body {
     width: 90% !important;
 }
 
+.popup-swiper img {
+    height: 90% !important;
+}
+
 .gallery .swiper {
     margin-top: 1rem ;
     width: 100%; 
