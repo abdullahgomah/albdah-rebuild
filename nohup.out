@@ -5757,3 +5757,12 @@ Not Found: /global-protect/login.esp
 [26/Nov/2023 18:21:02] "GET /global-protect/login.esp HTTP/1.1" 404 3970
 [26/Nov/2023 18:22:38] "GET / HTTP/1.1" 200 12950
 [26/Nov/2023 18:23:18] "HEAD / HTTP/1.1" 200 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 26, 2023 - 17:03:25
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
