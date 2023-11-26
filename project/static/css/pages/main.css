@@ -255,7 +255,7 @@ section.property_list .grid .item {
     max-width: 900px !important;
     margin: 0 auto;
     /* background: white; */
-    padding: 1rem 0 ;
+    /* padding: 1rem 0 ; */
     background: #e8eaec; 
     border-radius: 5px;
 }
@@ -540,8 +540,8 @@ footer .copyrights {
     }
 }
 
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
     .container {
         width: 1400px;
     }
-}
+} */
