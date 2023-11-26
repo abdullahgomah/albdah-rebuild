@@ -252,7 +252,7 @@ section.property_list .grid .item {
     align-items: center;
     /* min-height: 250px !important; */
     height: 150px; 
-    max-width: 1100px;
+    max-width: 900px !important;
     margin: 0 auto;
     /* background: white; */
 
