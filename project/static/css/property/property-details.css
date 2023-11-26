@@ -170,6 +170,12 @@ body {
     border-radius: 3px;
     z-index: 100000;
 }
+
+
+.popup-swiper {
+    width: 90% !important;
+}
+
 .gallery .swiper {
     margin-top: 1rem ;
     width: 100%; 

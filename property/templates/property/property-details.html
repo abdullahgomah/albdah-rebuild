@@ -70,7 +70,30 @@
 
         <div class="popup">
             <span class="close-button">&times;</span>
-            <img class="popup-content" id="popup-image">
+            <!-- <img class="popup-content" id="popup-image"> -->
+            <div class="swiper mySwiper popup-swiper">
+
+                <div class="swiper-wrapper">
+                        
+                    {% for img in property.imgs.all %}
+                        
+                        
+                    <div class="swiper-slide">
+                        <img src="{{img.img.url}}" class="property__img__item" alt="">
+                    </div>
+                    {% endfor %}
+
+                    <!-- <div class="swiper-slide">
+                        <img src="./assets/imgs/property_img_2.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/imgs/property_img_3.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/imgs/property_img_4.webp" alt="">
+                    </div> -->
+                </div>
+            </div>
         </div>
 
 
@@ -825,13 +848,13 @@
 <script>
 
     const popup = document.querySelector(".popup");
-    const popupImage = document.querySelector("#popup-image");
+    // const popupImage = document.querySelector("#popup-image");
     const closeBtn = document.querySelector(".close-button");
     const images = document.querySelectorAll(".popup-image");
 
     function openPopup(imgSrc) { 
         popup.style.display = 'block'; 
-        popupImage.src = imgSrc 
+        // popupImage.src = imgSrc 
     }
 
     function closePopup() {
