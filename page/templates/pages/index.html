@@ -174,7 +174,7 @@
                         {% for img in property.imgs.all %}
                             
                             {% if img.main == True %}
-                            <img src="{{img.img.url}}" alt="">
+                            <img src="{% if img.main == True %}{{img.img.url}}{% else %}{{property.imgs.all.first.img.url}}{% endif %}" alt="">
                             {% endif %}
                                 
                         {% endfor %}
