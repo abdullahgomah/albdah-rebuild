@@ -5650,3 +5650,110 @@ Not Found: /.env
 [26/Nov/2023 17:00:21] "GET /.env HTTP/1.1" 404 3906
 Forbidden (CSRF cookie not set.): /
 [26/Nov/2023 17:00:21] "POST / HTTP/1.1" 403 3071
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 26, 2023 - 15:42:59
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[26/Nov/2023 17:11:38] "GET / HTTP/1.1" 200 12966
+[26/Nov/2023 17:11:38] "GET /static/css/pages/main.css HTTP/1.1" 200 8907
+[26/Nov/2023 17:11:38] "GET /static/css/normalize.css HTTP/1.1" 304 0
+[26/Nov/2023 17:11:38] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[26/Nov/2023 17:11:39] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[26/Nov/2023 17:11:39] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[26/Nov/2023 17:11:39] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[26/Nov/2023 17:11:39] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[26/Nov/2023 17:11:39] "GET / HTTP/1.1" 200 12966
+[26/Nov/2023 17:11:40] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[26/Nov/2023 17:11:42] "GET /property/69AqZ/details/ HTTP/1.1" 200 18343
+[26/Nov/2023 17:11:42] "GET /static/css/property/property-details.css HTTP/1.1" 200 5484
+[26/Nov/2023 17:11:43] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[26/Nov/2023 17:11:43] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_2.jpeg HTTP/1.1" 200 840710
+[26/Nov/2023 17:11:43] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_2.jpeg HTTP/1.1" 200 1035980
+[26/Nov/2023 17:11:43] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_1.jpeg HTTP/1.1" 200 943037
+[26/Nov/2023 17:11:43] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_3.jpeg HTTP/1.1" 200 1053922
+[26/Nov/2023 17:11:43] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM.jpeg HTTP/1.1" 200 1038412
+[26/Nov/2023 17:11:44] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_1.jpeg HTTP/1.1" 200 903749
+[26/Nov/2023 17:11:45] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM.jpeg HTTP/1.1" 200 1046435
+[26/Nov/2023 17:11:46] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_2.jpeg HTTP/1.1" 200 1050159
+[26/Nov/2023 17:11:46] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_1.jpeg HTTP/1.1" 200 837841
+Not Found: /property/69AqZ/details/assets/imgs/logo.jpeg
+[26/Nov/2023 17:11:47] "GET /property/69AqZ/details/assets/imgs/logo.jpeg HTTP/1.1" 404 4958
+[26/Nov/2023 17:11:47] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM.jpeg HTTP/1.1" 200 728336
+Not Found: /property/69AqZ/details/assets/imgs/profile-pic.svg
+[26/Nov/2023 17:11:47] "GET /property/69AqZ/details/assets/imgs/profile-pic.svg HTTP/1.1" 404 4976
+Not Found: /favicon.ico
+[26/Nov/2023 17:11:50] "GET /favicon.ico HTTP/1.1" 404 3926
+[26/Nov/2023 17:11:53] "GET / HTTP/1.1" 200 12966
+[26/Nov/2023 17:11:54] "GET / HTTP/1.1" 200 12966
+[26/Nov/2023 17:12:12] "GET /property/69AqZ/details/ HTTP/1.1" 200 18343
+Not Found: /property/69AqZ/details/assets/imgs/profile-pic.svg
+[26/Nov/2023 17:12:12] "GET /property/69AqZ/details/assets/imgs/profile-pic.svg HTTP/1.1" 404 4976
+Not Found: /favicon.ico
+[26/Nov/2023 17:12:13] "GET /favicon.ico HTTP/1.1" 404 3926
+Not Found: /favicon.ico
+[26/Nov/2023 17:12:14] "GET /favicon.ico HTTP/1.1" 404 3926
+Not Found: /favicon.ico
+[26/Nov/2023 17:12:15] "GET /favicon.ico HTTP/1.1" 404 3926
+[26/Nov/2023 17:12:16] "GET /property/69AqZ/details/ HTTP/1.1" 200 18343
+Not Found: /property/69AqZ/details/assets/imgs/profile-pic.svg
+[26/Nov/2023 17:12:16] "GET /property/69AqZ/details/assets/imgs/profile-pic.svg HTTP/1.1" 404 4976
+[26/Nov/2023 17:12:35] "GET /media/5ad31286-dc05-4f4f-852a-1695d1d01bdd.MP4 HTTP/1.1" 200 76369925
+[26/Nov/2023 17:12:37,236] - Broken pipe from ('127.0.0.1', 33168)
+[26/Nov/2023 17:12:37] "GET /property/69AqZ/details/ HTTP/1.1" 200 18343
+Not Found: /property/69AqZ/details/assets/imgs/profile-pic.svg
+[26/Nov/2023 17:12:37] "GET /property/69AqZ/details/assets/imgs/profile-pic.svg HTTP/1.1" 404 4976
+Not Found: /property/69AqZ/details/assets/imgs/logo.jpeg
+[26/Nov/2023 17:12:38] "GET /property/69AqZ/details/assets/imgs/logo.jpeg HTTP/1.1" 404 4958
+Not Found: /.env
+[26/Nov/2023 17:13:30] "GET /.env HTTP/1.1" 404 3906
+Forbidden (CSRF cookie not set.): /
+[26/Nov/2023 17:13:30] "POST / HTTP/1.1" 403 3071
+[26/Nov/2023 17:14:38] "GET / HTTP/1.1" 200 12950
+Not Found: /logon/LogonPoint/index.html
+[26/Nov/2023 17:14:44] "GET /logon/LogonPoint/index.html HTTP/1.1" 404 3975
+Not Found: /logon/LogonPoint/custom.html
+[26/Nov/2023 17:14:44] "GET /logon/LogonPoint/custom.html HTTP/1.1" 404 3978
+Not Found: /robots.txt
+[26/Nov/2023 17:30:42] "GET /robots.txt HTTP/1.1" 404 3919
+[26/Nov/2023 17:30:42] "GET / HTTP/1.1" 200 12950
+[26/Nov/2023 17:39:11] "GET / HTTP/1.1" 200 12950
+[26/Nov/2023 17:42:35] "GET / HTTP/1.1" 200 12950
+[26/Nov/2023 17:42:35] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[26/Nov/2023 17:42:35] "GET /static/css/pages/main.css HTTP/1.1" 200 8907
+[26/Nov/2023 17:42:35] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[26/Nov/2023 17:42:35] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[26/Nov/2023 17:42:35] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[26/Nov/2023 17:42:36] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[26/Nov/2023 17:42:36] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[26/Nov/2023 17:42:49] "GET / HTTP/1.1" 200 12950
+[26/Nov/2023 17:42:50] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[26/Nov/2023 17:42:53] "GET / HTTP/1.1" 200 12950
+[26/Nov/2023 17:42:53] "GET /static/css/pages/main.css HTTP/1.1" 200 8907
+[26/Nov/2023 17:42:53] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[26/Nov/2023 17:42:53] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[26/Nov/2023 17:42:53] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[26/Nov/2023 17:42:53] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[26/Nov/2023 17:42:53] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[26/Nov/2023 17:42:53] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[26/Nov/2023 17:48:28] "GET / HTTP/1.1" 200 12950
+[26/Nov/2023 18:04:45] "GET / HTTP/1.1" 200 12950
+[26/Nov/2023 18:04:48] "GET / HTTP/1.1" 200 12950
+Not Found: /assets/imgs/logo.jpeg
+[26/Nov/2023 18:04:48] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 3957
+Not Found: /favicon.ico
+[26/Nov/2023 18:04:48] "GET /favicon.ico HTTP/1.1" 404 3927
+[26/Nov/2023 18:12:25] "GET / HTTP/1.1" 200 12950
+[26/Nov/2023 18:20:53] "GET / HTTP/1.1" 200 12950
+Not Found: /+CSCOE+/logon.html
+[26/Nov/2023 18:20:55] "GET /+CSCOE+/logon.html HTTP/1.1" 404 3952
+Not Found: /vpn/index.html
+[26/Nov/2023 18:20:57] "GET /vpn/index.html HTTP/1.1" 404 3940
+Not Found: /global-protect/login.esp
+[26/Nov/2023 18:21:02] "GET /global-protect/login.esp HTTP/1.1" 404 3970
+[26/Nov/2023 18:22:38] "GET / HTTP/1.1" 200 12950
+[26/Nov/2023 18:23:18] "HEAD / HTTP/1.1" 200 0
