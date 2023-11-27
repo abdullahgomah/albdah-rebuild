@@ -224,6 +224,7 @@ body {
     font-size: 30px;
     color: #fff;
     cursor: pointer;
+    z-index: 3000;
 }
 .popup-content {
     margin: auto;
