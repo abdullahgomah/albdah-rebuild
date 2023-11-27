@@ -3,7 +3,8 @@
     margin: 0; 
     box-sizing: border-box;
     transition: all .2s ease-in-out;
-    font-family: 'changa';
+    /* font-family: 'changa'; */
+    font-family: 'Readex Pro', sans-serif;
 }
 
 :root { 
