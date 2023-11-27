@@ -32,7 +32,7 @@
 
 
 
-        <!-- <div class="gallery">
+        <div class="gallery">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     
@@ -57,12 +57,12 @@
                 {% endif %}
                     
             </p>
-        </div> -->
+        </div>
 
 
-        <div class="gallery">
+        <!-- <div class="gallery">
             <div class="main-img">
-                <!-- <img src="./1.png" alt=""> -->
+                
                 <img class="property__img__item" src="{{ property.imgs.all.0.img.url }}" alt="Main Image">
             </div>
     
@@ -73,7 +73,7 @@
                     </div>
                 {% endfor %}
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -470,9 +470,11 @@
                 
                 {% if property.p_type == 'chalet_rent' %}
                 <div class="col  ">
-                    <i class="fa-solid fa-road"></i>
 
-                    <p>عرض الشارع</p>
+                    <p>
+                        <i class="fa-solid fa-road"></i>
+                        عرض الشارع
+                    </p>
                     <p>{{property.street_width}}</p>
                 </div>
                 <div class="col  ">
