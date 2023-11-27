@@ -320,4 +320,9 @@ body {
     .property__actions li:hover {
         transform: none !important;
     }
+    .col {
+        height: fit-content !important;
+        flex-direction: column;
+        row-gap: .5rem !important;
+    }
 }
