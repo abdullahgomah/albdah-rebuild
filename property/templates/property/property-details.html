@@ -32,7 +32,7 @@
 
 
 
-        <div class="gallery">
+        <!-- <div class="gallery">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     
@@ -44,15 +44,6 @@
                     </div>
                     {% endfor %}
 
-                    <!-- <div class="swiper-slide">
-                        <img src="./assets/imgs/property_img_2.webp" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/imgs/property_img_3.webp" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/imgs/property_img_4.webp" alt="">
-                    </div> -->
                 </div>
             </div>
             <p class="pics__count">
@@ -66,7 +57,25 @@
                 {% endif %}
                     
             </p>
+        </div> -->
+
+
+        <div class="gallery">
+            <div class="main-img">
+                <!-- <img src="./1.png" alt=""> -->
+                <img class="property__img__item" src="{{ property.imgs.all.0.img.url }}" alt="Main Image">
+            </div>
+    
+            <div class="additional-img">
+                {% for img in property.imgs.all|slice:"1:" %}
+                    <div class="image">
+                        <img class="property__img__item" src="{{ img.img.url }}" alt="Additional Image">
+                    </div>
+                {% endfor %}
+            </div>
         </div>
+
+
 
         <div class="popup">
             <span class="close-button">&times;</span>
