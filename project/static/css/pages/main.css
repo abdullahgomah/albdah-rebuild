@@ -116,6 +116,13 @@ header .container .logo-container {
     flex: .5;
 }
 
+header .container .logo-container a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: .5;
+}
+
 header .container .logo-container img:first-child { 
     width: 50px;
 }
