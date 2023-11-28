@@ -232,3 +232,5 @@ class Report(models.Model):
 
     def __str__(self):
         return f"{self.ad} {self.date}"
+    
+
