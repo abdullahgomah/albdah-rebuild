@@ -717,7 +717,7 @@ def add_to_favourite(request, property_number):
 
 def report_property(request, number): 
     property = Property.objects.get(number=number) 
-    Report.objects.create(ad=property) 
+    Report.objects.create(ad=property, number=number) 
 
     context = {} 
 
