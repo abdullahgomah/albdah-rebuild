@@ -217,8 +217,9 @@ section.property_type .btn {
     border-radius: 2rem;
     color: var(--primary-color); 
     background: #fff; 
-    border: 1px solid #1e2957; 
+    /* border: 1px solid #1e2957;  */
     /* box-shadow: 2px 4px 10px #1e295730; */
+    box-shadow: 2px 2px 5px #1e295730;
 }
 
 
