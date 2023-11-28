@@ -106,17 +106,24 @@
         </div>
 
 
-        <div style="background-color: #fff; padding: 1rem;">
+        <div >
 
-        <h3 class="property__cost">
-            {{property.price}} ريال / <span id="type">{{property.get_rent_type_display}}</span>
-        </h3>
 
-        
-        <input type="hidden" name="property_details_markdown" value="{{property.description|safe}}">
-        <p class="property__details">
+        <div class="property__info">
+
+
+            <h3 class="property__cost">
+                {{property.price}} ريال / <span id="type">{{property.get_rent_type_display}}</span>
+            </h3>
+
             
-        </p>
+            <input type="hidden" name="property_details_markdown" value="{{property.description|safe}}">
+            <p class="property__details">
+                
+            </p>
+
+        </div>
+
 
 
         <div class="property__features">
