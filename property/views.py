@@ -712,3 +712,19 @@ def add_to_favourite(request, property_number):
     
 
     ## return to previous page 
+
+
+
+def report_property(request, number): 
+    property = Property.objects.get(number=number) 
+    Report.objects.create(ad=property) 
+
+    context = {} 
+
+    return redirect(reverse("property:reported"))
+
+
+
+def show_reported(request): 
+    context = {} 
+    return render(request, 'property/reported.html', context=context )    

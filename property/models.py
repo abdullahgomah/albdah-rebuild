@@ -217,3 +217,17 @@ class PropertyImage(models.Model):
     class Meta: 
         verbose_name = 'صورة عقار'
         verbose_name_plural = "صور العقارات"
+
+
+
+class Report(models.Model):
+    ad = models.ForeignKey(Property, on_delete=models.CASCADE, verbose_name="الإعلان") 
+    number = models.CharField(max_length=40, verbose_name="رقم الإعلان", default="") 
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta: 
+        verbose_name = 'إبلاغ'
+        verbose_name_plural = 'البلاغات'
+
+    def __str__(self):
+        return f"{self.ad} {self.date}"
