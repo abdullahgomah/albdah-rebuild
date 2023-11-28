@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    المفضلة
+{% endblock title %}
+    
+
+
+
+{% block content %}
+
+
+
+<section class="property_list">
+    <div class="container">
+
+        <div class="grid property_grid">
+            
+            {% for property in all_properties %}
+
+            <div class="item property">
+                <input type="hidden" name="property_type_input" value="{{property.property.p_type}}">
+                <div class="property__info">
+                    <h4 class="property__title">
+                        <a href="{% url 'property:property-details' property.property.number %}">{{property.property.title}}</a>
+                    </h4>
+                    <p class="property__price">
+                        {{property.property.price}} ريال / <span>{{property.property.get_rent_type_display }}</span>
+                    </p>
+                    <p class="property__description">
+                        <!-- {{property.description|safe|truncatewords:5}} -->
+                    </p>
+                </div>
+                <div class="property__cover_img">
+                    
+                    {% for img in property.property.imgs.all %}
+                        
+                        {% if img.main == True %}
+                        <!-- <img src="{% if img.main == True %}{{img.img.url}}{% else %}{{property.imgs.first.img.url}}{% endif %}" alt=""> -->
+                        {% endif %}
+                        
+                            
+                    {% endfor %}
+
+                    <img src="{{property.property.imgs.first.img.url}}" alt="">
+                        
+                </div>
+            </div>
+            {% endfor %}
+
+
+
+                
+
+
+
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock content %}
+    

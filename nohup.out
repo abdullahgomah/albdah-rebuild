@@ -7737,3 +7737,633 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 
 Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+November 28, 2023 - 12:38:15
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: property_property.agree
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/page/views.py", line 8, in index
+    all_properties = Property.objects.all()[::-1]
+                     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 445, in __getitem__
+    return list(qs)[:: k.step] if k.step else qs
+           ^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: property_property.agree
+[28/Nov/2023 12:50:56] "GET / HTTP/1.1" 500 153822
+Not Found: /favicon.ico
+[28/Nov/2023 12:58:51] "GET /favicon.ico HTTP/1.1" 404 3927
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: property_property.agree
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/page/views.py", line 8, in index
+    all_properties = Property.objects.all()[::-1]
+                     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 445, in __getitem__
+    return list(qs)[:: k.step] if k.step else qs
+           ^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: property_property.agree
+[28/Nov/2023 13:01:37] "GET / HTTP/1.1" 500 153822
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: property_property.agree
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 20, in property_details
+    property = Property.objects.get(number = number)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: property_property.agree
+[28/Nov/2023 13:04:11] "GET /property/69AqZ/details/ HTTP/1.1" 500 160823
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: property_property.agree
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/page/views.py", line 8, in index
+    all_properties = Property.objects.all()[::-1]
+                     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 445, in __getitem__
+    return list(qs)[:: k.step] if k.step else qs
+           ^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: property_property.agree
+[28/Nov/2023 13:04:20] "GET / HTTP/1.1" 500 155061
+Internal Server Error: /maps/search
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: property_property.agree
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/maps/views.py", line 11, in search_with_map
+    return render(request, 'maps/index.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/template/defaulttags.py", line 194, in render
+    len_values = len(values)
+                 ^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: property_property.agree
+[28/Nov/2023 13:04:25] "GET /maps/search HTTP/1.1" 500 235857
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: property_property.agree
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/page/views.py", line 8, in index
+    all_properties = Property.objects.all()[::-1]
+                     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 445, in __getitem__
+    return list(qs)[:: k.step] if k.step else qs
+           ^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: property_property.agree
+[28/Nov/2023 13:05:08] "GET / HTTP/1.1" 500 156186
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: property_property.agree
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/page/views.py", line 8, in index
+    all_properties = Property.objects.all()[::-1]
+                     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 445, in __getitem__
+    return list(qs)[:: k.step] if k.step else qs
+           ^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: property_property.agree
+[28/Nov/2023 13:05:10] "GET / HTTP/1.1" 500 156069
+Not Found: /favicon.ico
+[28/Nov/2023 13:05:11] "GET /favicon.ico HTTP/1.1" 404 3926
+Not Found: /geoserver/web/
+[28/Nov/2023 13:05:34] "GET /geoserver/web/ HTTP/1.1" 404 3936
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+November 28, 2023 - 12:38:39
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[28/Nov/2023 13:07:38] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 13:07:38] "GET /static/css/normalize.css HTTP/1.1" 304 0
+[28/Nov/2023 13:07:39] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[28/Nov/2023 13:07:39] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 304 0
+[28/Nov/2023 13:07:39] "GET /static/imgs/logo.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 13:07:39] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 13:07:39] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 13:07:39] "GET /static/js/pages/app.js HTTP/1.1" 304 0
+[28/Nov/2023 13:07:39] "GET /static/imgs/logo-transparent.png HTTP/1.1" 304 0
+Not Found: /actuator/gateway/routes
+[28/Nov/2023 13:15:27] "GET /actuator/gateway/routes HTTP/1.1" 404 3966
+Not Found: /assets/imgs/logo.jpeg
+[28/Nov/2023 13:21:13] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 3956
+[28/Nov/2023 13:22:03] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 13:58:56] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 14:16:10] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 14:16:15] "GET / HTTP/1.1" 200 14016
+Not Found: /favicon.ico
+[28/Nov/2023 14:16:41] "GET /favicon.ico HTTP/1.1" 404 3922
+[28/Nov/2023 14:16:42] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 14:16:47] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 14:16:48] "GET / HTTP/1.1" 200 14016
+Not Found: /favicon.ico
+[28/Nov/2023 14:17:11] "GET /favicon.ico HTTP/1.1" 404 3922
+[28/Nov/2023 14:17:12] "GET / HTTP/1.1" 200 14016
+Not Found: /Temporary_Listen_Addresses
+[28/Nov/2023 14:25:46] "GET /Temporary_Listen_Addresses HTTP/1.1" 404 3972
+Not Found: /ews/exchanges/
+[28/Nov/2023 14:25:46] "GET /ews/exchanges/ HTTP/1.1" 404 3936
+Not Found: /ews/exchange /
+[28/Nov/2023 14:25:47] "GET /ews/exchange%20/ HTTP/1.1" 404 3938
+Not Found: /ews/exchange/
+[28/Nov/2023 14:25:47] "GET /ews/exchange/ HTTP/1.1" 404 3933
+Not Found: /ews/ /
+[28/Nov/2023 14:25:47] "GET /ews/%20/ HTTP/1.1" 404 3914
+Not Found: /ews/ews/
+[28/Nov/2023 14:25:48] "GET /ews/ews/ HTTP/1.1" 404 3918
+Not Found: /ews/autodiscovers/
+[28/Nov/2023 14:25:48] "GET /ews/autodiscovers/ HTTP/1.1" 404 3948
+Not Found: /autodiscover/autodiscovers/
+[28/Nov/2023 14:25:49] "GET /autodiscover/autodiscovers/ HTTP/1.1" 404 3975
+Not Found: /autodiscover/autodiscover /
+[28/Nov/2023 14:25:49] "GET /autodiscover/autodiscover%20/ HTTP/1.1" 404 3977
+Not Found: /autodiscover/autodiscoverrs/
+[28/Nov/2023 14:25:50] "GET /autodiscover/autodiscoverrs/ HTTP/1.1" 404 3978
+Not Found: /autodiscove/
+[28/Nov/2023 14:25:50] "GET /autodiscove/ HTTP/1.1" 404 3930
+[28/Nov/2023 14:29:53] "GET / HTTP/1.1" 200 14016
+Not Found: /druid/index.html
+[28/Nov/2023 14:59:19] "GET /druid/index.html HTTP/1.1" 404 3942
+Forbidden (CSRF cookie not set.): /
+[28/Nov/2023 15:10:03] "CONNECT / HTTP/1.1" 403 3071
+Not Found: /proxychecker/index.php
+[28/Nov/2023 15:13:56] "GET /proxychecker/index.php HTTP/1.1" 404 3958
+Not Found: /portal/redlion
+[28/Nov/2023 15:23:57] "GET /portal/redlion HTTP/1.1" 404 3936
+[28/Nov/2023 15:26:12] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 15:28:12] "GET / HTTP/1.1" 200 14016
+Not Found: /assets/imgs/logo.jpeg
+[28/Nov/2023 15:28:20] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 3957
+Not Found: /robots.txt
+[28/Nov/2023 15:28:21] "GET /robots.txt HTTP/1.1" 404 3924
+[28/Nov/2023 15:28:23] "GET / HTTP/1.1" 200 14032
+Not Found: /sitemap.xml
+[28/Nov/2023 15:28:23] "GET /sitemap.xml HTTP/1.1" 404 3927
+[28/Nov/2023 15:28:23] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[28/Nov/2023 15:28:23] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 15:28:23] "GET /static/css/normalize.css HTTP/1.1" 304 0
+[28/Nov/2023 15:28:24] "GET /static/js/pages/app.js HTTP/1.1" 304 0
+[28/Nov/2023 15:28:24] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[28/Nov/2023 15:28:24] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[28/Nov/2023 15:28:24] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[28/Nov/2023 15:28:24] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+Not Found: /assets/imgs/logo.jpeg
+[28/Nov/2023 15:28:24] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 3956
+[28/Nov/2023 15:36:31] "GET / HTTP/1.1" 200 14032
+[28/Nov/2023 15:37:24] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 15:37:24] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[28/Nov/2023 15:37:24] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[28/Nov/2023 15:37:25] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[28/Nov/2023 15:37:25] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[28/Nov/2023 15:37:25] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[28/Nov/2023 15:37:25] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 15:37:25] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[28/Nov/2023 15:37:25] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[28/Nov/2023 15:38:35] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 15:38:35] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[28/Nov/2023 15:38:35] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:38:35] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[28/Nov/2023 15:38:35] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[28/Nov/2023 15:42:46] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 15:42:46] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[28/Nov/2023 15:42:46] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[28/Nov/2023 15:42:46] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[28/Nov/2023 15:42:46,616] - Broken pipe from ('127.0.0.1', 56400)
+[28/Nov/2023 15:42:47] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 15:42:47] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[28/Nov/2023 15:42:47] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[28/Nov/2023 15:42:47] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[28/Nov/2023 15:42:47] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 15:42:47] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[28/Nov/2023 15:42:49] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 15:42:50] "GET /property/69AqZ/details/ HTTP/1.1" 200 25151
+[28/Nov/2023 15:42:50] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_2.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_1.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_3.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_2.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_1.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_2.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_1.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:42:51] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 15:43:12] "GET /media/5ad31286-dc05-4f4f-852a-1695d1d01bdd.MP4 HTTP/1.1" 200 76369925
+[28/Nov/2023 15:43:13] "GET /property/69AqZ/details/ HTTP/1.1" 200 25151
+[28/Nov/2023 15:43:13,328] - Broken pipe from ('127.0.0.1', 48468)
+[28/Nov/2023 15:43:13] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 15:43:14] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 15:43:15] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 15:54:39] "GET /login HTTP/1.1" 301 0
+[28/Nov/2023 16:02:12] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 16:20:23] "GET / HTTP/1.1" 200 14016
+Not Found: /assets/imgs/logo.jpeg
+[28/Nov/2023 16:20:31] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 3957
+Not Found: /robots.txt
+[28/Nov/2023 16:20:32] "GET /robots.txt HTTP/1.1" 404 3924
+Not Found: /sitemap.xml
+[28/Nov/2023 16:20:34] "GET /sitemap.xml HTTP/1.1" 404 3927
+[28/Nov/2023 16:21:48] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 16:21:53] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 16:45:32] "HEAD / HTTP/1.1" 200 0
+[28/Nov/2023 16:45:33] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 16:45:33] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 16:45:33] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 16:45:33] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 16:45:34] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 16:45:42] "HEAD / HTTP/1.1" 200 0
+[28/Nov/2023 16:45:42] "GET / HTTP/1.1" 200 14016
+[28/Nov/2023 16:45:43] "HEAD /static/js/pages/index.js HTTP/1.1" 200 0
+[28/Nov/2023 16:45:43] "HEAD /static/js/pages/app.js HTTP/1.1" 200 0
+[28/Nov/2023 16:45:43] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 16:45:43] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+/albdah-rebuild/albdah-rebuild/page/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 28, 2023 - 13:06:29
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader

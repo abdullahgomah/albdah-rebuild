@@ -17,9 +17,17 @@ def add_property_interface(request):
 
 
 def property_details(request, number): 
-    property = Property.objects.get(number = number) 
+    property = Property.objects.get(number = number)
+    is_favourite = False 
+    try: 
+        ad = Favourite.objects.get(user=request.user, property=property) 
+        is_favourite = True
+    except Favourite.DoesNotExist: 
+        is_favourite = False 
+    
     context = {
         'property': property, 
+        'is_favourite': is_favourite
     } 
     return render(request, 'property/property-details.html', context ) 
 
@@ -705,7 +713,12 @@ def add_to_favourite(request, property_number):
     user = request.user 
     property = Property.objects.get(number = property_number)  
 
-    Favourite.objects.create(property=property, user=user).save() 
+    try: 
+        ad = Favourite.objects.get(user=user, property=property)
+        ad.delete() 
+
+    except Favourite.DoesNotExist: 
+        ad = Favourite.objects.create(property=property, user=user) 
 
 
     return redirect(reverse('property:property-details', kwargs={'number': property.number}))
@@ -728,3 +741,4 @@ def report_property(request, number):
 def show_reported(request): 
     context = {} 
     return render(request, 'property/reported.html', context=context )    
+
