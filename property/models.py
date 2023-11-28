@@ -62,6 +62,7 @@ def generate():
 
 
 class Property(models.Model): 
+    agree = models.BooleanField(default=False, verbose_name="موافقة" )
     # profile = models.ForeignKey("accounts.Profile", on_delete=models.CASCADE, null=True, blank=True)
     user = models.ForeignKey("accounts.User", on_delete=models.CASCADE, null=True, blank=True) 
     lat = models.CharField(max_length=200, null=True, blank=True) 
