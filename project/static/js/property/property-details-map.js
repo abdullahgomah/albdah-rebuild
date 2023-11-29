@@ -87,7 +87,11 @@ async function initMap() {
     });
 
 
-
+    userMarker.addListener('click', function () {
+        // Open Google Maps with the clicked location
+        var url = 'https://www.google.com/maps/search/?api=1&query=' + userMarker.getPosition().lat() + ',' + userMarker.getPosition().lng();
+        window.open(url, '_blank');
+    });
 
     
 
