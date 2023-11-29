@@ -376,6 +376,7 @@ body {
 /* map styling */
 
 #map {
+    margin: 1rem 0; 
     transition: none;
     width:100%; 
     height: 300px; 
