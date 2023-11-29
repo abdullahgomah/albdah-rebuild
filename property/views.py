@@ -18,17 +18,23 @@ def add_property_interface(request):
 
 def property_details(request, number): 
     property = Property.objects.get(number = number)
-    is_favourite = False 
-    try: 
-        ad = Favourite.objects.get(user=request.user, property=property) 
-        is_favourite = True
-    except Favourite.DoesNotExist: 
+    if request.user.is_authenticated: 
+
         is_favourite = False 
-    
-    context = {
-        'property': property, 
-        'is_favourite': is_favourite
-    } 
+        try: 
+            ad = Favourite.objects.get(user=request.user, property=property) 
+            is_favourite = True
+        except Favourite.DoesNotExist: 
+            is_favourite = False 
+
+        context = {
+            'property': property, 
+            'is_favourite': is_favourite
+        } 
+    else: 
+        context = {
+            'property': property, 
+        } 
     return render(request, 'property/property-details.html', context ) 
 
 @login_required(login_url='/auth/')
