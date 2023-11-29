@@ -72,7 +72,7 @@ async function initMap() {
         center: { lat: Number(latInput.value), lng: Number(lngInput.value) }, // Coordinates for Saudi Arabia
         zoom: 24, 
         zoomControl: false, 
-        mapTypeId: "roadmap",
+        mapTypeId: "terrain",
         mapTypeControl: false, 
         fullscreenControl: false, 
         gestureHandling: "greedy", 
