@@ -25,6 +25,9 @@
 
 {% block content %}
 
+<input type="hidden" id="lat-input" value="{{property.lat}}">
+<input type="hidden" id="lng-input" value="{{property.lng}}">
+
 <section class="property">
     <div class="container">
 
@@ -806,6 +809,12 @@
 
         </div>
 
+        <div class="property__location">
+            <div id="map">
+
+            </div>
+        </div>
+
         <div class="property__actions">
             <div class="container">
 
@@ -910,5 +919,15 @@
         })
     })
 </script>
+
+
+<script src="{% static 'js/property/property-details-map.js' %}"></script>
+
+<script>
+    window.initMap = initMap;
+</script>
+
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKt6ozfNbfbA7RIWbNeIvy3Rj4NT7RpO4&callback=initMap"></script>
+
 {% endblock content %}
     
