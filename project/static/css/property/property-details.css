@@ -31,6 +31,11 @@ body {
     margin: 1rem 0 ;
 }
 
+.property__actions .container {
+    height: 50px !important;
+}
+
+
 .property__actions ul {
     display: flex;
     align-items: center;
@@ -46,7 +51,7 @@ body {
     max-width: 200px;
     width: 150px;
     text-align: center;
-    line-height: 60px;
+    line-height: 50px;
     border-radius: 5px ;
     border: 1px solid #1e2957; 
 }
@@ -275,7 +280,7 @@ body {
     background: #fff;
     padding: 1rem;
     border: 1px solid #777;
-    min-height: 300px;
+    min-height: 200px;
 }
 
 .advertiser .advertiser_pic {
