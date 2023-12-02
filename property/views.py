@@ -296,6 +296,8 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                lat= lat, 
+                lng=lng,
                 user = user, 
                 driver_room = features[14], 
                 maid_room = features[15],
