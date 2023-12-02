@@ -245,7 +245,7 @@ def add_property(request, property_type):
         )
 
         elif property_type == 'villa_rent': 
-            # interface = request.POST.get('interface-input') 
+            interface = request.POST.get('interface-input') 
             floor = request.POST.get('extra-floor-input') 
             if floor == None or floor == '' or floor == 0: 
                 floor = request.POST.get('floor-input') 
@@ -317,7 +317,7 @@ def add_property(request, property_type):
                 advertiser_relation= advertiser_relation, 
                 exclusive = exclusive, 
                 video = video, 
-                # interface= interface, 
+                interface= interface, 
                 street_width = street_width, 
                 rooms = rooms , 
                 lounges = lounges, 
