@@ -581,6 +581,12 @@ def add_property(request, property_type):
             if floor == None or floor == '' or floor == 0: 
                 floor = request.POST.get('floor-input') 
 
+
+            lounges = request.POST.get('extra-lounges-input') 
+            if lounges == None or lounges == "" or lounges == 0: 
+                lounges = request.POST.get('lounges-input') 
+            
+
             families = request.POST.get('families') 
             extenstion = request.POST.get('extenstion') 
             car_entrance = request.POST.get('car_entrance') 
@@ -598,6 +604,8 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                lounges= lounges, 
+                floor= floor, 
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
