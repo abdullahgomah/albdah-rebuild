@@ -31,7 +31,7 @@
 <section class="property">
     <div class="container">
 
-        <h3 class="property__title">{{property.title}}</h3>
+        <h3 id="property_title" class="property__title">{{property.title}}</h3>
 
 
 
@@ -884,6 +884,24 @@
         // Remove the temporary input element
         document.body.removeChild(tempInput);
 
+    })
+
+    let btnWhatsapp = document.querySelector('#btn__whatsapp'); 
+
+    btnWhatsapp.addEventListener('click', () => {
+
+        var phoneNumber = '+966565594599';
+
+        var propertyTitle = document.getElementById('property_title').innerText; // Assuming the property title is in a <span> with id 'property_title'
+        var pageUrl = window.location.href;
+        var message = 'السلام عليكم\nأتواصل معك بخصوص إعلانكم على البداح للعقارات (' + propertyTitle + ')\n\n' + pageUrl;
+        
+        // Create WhatsApp link
+        var whatsappLink = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+        
+        // Open WhatsApp link
+        window.open(whatsappLink, '_blank');
+        
     })
 
 
