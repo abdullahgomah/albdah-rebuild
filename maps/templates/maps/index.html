@@ -236,9 +236,14 @@ function get_properties() {
         },
     {% endfor %}
     ];
+
+
+
+    console.log(properties_data.length); 
 }
 
 
+get_properties() 
 
 
 
@@ -287,12 +292,12 @@ async function initMap() {
     //];
 
 
-    get_properties() 
 
 
     for (let i=0; i<properties_data.length; i++ ) {
 
-
+        // console.log(properties_data[i]); 
+        // console.log(i)
         const priceTag = document.createElement("div");
 
         priceTag.className = "price-tag";
@@ -305,13 +310,13 @@ async function initMap() {
             propertyDescription = property.description, 
             propertyCoverImg = property.cover_img,
             // lat = Number(property.position.split(',')[0])
-            lat = Number(property.lat), 
+            lat = property.lat, 
             // lng = Number(property.position.split(',')[1])
-            lng = Number(property.lng)
+            lng = property.lng
 
         priceTag.textContent = propertytPrice
 
-        if ( lat != NaN || lng != NaN ) { 
+        // if ( lat != "" || lng != "" ) { 
 
                 
             var marker = new AdvancedMarkerElement ({
@@ -333,7 +338,7 @@ async function initMap() {
                 coverImg.src = propertyCoverImg; 
                 
             });
-        }
+        // }
 
 
 
