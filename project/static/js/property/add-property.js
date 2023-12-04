@@ -467,7 +467,7 @@ if (document.querySelector('[name=property_type]').value != 'land_rent' && docum
     })
 
 
-    if (document.querySelector('[name=property_type]').value != 'chalet_rent') {
+    if (document.querySelector('[name=property_type]').value != 'chalet_rent' && document.querySelector('[name=property_type]').value != 'villa_rent') {
         let floorNumberGrid = document.querySelector('.floor-number'); 
         floorNumberGrid.querySelectorAll('.item').forEach((item) => {
             item.addEventListener('click', () => {
@@ -531,7 +531,7 @@ let roomInput = document.querySelector('[name=room-input]');
 let loungesInput = document.querySelector("[name=lounges-input]")
 let bathroomInput = document.querySelector("[name=bathroom-input]")
 
-if (document.querySelector("[name=property_type]").textContent =! "chalet_rent") {
+if (document.querySelector("[name=property_type]").textContent != "chalet_rent" && document.querySelector("[name=property_type]").textContent != "villa_rent") {
     let floorInput = document.querySelector('[name=floor-input]'); 
 } 
 
@@ -584,7 +584,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     }
 
 
-    if (document.querySelector('[name=property_type]').value == "shop_rent" || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'building_rent') { 
+    if (document.querySelector('[name=property_type]').value == "shop_rent" || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'villa_rent') { 
         if (interfaceInput.value == "") { 
             document.querySelector('.interface-field').style.border = "1px solid #dc3546" 
         } else { 
@@ -640,7 +640,10 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
     if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'building_rent') {
         if (document.querySelector("[name=property_type]").value != 'building_rent') {
-            let floorInput = document.querySelector('[name=floor-input]'); 
+            if (document.querySelector('[name=property_type]').value != 'villa_rent') {
+                let floorInput = document.querySelector('[name=floor-input]'); 
+            }
+
             //1 
             if (roomInput.value == "") {
                 roomInput.parentElement.style.border = "1px solid #dc3546"
@@ -666,7 +669,8 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
             }
 
             // 4
-            if (document.querySelector('[name=property_type]').value != 'chalet_rent') { 
+            if (document.querySelector('[name=property_type]').value != 'chalet_rent' && document.querySelector("[name=property_type]").value != "villa_rent") { 
+                let floorInput = document.querySelector('[name=floor-input]'); 
                 if (floorInput.value == "") {
                     floorInput.parentElement.style.border = "1px solid #dc3546"
                 } else { 
