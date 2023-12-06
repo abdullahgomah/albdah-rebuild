@@ -426,6 +426,12 @@ propertyFeaturesNextPrev.querySelector('.btn-prev').addEventListener('click', ()
 })
 
 
+function disableButton() {
+    // Disable the button
+    document.getElementById("submitButton").disabled = true;
+
+}
+
 
 if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != "building_rent") { 
 
