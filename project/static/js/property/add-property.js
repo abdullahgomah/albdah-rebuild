@@ -428,6 +428,7 @@ propertyFeaturesNextPrev.querySelector('.btn-prev').addEventListener('click', ()
 
 function disableButton() {
     // Disable the button
+
     document.getElementById("submitButton").disabled = true;
 
 }
