@@ -155,8 +155,10 @@
             <div class="grid property_grid">
                 
                 {% for property in all_properties %}
+                
 
                 <div class="item property">
+                    <input type="hidden" name="propertyFirstImgUrl" value="{{property.imgs.first.img.url}}">
                     <input type="hidden" name="property_type_input" value="{{property.p_type}}">
                     <div class="property__info">
                         <h4 class="property__title">
@@ -170,18 +172,11 @@
                         </p>
                     </div>
                     <div class="property__cover_img">
+                    
+                    
+                        <img src="{% for img in property.imgs.all %}{% if img.main %}{{img.img.url}}{% endif %}{% endfor %}" alt="">
                         
-                        {% for img in property.imgs.all %}
-                            
-                            {% if img.main == True %}
-                            <!-- <img src="{% if img.main == True %}{{img.img.url}}{% else %}{{property.imgs.first.img.url}}{% endif %}" alt=""> -->
-                            {% endif %}
-                            
-                                
-                        {% endfor %}
-
-                        <img src="{{property.imgs.first.img.url}}" alt="">
-                            
+                        
                     </div>
                 </div>
                 {% endfor %}
