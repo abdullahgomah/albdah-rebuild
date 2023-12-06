@@ -17082,3 +17082,334 @@ Watching for file changes with StatReloader
 [06/Dec/2023 16:24:06] "GET / HTTP/1.1" 200 17032
 Not Found: /maps/assets/imgs/logo.jpeg
 [06/Dec/2023 16:29:37] "GET /maps/assets/imgs/logo.jpeg HTTP/1.1" 404 4221
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 06, 2023 - 16:22:04
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[06/Dec/2023 16:37:08] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 16:37:08] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[06/Dec/2023 16:37:08] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[06/Dec/2023 16:37:08] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 16:37:09] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[06/Dec/2023 16:37:10] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[06/Dec/2023 16:37:10] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[06/Dec/2023 16:37:10] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+[06/Dec/2023 16:37:10] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[06/Dec/2023 16:37:10] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[06/Dec/2023 16:37:10] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[06/Dec/2023 16:37:10] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[06/Dec/2023 16:37:10] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[06/Dec/2023 16:37:10] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[06/Dec/2023 16:37:10] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[06/Dec/2023 16:37:10] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[06/Dec/2023 16:37:10] "GET /property/add-property/ HTTP/1.1" 302 0
+[06/Dec/2023 16:37:10,816] - Broken pipe from ('127.0.0.1', 58298)
+[06/Dec/2023 16:37:10,817] - Broken pipe from ('127.0.0.1', 58282)
+[06/Dec/2023 16:37:10] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[06/Dec/2023 16:37:11] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+Not Found: /auth/assets/imgs/logo.jpeg
+[06/Dec/2023 16:37:11] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4148
+[06/Dec/2023 16:37:12] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[06/Dec/2023 16:37:13] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[06/Dec/2023 16:37:13] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[06/Dec/2023 16:37:13] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[06/Dec/2023 16:37:13] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[06/Dec/2023 16:37:13] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 16:37:13,869] - Broken pipe from ('127.0.0.1', 58322)
+[06/Dec/2023 16:37:13,871] - Broken pipe from ('127.0.0.1', 58310)
+[06/Dec/2023 16:37:14] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[06/Dec/2023 16:37:14] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[06/Dec/2023 16:37:14] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[06/Dec/2023 16:37:14] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[06/Dec/2023 16:37:14] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 16:37:14,417] - Broken pipe from ('127.0.0.1', 58356)
+[06/Dec/2023 16:37:14,447] - Broken pipe from ('127.0.0.1', 58342)
+[06/Dec/2023 16:37:14] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[06/Dec/2023 16:37:14] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[06/Dec/2023 16:37:14,693] - Broken pipe from ('127.0.0.1', 58366)
+[06/Dec/2023 16:37:14,703] - Broken pipe from ('127.0.0.1', 58368)
+[06/Dec/2023 16:37:14] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 16:37:15] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[06/Dec/2023 16:37:15] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[06/Dec/2023 16:37:15] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[06/Dec/2023 16:37:15] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[06/Dec/2023 16:37:16] "GET /property/add-property/ HTTP/1.1" 302 0
+[06/Dec/2023 16:37:16] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+Not Found: /auth/assets/imgs/logo.jpeg
+[06/Dec/2023 16:37:16] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4148
+[06/Dec/2023 16:37:28] "POST /login/ HTTP/1.1" 302 0
+[06/Dec/2023 16:37:28] "GET /accounts/profile HTTP/1.1" 301 0
+[06/Dec/2023 16:37:29] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[06/Dec/2023 16:37:29] "GET /static/css/users/main.css HTTP/1.1" 200 227
+Not Found: /accounts/profile/assets/imgs/logo.jpeg
+[06/Dec/2023 16:37:29] "GET /accounts/profile/assets/imgs/logo.jpeg HTTP/1.1" 404 5721
+[06/Dec/2023 16:37:30] "GET / HTTP/1.1" 200 17048
+[06/Dec/2023 16:37:31] "GET /property/26ZCy/details/ HTTP/1.1" 200 25685
+[06/Dec/2023 16:37:31] "GET /static/css/property/property-details.css HTTP/1.1" 200 7032
+[06/Dec/2023 16:37:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 16:37:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 16:37:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 16:37:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_2.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 16:37:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 16:37:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_2.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 16:37:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 16:37:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM.jpeg HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[06/Dec/2023 16:37:35] "GET /favicon.ico HTTP/1.1" 404 4103
+[06/Dec/2023 16:37:36] "GET /property/add-property/ HTTP/1.1" 200 12178
+[06/Dec/2023 16:37:36] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+[06/Dec/2023 16:37:38] "GET /property/add-property/ HTTP/1.1" 200 12178
+[06/Dec/2023 16:37:39] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34377
+[06/Dec/2023 16:37:39] "GET /static/css/property/add-property.css HTTP/1.1" 200 10572
+[06/Dec/2023 16:37:39] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+[06/Dec/2023 16:37:40] "GET /static/js/property/add-property.js HTTP/1.1" 200 28327
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[06/Dec/2023 16:37:40] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5583
+[06/Dec/2023 16:38:08] "GET / HTTP/1.1" 200 17048
+[06/Dec/2023 16:38:43] "POST /property/add-property/new/apartment_rent/ HTTP/1.1" 302 0
+[06/Dec/2023 16:38:43] "GET /property/ad-uploaded/ HTTP/1.1" 200 6060
+[06/Dec/2023 16:39:07] "GET / HTTP/1.1" 200 18179
+[06/Dec/2023 16:39:08] "GET /media/property/images/IMG-20231202-WA0023.jpg HTTP/1.1" 200 47331
+[06/Dec/2023 16:39:15] "GET /admin HTTP/1.1" 301 0
+[06/Dec/2023 16:39:15] "GET /admin/ HTTP/1.1" 302 0
+[06/Dec/2023 16:39:15] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4013
+[06/Dec/2023 16:39:15] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[06/Dec/2023 16:39:15] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[06/Dec/2023 16:39:15] "GET /static/admin/css/rtl.css HTTP/1.1" 200 4788
+[06/Dec/2023 16:39:15] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:15] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[06/Dec/2023 16:39:15] "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:15] "GET /static/override.css HTTP/1.1" 200 156
+[06/Dec/2023 16:39:15] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 200 1785
+[06/Dec/2023 16:39:15] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[06/Dec/2023 16:39:15] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[06/Dec/2023 16:39:18] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[06/Dec/2023 16:39:19] "GET /admin/ HTTP/1.1" 200 13028
+[06/Dec/2023 16:39:19] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[06/Dec/2023 16:39:19] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[06/Dec/2023 16:39:19] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[06/Dec/2023 16:39:19] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[06/Dec/2023 16:39:20] "GET /admin/property/property/ HTTP/1.1" 200 12942
+[06/Dec/2023 16:39:21] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[06/Dec/2023 16:39:21] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:21] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[06/Dec/2023 16:39:21] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[06/Dec/2023 16:39:21] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:21] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:21] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:21] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:21] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:21] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:21] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[06/Dec/2023 16:39:21] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+Not Found: /favicon.ico
+[06/Dec/2023 16:39:21] "GET /favicon.ico HTTP/1.1" 404 4103
+[06/Dec/2023 16:39:25] "POST /admin/property/property/ HTTP/1.1" 200 13018
+[06/Dec/2023 16:39:25] "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[06/Dec/2023 16:39:28] "POST /admin/property/property/ HTTP/1.1" 302 0
+[06/Dec/2023 16:39:28] "GET /admin/property/property/ HTTP/1.1" 200 12823
+[06/Dec/2023 16:39:28] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[06/Dec/2023 16:39:28] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[06/Dec/2023 16:39:29] "GET / HTTP/1.1" 200 17048
+Not Found: /assets/imgs/logo.jpeg
+[06/Dec/2023 16:39:30] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[06/Dec/2023 17:13:50] "GET /property/69AqZ/details/ HTTP/1.1" 200 26666
+Not Found: /property/32Ahp/details/assets/imgs/logo.jpeg
+[06/Dec/2023 17:20:55] "GET /property/32Ahp/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5529
+[06/Dec/2023 17:20:58] "GET /media/4d6ca0cb-c691-4923-a9a7-6bfd54ada0e8.mp4 HTTP/1.1" 200 17415119
+Not Found: /autodiscover/autodiscover.json
+[06/Dec/2023 17:44:49] "GET /autodiscover/autodiscover.json?@1337.com/owa/?&Email=autodiscover/autodiscover.json%3F@1337.com HTTP/1.1" 404 4230
+Not Found: /actuator/gateway/routes
+[06/Dec/2023 18:02:30] "GET /actuator/gateway/routes HTTP/1.1" 404 4144
+Not Found: /owa/auth/errorFE.aspx
+[06/Dec/2023 18:27:21] "GET /owa/auth/errorFE.aspx?httpCode=500 HTTP/1.1" 404 4151
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+[06/Dec/2023 18:27:21] "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.1" 404 4300
+Not Found: /owa/auth/logon.aspx
+[06/Dec/2023 18:27:21] "GET /owa/auth/logon.aspx HTTP/1.1" 404 4132
+[06/Dec/2023 18:27:30] "GET / HTTP/1.1" 200 17032
+Not Found: /api/v1
+[06/Dec/2023 18:27:48] "GET /api/v1 HTTP/1.1" 404 4089
+Not Found: /v1/statement
+[06/Dec/2023 18:28:05] "POST /v1/statement HTTP/1.1" 404 4108
+Not Found: /dana-cached/hc/HostCheckerInstaller.osx
+[06/Dec/2023 18:28:22] "GET /dana-cached/hc/HostCheckerInstaller.osx HTTP/1.1" 404 4192
+Not Found: /dana-na/nc/nc_gina_ver.txt
+[06/Dec/2023 18:28:22] "GET /dana-na/nc/nc_gina_ver.txt HTTP/1.1" 404 4153
+Not Found: /RDWeb
+[06/Dec/2023 18:28:31] "GET /RDWeb HTTP/1.1" 404 4090
+Not Found: /Remote
+[06/Dec/2023 18:28:31] "GET /Remote HTTP/1.1" 404 4093
+[06/Dec/2023 18:28:31] "GET / HTTP/1.1" 200 17032
+Not Found: /wsman
+[06/Dec/2023 18:28:38] "POST /wsman HTTP/1.1" 404 4091
+Not Found: /api/sonicos/auth
+[06/Dec/2023 18:28:48] "GET /api/sonicos/auth HTTP/1.1" 404 4123
+Not Found: /sslvpnLogin.html
+[06/Dec/2023 18:28:48] "GET /sslvpnLogin.html HTTP/1.1" 404 4123
+Not Found: /auth1.html
+[06/Dec/2023 18:28:48] "GET /auth1.html HTTP/1.1" 404 4105
+Not Found: /auth.html
+[06/Dec/2023 18:28:48] "GET /auth.html HTTP/1.1" 404 4102
+Not Found: /api/sonicos/tfa
+[06/Dec/2023 18:28:48] "GET /api/sonicos/tfa HTTP/1.1" 404 4120
+[06/Dec/2023 18:28:48] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 18:29:00] "HEAD / HTTP/1.1" 200 0
+[06/Dec/2023 18:29:26] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 18:29:28] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[06/Dec/2023 18:29:29] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+[06/Dec/2023 18:31:26] "GET / HTTP/1.1" 200 17032
+Not Found: /favicon.ico
+[06/Dec/2023 18:31:33] "GET /favicon.ico HTTP/1.1" 404 4104
+Not Found: /favicon.ico
+[06/Dec/2023 18:33:38] "GET /favicon.ico HTTP/1.1" 404 4104
+Not Found: /manage/account/login
+[06/Dec/2023 18:35:42] "GET /manage/account/login HTTP/1.1" 404 4131
+Not Found: /manage/account/login
+[06/Dec/2023 18:38:45] "GET /manage/account/login HTTP/1.1" 404 4131
+[06/Dec/2023 18:41:26] "GET /admin/index.html HTTP/1.1" 302 0
+[06/Dec/2023 18:44:31] "GET /admin/index.html HTTP/1.1" 302 0
+Not Found: /index.html
+[06/Dec/2023 18:47:15] "GET /index.html HTTP/1.1" 404 4101
+Not Found: /index.html
+[06/Dec/2023 18:50:41] "GET /index.html HTTP/1.1" 404 4101
+Not Found: /+CSCOE+/logon.html
+[06/Dec/2023 18:53:36] "GET /+CSCOE+/logon.html HTTP/1.1" 404 4125
+Not Found: /query
+[06/Dec/2023 18:55:37] "POST /query HTTP/1.1" 404 4087
+Not Found: /+CSCOE+/logon.html
+[06/Dec/2023 18:56:44] "GET /+CSCOE+/logon.html HTTP/1.1" 404 4125
+Not Found: /cgi-bin/login.cgi
+[06/Dec/2023 18:59:26] "GET /cgi-bin/login.cgi HTTP/1.1" 404 4122
+Not Found: /cgi-bin/login.cgi
+[06/Dec/2023 19:02:23] "GET /cgi-bin/login.cgi HTTP/1.1" 404 4122
+Not Found: /logon.htm
+[06/Dec/2023 19:05:01] "GET /logon.htm HTTP/1.1" 404 4098
+Not Found: /logon.htm
+[06/Dec/2023 19:08:07] "GET /logon.htm HTTP/1.1" 404 4098
+Not Found: /login.jsp
+[06/Dec/2023 19:10:51] "GET /login.jsp HTTP/1.1" 404 4098
+Not Found: /login.jsp
+[06/Dec/2023 19:13:57] "GET /login.jsp HTTP/1.1" 404 4098
+[06/Dec/2023 19:16:45] "GET / HTTP/1.1" 200 17032
+Forbidden (CSRF cookie not set.): /
+[06/Dec/2023 19:19:57] "POST / HTTP/1.1" 403 3071
+[06/Dec/2023 19:20:48] "GET / HTTP/1.1" 200 17032
+Internal Server Error: /property/49SXY/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 20, in property_details
+    property = Property.objects.get(number = number)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+property.models.Property.DoesNotExist: Property matching query does not exist.
+[06/Dec/2023 19:23:35] "GET /property/49SXY/details/ HTTP/1.1" 500 71132
+Not Found: /favicon.ico
+[06/Dec/2023 19:23:36] "GET /favicon.ico HTTP/1.1" 404 4099
+[06/Dec/2023 19:26:09] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 19:41:16] "GET / HTTP/1.1" 200 17032
+Internal Server Error: /property/49SXY/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 20, in property_details
+    property = Property.objects.get(number = number)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+property.models.Property.DoesNotExist: Property matching query does not exist.
+[06/Dec/2023 19:43:13] "GET /property/49SXY/details/ HTTP/1.1" 500 71132
+[06/Dec/2023 19:43:18] "GET / HTTP/1.1" 200 17048
+[06/Dec/2023 19:43:18] "GET /media/property/images/5.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:18] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 304 0
+Not Found: /assets/imgs/logo.jpeg
+[06/Dec/2023 19:43:19] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[06/Dec/2023 19:43:22] "GET /property/26ZCy/details/ HTTP/1.1" 200 25685
+[06/Dec/2023 19:43:22] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:22] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:23] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_2.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:23] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_1.jpeg HTTP/1.1" 304 0
+Not Found: /property/26ZCy/details/assets/imgs/logo.jpeg
+[06/Dec/2023 19:43:23] "GET /property/26ZCy/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5525
+[06/Dec/2023 19:43:23] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:23] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:23] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:23] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:23] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_2.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:25] "GET /property/45SUV/details/ HTTP/1.1" 200 24619
+[06/Dec/2023 19:43:25] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:25] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:25] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.30_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:25] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:25] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_2.jpeg HTTP/1.1" 304 0
+Not Found: /property/45SUV/details/assets/imgs/logo.jpeg
+[06/Dec/2023 19:43:26] "GET /property/45SUV/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5525
+[06/Dec/2023 19:43:26] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.29_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:26] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.29_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:26] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.29_PM_2.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:28] "GET /property/32Ahp/details/ HTTP/1.1" 200 21944
+[06/Dec/2023 19:43:28] "GET /media/property/images/2.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:28] "GET /media/property/images/7.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:28] "GET /media/property/images/6.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:28] "GET /media/property/images/3.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:28] "GET /media/property/images/4.jpeg HTTP/1.1" 304 0
+Not Found: /property/32Ahp/details/assets/imgs/logo.jpeg
+[06/Dec/2023 19:43:28] "GET /property/32Ahp/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5525
+[06/Dec/2023 19:43:28] "GET /media/property/images/1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:30] "GET /property/86xPt/details/ HTTP/1.1" 200 30265
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.53_PM_y32nzLs.jpeg HTTP/1.1" 200 92003
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.56_PM_S9JqsW2.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.55_PM_1_FUYo1hw.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.56_PM_1_5S9Cs9X.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.55_PM_O9MjG7D.jpeg HTTP/1.1" 304 0
+Not Found: /property/86xPt/details/assets/imgs/logo.jpeg
+[06/Dec/2023 19:43:31] "GET /property/86xPt/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5525
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.57_PM_kdkMn6M.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.35_PM_GmmtKKk.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.51_PM_hts596Q.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.34_PM_1_PLJvn16.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.33_PM_Zf4Jcqk.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1okpoi8.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.32_PM_6ZoCyqi.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:31] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.34_PM_3pMvo1e.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:33] "GET /property/69AqZ/details/ HTTP/1.1" 200 26700
+[06/Dec/2023 19:43:33] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_2.jpeg HTTP/1.1" 200 1035980
+[06/Dec/2023 19:43:33] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_2.jpeg HTTP/1.1" 200 840710
+[06/Dec/2023 19:43:33] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:33] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:33] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_3.jpeg HTTP/1.1" 304 0
+Not Found: /property/69AqZ/details/assets/imgs/logo.jpeg
+[06/Dec/2023 19:43:34] "GET /property/69AqZ/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5525
+[06/Dec/2023 19:43:34] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:34] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:34] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:34] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_1.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:34] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_2.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:34] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM.jpeg HTTP/1.1" 304 0
+[06/Dec/2023 19:43:36,312] - Broken pipe from ('127.0.0.1', 39858)
+[06/Dec/2023 19:43:36,312] - Broken pipe from ('127.0.0.1', 39846)
+[06/Dec/2023 20:11:58] "GET / HTTP/1.1" 200 17032
+Not Found: /robots.txt
+[06/Dec/2023 20:17:12] "GET /robots.txt HTTP/1.1" 404 4096
+[06/Dec/2023 20:17:12] "GET / HTTP/1.1" 200 17032

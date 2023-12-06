@@ -434,7 +434,7 @@ function disableButton() {
 }
 
 
-if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != "building_rent") { 
+if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != "building_rent" && document.querySelector('[name=property_type]').value != "shop_rent") { 
 
     let roomCountGrid = document.querySelector('.room-count'); 
     roomCountGrid.querySelectorAll('.item').forEach((item) => {
@@ -487,16 +487,20 @@ if (document.querySelector('[name=property_type]').value != 'land_rent' && docum
 
 
 
+
+
+
+}
+
+
 let propertyAgeGrid = document.querySelector('.property-age'); 
 propertyAgeGrid.querySelectorAll('.item').forEach((item) => {
     item.addEventListener('click', () => {
         item.parentElement.querySelector("[name=property-age-input]").value = item.textContent; 
+        console.log(item);
         // console.log(item.parentElement.querySelector('[name=property-age-input]').value)
     })
 })
-
-
-}
 
 
 if (document.querySelector('[name=property_type]').value == 'building_rent') { 
@@ -519,6 +523,7 @@ if (document.querySelector('[name=property_type]').value == 'building_rent') {
     propertyAgeGrid.querySelectorAll('.item').forEach((item) => {
         item.addEventListener('click', () => {
             item.parentElement.querySelector("[name=property-age-input]").value = item.textContent; 
+            console.log(item)
             // console.log(item.parentElement.querySelector('[name=property-age-input]').value)
         })
     })
@@ -546,19 +551,26 @@ if (document.querySelector("[name=property_type]").textContent != "chalet_rent" 
 let propertyAgeInput = document.querySelector('[name=property-age-input]'); 
 
 
-if (document.querySelector("[name=property_type]").textContent =! "land_rent") { 
+if (document.querySelector("[name=property_type]").textContent != "land_rent") { 
 
-    extraRoomInput.addEventListener('change', () => { 
-        roomInput.value = "";
-    })
 
-    extraLoungesInput.addEventListener('change', () => {
-        loungesInput.value = ''; 
-    })
+    if (document.querySelector("[name=property_type]").value != 'shop_rent') {
 
-    extraBathroomInput.addEventListener('change', () => {
-        bathroomInput.value = ''; 
-    })
+        extraRoomInput.addEventListener('change', () => { 
+            roomInput.value = "";
+        })
+        extraLoungesInput.addEventListener('change', () => {
+            loungesInput.value = ''; 
+        })
+        extraBathroomInput.addEventListener('change', () => {
+            bathroomInput.value = ''; 
+        })
+    }
+
+
+
+
+
 
     extraPropertyAgeInput.addEventListener('change', () => {
         propertyAgeInput.value = ''; 
@@ -587,7 +599,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     }
 
     if (document.querySelector('[name=property_type]').value == 'shop_rent') {
-        limit = 7; 
+        limit = 3; 
     }
 
 
@@ -645,7 +657,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
     // check purpose input, move interface validation functions from propertyInfo to propertyDetails
 
-    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'building_rent') {
+    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'building_rent' && document.querySelector('[name=property_type]').value != 'shop_rent') {
         if (document.querySelector("[name=property_type]").value != 'building_rent') {
             if (document.querySelector('[name=property_type]').value != 'villa_rent') {
                 let floorInput = document.querySelector('[name=floor-input]'); 
@@ -691,8 +703,6 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     
 
 
-
-        
         // 5
         if (propertyAgeInput.value == "") {
             propertyAgeInput.parentElement.style.border = "1px solid #dc3546"
@@ -701,19 +711,28 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
             counter = counter+1 ;
         }
 
+        
+
+
 
     } 
 
 
 
-    if (document.querySelector('[name=property_type]').value == 'building_rent') {
-                
+    if (document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'shop_rent') {
+            
+        
+
+        console.log("this is shop rent")
+
         // 5
         if (propertyAgeInput.value == "") {
             propertyAgeInput.parentElement.style.border = "1px solid #dc3546"
         } else { 
             propertyAgeInput.parentElement.style.border = "1px solid #00000040"
             counter = counter+1 ;
+            console.log("property age grid") 
+            console.log(counter) 
         }
     } 
 
@@ -723,6 +742,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     } else { 
         // streetWidthSliderValueInput.parentElement.style.border = "1px solid #00000040"
         counter = counter+1 ;
+        console.log(counter);
     }
 
 
