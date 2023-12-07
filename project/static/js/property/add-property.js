@@ -559,12 +559,18 @@ if (document.querySelector("[name=property_type]").value != "land_rent") {
         extraRoomInput.addEventListener('change', () => { 
             roomInput.value = "";
         })
-        extraLoungesInput.addEventListener('change', () => {
-            loungesInput.value = ''; 
-        })
-        extraBathroomInput.addEventListener('change', () => {
-            bathroomInput.value = ''; 
-        })
+
+        if (document.querySelector('[name=property_type]').value != 'building_rent') {
+
+            
+            extraLoungesInput.addEventListener('change', () => {
+                loungesInput.value = ''; 
+            })
+            
+            extraBathroomInput.addEventListener('change', () => {
+                bathroomInput.value = ''; 
+            })
+        }
     }
 
 
