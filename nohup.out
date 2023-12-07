@@ -17623,3 +17623,150 @@ Quit the server with CONTROL-C.
 land_rent
 villa_rent
 Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 07, 2023 - 17:18:47
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[07/Dec/2023 17:19:28] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 17:19:28] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[07/Dec/2023 17:19:28] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[07/Dec/2023 17:19:28] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[07/Dec/2023 17:19:28] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+[07/Dec/2023 17:19:28] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[07/Dec/2023 17:19:28] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[07/Dec/2023 17:19:28,690] - Broken pipe from ('127.0.0.1', 49048)
+[07/Dec/2023 17:19:28,700] - Broken pipe from ('127.0.0.1', 49076)
+[07/Dec/2023 17:19:28] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 17:19:29] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[07/Dec/2023 17:19:29] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[07/Dec/2023 17:19:29] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+[07/Dec/2023 17:19:29] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[07/Dec/2023 17:19:29] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[07/Dec/2023 17:19:29] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[07/Dec/2023 17:19:29] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[07/Dec/2023 17:19:29] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[07/Dec/2023 17:19:29] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[07/Dec/2023 17:19:29] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[07/Dec/2023 17:19:29] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[07/Dec/2023 17:19:29] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+Not Found: /assets/imgs/logo.jpeg
+[07/Dec/2023 17:19:30] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[07/Dec/2023 17:19:31] "GET /property/26ZCy/details/ HTTP/1.1" 200 25685
+[07/Dec/2023 17:19:31] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[07/Dec/2023 17:19:31] "GET /static/js/property/property-details-map.js HTTP/1.1" 304 0
+[07/Dec/2023 17:19:31] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_1.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:19:31] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:19:31] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM_1.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:19:31] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_2.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:19:31] "GET /static/imgs/%D9%85%D8%AF%D8%AE%D9%84_%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-removebg-preview.png HTTP/1.1" 200 11666
+[07/Dec/2023 17:19:31] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:19:31] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:19:31] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_1.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:19:31] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_2.jpeg HTTP/1.1" 304 0
+Not Found: /info.php
+[07/Dec/2023 17:41:30] "GET /info.php HTTP/1.1" 404 4095
+[07/Dec/2023 17:44:37] "GET /static/js/property/add-property.js HTTP/1.1" 200 32559
+[07/Dec/2023 17:44:38] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 17:44:38] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+Not Found: /property/add-property/new/villa_rent/assets/imgs/logo.jpeg
+[07/Dec/2023 17:44:38] "GET /property/add-property/new/villa_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5567
+[07/Dec/2023 17:44:38] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 304 0
+Not Found: /assets/imgs/logo.jpeg
+[07/Dec/2023 17:44:38] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[07/Dec/2023 17:44:38] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:44:39] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 304 0
+[07/Dec/2023 17:44:39] "GET /static/imgs/logo.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:44:39] "GET /media/property/images/5.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:44:39] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:44:39] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:44:40] "GET /property/26ZCy/details/ HTTP/1.1" 200 25685
+[07/Dec/2023 17:44:41] "GET /static/imgs/%D9%85%D8%AF%D8%AE%D9%84_%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-removebg-preview.png HTTP/1.1" 304 0
+[07/Dec/2023 17:44:41] "GET /static/js/property/property-details-map.js HTTP/1.1" 304 0
+[07/Dec/2023 17:44:41] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM.jpeg HTTP/1.1" 200 690843
+[07/Dec/2023 17:44:41] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[07/Dec/2023 17:44:41] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM.jpeg HTTP/1.1" 200 532680
+[07/Dec/2023 17:44:41] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM_1.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:44:41] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_1.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:44:41] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_2.jpeg HTTP/1.1" 304 0
+Not Found: /property/26ZCy/details/assets/imgs/logo.jpeg
+[07/Dec/2023 17:44:41] "GET /property/26ZCy/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5525
+[07/Dec/2023 17:44:41] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 17:44:42] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_2.jpeg HTTP/1.1" 200 648945
+[07/Dec/2023 17:44:42] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_1.jpeg HTTP/1.1" 200 662309
+[07/Dec/2023 17:44:56] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 17:44:59] "GET /property/add-property/ HTTP/1.1" 200 12178
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[07/Dec/2023 17:45:00] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5522
+[07/Dec/2023 17:45:03] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34429
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[07/Dec/2023 17:45:04] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5579
+[07/Dec/2023 17:47:12] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 17:47:12] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[07/Dec/2023 17:47:12] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[07/Dec/2023 17:47:12] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[07/Dec/2023 17:47:14] "GET /property/add-property/ HTTP/1.1" 200 12178
+[07/Dec/2023 17:47:14] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+[07/Dec/2023 17:47:14] "GET /static/js/property/add-property-interface.js HTTP/1.1" 304 0
+[07/Dec/2023 17:47:15] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34429
+[07/Dec/2023 17:47:15] "GET /static/css/property/add-property.css HTTP/1.1" 200 10572
+[07/Dec/2023 17:47:15] "GET /static/js/property/add-property.js HTTP/1.1" 200 32559
+[07/Dec/2023 17:47:15] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+[07/Dec/2023 17:47:24] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34429
+[07/Dec/2023 17:47:37] "POST /property/add-property/new/apartment_rent/ HTTP/1.1" 302 0
+[07/Dec/2023 17:47:37] "GET /property/ad-uploaded/ HTTP/1.1" 200 6060
+[07/Dec/2023 17:47:38] "GET / HTTP/1.1" 200 18086
+Not Found: /assets/imgs/logo.jpeg
+[07/Dec/2023 17:47:38] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[07/Dec/2023 17:47:39] "GET /property/77Fgp/details/ HTTP/1.1" 200 15469
+Not Found: /property/77Fgp/details/assets/imgs/logo.jpeg
+[07/Dec/2023 17:47:39] "GET /property/77Fgp/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5529
+[07/Dec/2023 17:47:44] "GET /admin HTTP/1.1" 301 0
+[07/Dec/2023 17:47:44] "GET /admin/ HTTP/1.1" 200 13026
+[07/Dec/2023 17:47:44] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[07/Dec/2023 17:47:44] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[07/Dec/2023 17:47:44] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[07/Dec/2023 17:47:44] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[07/Dec/2023 17:47:44] "GET /static/admin/css/rtl.css HTTP/1.1" 200 4788
+[07/Dec/2023 17:47:44] "GET /static/override.css HTTP/1.1" 200 156
+[07/Dec/2023 17:47:44] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[07/Dec/2023 17:47:44] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 200 1785
+[07/Dec/2023 17:47:44] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[07/Dec/2023 17:47:44] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[07/Dec/2023 17:47:44] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[07/Dec/2023 17:47:46] "GET /admin/property/property/ HTTP/1.1" 200 12942
+[07/Dec/2023 17:47:46] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[07/Dec/2023 17:47:46] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[07/Dec/2023 17:47:46] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[07/Dec/2023 17:47:46] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[07/Dec/2023 17:47:46] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[07/Dec/2023 17:47:50] "POST /admin/property/property/ HTTP/1.1" 200 10565
+[07/Dec/2023 17:47:50] "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+Not Found: /favicon.ico
+[07/Dec/2023 17:47:50] "GET /favicon.ico HTTP/1.1" 404 4103
+[07/Dec/2023 17:47:51] "POST /admin/property/property/ HTTP/1.1" 302 0
+[07/Dec/2023 17:47:51] "GET /admin/property/property/ HTTP/1.1" 200 12823
+[07/Dec/2023 17:47:51] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[07/Dec/2023 17:47:51] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[07/Dec/2023 17:47:52] "GET /admin/property/property/ HTTP/1.1" 200 12687
+[07/Dec/2023 17:47:52] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[07/Dec/2023 17:47:53] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 17:48:40] "GET /property/add-property/ HTTP/1.1" 200 12178
+[07/Dec/2023 17:48:41] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34429
+[07/Dec/2023 17:48:41] "GET /static/js/property/add-property.js HTTP/1.1" 304 0
+[07/Dec/2023 17:49:59] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 17:50:04] "GET /property/add-property/ HTTP/1.1" 200 12178
+[07/Dec/2023 17:50:05] "GET /property/add-property/new/floor_rent/ HTTP/1.1" 200 36244
+Not Found: /property/add-property/new/floor_rent/assets/imgs/logo.jpeg
+[07/Dec/2023 17:50:06] "GET /property/add-property/new/floor_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5567
+[07/Dec/2023 17:52:06] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 17:52:07] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 17:52:08] "GET /property/add-property/ HTTP/1.1" 200 12178
+[07/Dec/2023 17:52:10] "GET /property/add-property/new/villa_rent/ HTTP/1.1" 200 36207
+[07/Dec/2023 17:52:10] "GET /static/js/property/add-property.js HTTP/1.1" 304 0
+Not Found: /property/add-property/new/villa_rent/assets/imgs/logo.jpeg
+[07/Dec/2023 17:52:11] "GET /property/add-property/new/villa_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5567

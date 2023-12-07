@@ -576,30 +576,34 @@ if (document.querySelector("[name=property_type]").value != "land_rent") {
 
     if (document.querySelector("[name=property_type]").value != 'shop_rent' || document.querySelector('[name=property_type]').value != 'commercial_office_rent' || document.querySelector('[name=property_type]').value != 'branch_rent' ) {
 
-
-        if (extraRoomInput) {
-
+        if (extraRoomInput !== null) { 
             extraRoomInput.addEventListener('change', () => { 
                 roomInput.value = "";
             })
         }
 
+    
+
 
 
         if (document.querySelector('[name=property_type]').value != 'building_rent') {
 
-            if (extraLoungesInput) {
+
+            if (extraLoungesInput !== null) { 
                 extraLoungesInput.addEventListener('change', () => {
                     loungesInput.value = ''; 
                 })
-                
             }
 
-            if (extraBathroomInput) {
+            
+            
+            if (extraBathroomInput !== null ) { 
                 extraBathroomInput.addEventListener('change', () => {
                     bathroomInput.value = ''; 
                 })
             }
+
+        
 
         }
     }
@@ -782,7 +786,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     } 
 
 
-    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'resthouse_rent' && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'apartment_rent' && document.querySelector('[name=property_type]').value != 'chalet_rent' && document.querySelector('[name=property_type]').value != 'furnished_apartment_rent') {
+    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'floor_rent' && document.querySelector('[name=property_type]').value != 'resthouse_rent' && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'apartment_rent' && document.querySelector('[name=property_type]').value != 'chalet_rent' && document.querySelector('[name=property_type]').value != 'furnished_apartment_rent') {
         // 5
         if (propertyAgeInput.value == "") {
             propertyAgeInput.parentElement.style.border = "1px solid #dc3546"
