@@ -17482,3 +17482,15 @@ Not Found: /assets/imgs/logo.jpeg
 Not Found: /favicon.ico
 [06/Dec/2023 22:51:38] "GET /favicon.ico HTTP/1.1" 404 4104
 [06/Dec/2023 23:46:40] "GET / HTTP/1.1" 200 17032
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 06, 2023 - 20:32:09
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+shop_rent
+land_rent
+land_rent
+Watching for file changes with StatReloader
