@@ -125,6 +125,8 @@ def add_property(request, property_type):
             if floor == None or floor == '' or floor == 0: 
                 floor = request.POST.get('floor-input') 
 
+            interface = request.POST.get('interface-input') 
+
 
             families = request.POST.get('families') 
             furnished = request.POST.get('furnished') 
@@ -157,6 +159,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                interface = interface, 
                 user= user, 
                 p_type = property_type, 
                 neighborhood = neighborhood, 
@@ -612,6 +615,7 @@ def add_property(request, property_type):
                 p_type = property_type, 
                 neighborhood = neighborhood, 
                 city = city, 
+                rooms=rooms, 
                 price = price, 
                 space = space, 
                 advertiser_relation= advertiser_relation, 

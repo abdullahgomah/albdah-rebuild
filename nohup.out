@@ -17494,3 +17494,132 @@ shop_rent
 land_rent
 land_rent
 Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 07, 2023 - 01:21:51
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[07/Dec/2023 02:04:27] "GET / HTTP/1.1" 200 17032
+Not Found: /cdn.js
+[07/Dec/2023 02:04:46] "GET /cdn.js HTTP/1.1" 404 4088
+[07/Dec/2023 02:04:46] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+Not Found: /swiper-bundle.min.js
+[07/Dec/2023 02:04:46] "GET /swiper-bundle.min.js HTTP/1.1" 404 4130
+[07/Dec/2023 02:04:46] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+[07/Dec/2023 02:05:18] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+Not Found: /cdn.js
+[07/Dec/2023 02:05:18] "GET /cdn.js HTTP/1.1" 404 4088
+Not Found: /swiper-bundle.min.js
+[07/Dec/2023 02:05:18] "GET /swiper-bundle.min.js HTTP/1.1" 404 4130
+[07/Dec/2023 02:05:19] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+Not Found: /autodiscover/autodiscover.json
+[07/Dec/2023 02:13:35] "GET /autodiscover/autodiscover.json?@zdi/Powershell HTTP/1.1" 404 4177
+[07/Dec/2023 02:23:49] "GET / HTTP/1.1" 200 17032
+[07/Dec/2023 05:35:10] "GET / HTTP/1.1" 200 17032
+Not Found: /remote/login
+[07/Dec/2023 05:57:37] "GET /remote/login HTTP/1.1" 404 4107
+[07/Dec/2023 06:46:35] "GET / HTTP/1.1" 200 17032
+Not Found: /assets/imgs/logo.jpeg
+[07/Dec/2023 06:57:38] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[07/Dec/2023 06:57:39] "GET /property/add-property/ HTTP/1.1" 200 12178
+[07/Dec/2023 06:57:39] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[07/Dec/2023 06:57:39] "GET /static/css/property/add-property-interface.css HTTP/1.1" 304 0
+[07/Dec/2023 06:57:39] "GET /static/js/property/add-property-interface.js HTTP/1.1" 304 0
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[07/Dec/2023 06:57:40] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5522
+[07/Dec/2023 06:57:42] "GET /property/add-property/new/land_rent/ HTTP/1.1" 200 27621
+[07/Dec/2023 06:57:42] "GET /static/css/property/add-property.css HTTP/1.1" 304 0
+[07/Dec/2023 06:57:42] "GET /static/js/property/add-property.js HTTP/1.1" 200 29052
+Not Found: /property/add-property/new/land_rent/assets/imgs/logo.jpeg
+[07/Dec/2023 06:57:42] "GET /property/add-property/new/land_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5564
+[07/Dec/2023 07:19:36] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 07:19:36] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 07:19:36] "GET /media/property/images/5.jpeg HTTP/1.1" 304 0
+Not Found: /assets/imgs/logo.jpeg
+[07/Dec/2023 07:49:31] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4134
+[07/Dec/2023 07:49:32] "GET / HTTP/1.1" 200 17032
+Not Found: /assets/imgs/logo.jpeg
+[07/Dec/2023 07:50:57] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4134
+[07/Dec/2023 07:50:57] "GET / HTTP/1.1" 200 17032
+[07/Dec/2023 10:05:37] "GET / HTTP/1.1" 200 17032
+Not Found: /favicon.ico
+[07/Dec/2023 10:12:50] "GET /favicon.ico HTTP/1.1" 404 4104
+[07/Dec/2023 10:14:09] "GET / HTTP/1.1" 200 17032
+Not Found: /geoserver/web/
+[07/Dec/2023 10:16:45] "GET /geoserver/web/ HTTP/1.1" 404 4113
+Not Found: /.git/
+[07/Dec/2023 10:46:20] "GET /.git/ HTTP/1.1" 404 4081
+[07/Dec/2023 12:03:34] "GET /property/86xPt/details/ HTTP/1.1" 200 30265
+[07/Dec/2023 12:03:34] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.56_PM_S9JqsW2.jpeg HTTP/1.1" 200 53090
+[07/Dec/2023 12:03:35] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1okpoi8.jpeg HTTP/1.1" 200 92066
+Not Found: /property/86xPt/details/assets/imgs/logo.jpeg
+[07/Dec/2023 12:03:35] "GET /property/86xPt/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5525
+[07/Dec/2023 12:03:35] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.35_PM_GmmtKKk.jpeg HTTP/1.1" 200 165738
+[07/Dec/2023 12:03:35] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.34_PM_3pMvo1e.jpeg HTTP/1.1" 200 150530
+[07/Dec/2023 12:03:35] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.32_PM_6ZoCyqi.jpeg HTTP/1.1" 200 83250
+[07/Dec/2023 12:03:35] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.34_PM_1_PLJvn16.jpeg HTTP/1.1" 200 213638
+[07/Dec/2023 12:03:35] "GET / HTTP/1.1" 200 17048
+[07/Dec/2023 12:03:35,891] - Broken pipe from ('127.0.0.1', 46448)
+[07/Dec/2023 12:03:35,897] - Broken pipe from ('127.0.0.1', 46476)
+[07/Dec/2023 12:03:35,910] - Broken pipe from ('127.0.0.1', 43818)
+[07/Dec/2023 12:03:36] "GET /media/property/images/5.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 12:03:36] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+[07/Dec/2023 12:03:36] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 12:03:36] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 304 0
+[07/Dec/2023 12:12:46] "GET /property/add-property/ HTTP/1.1" 200 12178
+[07/Dec/2023 12:12:49] "GET /property/add-property/new/villa_rent/ HTTP/1.1" 200 36207
+[07/Dec/2023 12:12:49] "GET /static/js/property/add-property.js HTTP/1.1" 200 29052
+Not Found: /property/add-property/new/villa_rent/assets/imgs/logo.jpeg
+[07/Dec/2023 12:12:50] "GET /property/add-property/new/villa_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5567
+[07/Dec/2023 12:14:21] "GET / HTTP/1.1" 200 17032
+[07/Dec/2023 12:53:55] "GET / HTTP/1.1" 200 17032
+Not Found: /.vscode/sftp.json
+[07/Dec/2023 12:59:12] "GET /.vscode/sftp.json HTTP/1.1" 404 4126
+[07/Dec/2023 13:23:00] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+Not Found: /maps/assets/imgs/logo.jpeg
+[07/Dec/2023 13:23:01] "GET /maps/assets/imgs/logo.jpeg HTTP/1.1" 404 4221
+Not Found: /property/add-property/new/villa_rent/assets/imgs/logo.jpeg
+[07/Dec/2023 13:54:54] "GET /property/add-property/new/villa_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5567
+Not Found: /docker-compose.yml
+[07/Dec/2023 14:49:09] "GET /docker-compose.yml HTTP/1.1" 404 4125
+[07/Dec/2023 14:58:52] "GET / HTTP/1.1" 200 17032
+Not Found: /assets/imgs/logo.jpeg
+[07/Dec/2023 14:59:02] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4134
+Not Found: /robots.txt
+[07/Dec/2023 14:59:05] "GET /robots.txt HTTP/1.1" 404 4101
+Not Found: /sitemap.xml
+[07/Dec/2023 14:59:06] "GET /sitemap.xml HTTP/1.1" 404 4104
+Not Found: /version
+[07/Dec/2023 15:35:00] "GET /version HTTP/1.1" 404 4092
+Not Found: /.env
+[07/Dec/2023 15:46:36] "GET /.env HTTP/1.1" 404 4083
+[07/Dec/2023 16:42:19] "GET / HTTP/1.1" 200 17032
+Not Found: /Ep1v
+[07/Dec/2023 16:42:21] "GET /Ep1v HTTP/1.1" 404 4083
+Not Found: /GWqN
+[07/Dec/2023 16:42:22] "GET /GWqN HTTP/1.1" 404 4083
+Not Found: /sendgrid.env
+[07/Dec/2023 16:44:04] "GET /sendgrid.env HTTP/1.1" 404 4107
+[07/Dec/2023 17:05:58] "GET /maps/search HTTP/1.1" 200 16744
+[07/Dec/2023 17:06:37] "GET /static/css/maps/style.css HTTP/1.1" 200 2701
+[07/Dec/2023 17:06:37] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[07/Dec/2023 17:06:44] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[07/Dec/2023 17:09:49] "GET / HTTP/1.1" 200 17032
+Not Found: /.git/
+[07/Dec/2023 17:13:14] "GET /.git/ HTTP/1.1" 404 4085
+/albdah-rebuild/albdah-rebuild/property/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 07, 2023 - 01:29:07
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+land_rent
+villa_rent
+Watching for file changes with StatReloader
