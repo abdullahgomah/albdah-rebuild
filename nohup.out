@@ -17413,3 +17413,72 @@ Not Found: /property/69AqZ/details/assets/imgs/logo.jpeg
 Not Found: /robots.txt
 [06/Dec/2023 20:17:12] "GET /robots.txt HTTP/1.1" 404 4096
 [06/Dec/2023 20:17:12] "GET / HTTP/1.1" 200 17032
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 06, 2023 - 16:36:56
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+apartment_rent
+lounges
+2
+##############################
+bathrooms
+2
+##############################
+Watching for file changes with StatReloader
+[06/Dec/2023 20:46:30] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 20:50:01] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[06/Dec/2023 20:50:01] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[06/Dec/2023 20:50:02] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+[06/Dec/2023 20:50:02] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[06/Dec/2023 20:57:17] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 21:05:55] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 21:05:55] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[06/Dec/2023 21:05:55] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[06/Dec/2023 21:05:55] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[06/Dec/2023 21:05:55] "GET /static/js/pages/index.js HTTP/1.1" 200 861
+[06/Dec/2023 21:05:55] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[06/Dec/2023 21:05:55] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[06/Dec/2023 21:05:55] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[06/Dec/2023 21:05:55] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[06/Dec/2023 21:05:55] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[06/Dec/2023 21:05:55] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[06/Dec/2023 21:05:55] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[06/Dec/2023 21:05:56] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+Not Found: /em/
+[06/Dec/2023 21:19:50] "GET /em/ HTTP/1.1" 404 4080
+Not Found: /dIlC
+[06/Dec/2023 21:30:04] "GET /dIlC HTTP/1.1" 404 4083
+Not Found: /ItSM
+[06/Dec/2023 21:30:04] "GET /ItSM HTTP/1.1" 404 4083
+Not Found: /assets/imgs/logo.jpeg
+[06/Dec/2023 21:48:08] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[06/Dec/2023 21:48:09] "GET /property/add-property/ HTTP/1.1" 200 12178
+[06/Dec/2023 21:48:10] "GET /static/css/normalize.css HTTP/1.1" 304 0
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[06/Dec/2023 21:48:10] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5522
+[06/Dec/2023 21:48:11] "GET /static/imgs/logo-transparent.png HTTP/1.1" 304 0
+[06/Dec/2023 21:48:11] "GET /property/add-property/new/shop_rent/ HTTP/1.1" 200 28164
+[06/Dec/2023 21:48:12] "GET /static/imgs/logo-transparent.png HTTP/1.1" 304 0
+[06/Dec/2023 21:48:12] "GET /static/js/property/add-property.js HTTP/1.1" 200 28885
+[06/Dec/2023 21:48:12] "GET /static/js/property/init-map.js HTTP/1.1" 304 0
+Not Found: /property/add-property/new/shop_rent/assets/imgs/logo.jpeg
+[06/Dec/2023 21:48:13] "GET /property/add-property/new/shop_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5564
+[06/Dec/2023 21:48:41] "GET / HTTP/1.1" 200 17048
+[06/Dec/2023 21:48:41] "GET /static/js/pages/app.js HTTP/1.1" 304 0
+[06/Dec/2023 21:48:42] "GET /property/add-property/ HTTP/1.1" 200 12178
+[06/Dec/2023 21:48:45] "GET /property/add-property/new/land_rent/ HTTP/1.1" 200 27621
+Not Found: /property/add-property/new/land_rent/assets/imgs/logo.jpeg
+[06/Dec/2023 21:48:46] "GET /property/add-property/new/land_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5564
+[06/Dec/2023 21:49:53] "GET /property/add-property/ HTTP/1.1" 200 12178
+[06/Dec/2023 21:49:56] "GET /property/add-property/new/land_rent/ HTTP/1.1" 200 27621
+[06/Dec/2023 22:51:35] "GET / HTTP/1.1" 200 17032
+[06/Dec/2023 22:51:38] "GET / HTTP/1.1" 200 17032
+Not Found: /assets/imgs/logo.jpeg
+[06/Dec/2023 22:51:38] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4134
+Not Found: /favicon.ico
+[06/Dec/2023 22:51:38] "GET /favicon.ico HTTP/1.1" 404 4104
+[06/Dec/2023 23:46:40] "GET / HTTP/1.1" 200 17032

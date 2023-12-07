@@ -493,14 +493,14 @@ if (document.querySelector('[name=property_type]').value != 'land_rent' && docum
 }
 
 
-let propertyAgeGrid = document.querySelector('.property-age'); 
-propertyAgeGrid.querySelectorAll('.item').forEach((item) => {
-    item.addEventListener('click', () => {
-        item.parentElement.querySelector("[name=property-age-input]").value = item.textContent; 
-        console.log(item);
-        // console.log(item.parentElement.querySelector('[name=property-age-input]').value)
-    })
-})
+// let propertyAgeGrid = document.querySelector('.property-age'); 
+// propertyAgeGrid.querySelectorAll('.item').forEach((item) => {
+//     item.addEventListener('click', () => {
+//         item.parentElement.querySelector("[name=property-age-input]").value = item.textContent; 
+//         console.log(item);
+//         // console.log(item.parentElement.querySelector('[name=property-age-input]').value)
+//     })
+// })
 
 
 if (document.querySelector('[name=property_type]').value == 'building_rent') { 
@@ -551,7 +551,7 @@ if (document.querySelector("[name=property_type]").textContent != "chalet_rent" 
 let propertyAgeInput = document.querySelector('[name=property-age-input]'); 
 
 
-if (document.querySelector("[name=property_type]").textContent != "land_rent") { 
+if (document.querySelector("[name=property_type]").value != "land_rent") { 
 
 
     if (document.querySelector("[name=property_type]").value != 'shop_rent') {
