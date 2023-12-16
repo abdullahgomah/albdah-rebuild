@@ -578,7 +578,9 @@ if (document.querySelector("[name=property_type]").value != "land_rent") {
 
         if (extraRoomInput !== null) { 
             extraRoomInput.addEventListener('change', () => { 
-                roomInput.value = "";
+                // roomInput.value = "";
+                roomInput.value = extraRoomInput.value;
+                
             })
         }
 
@@ -591,7 +593,8 @@ if (document.querySelector("[name=property_type]").value != "land_rent") {
 
             if (extraLoungesInput !== null) { 
                 extraLoungesInput.addEventListener('change', () => {
-                    loungesInput.value = ''; 
+                    // loungesInput.value = ''; 
+                    loungesInput.value = extraLoungesInput.value; 
                 })
             }
 
@@ -599,7 +602,8 @@ if (document.querySelector("[name=property_type]").value != "land_rent") {
             
             if (extraBathroomInput !== null ) { 
                 extraBathroomInput.addEventListener('change', () => {
-                    bathroomInput.value = ''; 
+                    // bathroomInput.value = ''; 
+                    bathroomInput.value = extraBathroomInput.value; 
                 })
             }
 
@@ -614,7 +618,8 @@ if (document.querySelector("[name=property_type]").value != "land_rent") {
 
 
     extraPropertyAgeInput.addEventListener('change', () => {
-        propertyAgeInput.value = ''; 
+        // propertyAgeInput.value = ''; 
+        propertyAgeInput.value = extraPropertyAgeInput.value; 
     })
 }
 
