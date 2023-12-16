@@ -25,4 +25,3 @@ propertyCoverImg.forEach((img) => {
     }
 })
 
-
