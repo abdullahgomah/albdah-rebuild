@@ -24,3 +24,5 @@ propertyCoverImg.forEach((img) => {
         img.src = img.parentElement.parentElement.querySelector("[name=propertyFirstImgUrl]").value
     }
 })
+
+alert('this is index page ' ) ;
