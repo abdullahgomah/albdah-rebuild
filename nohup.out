@@ -21541,3 +21541,131 @@ Not Found: /t4
 Not Found: /favicon.ico
 [16/Dec/2023 01:24:29] "GET /favicon.ico HTTP/1.1" 404 4104
 [16/Dec/2023 01:24:30] "GET / HTTP/1.1" 200 17032
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 16, 2023 - 01:32:33
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:800/
+Quit the server with CONTROL-C.
+
+Unknown command: '8000'
+Type 'manage.py help' for usage.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.11/threading.py", line 975, in run
+    self._target(*self._args, **self._kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 140, in inner_run
+    run(
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/servers/basehttp.py", line 269, in run
+    httpd = httpd_cls(server_address, WSGIRequestHandler, ipv6=ipv6)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/servers/basehttp.py", line 77, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.11/socketserver.py", line 456, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.11/wsgiref/simple_server.py", line 50, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python3.11/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.11/socketserver.py", line 472, in server_bind
+    self.socket.bind(self.server_address)
+OverflowError: bind(): port must be 0-65535.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Watching for file changes with StatReloader
+[16/Dec/2023 01:33:32] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:33:32] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[16/Dec/2023 01:33:32] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[16/Dec/2023 01:33:32] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[16/Dec/2023 01:33:32] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[16/Dec/2023 01:33:32] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[16/Dec/2023 01:33:32] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[16/Dec/2023 01:33:32] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[16/Dec/2023 01:33:32] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[16/Dec/2023 01:33:32] "GET /static/js/pages/index.js HTTP/1.1" 200 896
+[16/Dec/2023 01:33:32] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[16/Dec/2023 01:33:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[16/Dec/2023 01:33:32] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+Not Found: /assets/imgs/logo.jpeg
+[16/Dec/2023 01:33:35] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[16/Dec/2023 01:33:43] "GET /property/add-property/ HTTP/1.1" 200 12178
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[16/Dec/2023 01:33:43] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5526
+[16/Dec/2023 01:33:47] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34430
+[16/Dec/2023 01:33:47] "GET /static/js/property/add-property1.js HTTP/1.1" 304 0
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[16/Dec/2023 01:33:49] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5583
+[16/Dec/2023 01:33:59] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:34:10] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:34:11] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:34:13] "GET /property/add-property/ HTTP/1.1" 200 12178
+[16/Dec/2023 01:34:15] "GET /property/add-property/ HTTP/1.1" 200 12178
+[16/Dec/2023 01:34:17] "GET /property/add-property/ HTTP/1.1" 200 12178
+[16/Dec/2023 01:34:27] "GET / HTTP/1.1" 200 17032
+[16/Dec/2023 01:34:28] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[16/Dec/2023 01:34:28] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[16/Dec/2023 01:34:28] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[16/Dec/2023 01:34:28] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[16/Dec/2023 01:34:29] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[16/Dec/2023 01:34:29] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[16/Dec/2023 01:34:29] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[16/Dec/2023 01:34:29] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[16/Dec/2023 01:34:29] "GET /static/js/pages/index.js HTTP/1.1" 200 896
+[16/Dec/2023 01:34:29] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[16/Dec/2023 01:34:31] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[16/Dec/2023 01:34:31] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[16/Dec/2023 01:34:32] "GET /property/add-property/ HTTP/1.1" 302 0
+[16/Dec/2023 01:34:32] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[16/Dec/2023 01:34:33] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+[16/Dec/2023 01:34:49] "POST /login/ HTTP/1.1" 302 0
+[16/Dec/2023 01:34:49] "GET /accounts/profile HTTP/1.1" 301 0
+[16/Dec/2023 01:34:49] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[16/Dec/2023 01:34:49] "GET /static/css/users/main.css HTTP/1.1" 200 227
+[16/Dec/2023 01:34:51] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:34:53] "GET /property/add-property/ HTTP/1.1" 200 12178
+[16/Dec/2023 01:34:53] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+[16/Dec/2023 01:34:54] "GET /static/js/property/add-property-interface.js HTTP/1.1" 200 1233
+[16/Dec/2023 01:34:55] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34430
+[16/Dec/2023 01:34:55] "GET /static/css/property/add-property.css HTTP/1.1" 200 10572
+[16/Dec/2023 01:34:55] "GET /static/js/property/add-property1.js HTTP/1.1" 200 32747
+[16/Dec/2023 01:34:55] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[16/Dec/2023 01:34:57] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5579
+[16/Dec/2023 01:36:14] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34430
+[16/Dec/2023 01:36:14] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[16/Dec/2023 01:36:14] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[16/Dec/2023 01:36:14] "GET /static/css/property/add-property.css HTTP/1.1" 200 10572
+[16/Dec/2023 01:36:14] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[16/Dec/2023 01:36:14] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[16/Dec/2023 01:36:14] "GET /static/js/property/add-property1.js HTTP/1.1" 200 32747
+[16/Dec/2023 01:36:14] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+[16/Dec/2023 01:36:14] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[16/Dec/2023 01:36:16] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5583
+[16/Dec/2023 01:37:05] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34430
+[16/Dec/2023 01:37:05] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[16/Dec/2023 01:37:05] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[16/Dec/2023 01:37:05] "GET /static/css/property/add-property.css HTTP/1.1" 200 10572
+[16/Dec/2023 01:37:05] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[16/Dec/2023 01:37:06] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[16/Dec/2023 01:37:06] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+[16/Dec/2023 01:37:06] "GET /static/js/property/add-property1.js HTTP/1.1" 200 32747
+[16/Dec/2023 01:37:06] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[16/Dec/2023 01:37:07] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:37:07] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+Not Found: /assets/imgs/logo.jpeg
+[16/Dec/2023 01:37:08] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[16/Dec/2023 01:37:10] "GET /property/add-property/ HTTP/1.1" 200 12178
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[16/Dec/2023 01:37:10] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5526
+[16/Dec/2023 01:37:12] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34430
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[16/Dec/2023 01:37:13] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5583

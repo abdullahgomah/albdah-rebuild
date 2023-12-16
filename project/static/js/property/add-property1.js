@@ -620,8 +620,6 @@ if (document.querySelector("[name=property_type]").value != "land_rent") {
 
 
 
-alert(document.querySelector('[name=property_type]').value); 
-
 
 propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () => {
     // check all these inputs

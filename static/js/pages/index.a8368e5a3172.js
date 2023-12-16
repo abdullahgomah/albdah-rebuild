@@ -25,3 +25,5 @@ propertyCoverImg.forEach((img) => {
     }
 })
 
+alert('this is index page ' ) ;
+
