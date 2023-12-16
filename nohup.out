@@ -21490,3 +21490,54 @@ Watching for file changes with StatReloader
 [16/Dec/2023 01:20:06] "GET /property/add-property/ HTTP/1.1" 200 12178
 [16/Dec/2023 01:20:08] "GET /property/add-property/ HTTP/1.1" 200 12178
 [16/Dec/2023 01:20:12] "GET /property/add-property/ HTTP/1.1" 200 12178
+Watching for file changes with StatReloader
+[16/Dec/2023 01:23:25] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 34430
+[16/Dec/2023 01:23:26] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[16/Dec/2023 01:23:26] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[16/Dec/2023 01:23:26] "GET /static/css/property/add-property.css HTTP/1.1" 200 10572
+[16/Dec/2023 01:23:26] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[16/Dec/2023 01:23:26] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[16/Dec/2023 01:23:26] "GET /static/js/property/add-property1.js HTTP/1.1" 200 32747
+[16/Dec/2023 01:23:26] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+[16/Dec/2023 01:23:26] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[16/Dec/2023 01:23:30] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5583
+[16/Dec/2023 01:23:30] "GET / HTTP/1.1" 200 17048
+Not Found: /assets/imgs/logo.jpeg
+[16/Dec/2023 01:23:30] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[16/Dec/2023 01:23:31] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:23:32] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[16/Dec/2023 01:23:32] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[16/Dec/2023 01:23:32] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[16/Dec/2023 01:23:32] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[16/Dec/2023 01:23:32] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[16/Dec/2023 01:23:32] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[16/Dec/2023 01:23:32] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[16/Dec/2023 01:23:32] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[16/Dec/2023 01:23:32] "GET /static/js/pages/index.js HTTP/1.1" 200 894
+[16/Dec/2023 01:23:32] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[16/Dec/2023 01:23:32] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[16/Dec/2023 01:23:32] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+Not Found: /assets/imgs/logo.jpeg
+[16/Dec/2023 01:23:33] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[16/Dec/2023 01:23:41] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:23:43] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:23:45] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:23:47] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:23:50] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:23:52] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:23:53] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:24:00] "GET / HTTP/1.1" 200 17048
+[16/Dec/2023 01:24:03] "GET / HTTP/1.1" 200 17048
+Not Found: /ab2g
+[16/Dec/2023 01:24:19] "GET /ab2g HTTP/1.1" 404 4083
+Not Found: /ab2h
+[16/Dec/2023 01:24:20] "GET /ab2h HTTP/1.1" 404 4083
+Not Found: /alive.php
+[16/Dec/2023 01:24:21] "GET /alive.php HTTP/1.1" 404 4098
+[16/Dec/2023 01:24:26] "GET / HTTP/1.1" 200 17032
+Not Found: /t4
+[16/Dec/2023 01:24:27] "GET /t4 HTTP/1.1" 404 4077
+Not Found: /favicon.ico
+[16/Dec/2023 01:24:29] "GET /favicon.ico HTTP/1.1" 404 4104
+[16/Dec/2023 01:24:30] "GET / HTTP/1.1" 200 17032
