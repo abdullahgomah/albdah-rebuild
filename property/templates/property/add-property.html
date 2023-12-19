@@ -176,7 +176,10 @@
                 <input type="text" placeholder="الرجاء كتابة السعر...">
             </div> -->
 
-
+            
+            {% if property_type == 'apartment_rent' or property_type == 'floor_rent' or property_type == 'furnished_apartment_rent' %}
+                
+                
             <div class="box">
                 <p>عوائل / عزاب</p>
                 <div class="grid">
@@ -186,7 +189,10 @@
                 </div>
             </div>
 
+        
             <br>
+        
+            {% endif %}
 
 
             <div class="box">
