@@ -176,6 +176,25 @@
                 <input type="text" placeholder="الرجاء كتابة السعر...">
             </div> -->
 
+            
+            <!-- {% if property_type == 'apartment_rent' or property_type == 'floor_rent' or property_type == 'furnished_apartment_rent' %} -->
+<!--                 
+                
+            <div class="box">
+                <p>عوائل / عزاب</p>
+                <div class="grid">
+                    <input type="hidden" name="property_type_input">
+                    <div class="item">عوائل</div>
+                    <div class="item">عزاب</div>
+                </div>
+            </div>
+
+        
+            <br> -->
+        
+            <!-- {% endif %} -->
+
+
             <div class="box">
                 <p>نوع الإيجار</p>
                 <div class="grid rent-type">
@@ -184,6 +203,10 @@
                     <div class="item" data-value="yearly">سنوي</div>
                 </div>
             </div>
+            
+
+
+
             <br>
 
             <div class="box">
@@ -733,6 +756,21 @@
 
                     <div class="property__feature__item">
                         <label class="toggle-container">
+                            <input type="checkbox" name="families" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عوائل</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="single" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عزاب</p>
+                    </div>
+
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
                             <input type="checkbox" name="private_surface" class="toggle-switch">
                             <span class="toggle-circle"></span>
                         </label>
@@ -800,6 +838,20 @@
                         
                     
                     {% elif property_type == 'villa_rent' %}
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="families" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عوائل</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="single" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عزاب</p>
+                    </div>
                     <div class="property__feature__item">
                         <label class="toggle-container">
                             <input type="checkbox" name="driver_room" class="toggle-switch">
@@ -919,6 +971,20 @@
                     {% elif property_type == 'resthouse_rent' %}
                     <div class="property__feature__item">
                         <label class="toggle-container">
+                            <input type="checkbox" name="families" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عوائل</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="single" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عزاب</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
                             <input type="checkbox" name="pool" class="toggle-switch">
                             <span class="toggle-circle"></span>
                         </label>
@@ -996,6 +1062,20 @@
                     {% if property_type == "building_rent" %}
                     <div class="property__feature__item">
                         <label class="toggle-container">
+                            <input type="checkbox" name="families" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عوائل</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="single" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عزاب</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
                             <input type="checkbox" name="furnished" class="toggle-switch">
                             <span class="toggle-circle"></span>
                         </label>
@@ -1063,6 +1143,20 @@
                     {% if property_type == 'chalet_rent' %}
                     <div class="property__feature__item">
                         <label class="toggle-container">
+                            <input type="checkbox" name="families" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عوائل</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="single" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عزاب</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
                             <input type="checkbox" name="furnished" class="toggle-switch">
                             <span class="toggle-circle"></span>
                         </label>
@@ -1114,6 +1208,13 @@
                             <span class="toggle-circle"></span>
                         </label>
                         <p>عوائل</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="single" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>عزاب</p>
                     </div>
                     <div class="property__feature__item">
                         <label class="toggle-container">

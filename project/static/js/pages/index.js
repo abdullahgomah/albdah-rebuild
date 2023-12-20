@@ -5,14 +5,22 @@ let allProperties = document.querySelectorAll('.item.property')
 propertyTypeBtns.forEach((btn) => {
     // console.log(btn.dataset.property_type)
     btn.addEventListener('click', () => {
-        allProperties.forEach((ad) => {
-            ad.style.display = 'flex';
-        })
-        allProperties.forEach((property) => {
-            if (property.querySelector('[name="property_type_input"]').value != btn.dataset.property_type) {
-                property.style.display = 'none';
-            }
-        })
+        if (btn.dataset.property_type == 'all') {
+            allProperties.forEach((ad) => {
+                ad.style.display = 'flex';
+            })
+        } else {
+
+            
+            allProperties.forEach((ad) => {
+                ad.style.display = 'flex';
+            })
+            allProperties.forEach((property) => {
+                if (property.querySelector('[name="property_type_input"]').value != btn.dataset.property_type) {
+                    property.style.display = 'none';
+                } 
+            })
+        }
     })
 })
 
