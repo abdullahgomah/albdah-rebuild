@@ -158,6 +158,11 @@ class Property(models.Model):
 
     family_part = models.BooleanField(default=False, verbose_name="قسم عوائل")
 
+    monthly_payment = models.BooleanField(default=False, verbose_name="دفع شهري") 
+    quarterly_payment = models.BooleanField(default=False, verbose_name='دفع ربع سنوي') 
+    semi_annual_payment= models.BooleanField(default=False, verbose_name="دفع نصف سنوي") 
+    annual_payment = models.BooleanField(default=False, verbose_name="دفع سنوي") 
+
     def __str__(self):
         return str(self.title )
 
