@@ -686,6 +686,34 @@
             <div class="property__features__container">
                 <p>مزايا العقار</p>
                 <div class="property__features__wrapper">
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="monthly_payment" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>دفع شهري</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="quarterly_payment" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>دفع ربع سنوي</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="semi_annual_payment" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>دفع نصف سنوي</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="annual_payment" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>دفع سنوي</p>
+                    </div>
                     {% if   property_type == 'apartment_rent' or property_type == 'floor_rent' %}
                     <div class="property__feature__item">
                         <label class="toggle-container">

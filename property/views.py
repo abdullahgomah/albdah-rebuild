@@ -43,6 +43,28 @@ def add_property(request, property_type):
     
     if request.POST: 
 
+
+        ## payment types 
+        monthly_payment = request.POST.get('monthly_payment') 
+        quarterly_payment = request.POST.get('quarterly_payment') 
+        semi_annual_payment = request.POST.get('semi_annual_payment') 
+        annual_payment = request.POST.get('annual_payment')
+
+        payments= [
+
+        ]
+
+        payments.append(monthly_payment) # 0
+        payments.append(quarterly_payment) # 1 
+        payments.append(semi_annual_payment) # 2 
+        payments.append(annual_payment) # 4 
+
+        for i in range(len(payments)) : 
+            if payments[i] == 'on': 
+                payments[i] = 1 
+            else: 
+                payments[i] = 0 
+
         user = request.user 
         # GENERAL FIELDS 
         sale = request.POST.get("sale") 
@@ -199,6 +221,10 @@ def add_property(request, property_type):
                 single = features[14], 
                 lat = lat, 
                 lng = lng ,
+                monthly_payment= payments[0] ,
+                quarterly_payment = payments[1], 
+                semi_annual_payment = payments[2], 
+                annual_payment = payments[3], 
                 # families_or_single = families_or_single
         )
 
@@ -350,6 +376,10 @@ def add_property(request, property_type):
                 sanitation_exist = features[2], 
                 private_enternace = features[13], 
                 single = features[20], 
+                monthly_payment= payments[0] ,
+                quarterly_payment = payments[1], 
+                semi_annual_payment = payments[2], 
+                annual_payment = payments[3], 
             )
 
         elif property_type == 'resthouse_rent': 
@@ -417,6 +447,10 @@ def add_property(request, property_type):
                 power_exist = features[1], 
                 sanitation_exist = features[2],  
                 single = features[10], 
+                monthly_payment= payments[0] ,
+                quarterly_payment = payments[1], 
+                semi_annual_payment = payments[2], 
+                annual_payment = payments[3], 
             )
 
         elif property_type == 'commercial_office_rent': 
@@ -462,7 +496,11 @@ def add_property(request, property_type):
                 water_exist = features[0], 
                 power_exist = features[1], 
                 sanitation_exist = features[2],  
-                furnished = features[3] 
+                furnished = features[3] , 
+                monthly_payment= payments[0] ,
+                quarterly_payment = payments[1], 
+                semi_annual_payment = payments[2], 
+                annual_payment = payments[3], 
             )
 
 
@@ -504,7 +542,11 @@ def add_property(request, property_type):
                 description = description, 
                 water_exist = features[0], 
                 power_exist = features[1], 
-                sanitation_exist = features[2],  
+                sanitation_exist = features[2],
+                monthly_payment= payments[0] ,
+                quarterly_payment = payments[1], 
+                semi_annual_payment = payments[2], 
+                annual_payment = payments[3],  
             )
 
         
@@ -558,7 +600,11 @@ def add_property(request, property_type):
                 basement = features[4], 
                 stores_count = stores_count, 
                 apartments_count = apartments_count, 
-                single = features[5]
+                single = features[5], 
+                monthly_payment= payments[0] ,
+                quarterly_payment = payments[1], 
+                semi_annual_payment = payments[2], 
+                annual_payment = payments[3], 
             )
 
 
@@ -592,6 +638,10 @@ def add_property(request, property_type):
                 water_exist = features[0], 
                 power_exist = features[1], 
                 sanitation_exist = features[2],  
+                monthly_payment= payments[0] ,
+                quarterly_payment = payments[1], 
+                semi_annual_payment = payments[2], 
+                annual_payment = payments[3], 
             )
 
 
@@ -655,7 +705,10 @@ def add_property(request, property_type):
                 ac = features[6], 
                 single = features[7],
                 # families_or_single = families_or_single
-
+                monthly_payment= payments[0] ,
+                quarterly_payment = payments[1], 
+                semi_annual_payment = payments[2], 
+                annual_payment = payments[3], 
             )
             
 
@@ -717,6 +770,10 @@ def add_property(request, property_type):
                 kitchen = features[8], 
                 furnished = features[9], 
                 single= features[10], 
+                monthly_payment= payments[0] ,
+                quarterly_payment = payments[1], 
+                semi_annual_payment = payments[2], 
+                annual_payment = payments[3], 
             )
 
 

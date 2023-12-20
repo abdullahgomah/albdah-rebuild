@@ -540,6 +540,42 @@
                     
                     
                     
+                
+                {% if property.monthly_payment %}
+                    <div class="col">
+                        <p>دفع شهري</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.quarterly_payment %}
+                    <div class="col">
+                        <p>دفع ربع سنوي</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.semi_annual_payment %}
+                    <div class="col">
+                        <p>دفع نصف سنوي</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.annual_payment %}
+                    <div class="col">
+                        <p>دفع سنوي</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
                     
 
                 
