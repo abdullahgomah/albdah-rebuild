@@ -9,10 +9,13 @@ from django.core.paginator import Paginator
 
 def index(request): 
     all_properties = Property.objects.all()[::-1]
-    page = request.GET.get("page") 
-    print(page) 
+    paginator = Paginator(all_properties, 5) 
+    page_number = request.GET.get('page') 
+    page_obj = paginator.get_page(page_number) 
+
     context = {
-        'all_properties': all_properties
+        'all_properties': all_properties, 
+        'page_obj': page_obj
     } 
     return render(request, 'pages/index.html', context)
 
