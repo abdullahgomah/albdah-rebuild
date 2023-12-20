@@ -24139,3 +24139,58 @@ apartment_rent
 apartment_rent
 apartment_rent
 Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+December 20, 2023 - 04:03:49
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[20/Dec/2023 04:04:46] "GET / HTTP/1.1" 200 18367
+[20/Dec/2023 04:04:46] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[20/Dec/2023 04:04:46] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[20/Dec/2023 04:04:46] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[20/Dec/2023 04:04:46] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[20/Dec/2023 04:04:46] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[20/Dec/2023 04:04:46] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[20/Dec/2023 04:04:46,628] - Broken pipe from ('127.0.0.1', 53870)
+[20/Dec/2023 04:04:46,644] - Broken pipe from ('127.0.0.1', 53882)
+[20/Dec/2023 04:04:46,656] - Broken pipe from ('127.0.0.1', 53894)
+[20/Dec/2023 04:04:46] "GET / HTTP/1.1" 200 18367
+[20/Dec/2023 04:04:47] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[20/Dec/2023 04:04:47] "GET /static/css/pages/main.css HTTP/1.1" 200 9243
+[20/Dec/2023 04:04:47] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[20/Dec/2023 04:04:47] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[20/Dec/2023 04:04:47] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[20/Dec/2023 04:04:47] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[20/Dec/2023 04:04:47] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[20/Dec/2023 04:04:47] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[20/Dec/2023 04:04:47] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[20/Dec/2023 04:04:47] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[20/Dec/2023 04:04:47] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[20/Dec/2023 04:04:47] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[20/Dec/2023 04:04:47] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+Not Found: /assets/imgs/logo.jpeg
+[20/Dec/2023 04:04:48] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[20/Dec/2023 04:04:49] "GET /property/add-property/ HTTP/1.1" 200 12178
+[20/Dec/2023 04:04:50] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[20/Dec/2023 04:04:50] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[20/Dec/2023 04:04:50,882] - Broken pipe from ('127.0.0.1', 53910)
+[20/Dec/2023 04:04:50,884] - Broken pipe from ('127.0.0.1', 53912)
+[20/Dec/2023 04:04:50] "GET /property/19cQG/details/ HTTP/1.1" 200 18559
+[20/Dec/2023 04:04:51] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+/albdah-rebuild/albdah-rebuild/property/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 20, 2023 - 04:04:36
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader

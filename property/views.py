@@ -131,6 +131,7 @@ def add_property(request, property_type):
 
 
             families = request.POST.get('families') 
+            single = request.POST.get('single') 
             furnished = request.POST.get('furnished') 
             kitchen = request.POST.get('kitchen') 
             extenstion = request.POST.get('extenstion') 
@@ -153,6 +154,7 @@ def add_property(request, property_type):
             features.append(in_villa) # 11 
             features.append(two_enternace) # 12 
             features.append(private_enternace) # 13 
+            features.append(single) # 14 
 
             for i in range(len(features)) : 
                 if features[i] == 'on': 
@@ -194,6 +196,7 @@ def add_property(request, property_type):
                 power_exist = features[1], 
                 sanitation_exist = features[2], 
                 private_enternace = features[13], 
+                single = features[14], 
                 lat = lat, 
                 lng = lng ,
                 # families_or_single = families_or_single
@@ -257,6 +260,7 @@ def add_property(request, property_type):
                 floor = request.POST.get('floor-input') 
 
             families = request.POST.get('families') 
+            single = request.POST.get('single') 
             furnished = request.POST.get('furnished') 
             kitchen = request.POST.get('kitchen') 
             extenstion = request.POST.get('extenstion') 
@@ -293,6 +297,7 @@ def add_property(request, property_type):
             features.append(basement) # 17
             features.append(yard) # 18
             features.append(hair_tent_house) # 19 
+            features.append(single) # 20 
 
 
             for i in range(len(features)) : 
@@ -344,6 +349,7 @@ def add_property(request, property_type):
                 power_exist = features[1], 
                 sanitation_exist = features[2], 
                 private_enternace = features[13], 
+                single = features[20], 
             )
 
         elif property_type == 'resthouse_rent': 
@@ -358,6 +364,8 @@ def add_property(request, property_type):
             amusement = request.POST.get('amusement') 
             family_part = request.POST.get('family_part') 
             kitchen = request.POST.get('kitchen') 
+            single = request.POST.get('single') 
+
 
 
             features.append(pool) # 3
@@ -367,6 +375,7 @@ def add_property(request, property_type):
             features.append(amusement) # 7
             features.append(family_part) # 8
             features.append(kitchen) # 9
+            features.append(single) # 10 
 
             for i in range(len(features)) : 
                 if features[i] == 'on': 
@@ -407,6 +416,7 @@ def add_property(request, property_type):
                 water_exist = features[0], 
                 power_exist = features[1], 
                 sanitation_exist = features[2],  
+                single = features[10], 
             )
 
         elif property_type == 'commercial_office_rent': 
@@ -504,6 +514,8 @@ def add_property(request, property_type):
             furnished = request.POST.get('furnished') 
             basement = request.POST.get('basement')
             stores_count = request.POST.get('stores-count-input')
+            single = request.POST.get('single') 
+
 
             apartments_count = request.POST.get('extra-apartments-count-input') 
             if apartments_count == None or apartments_count == "" or apartments_count == 0: 
@@ -512,6 +524,7 @@ def add_property(request, property_type):
 
             features.append(furnished) # 3 
             features.append(basement)  # 4 
+            features.append(single) # 5 
 
 
             for i in range(len(features)) : 
@@ -544,8 +557,8 @@ def add_property(request, property_type):
                 furnished = features[3], 
                 basement = features[4], 
                 stores_count = stores_count, 
-                apartments_count = apartments_count
-
+                apartments_count = apartments_count, 
+                single = features[5]
             )
 
 
@@ -583,6 +596,8 @@ def add_property(request, property_type):
 
 
         elif property_type =='furnished_apartment_rent': 
+            single = request.POST.get('single') 
+
             floor = request.POST.get('extra-floor-input') 
             if floor == None or floor == '' or floor == 0: 
                 floor = request.POST.get('floor-input') 
@@ -603,6 +618,7 @@ def add_property(request, property_type):
             features.append(extenstion) # 4 
             features.append(car_entrance) # 5
             features.append(ac)  # 6
+            features.append(single) # 7 
 
             for i in range(len(features)) : 
                 if features[i] == 'on': 
@@ -637,6 +653,7 @@ def add_property(request, property_type):
                 extenstion = features[4], 
                 car_entrance= features[5], 
                 ac = features[6], 
+                single = features[7],
                 # families_or_single = families_or_single
 
             )
@@ -644,6 +661,7 @@ def add_property(request, property_type):
 
 
         elif property_type =='chalet_rent': 
+
             football_field = request.POST.get('football_field') # 3
             volly_field = request.POST.get('volly_field') # 4 
             hair_tent_house = request.POST.get('hair_tent_house') # 5
@@ -651,7 +669,7 @@ def add_property(request, property_type):
             family_part = request.POST.get('family_part') # 7
             kitchen = request.POST.get('kitchen') # 8 
             furnished = request.POST.get('furnished') # 9
-
+            single = request.POST.get('single')  # 10 
 
             features.append(football_field)
             features.append(volly_field)
@@ -660,6 +678,7 @@ def add_property(request, property_type):
             features.append(family_part)
             features.append(kitchen)
             features.append(furnished)
+            features.append(single) 
 
             for i in range(len(features)) : 
                 if features[i] == 'on': 
@@ -697,6 +716,7 @@ def add_property(request, property_type):
                 family_part = features[7], 
                 kitchen = features[8], 
                 furnished = features[9], 
+                single= features[10], 
             )
 
 
