@@ -120,6 +120,8 @@ def add_property(request, property_type):
 
         if property_type == 'apartment_rent' or property_type == 'floor_rent' or property_type == 'apartment_sale' or property_type == 'floor_sale': 
 
+            # families_or_single = request.POST.get('families_or_single') 
+
 
             floor = request.POST.get('extra-floor-input') 
             if floor == None or floor == '' or floor == 0: 
@@ -193,7 +195,8 @@ def add_property(request, property_type):
                 sanitation_exist = features[2], 
                 private_enternace = features[13], 
                 lat = lat, 
-                lng = lng  
+                lng = lng ,
+                # families_or_single = families_or_single
         )
 
         
@@ -584,6 +587,7 @@ def add_property(request, property_type):
             if floor == None or floor == '' or floor == 0: 
                 floor = request.POST.get('floor-input') 
 
+            # families_or_single = request.POST.get('families_or_single') 
 
             lounges = request.POST.get('extra-lounges-input') 
             if lounges == None or lounges == "" or lounges == 0: 
@@ -633,6 +637,7 @@ def add_property(request, property_type):
                 extenstion = features[4], 
                 car_entrance= features[5], 
                 ac = features[6], 
+                # families_or_single = families_or_single
 
             )
             

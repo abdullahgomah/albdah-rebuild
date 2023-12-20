@@ -105,6 +105,9 @@ class Property(models.Model):
 
     families = models.BooleanField(default=True, verbose_name="عوائل ام عزاب") 
 
+    families_or_single= models.CharField(max_length=60, verbose_name= "عوائل / عزاب", null =True, blank=True) 
+    
+
     rent_type = models.CharField(max_length=50, choices=RENT_TYPE_CHOICES, verbose_name="نوع الإيجار", null=True, blank=True) 
     purpose = models.CharField(max_length=100, verbose_name="الغرض", null=True, blank=True)
 
