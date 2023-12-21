@@ -570,5 +570,23 @@ footer .copyrights {
 
 .pagination .container {
     display: flex;
+    column-gap: 1rem;
     justify-content: center;
+}
+
+
+.pagination .container a {
+    display: inline-block;
+    color: var(--primary-color);
+    width: fit-content;
+    padding: .4rem 1rem;
+    border: 1px solid var(--primary-color); 
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pagination .current_page {
+    color: var(--secondary-color) !important; 
+    background: var(--primary-color); 
+    border: none; 
 }

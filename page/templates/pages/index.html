@@ -185,8 +185,27 @@
                 {% endfor %}
 
 
+                <div class="pagination">
+                    <div class="container">
+                        <a href="?page=1">الأولى</a>
+                        
+                        {% if page_obj.has_previous %}
+                            <a href="?page={{page_obj.previous_page_number}}">{{page_obj.previous_page_number}}</a>
+                        {% endif %}
 
-                <div class="pagination"> 
+                        <a href="?page={{page_obj.number}}" class="current_page">{{page_obj.number}}</a>
+                        
+                        {% if page_obj.has_next %}
+                            <a href="?page={{page_obj.next_page_number}}">{{page_obj.next_page_number}}</a>
+                        {% endif %}
+
+                        <a href="?page={{paginator.num_pages}}">الأخيرة</a>
+                            
+                    </div>
+                </div>
+
+
+                <!-- <div class="pagination"> 
                     
                     <div class="container">
                         <span class="step-links">
@@ -207,7 +226,7 @@
 
                     </div>
 
-                </div>
+                </div> -->
 
                     
 

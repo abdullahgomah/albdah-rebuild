@@ -15,7 +15,8 @@ def index(request):
 
     context = {
         'all_properties': all_properties, 
-        'page_obj': page_obj
+        'page_obj': page_obj, 
+        'paginator': paginator,
     } 
     return render(request, 'pages/index.html', context)
 
