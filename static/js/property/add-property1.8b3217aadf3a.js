@@ -434,34 +434,6 @@ function disableButton() {
 }
 
 
-function disableSubmitAfterFirstSubmit() {
-    // Get the form element
-    var form = document.querySelector('form');
-
-    // Flag to track whether the form has been submitted
-    var submitted = false;
-
-    // Attach a submit event listener to the form
-    form.addEventListener('submit', function (event) {
-        // If the form has already been submitted, prevent further submissions
-        if (submitted) {
-            event.preventDefault();
-            alert("Form already submitted. Please wait for the process to complete.");
-        } else {
-            // Disable the submit button
-            var submitButton = form.querySelector('[type=submit]');
-            if (submitButton) {
-                submitButton.disabled = true;
-            }
-
-            // Set the submitted flag to true
-            submitted = true;
-        }
-    });
-}
-
-
-
 if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != "building_rent" && document.querySelector('[name=property_type]').value != "shop_rent" && document.querySelector('[name=property_type]').value != 'commercial_office_rent' && document.querySelector('[name=property_type]').value != 'branch_rent') { 
     
     let roomCountGrid = document.querySelector('.room-count'); 
@@ -920,4 +892,5 @@ document.querySelector('form').onsubmit = function () {
     var description = document.querySelector('[name=property__description__input]').value; 
     document.querySelector('[name=property__description__input]').value = marked(description); 
     // alert(document.querySelector('[name=property__description__input]').value)
+
 }
