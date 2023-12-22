@@ -26469,3 +26469,200 @@ Not Found: /favicon.ico
 [22/Dec/2023 14:12:47] "GET / HTTP/1.1" 200 18226
 [22/Dec/2023 14:25:30] "GET / HTTP/1.1" 200 18226
 [22/Dec/2023 15:01:09] "GET / HTTP/1.1" 200 18226
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 22, 2023 - 12:46:00
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+apartment_rent
+apartment_rent
+lounges
+2
+##############################
+bathrooms
+2
+##############################
+Watching for file changes with StatReloader
+[22/Dec/2023 15:21:20] "GET / HTTP/1.1" 200 18226
+[22/Dec/2023 15:21:20] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[22/Dec/2023 15:21:20] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[22/Dec/2023 15:21:20] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[22/Dec/2023 15:21:20] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[22/Dec/2023 15:21:20] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[22/Dec/2023 15:21:20] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[22/Dec/2023 15:21:20] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[22/Dec/2023 15:21:20] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[22/Dec/2023 15:21:21] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[22/Dec/2023 15:21:38] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[22/Dec/2023 15:21:38] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[22/Dec/2023 15:21:38] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+Not Found: /assets/imgs/logo.jpeg
+[22/Dec/2023 15:21:39] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[22/Dec/2023 15:21:40] "GET /property/add-property/ HTTP/1.1" 302 0
+[22/Dec/2023 15:21:40] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[22/Dec/2023 15:21:40] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+Not Found: /auth/assets/imgs/logo.jpeg
+[22/Dec/2023 15:21:40] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4144
+[22/Dec/2023 15:21:41] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[22/Dec/2023 15:21:41] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[22/Dec/2023 15:21:41] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+[22/Dec/2023 15:21:41] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[22/Dec/2023 15:21:41] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[22/Dec/2023 15:21:41] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[22/Dec/2023 15:21:42] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+Not Found: /auth/assets/imgs/logo.jpeg
+[22/Dec/2023 15:21:42] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4144
+[22/Dec/2023 15:21:54] "POST /login/ HTTP/1.1" 302 0
+[22/Dec/2023 15:21:55] "GET /accounts/profile HTTP/1.1" 301 0
+[22/Dec/2023 15:21:55] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[22/Dec/2023 15:21:55] "GET /static/css/users/main.css HTTP/1.1" 200 227
+Not Found: /accounts/profile/assets/imgs/logo.jpeg
+[22/Dec/2023 15:21:55] "GET /accounts/profile/assets/imgs/logo.jpeg HTTP/1.1" 404 5717
+[22/Dec/2023 15:21:58] "GET / HTTP/1.1" 200 18242
+Not Found: /assets/imgs/logo.jpeg
+[22/Dec/2023 15:21:58] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[22/Dec/2023 15:21:58] "GET /property/add-property/ HTTP/1.1" 200 12178
+[22/Dec/2023 15:21:59] "GET /static/js/property/add-property-interface.js HTTP/1.1" 200 1233
+[22/Dec/2023 15:21:59] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[22/Dec/2023 15:21:59] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5522
+[22/Dec/2023 15:21:59] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37217
+[22/Dec/2023 15:21:59] "GET /static/js/property/add-property1.js HTTP/1.1" 200 33956
+[22/Dec/2023 15:21:59] "GET /static/css/property/add-property.css HTTP/1.1" 200 10572
+[22/Dec/2023 15:21:59] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[22/Dec/2023 15:22:00] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5579
+Internal Server Error: /property/add-property/new/apartment_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 786, in add_property
+    main = images_status[i]
+           ~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+Internal Server Error: /property/add-property/new/apartment_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 786, in add_property
+    main = images_status[i]
+           ~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+[22/Dec/2023 15:22:37] "GET / HTTP/1.1" 200 18019
+[22/Dec/2023 15:22:47] "GET /admin HTTP/1.1" 301 0
+[22/Dec/2023 15:22:47] "GET /admin/ HTTP/1.1" 302 0
+[22/Dec/2023 15:22:48] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4013
+[22/Dec/2023 15:22:48] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[22/Dec/2023 15:22:48] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[22/Dec/2023 15:22:48] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[22/Dec/2023 15:22:49] "GET /static/override.css HTTP/1.1" 200 156
+[22/Dec/2023 15:22:49] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[22/Dec/2023 15:22:49] "GET /static/admin/css/rtl.css HTTP/1.1" 200 4788
+[22/Dec/2023 15:22:49] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[22/Dec/2023 15:22:49] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 200 1785
+[22/Dec/2023 15:22:49] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[22/Dec/2023 15:22:49] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+Not Found: /favicon.ico
+[22/Dec/2023 15:22:49] "GET /favicon.ico HTTP/1.1" 404 4099
+Internal Server Error: /property/add-property/new/apartment_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 786, in add_property
+    main = images_status[i]
+           ~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+[22/Dec/2023 15:22:55] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[22/Dec/2023 15:22:55] "GET /admin/ HTTP/1.1" 200 12913
+[22/Dec/2023 15:22:55] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[22/Dec/2023 15:22:55] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[22/Dec/2023 15:22:55] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[22/Dec/2023 15:22:56] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[22/Dec/2023 15:22:56] "GET /admin/property/property/ HTTP/1.1" 200 14019
+[22/Dec/2023 15:22:57] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[22/Dec/2023 15:22:57] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[22/Dec/2023 15:22:57] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[22/Dec/2023 15:22:57] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[22/Dec/2023 15:22:57] "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[22/Dec/2023 15:22:57] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[22/Dec/2023 15:22:57] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[22/Dec/2023 15:22:57] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[22/Dec/2023 15:22:57] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[22/Dec/2023 15:22:57] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[22/Dec/2023 15:22:57] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[22/Dec/2023 15:22:57] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[22/Dec/2023 15:23:02] "POST /admin/property/property/ HTTP/1.1" 200 10974
+[22/Dec/2023 15:23:02] "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[22/Dec/2023 15:23:03] "POST /admin/property/property/ HTTP/1.1" 302 0
+[22/Dec/2023 15:23:03] "GET /admin/property/property/ HTTP/1.1" 200 13358
+[22/Dec/2023 15:23:04] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[22/Dec/2023 15:23:04] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[22/Dec/2023 15:23:05] "GET /admin/property/property/ HTTP/1.1" 200 13218
+[22/Dec/2023 15:23:05] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[22/Dec/2023 15:23:06] "GET / HTTP/1.1" 200 18242
+[22/Dec/2023 15:23:10] "GET /property/99PLm/details/ HTTP/1.1" 200 31548
+[22/Dec/2023 15:23:10] "GET /static/css/property/property-details.css HTTP/1.1" 200 7032
+[22/Dec/2023 15:23:10] "GET /media/property/images/IMG_0306.jpeg HTTP/1.1" 200 248693
+[22/Dec/2023 15:23:10] "GET /media/property/images/IMG_0289.jpeg HTTP/1.1" 200 1624757
+[22/Dec/2023 15:23:10] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[22/Dec/2023 15:23:10] "GET /static/imgs/%D9%85%D8%AF%D8%AE%D9%84_%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-removebg-preview.png HTTP/1.1" 200 11666
+[22/Dec/2023 15:23:10] "GET /media/property/images/IMG_0290.jpeg HTTP/1.1" 200 1675727
+[22/Dec/2023 15:23:11] "GET /media/property/images/IMG_0291.jpeg HTTP/1.1" 200 1676818
+[22/Dec/2023 15:23:11] "GET /media/property/images/IMG_0292.jpeg HTTP/1.1" 200 1380045
+[22/Dec/2023 15:23:11] "GET /media/property/images/IMG_0293.jpeg HTTP/1.1" 200 1153457
+[22/Dec/2023 15:23:11] "GET /media/property/images/IMG_0294.jpeg HTTP/1.1" 200 1402474
+[22/Dec/2023 15:23:12] "GET /media/property/images/IMG_0295.jpeg HTTP/1.1" 200 1300963
+[22/Dec/2023 15:23:12] "GET /media/property/images/IMG_0296.jpeg HTTP/1.1" 200 1110723
+[22/Dec/2023 15:23:13] "GET /media/property/images/IMG_0297.jpeg HTTP/1.1" 200 873221
+[22/Dec/2023 15:23:14] "GET /media/property/images/IMG_0300.jpeg HTTP/1.1" 200 735432
+[22/Dec/2023 15:23:14] "GET /media/property/images/IMG_0299.jpeg HTTP/1.1" 200 675822
+[22/Dec/2023 15:23:15] "GET /media/property/images/IMG_0298.jpeg HTTP/1.1" 200 748535
+[22/Dec/2023 15:23:15] "GET /media/property/images/IMG_0301.jpeg HTTP/1.1" 200 728267
+[22/Dec/2023 15:23:15] "GET /media/property/images/IMG_0302.jpeg HTTP/1.1" 200 786331
+[22/Dec/2023 15:23:15] "GET /media/property/images/IMG_0303.jpeg HTTP/1.1" 200 1700584
+[22/Dec/2023 15:23:16] "GET /static/imgs/%D9%85%D9%83%D9%8A%D9%81-removebg-preview.png HTTP/1.1" 200 7501
+[22/Dec/2023 15:23:16] "GET /media/property/images/IMG_0304.jpeg HTTP/1.1" 200 1827813
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[22/Dec/2023 15:23:20] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5525
+[22/Dec/2023 15:23:22] "GET / HTTP/1.1" 200 18242
+[22/Dec/2023 15:23:24] "GET /accounts/profile/ HTTP/1.1" 200 10322
+[22/Dec/2023 15:23:26] "GET /favourites/ HTTP/1.1" 200 11366
+[22/Dec/2023 15:23:26] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.04_PM.jpeg HTTP/1.1" 200 838594
+Not Found: /favourites/assets/imgs/logo.jpeg
+[22/Dec/2023 15:23:28] "GET /favourites/assets/imgs/logo.jpeg HTTP/1.1" 404 4162
+[22/Dec/2023 15:23:28] "GET /property/69AqZ/details/ HTTP/1.1" 200 26805
+[22/Dec/2023 15:23:28] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_2.jpeg HTTP/1.1" 200 840710
+[22/Dec/2023 15:23:29] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM_1.jpeg HTTP/1.1" 200 943037
+[22/Dec/2023 15:23:29] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.03_PM.jpeg HTTP/1.1" 200 1038412
+[22/Dec/2023 15:23:29] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_3.jpeg HTTP/1.1" 200 1053922
+[22/Dec/2023 15:23:29] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_2.jpeg HTTP/1.1" 200 1035980
+[22/Dec/2023 15:23:30] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM_1.jpeg HTTP/1.1" 200 903749
+[22/Dec/2023 15:23:30] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.02_PM.jpeg HTTP/1.1" 200 1046435
+[22/Dec/2023 15:23:31] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_2.jpeg HTTP/1.1" 200 1050159
+[22/Dec/2023 15:23:31] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_1.jpeg HTTP/1.1" 200 837841
+[22/Dec/2023 15:23:31] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM.jpeg HTTP/1.1" 200 728336
+[22/Dec/2023 15:23:33] "GET / HTTP/1.1" 200 18242
