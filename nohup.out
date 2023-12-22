@@ -26304,3 +26304,168 @@ Not Found: /assets/imgs/logo.jpeg
 [22/Dec/2023 12:03:17] "GET / HTTP/1.1" 200 18226
 [22/Dec/2023 12:19:18] "GET / HTTP/1.1" 200 18226
 [22/Dec/2023 12:20:11] "GET / HTTP/1.1" 200 18226
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 22, 2023 - 01:11:48
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+villa_rent
+lounges
+2
+##############################
+bathrooms
+4
+##############################
+lounges
+2
+##############################
+bathrooms
+4
+##############################
+Watching for file changes with StatReloader
+[22/Dec/2023 12:46:11] "GET / HTTP/1.1" 200 18226
+[22/Dec/2023 12:46:11] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[22/Dec/2023 12:46:11] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[22/Dec/2023 12:46:11] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[22/Dec/2023 12:46:11] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[22/Dec/2023 12:46:11] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[22/Dec/2023 12:46:11] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[22/Dec/2023 12:46:12] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[22/Dec/2023 12:46:12,742] - Broken pipe from ('127.0.0.1', 37676)
+[22/Dec/2023 12:46:12,744] - Broken pipe from ('127.0.0.1', 37652)
+[22/Dec/2023 12:46:13] "GET / HTTP/1.1" 200 18226
+[22/Dec/2023 12:46:13] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[22/Dec/2023 12:46:13] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[22/Dec/2023 12:46:13] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[22/Dec/2023 12:46:13] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[22/Dec/2023 12:46:13] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[22/Dec/2023 12:46:13] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[22/Dec/2023 12:46:13] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[22/Dec/2023 12:46:13] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[22/Dec/2023 12:46:13] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[22/Dec/2023 12:46:13] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[22/Dec/2023 12:46:13] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[22/Dec/2023 12:46:13] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[22/Dec/2023 12:46:14,086] - Broken pipe from ('127.0.0.1', 37660)
+[22/Dec/2023 12:46:14,101] - Broken pipe from ('127.0.0.1', 37686)
+[22/Dec/2023 12:46:14,106] - Broken pipe from ('127.0.0.1', 37700)
+[22/Dec/2023 12:46:14] "GET / HTTP/1.1" 200 18226
+[22/Dec/2023 12:46:14] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[22/Dec/2023 12:46:14] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[22/Dec/2023 12:46:14] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[22/Dec/2023 12:46:14] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[22/Dec/2023 12:46:14] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[22/Dec/2023 12:46:14] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[22/Dec/2023 12:46:14] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[22/Dec/2023 12:46:14] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[22/Dec/2023 12:46:15] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[22/Dec/2023 12:46:15] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[22/Dec/2023 12:46:15] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[22/Dec/2023 12:46:15] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[22/Dec/2023 12:46:15,548] - Broken pipe from ('127.0.0.1', 37708)
+[22/Dec/2023 12:46:15,552] - Broken pipe from ('127.0.0.1', 37732)
+[22/Dec/2023 12:46:15] "GET /property/add-property/ HTTP/1.1" 302 0
+[22/Dec/2023 12:46:15,644] - Broken pipe from ('127.0.0.1', 37726)
+[22/Dec/2023 12:46:15] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[22/Dec/2023 12:46:15] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+[22/Dec/2023 12:46:16] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+Not Found: /auth/assets/imgs/logo.jpeg
+[22/Dec/2023 12:46:16] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4148
+[22/Dec/2023 12:46:28] "POST /login/ HTTP/1.1" 302 0
+[22/Dec/2023 12:46:28] "GET /accounts/profile HTTP/1.1" 301 0
+[22/Dec/2023 12:46:28] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[22/Dec/2023 12:46:28] "GET /static/css/users/main.css HTTP/1.1" 200 227
+Not Found: /accounts/profile/assets/imgs/logo.jpeg
+[22/Dec/2023 12:46:28] "GET /accounts/profile/assets/imgs/logo.jpeg HTTP/1.1" 404 5721
+[22/Dec/2023 12:46:29] "GET / HTTP/1.1" 200 18242
+[22/Dec/2023 12:46:29] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[22/Dec/2023 12:46:29] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[22/Dec/2023 12:46:30] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[22/Dec/2023 12:46:30] "GET /media/property/images/WhatsApp_Image_2023-12-02_at_9.47.28_PM_3.jpeg HTTP/1.1" 200 41167
+[22/Dec/2023 12:46:31] "GET /property/add-property/ HTTP/1.1" 200 12178
+[22/Dec/2023 12:46:31,095] - Broken pipe from ('127.0.0.1', 37716)
+[22/Dec/2023 12:46:31,177] - Broken pipe from ('127.0.0.1', 58434)
+[22/Dec/2023 12:46:31] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+[22/Dec/2023 12:46:31] "GET /static/js/property/add-property-interface.js HTTP/1.1" 200 1233
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[22/Dec/2023 12:46:31] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5526
+[22/Dec/2023 12:46:32] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37217
+[22/Dec/2023 12:46:32] "GET /static/js/property/add-property1.js HTTP/1.1" 200 33904
+[22/Dec/2023 12:46:32] "GET /static/css/property/add-property.css HTTP/1.1" 200 10572
+[22/Dec/2023 12:46:32] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[22/Dec/2023 12:46:32] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5583
+[22/Dec/2023 12:46:48] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37217
+[22/Dec/2023 12:46:49] "GET /static/js/property/add-property1.js HTTP/1.1" 304 0
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[22/Dec/2023 12:46:49] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5583
+[22/Dec/2023 12:47:46] "POST /property/add-property/new/apartment_rent/ HTTP/1.1" 302 0
+[22/Dec/2023 12:47:46] "GET /property/ad-uploaded/ HTTP/1.1" 200 6060
+Not Found: /property/ad-uploaded/assets/imgs/logo.jpeg
+[22/Dec/2023 12:47:47] "GET /property/ad-uploaded/assets/imgs/logo.jpeg HTTP/1.1" 404 5523
+[22/Dec/2023 12:47:53] "GET / HTTP/1.1" 200 18176
+[22/Dec/2023 12:47:53] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[22/Dec/2023 12:47:53] "GET /media/property/images/IMG-20231202-WA0027_wJSRvN1.jpg HTTP/1.1" 200 39543
+[22/Dec/2023 12:47:53] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[22/Dec/2023 12:47:53] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[22/Dec/2023 12:47:59] "GET /admin HTTP/1.1" 301 0
+[22/Dec/2023 12:47:59] "GET /admin/ HTTP/1.1" 302 0
+[22/Dec/2023 12:47:59] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4013
+[22/Dec/2023 12:48:00] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[22/Dec/2023 12:48:00] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[22/Dec/2023 12:48:00] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[22/Dec/2023 12:48:00] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[22/Dec/2023 12:48:00] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[22/Dec/2023 12:48:00] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[22/Dec/2023 12:48:00] "GET /static/override.css HTTP/1.1" 200 156
+[22/Dec/2023 12:48:00] "GET /static/admin/css/rtl.css HTTP/1.1" 200 4788
+[22/Dec/2023 12:48:00] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[22/Dec/2023 12:48:00] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 200 1785
+Not Found: /favicon.ico
+[22/Dec/2023 12:48:00] "GET /favicon.ico HTTP/1.1" 404 4103
+[22/Dec/2023 12:48:03] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[22/Dec/2023 12:48:04] "GET /admin/ HTTP/1.1" 200 12915
+[22/Dec/2023 12:48:04] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[22/Dec/2023 12:48:04] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[22/Dec/2023 12:48:04] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[22/Dec/2023 12:48:04] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[22/Dec/2023 12:48:05] "GET /admin/property/property/ HTTP/1.1" 200 13473
+[22/Dec/2023 12:48:05] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[22/Dec/2023 12:48:05] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[22/Dec/2023 12:48:05] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[22/Dec/2023 12:48:05] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[22/Dec/2023 12:48:05] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[22/Dec/2023 12:48:06] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[22/Dec/2023 12:48:06] "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[22/Dec/2023 12:48:06] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[22/Dec/2023 12:48:06] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[22/Dec/2023 12:48:06] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[22/Dec/2023 12:48:06] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[22/Dec/2023 12:48:06] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[22/Dec/2023 12:48:09] "POST /admin/property/property/ HTTP/1.1" 200 13018
+[22/Dec/2023 12:48:10] "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[22/Dec/2023 12:48:11] "POST /admin/property/property/ HTTP/1.1" 302 0
+[22/Dec/2023 12:48:12] "GET /admin/property/property/ HTTP/1.1" 200 13354
+[22/Dec/2023 12:48:12] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[22/Dec/2023 12:48:12] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[22/Dec/2023 12:54:31] "GET / HTTP/1.1" 200 18226
+Not Found: /favicon.ico
+[22/Dec/2023 13:01:19] "GET /favicon.ico HTTP/1.1" 404 4104
+[22/Dec/2023 13:02:42] "GET / HTTP/1.1" 200 18226
+Not Found: /geoserver/web/
+[22/Dec/2023 13:05:17] "GET /geoserver/web/ HTTP/1.1" 404 4113
+Not Found: /.git/config
+[22/Dec/2023 13:25:31] "GET /.git/config HTTP/1.1" 404 4104
+Not Found: /.git/config
+[22/Dec/2023 13:50:22] "GET /.git/config HTTP/1.1" 404 4108
+Not Found: /robots.txt
+[22/Dec/2023 13:55:59] "GET /robots.txt HTTP/1.1" 404 4096
+[22/Dec/2023 14:11:38] "GET / HTTP/1.1" 200 18226
+Not Found: /favicon.ico
+[22/Dec/2023 14:11:51] "GET /favicon.ico HTTP/1.1" 404 4099
+[22/Dec/2023 14:12:47] "GET / HTTP/1.1" 200 18226
+[22/Dec/2023 14:25:30] "GET / HTTP/1.1" 200 18226
+[22/Dec/2023 15:01:09] "GET / HTTP/1.1" 200 18226
