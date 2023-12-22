@@ -891,6 +891,6 @@ document.querySelector('form').onsubmit = function () {
     // var description = `{% autoescape off %}{{ property.description }}{% endautoescape %}`; 
     var description = document.querySelector('[name=property__description__input]').value; 
     document.querySelector('[name=property__description__input]').value = marked(description); 
-    alert(document.querySelector('[name=property__description__input]').value)
+    // alert(document.querySelector('[name=property__description__input]').value)
 
 }
