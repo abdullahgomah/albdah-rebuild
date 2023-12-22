@@ -446,12 +446,13 @@ function disableSubmitAfterFirstSubmit() {
         // If the form has already been submitted, prevent further submissions
         if (submitted) {
             event.preventDefault();
-            alert("Form already submitted. Please wait for the process to complete.");
+            // alert("Form already submitted. Please wait for the process to complete.");
         } else {
             // Disable the submit button
             var submitButton = form.querySelector('[type=submit]');
             if (submitButton) {
                 submitButton.disabled = true;
+                submitButton.style.opacity = .6;
             }
 
             // Set the submitted flag to true
