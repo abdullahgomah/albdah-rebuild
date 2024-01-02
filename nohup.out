@@ -34015,3 +34015,251 @@ Django version 4.2.6, using settings 'project.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 
+Watching for file changes with StatReloader
+[02/Jan/2024 08:06:05] "GET / HTTP/1.1" 200 18429
+[02/Jan/2024 08:06:05] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:06:08] "GET /property/63MwB/details/ HTTP/1.1" 200 30765
+[02/Jan/2024 08:06:08] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_13.jpeg HTTP/1.1" 200 40575
+[02/Jan/2024 08:06:08] "GET /static/css/property/property-details.css HTTP/1.1" 200 7032
+[02/Jan/2024 08:06:08] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_12.jpeg HTTP/1.1" 200 44703
+[02/Jan/2024 08:06:08] "GET /static/imgs/%D9%85%D8%AF%D8%AE%D9%84_%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-removebg-preview.png HTTP/1.1" 200 11666
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_11.jpeg HTTP/1.1" 200 47921
+[02/Jan/2024 08:06:09] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_10.jpeg HTTP/1.1" 200 41539
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_9.jpeg HTTP/1.1" 200 60636
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_8.jpeg HTTP/1.1" 200 41322
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_7.jpeg HTTP/1.1" 200 60591
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_6.jpeg HTTP/1.1" 200 54569
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_5.jpeg HTTP/1.1" 200 96405
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_4.jpeg HTTP/1.1" 200 51922
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_3.jpeg HTTP/1.1" 200 54916
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_2.jpeg HTTP/1.1" 200 96285
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM.jpeg HTTP/1.1" 200 67593
+[02/Jan/2024 08:06:09] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_1.jpeg HTTP/1.1" 200 59474
+[02/Jan/2024 08:06:09] "GET /static/imgs/%D9%85%D9%83%D9%8A%D9%81-removebg-preview.png HTTP/1.1" 200 7501
+[02/Jan/2024 08:06:10] "GET /media/6fd342d5-068e-41c5-be95-b1c16a5c93e5.MP4 HTTP/1.1" 200 7608275
+Not Found: /property/63MwB/details/assets/imgs/logo.jpeg
+[02/Jan/2024 08:06:10] "GET /property/63MwB/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+January 02, 2024 - 08:05:49
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[02/Jan/2024 08:08:30] "GET / HTTP/1.1" 200 18429
+[02/Jan/2024 08:08:30] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+[02/Jan/2024 08:08:31] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:08:32] "GET /property/63MwB/details/ HTTP/1.1" 200 30765
+[02/Jan/2024 08:08:32] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_13.jpeg HTTP/1.1" 200 40575
+[02/Jan/2024 08:08:32] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_11.jpeg HTTP/1.1" 200 47921
+[02/Jan/2024 08:08:32] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_12.jpeg HTTP/1.1" 200 44703
+[02/Jan/2024 08:08:32] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_9.jpeg HTTP/1.1" 200 60636
+[02/Jan/2024 08:08:32] "GET /static/imgs/%D9%85%D8%AF%D8%AE%D9%84_%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-removebg-preview.png HTTP/1.1" 200 11666
+[02/Jan/2024 08:08:32] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_10.jpeg HTTP/1.1" 200 41539
+[02/Jan/2024 08:08:32] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_8.jpeg HTTP/1.1" 200 41322
+[02/Jan/2024 08:08:32] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_7.jpeg HTTP/1.1" 200 60591
+[02/Jan/2024 08:08:32] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_6.jpeg HTTP/1.1" 200 54569
+[02/Jan/2024 08:08:33] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_5.jpeg HTTP/1.1" 200 96405
+[02/Jan/2024 08:08:33] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_4.jpeg HTTP/1.1" 200 51922
+[02/Jan/2024 08:08:33] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_3.jpeg HTTP/1.1" 200 54916
+[02/Jan/2024 08:08:33] "GET /media/6fd342d5-068e-41c5-be95-b1c16a5c93e5.MP4 HTTP/1.1" 200 7608275
+[02/Jan/2024 08:08:33] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_1.jpeg HTTP/1.1" 200 59474
+[02/Jan/2024 08:08:33] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_2.jpeg HTTP/1.1" 200 96285
+[02/Jan/2024 08:08:33] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM.jpeg HTTP/1.1" 200 67593
+[02/Jan/2024 08:08:33,646] - Broken pipe from ('127.0.0.1', 54626)
+[02/Jan/2024 08:08:34] "GET /property/75Xhu/details/ HTTP/1.1" 200 24636
+[02/Jan/2024 08:08:35] "GET /media/property/images/IMG_0480.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:08:35] "GET /media/property/images/IMG_0481.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:08:35] "GET /media/property/images/IMG_0487.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:08:35] "GET /media/property/images/IMG_0492.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:08:35] "GET /media/property/images/IMG_0482.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:08:35] "GET /media/property/images/IMG_0485.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:08:35] "GET /media/property/images/IMG_0483.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:08:35] "GET /media/property/images/IMG_0486.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:08:35] "GET /media/property/images/IMG_0484.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:09:11] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 08:09:11] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+[02/Jan/2024 08:09:13] "GET /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 200 35403
+[02/Jan/2024 08:09:14] "GET /static/css/property/add-property.css HTTP/1.1" 200 10618
+Not Found: /favicon.ico
+[02/Jan/2024 08:09:14] "GET /favicon.ico HTTP/1.1" 404 4103
+[02/Jan/2024 08:09:15] "GET / HTTP/1.1" 200 18429
+[02/Jan/2024 08:09:15] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+Not Found: /assets/imgs/logo.jpeg
+[02/Jan/2024 08:09:15] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+Not Found: /favicon.ico
+[02/Jan/2024 08:09:29] "GET /favicon.ico HTTP/1.1" 404 4104
+[02/Jan/2024 08:10:32] "GET /admin HTTP/1.1" 301 0
+[02/Jan/2024 08:10:32] "GET /admin/ HTTP/1.1" 302 0
+[02/Jan/2024 08:10:32] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4013
+[02/Jan/2024 08:10:32] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[02/Jan/2024 08:10:32] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[02/Jan/2024 08:10:32] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[02/Jan/2024 08:10:32] "GET /static/override.css HTTP/1.1" 200 156
+[02/Jan/2024 08:10:33] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[02/Jan/2024 08:10:33] "GET /static/admin/css/rtl.css HTTP/1.1" 200 4788
+[02/Jan/2024 08:10:33] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[02/Jan/2024 08:10:33] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 200 1785
+[02/Jan/2024 08:10:33] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[02/Jan/2024 08:10:33] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[02/Jan/2024 08:10:37] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[02/Jan/2024 08:10:38] "GET /admin/ HTTP/1.1" 200 12880
+[02/Jan/2024 08:10:38] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[02/Jan/2024 08:10:38] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[02/Jan/2024 08:10:38] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[02/Jan/2024 08:10:39] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[02/Jan/2024 08:10:42] "GET /admin/property/property/ HTTP/1.1" 200 13741
+[02/Jan/2024 08:10:42] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[02/Jan/2024 08:10:43] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[02/Jan/2024 08:10:43] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[02/Jan/2024 08:10:43] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[02/Jan/2024 08:10:43] "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[02/Jan/2024 08:10:43] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[02/Jan/2024 08:10:43] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[02/Jan/2024 08:10:43] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[02/Jan/2024 08:10:43] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[02/Jan/2024 08:10:43] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[02/Jan/2024 08:10:43] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[02/Jan/2024 08:10:44] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[02/Jan/2024 08:10:45] "GET /admin/property/property/60/change/ HTTP/1.1" 200 49203
+[02/Jan/2024 08:10:45] "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+[02/Jan/2024 08:10:45] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[02/Jan/2024 08:10:45] "GET /static/markdownx/js/markdownx.js HTTP/1.1" 200 32685
+[02/Jan/2024 08:10:45] "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[02/Jan/2024 08:10:45] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[02/Jan/2024 08:10:46] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[02/Jan/2024 08:10:46] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[02/Jan/2024 08:10:46] "POST /markdownx/markdownify/ HTTP/1.1" 200 434
+[02/Jan/2024 08:11:05] "POST /markdownx/markdownify/ HTTP/1.1" 200 437
+[02/Jan/2024 08:11:07] "POST /markdownx/markdownify/ HTTP/1.1" 200 443
+[02/Jan/2024 08:11:08] "POST /markdownx/markdownify/ HTTP/1.1" 200 440
+[02/Jan/2024 08:11:11] "POST /markdownx/markdownify/ HTTP/1.1" 200 446
+[02/Jan/2024 08:11:12] "POST /markdownx/markdownify/ HTTP/1.1" 200 449
+[02/Jan/2024 08:11:14] "POST /markdownx/markdownify/ HTTP/1.1" 200 452
+[02/Jan/2024 08:11:15] "GET / HTTP/1.1" 200 18413
+[02/Jan/2024 08:11:15] "POST /markdownx/markdownify/ HTTP/1.1" 200 455
+[02/Jan/2024 08:11:15] "POST /markdownx/markdownify/ HTTP/1.1" 200 458
+[02/Jan/2024 08:11:17] "POST /markdownx/markdownify/ HTTP/1.1" 200 461
+[02/Jan/2024 08:11:20] "POST /markdownx/markdownify/ HTTP/1.1" 200 464
+[02/Jan/2024 08:11:21] "POST /markdownx/markdownify/ HTTP/1.1" 200 467
+[02/Jan/2024 08:11:22] "POST /markdownx/markdownify/ HTTP/1.1" 200 470
+[02/Jan/2024 08:11:22] "POST /markdownx/markdownify/ HTTP/1.1" 200 473
+[02/Jan/2024 08:11:23] "POST /markdownx/markdownify/ HTTP/1.1" 200 476
+[02/Jan/2024 08:11:23] "POST /markdownx/markdownify/ HTTP/1.1" 200 479
+[02/Jan/2024 08:11:24] "POST /markdownx/markdownify/ HTTP/1.1" 200 482
+[02/Jan/2024 08:11:25] "POST /markdownx/markdownify/ HTTP/1.1" 200 485
+[02/Jan/2024 08:11:26] "POST /markdownx/markdownify/ HTTP/1.1" 200 488
+[02/Jan/2024 08:11:28] "POST /markdownx/markdownify/ HTTP/1.1" 200 491
+[02/Jan/2024 08:11:28] "POST /markdownx/markdownify/ HTTP/1.1" 200 494
+[02/Jan/2024 08:11:29] "POST /markdownx/markdownify/ HTTP/1.1" 200 497
+[02/Jan/2024 08:11:30] "POST /markdownx/markdownify/ HTTP/1.1" 200 500
+[02/Jan/2024 08:11:31] "POST /markdownx/markdownify/ HTTP/1.1" 200 503
+[02/Jan/2024 08:11:32] "POST /markdownx/markdownify/ HTTP/1.1" 200 506
+[02/Jan/2024 08:11:41] "POST /markdownx/markdownify/ HTTP/1.1" 200 509
+[02/Jan/2024 08:11:42] "POST /markdownx/markdownify/ HTTP/1.1" 200 512
+[02/Jan/2024 08:11:44] "POST /markdownx/markdownify/ HTTP/1.1" 200 515
+[02/Jan/2024 08:11:45] "POST /markdownx/markdownify/ HTTP/1.1" 200 518
+[02/Jan/2024 08:11:46] "POST /markdownx/markdownify/ HTTP/1.1" 200 521
+[02/Jan/2024 08:11:47] "POST /markdownx/markdownify/ HTTP/1.1" 200 524
+[02/Jan/2024 08:11:48] "POST /markdownx/markdownify/ HTTP/1.1" 200 527
+[02/Jan/2024 08:13:11] "POST /admin/property/property/60/change/ HTTP/1.1" 302 0
+[02/Jan/2024 08:13:12] "GET /admin/property/property/ HTTP/1.1" 200 13990
+[02/Jan/2024 08:13:12] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[02/Jan/2024 08:13:12] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[02/Jan/2024 08:13:21] "GET /property/63MwB/details/ HTTP/1.1" 200 30406
+[02/Jan/2024 08:13:21] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_13.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:21] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_12.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:21] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:21] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_11.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:21] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_10.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_9.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_8.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_7.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_6.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_5.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_4.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_3.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_1.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_2.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:13:22] "GET /media/6fd342d5-068e-41c5-be95-b1c16a5c93e5.MP4 HTTP/1.1" 200 7608275
+Not Found: /property/63MwB/details/assets/imgs/logo.jpeg
+[02/Jan/2024 08:13:46] "GET /property/63MwB/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[02/Jan/2024 08:13:46] "GET /media/6fd342d5-068e-41c5-be95-b1c16a5c93e5.MP4 HTTP/1.1" 200 7608275
+Not Found: /geoserver/web/
+[02/Jan/2024 08:14:07] "GET /geoserver/web/ HTTP/1.1" 404 4113
+[02/Jan/2024 08:14:24] "GET / HTTP/1.1" 200 18432
+[02/Jan/2024 08:14:24] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:14:29] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 08:14:32] "GET / HTTP/1.1" 200 18432
+[02/Jan/2024 08:14:32] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:14:40] "GET / HTTP/1.1" 200 18432
+[02/Jan/2024 08:14:42] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 08:14:45] "GET /property/add-property/new/sell/land_sale/ HTTP/1.1" 200 27125
+[02/Jan/2024 08:14:45] "GET /static/js/property/add-property1.js HTTP/1.1" 200 35215
+[02/Jan/2024 08:14:45] "GET /static/css/property/add-property.css HTTP/1.1" 304 0
+Not Found: /property/add-property/new/sell/land_sale/assets/imgs/logo.jpeg
+[02/Jan/2024 08:14:46] "GET /property/add-property/new/sell/land_sale/assets/imgs/logo.jpeg HTTP/1.1" 404 5831
+[02/Jan/2024 08:16:10] "GET / HTTP/1.1" 200 18432
+[02/Jan/2024 08:16:10] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[02/Jan/2024 08:16:10] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:16] "GET / HTTP/1.1" 200 18432
+[02/Jan/2024 08:16:16] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[02/Jan/2024 08:16:16] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[02/Jan/2024 08:16:17] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[02/Jan/2024 08:16:17] "GET /media/property/images/e5d50aaa-eaa0-4007-84cd-b9485974269c.jpeg HTTP/1.1" 200 55655
+[02/Jan/2024 08:16:17] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[02/Jan/2024 08:16:17] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[02/Jan/2024 08:16:17] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[02/Jan/2024 08:16:17] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[02/Jan/2024 08:16:17] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[02/Jan/2024 08:16:17] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 200 1564963
+[02/Jan/2024 08:16:17] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+[02/Jan/2024 08:16:17] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+Not Found: /assets/imgs/logo.jpeg
+[02/Jan/2024 08:16:18] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[02/Jan/2024 08:16:51] "GET / HTTP/1.1" 200 18432
+[02/Jan/2024 08:16:52] "GET /property/63MwB/details/ HTTP/1.1" 200 30406
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_13.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_12.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_7.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/6fd342d5-068e-41c5-be95-b1c16a5c93e5.MP4 HTTP/1.1" 200 7608275
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_11.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_10.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_8.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_9.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_6.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_5.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_3.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_4.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_2.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:52] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM_1.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:16:53] "GET /media/property/images/WhatsApp_Image_2024-01-02_at_10.37.10_AM.jpeg HTTP/1.1" 304 0
+Not Found: /property/63MwB/details/assets/imgs/logo.jpeg
+[02/Jan/2024 08:16:53] "GET /property/63MwB/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[02/Jan/2024 08:16:58,374] - Broken pipe from ('127.0.0.1', 41882)
+[02/Jan/2024 08:16:59] "GET /media/6fd342d5-068e-41c5-be95-b1c16a5c93e5.MP4 HTTP/1.1" 200 7608275
+[02/Jan/2024 08:17:04,133] - Broken pipe from ('127.0.0.1', 50782)
+[02/Jan/2024 08:17:05] "GET / HTTP/1.1" 200 18432
+[02/Jan/2024 08:17:41] "GET / HTTP/1.1" 200 18432
+[02/Jan/2024 08:17:44] "GET / HTTP/1.1" 200 18432
+[02/Jan/2024 08:17:44] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:17:45] "GET /maps/search HTTP/1.1" 200 18620
+[02/Jan/2024 08:17:45] "GET /static/css/maps/style.css HTTP/1.1" 200 2701
+Not Found: /maps/assets/imgs/logo.jpeg
+[02/Jan/2024 08:17:46] "GET /maps/assets/imgs/logo.jpeg HTTP/1.1" 404 4225
+[02/Jan/2024 08:18:57] "GET /maps/search HTTP/1.1" 200 18620
+[02/Jan/2024 08:18:57] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[02/Jan/2024 08:18:57] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[02/Jan/2024 08:18:57] "GET /static/css/maps/style.css HTTP/1.1" 200 2701
+[02/Jan/2024 08:18:57] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[02/Jan/2024 08:18:57] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[02/Jan/2024 08:18:57] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+Not Found: /maps/assets/imgs/logo.jpeg
+[02/Jan/2024 08:18:58] "GET /maps/assets/imgs/logo.jpeg HTTP/1.1" 404 4225
