@@ -194,15 +194,22 @@
         
             <!-- {% endif %} -->
 
+            <input type="hidden" name="offer_type_input" value="{{offer_type}}">
 
-            <div class="box">
-                <p>نوع الإيجار</p>
-                <div class="grid rent-type">
-                    <input type="hidden" name="rent_type_input">
-                    <div class="item" data-value="monthly">شهري</div>
-                    <div class="item" data-value="yearly">سنوي</div>
+            
+            {% if not offer_type == 'sell' %}
+                            
+                <div class="box">
+                    <p>نوع الإيجار</p>
+                    <div class="grid rent-type">
+                        <input type="hidden" name="rent_type_input">
+                        <div class="item" data-value="monthly">شهري</div>
+                        <div class="item" data-value="yearly">سنوي</div>
+                    </div>
                 </div>
-            </div>
+
+            {% endif %}
+
             
 
 
@@ -686,6 +693,8 @@
             <div class="property__features__container">
                 <p>مزايا العقار</p>
                 <div class="property__features__wrapper">
+                    
+                    {% if not offer_type == 'sell' %}  
                     <div class="property__feature__item">
                         <label class="toggle-container">
                             <input type="checkbox" name="monthly_payment" class="toggle-switch">
@@ -714,6 +723,8 @@
                         </label>
                         <p>دفع سنوي</p>
                     </div>
+                    {% endif %}
+                    
                     {% if   property_type == 'apartment_rent' or property_type == 'floor_rent' %}
                     <div class="property__feature__item">
                         <label class="toggle-container">

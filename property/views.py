@@ -38,8 +38,12 @@ def property_details(request, number):
     return render(request, 'property/property-details.html', context ) 
 
 @login_required(login_url='/auth/')
-def add_property(request, property_type): 
+def add_property(request, property_type, offer_type=None): 
 
+    if offer_type == "sell":
+        sell = 1
+    else: 
+        sell = 0 
     
     if request.POST: 
 
@@ -185,6 +189,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                sale = sell, 
                 interface = interface, 
                 user= user, 
                 p_type = property_type, 
@@ -243,6 +248,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                sale = sell, 
                 user = user, 
                 p_type = property_type, 
                 neighborhood = neighborhood, 
@@ -333,6 +339,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                sale = sell, 
                 lat= lat, 
                 lng=lng,
                 user = user, 
@@ -414,6 +421,7 @@ def add_property(request, property_type):
                     features[i] = 0 
         
             property_obj = Property.objects.create( 
+                sale = sell, 
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
@@ -472,6 +480,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                sale = sell, 
                 user = user , 
                 lat = lat, 
                 lng = lng  , 
@@ -519,6 +528,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                sale = sell, 
                 user = user, 
                 length = length, 
                 width = width, 
@@ -576,6 +586,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                sale = sell, 
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
@@ -618,6 +629,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                sale = sell, 
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
@@ -677,6 +689,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                sale = sell, 
                 lounges= lounges, 
                 floor= floor, 
                 user = user, 
@@ -740,6 +753,7 @@ def add_property(request, property_type):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                sale = sell, 
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
@@ -800,7 +814,8 @@ def add_property(request, property_type):
         
     print(property_type) 
     context = {
-        'property_type': property_type
+        'property_type': property_type, 
+        'offer_type': offer_type 
     }
     return render(request, 'property/add-property.html', context) 
 
