@@ -133,16 +133,23 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
     let limit = 4; 
     console.log(document.querySelector('[name=property_type]'));
     
-    if (document.querySelector("[name=property_type]").value == 'land_rent') {
-        limit = 7; 
-    }
+
+
 
     if (offerTypeInput.value == 'sell') { 
         limit = 3; 
+        if (document.querySelector("[name=property_type]").value == 'land_rent') {
+            limit = 6; 
+        }
+    } else { 
+        if (document.querySelector("[name=property_type]").value == 'land_rent') {
+            limit = 7; 
+        }
     }
 
     // check form validation 
-    let inputs = propertyInfoSection.querySelectorAll('.input') 
+    let inputs = propertyInfoSection.querySelectorAll('.input')
+
     let inputsLen = inputs.length; 
     let counter = 0; 
 
@@ -199,6 +206,11 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
 
 
         
+    } else { 
+        console.log('counter is not equals') 
+        console.log(counter) ;
+        console.log('the limit is') 
+        console.log(limit); 
     }
 
 

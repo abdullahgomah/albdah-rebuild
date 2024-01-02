@@ -806,11 +806,6 @@ def add_property(request, property_type, offer_type=None):
         return redirect(reverse('property:ad-uploaded'))
 
 
-
-
-        
-
-        
         
     print(property_type) 
     context = {
