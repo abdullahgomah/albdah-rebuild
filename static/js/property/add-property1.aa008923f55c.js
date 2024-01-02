@@ -918,16 +918,8 @@ let calc_meter_price_input_value = function () {
     let priceInputValue = Number(document.querySelector('[name=price-input]').value); 
     let spaceInputValue = Number(document.querySelector('[name=space-input]').value); 
 
-    input.value = (priceInputValue / spaceInputValue).toFixed(1); 
+    input.value = priceInputValue / spaceInputValue; 
 
-}
-
-calc_price_input_value = function() { 
-    let meterPriceInput = document.querySelector('[name=unit-price-input]');
-    let spaceInput = document.querySelector('[name=space-input]');
-    let priceInput = document.querySelector('[name=price-input]');
-
-    priceInput.value = Number(meterPriceInput.value) * Number(spaceInput.value); 
 }
 
 
@@ -935,29 +927,16 @@ if (document.querySelector("[name=property_type]").value == 'land_rent' || docum
 
     let priceInput = document.querySelector('[name=price-input]'); 
     let spaceInput = document.querySelector('[name=space-input]');
-    let meterPriceInput = document.querySelector('[name=unit-price-input]');
-
     
     console.log('land_rent');
     
     priceInput.addEventListener('input', () => {
-        if (meterPriceInput.value == '') { 
-            calc_meter_price_input_value(); 
-        }
+        calc_meter_price_input_value(); 
     })
     
     spaceInput.addEventListener('input', () => {
-        if (priceInput.value == "") {
-            calc_price_input_value();  
-        } else {
-            calc_meter_price_input_value(); 
-        }
+        calc_meter_price_input_value(); 
     })
-
-    meterPriceInput.addEventListener('input', () => {
-        calc_price_input_value(); 
-    })
-    
 
 } 
 
