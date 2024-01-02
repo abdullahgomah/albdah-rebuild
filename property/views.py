@@ -515,7 +515,7 @@ def add_property(request, property_type, offer_type=None):
 
 
 
-        elif property_type == 'land_rent': 
+        elif property_type == 'land_rent' or property_type == 'land_sale': 
             purpose = request.POST.get('purpose-input')
             interface = request.POST.get('interface-input') 
             length = request.POST.get('length-input') 
@@ -543,7 +543,7 @@ def add_property(request, property_type, offer_type=None):
                 advertiser_relation= advertiser_relation, 
                 exclusive = exclusive, 
                 video = video, 
-                # interface= interface, 
+                interface= interface, 
                 street_width = street_width, 
                 # property_age = property_age, 
                 # family_part = features[8], 

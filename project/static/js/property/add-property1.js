@@ -138,8 +138,8 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
 
     if (offerTypeInput.value == 'sell') { 
         limit = 3; 
-        if (document.querySelector("[name=property_type]").value == 'land_rent') {
-            limit = 6; 
+        if (document.querySelector("[name=property_type]").value == 'land_sale' ) {
+            limit = 5; 
         }
     } else { 
         if (document.querySelector("[name=property_type]").value == 'land_rent') {
@@ -480,7 +480,7 @@ function disableSubmitAfterFirstSubmit() {
 
 
 
-if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != "building_rent" && document.querySelector('[name=property_type]').value != "shop_rent" && document.querySelector('[name=property_type]').value != 'commercial_office_rent' && document.querySelector('[name=property_type]').value != 'branch_rent') { 
+if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'land_sale' && document.querySelector('[name=property_type]').value != "building_rent" && document.querySelector('[name=property_type]').value != "shop_rent" && document.querySelector('[name=property_type]').value != 'commercial_office_rent' && document.querySelector('[name=property_type]').value != 'branch_rent') { 
     
     let roomCountGrid = document.querySelector('.room-count'); 
     roomCountGrid.querySelectorAll('.item').forEach((item) => {
@@ -552,7 +552,7 @@ if (document.querySelector('[name=property_type]').value != 'land_rent' && docum
 // })
 
 
-if (document.querySelector('[name=property_type]').value != 'land_rent') {
+if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'land_sale') {
 let propertyAgeGrid = document.querySelector('.property-age'); 
 propertyAgeGrid.querySelectorAll('.item').forEach((item) => {
     item.addEventListener('click', () => {
@@ -621,7 +621,7 @@ if (document.querySelector("[name=property_type]").textContent != "chalet_rent" 
 let propertyAgeInput = document.querySelector('[name=property-age-input]'); 
 
 
-if (document.querySelector("[name=property_type]").value != "land_rent") { 
+if (document.querySelector("[name=property_type]").value != "land_rent" && document.querySelector('[name=property_type]').value != 'land_sale') { 
 
 
     if (document.querySelector("[name=property_type]").value != 'shop_rent' || document.querySelector('[name=property_type]').value != 'commercial_office_rent' || document.querySelector('[name=property_type]').value != 'branch_rent' ) {
@@ -687,7 +687,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
         console.log(limit) ; 
     }
 
-    if (document.querySelector('[name=property_type]').value == 'land_rent') { 
+    if (document.querySelector('[name=property_type]').value == 'land_rent' | document.querySelector('[name=property_type]').value == 'land_sale') { 
         limit = 3; 
         console.log(limit) ; 
     }
@@ -718,7 +718,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
     
 
-    if (document.querySelector('[name=property_type]').value == "shop_rent" || document.querySelector('[name=property_type]').value == 'branch_rent' || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'villa_rent' || document.querySelector('[name=property_type]').value == 'floor_rent' || document.querySelector('[name=property_type]').value == 'commercial_office_rent') { 
+    if (document.querySelector('[name=property_type]').value == "shop_rent" || document.querySelector('[name=property_type]').value == 'branch_rent' || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'land_sale' || document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'villa_rent' || document.querySelector('[name=property_type]').value == 'floor_rent' || document.querySelector('[name=property_type]').value == 'commercial_office_rent') { 
         if (interfaceInput.value == "") { 
             document.querySelector('.interface-field').style.border = "1px solid #dc3546" 
         } else { 
@@ -729,7 +729,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
         }
     }
 
-    if (document.querySelector('[name=property_type]').value == "land_rent" || document.querySelector('[name=property_type]').value == 'building_rent') {
+    if (document.querySelector('[name=property_type]').value == "land_rent" ||document.querySelector('[name=property_type]').value == "land_sale" || document.querySelector('[name=property_type]').value == 'building_rent') {
         let purposeInput = document.querySelector('[name=purpose-input]'); 
         if (purposeInput.value == "") { 
             purposeInput.style.border = "1px solid #dc3546" 
@@ -772,7 +772,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
     // check purpose input, move interface validation functions from propertyInfo to propertyDetails
 
-    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'building_rent' && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'commercial_office_rent' && document.querySelector('[name=property_type]').value != 'branch_rent') {
+    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'land_sale' && document.querySelector('[name=property_type]').value != 'building_rent' && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'commercial_office_rent' && document.querySelector('[name=property_type]').value != 'branch_rent') {
         if (document.querySelector("[name=property_type]").value != 'building_rent') {
             if (document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'resthouse_rent') {
                 let floorInput = document.querySelector('[name=floor-input]'); 
@@ -839,7 +839,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     } 
 
 
-    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'floor_rent' && document.querySelector('[name=property_type]').value != 'resthouse_rent' && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'apartment_rent' && document.querySelector('[name=property_type]').value != 'chalet_rent' && document.querySelector('[name=property_type]').value != 'furnished_apartment_rent') {
+    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'land_sale'  && document.querySelector('[name=property_type]').value != 'floor_rent' && document.querySelector('[name=property_type]').value != 'resthouse_rent' && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'apartment_rent' && document.querySelector('[name=property_type]').value != 'chalet_rent' && document.querySelector('[name=property_type]').value != 'furnished_apartment_rent') {
         // 5
         if (propertyAgeInput.value == "") {
             propertyAgeInput.parentElement.style.border = "1px solid #dc3546"
@@ -899,7 +899,10 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
         console.log(true) 
     } else { 
-        console.log(counter); 
+        console.log('the limit is ') ; 
+        console.log(limit) 
+        console.log('the counter is ') 
+        console.log(counter) 
     }
 })
 

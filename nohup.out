@@ -33374,3 +33374,644 @@ bathrooms
 3
 ##############################
 Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 02, 2024 - 05:58:16
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[02/Jan/2024 05:59:40] "GET / HTTP/1.1" 200 18315
+[02/Jan/2024 05:59:40] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[02/Jan/2024 05:59:40] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[02/Jan/2024 05:59:40] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[02/Jan/2024 05:59:41] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[02/Jan/2024 05:59:41] "GET /media/property/images/e5d50aaa-eaa0-4007-84cd-b9485974269c.jpeg HTTP/1.1" 200 55655
+[02/Jan/2024 05:59:41] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[02/Jan/2024 05:59:41] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[02/Jan/2024 05:59:41] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[02/Jan/2024 05:59:41] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[02/Jan/2024 05:59:41] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[02/Jan/2024 05:59:41,476] - Broken pipe from ('127.0.0.1', 37172)
+[02/Jan/2024 05:59:41,500] - Broken pipe from ('127.0.0.1', 37176)
+[02/Jan/2024 05:59:41] "GET / HTTP/1.1" 200 18315
+[02/Jan/2024 05:59:41] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[02/Jan/2024 05:59:41] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[02/Jan/2024 05:59:42] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[02/Jan/2024 05:59:42] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[02/Jan/2024 05:59:42] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[02/Jan/2024 05:59:42] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[02/Jan/2024 05:59:42] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[02/Jan/2024 05:59:42] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[02/Jan/2024 05:59:42] "GET /media/property/images/e5d50aaa-eaa0-4007-84cd-b9485974269c.jpeg HTTP/1.1" 200 55655
+[02/Jan/2024 05:59:42] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[02/Jan/2024 05:59:42] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[02/Jan/2024 05:59:42] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+Not Found: /assets/imgs/logo.jpeg
+[02/Jan/2024 05:59:43] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[02/Jan/2024 05:59:46] "GET / HTTP/1.1" 200 18315
+[02/Jan/2024 06:02:04] "GET / HTTP/1.1" 200 18315
+[02/Jan/2024 06:02:55] "GET / HTTP/1.1" 200 18315
+Not Found: /f/1ba1685.js
+[02/Jan/2024 06:03:10] "GET /f/1ba1685.js HTTP/1.1" 404 4106
+Not Found: /.git/config
+[02/Jan/2024 06:03:54] "GET /.git/config HTTP/1.1" 404 4104
+Not Found: /assets/imgs/logo.jpeg
+[02/Jan/2024 06:10:01] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4134
+[02/Jan/2024 06:10:01] "GET / HTTP/1.1" 200 18299
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:13:55] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:13:56] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:13:57] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:13:58] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[02/Jan/2024 06:15:59] "GET / HTTP/1.1" 200 18315
+Not Found: /assets/imgs/logo.jpeg
+[02/Jan/2024 06:16:00] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[02/Jan/2024 06:16:03] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 06:16:04] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+[02/Jan/2024 06:16:04] "GET /static/js/property/add-property-interface.js HTTP/1.1" 200 1233
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[02/Jan/2024 06:16:05] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5770
+[02/Jan/2024 06:16:11] "GET /property/add-property/new/sell/land_rent/ HTTP/1.1" 200 27426
+[02/Jan/2024 06:16:11] "GET /static/css/property/add-property.css HTTP/1.1" 200 10618
+[02/Jan/2024 06:16:11] "GET /static/js/property/add-property1.js HTTP/1.1" 200 34540
+[02/Jan/2024 06:16:12] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+Not Found: /property/add-property/new/sell/land_rent/assets/imgs/logo.jpeg
+[02/Jan/2024 06:16:13] "GET /property/add-property/new/sell/land_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[02/Jan/2024 06:18:33] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 06:18:35] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37447
+[02/Jan/2024 06:18:35] "GET /static/js/property/add-property1.js HTTP/1.1" 304 0
+[02/Jan/2024 06:18:35] "GET /static/css/property/add-property.css HTTP/1.1" 304 0
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[02/Jan/2024 06:18:36] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[02/Jan/2024 06:18:37] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 06:18:39] "GET /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 200 35403
+Not Found: /property/add-property/new/sell/apartment_rent/assets/imgs/logo.jpeg
+[02/Jan/2024 06:18:39] "GET /property/add-property/new/sell/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5842
+Not Found: /modules/.git/config
+[02/Jan/2024 06:26:52] "GET /modules/.git/config HTTP/1.1" 404 4128
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:29:32] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:29:32] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:29:33] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:29:34] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /design/defaulttheme/js/widgetv2/index.js
+[02/Jan/2024 06:41:21] "GET /design/defaulttheme/js/widgetv2/index.js HTTP/1.1" 404 4191
+[02/Jan/2024 06:43:18] "POST /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 302 0
+[02/Jan/2024 06:43:19] "GET /property/ad-uploaded/ HTTP/1.1" 200 6060
+Not Found: /property/ad-uploaded/assets/imgs/logo.jpeg
+[02/Jan/2024 06:43:20] "GET /property/ad-uploaded/assets/imgs/logo.jpeg HTTP/1.1" 404 5767
+[02/Jan/2024 06:43:26] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 06:43:26] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 200 1564963
+[02/Jan/2024 06:45:05] "GET /property/75Xhu/details/ HTTP/1.1" 200 24636
+[02/Jan/2024 06:45:06] "GET /media/property/images/IMG_0487.jpeg HTTP/1.1" 200 1326179
+[02/Jan/2024 06:45:06] "GET /media/property/images/IMG_0492.jpeg HTTP/1.1" 200 2052129
+[02/Jan/2024 06:45:06] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 06:45:06] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+Not Found: /property/75Xhu/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:45:07] "GET /property/75Xhu/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[02/Jan/2024 06:45:08] "GET /media/property/images/IMG_0481.jpeg HTTP/1.1" 200 1360141
+[02/Jan/2024 06:45:08] "GET /media/property/images/IMG_0480.jpeg HTTP/1.1" 200 1351664
+[02/Jan/2024 06:45:08] "GET /media/property/images/IMG_0485.jpeg HTTP/1.1" 200 1304182
+[02/Jan/2024 06:45:08] "GET /media/property/images/IMG_0482.jpeg HTTP/1.1" 200 1657452
+[02/Jan/2024 06:45:08] "GET /media/property/images/IMG_0483.jpeg HTTP/1.1" 200 763931
+[02/Jan/2024 06:45:09] "GET /media/property/images/IMG_0486.jpeg HTTP/1.1" 200 1441105
+[02/Jan/2024 06:45:09] "GET /media/property/images/IMG_0484.jpeg HTTP/1.1" 200 1233758
+[02/Jan/2024 06:45:10] "GET /static/imgs/%D9%85%D9%83%D9%8A%D9%81-removebg-preview.png HTTP/1.1" 200 7501
+[02/Jan/2024 06:45:13] "GET /media/9011fb60-d955-47fd-9cd5-a047733e2f2f.mp4 HTTP/1.1" 200 18715309
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:55:34] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:55:34] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:55:35] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 06:55:35] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[02/Jan/2024 06:56:05] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 06:56:06] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:03:04] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:03:05] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:03:05] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:03:06] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[02/Jan/2024 07:08:08] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 07:08:08] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[02/Jan/2024 07:08:08] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 200 1564963
+[02/Jan/2024 07:08:10] "GET /property/75Xhu/details/ HTTP/1.1" 200 24636
+[02/Jan/2024 07:08:10] "GET /static/css/property/property-details.css HTTP/1.1" 200 7032
+[02/Jan/2024 07:08:10] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[02/Jan/2024 07:08:10] "GET /media/property/images/IMG_0492.jpeg HTTP/1.1" 200 2052129
+[02/Jan/2024 07:08:10] "GET /media/property/images/IMG_0487.jpeg HTTP/1.1" 200 1326179
+[02/Jan/2024 07:08:10] "GET /media/property/images/IMG_0480.jpeg HTTP/1.1" 200 1351664
+[02/Jan/2024 07:08:10] "GET /media/property/images/IMG_0481.jpeg HTTP/1.1" 200 1360141
+[02/Jan/2024 07:08:10] "GET /media/property/images/IMG_0482.jpeg HTTP/1.1" 200 1657452
+[02/Jan/2024 07:08:13] "GET /static/imgs/%D9%85%D9%83%D9%8A%D9%81-removebg-preview.png HTTP/1.1" 200 7501
+[02/Jan/2024 07:08:13] "GET /media/property/images/IMG_0483.jpeg HTTP/1.1" 200 763931
+[02/Jan/2024 07:08:14] "GET /media/property/images/IMG_0485.jpeg HTTP/1.1" 200 1304182
+[02/Jan/2024 07:08:14] "GET /media/property/images/IMG_0486.jpeg HTTP/1.1" 200 1441105
+[02/Jan/2024 07:08:14] "GET /media/property/images/IMG_0484.jpeg HTTP/1.1" 200 1233758
+Not Found: /property/75Xhu/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:08:15] "GET /property/75Xhu/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[02/Jan/2024 07:08:15,497] - Broken pipe from ('127.0.0.1', 37184)
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:09] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:09] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:10] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:11] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:18] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:18] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:19] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:19] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:34] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:35] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:36] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Not Found: /property/99PLm/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:09:36] "GET /property/99PLm/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[02/Jan/2024 07:10:27] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 07:10:28] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[02/Jan/2024 07:10:28] "GET /static/css/normalize.css HTTP/1.1" 304 0
+[02/Jan/2024 07:10:28] "GET /static/imgs/logo.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:10:28] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 304 0
+[02/Jan/2024 07:10:28] "GET /static/js/pages/app.js HTTP/1.1" 304 0
+[02/Jan/2024 07:10:28] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 200 1564963
+[02/Jan/2024 07:10:28] "GET /media/property/images/e5d50aaa-eaa0-4007-84cd-b9485974269c.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:10:28] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:10:28] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[02/Jan/2024 07:10:28] "GET /static/imgs/logo-transparent.png HTTP/1.1" 304 0
+[02/Jan/2024 07:10:29] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:10:29] "GET /media/property/images/IMG_0278.png HTTP/1.1" 304 0
+Not Found: /assets/imgs/logo.jpeg
+[02/Jan/2024 07:10:30] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[02/Jan/2024 07:10:58] "GET / HTTP/1.1" 200 18317
+[02/Jan/2024 07:10:59] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[02/Jan/2024 07:10:59] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[02/Jan/2024 07:10:59] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[02/Jan/2024 07:10:59] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[02/Jan/2024 07:10:59] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 200 1564963
+[02/Jan/2024 07:10:59] "GET /media/property/images/e5d50aaa-eaa0-4007-84cd-b9485974269c.jpeg HTTP/1.1" 200 55655
+[02/Jan/2024 07:10:59] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[02/Jan/2024 07:10:59] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[02/Jan/2024 07:10:59] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[02/Jan/2024 07:10:59] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[02/Jan/2024 07:11:00] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[02/Jan/2024 07:11:00] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+Not Found: /assets/imgs/logo.jpeg
+[02/Jan/2024 07:11:03] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[02/Jan/2024 07:11:37] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 07:11:37] "GET / HTTP/1.1" 200 18317
+[02/Jan/2024 07:11:37] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:11:56] "GET / HTTP/1.1" 200 18317
+[02/Jan/2024 07:12:06] "GET /?page=2 HTTP/1.1" 200 16042
+[02/Jan/2024 07:12:06] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[02/Jan/2024 07:12:06] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[02/Jan/2024 07:12:07] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[02/Jan/2024 07:12:10] "GET /?page=1 HTTP/1.1" 200 18317
+[02/Jan/2024 07:12:33] "GET /?page=2 HTTP/1.1" 200 16042
+[02/Jan/2024 07:13:13] "GET /?page=1 HTTP/1.1" 200 18317
+Not Found: /14565770.js
+[02/Jan/2024 07:19:09] "GET /14565770.js HTTP/1.1" 404 4107
+Not Found: /.well-known/apple-app-site-association
+[02/Jan/2024 07:24:26] "GET /.well-known/apple-app-site-association HTTP/1.1" 404 4180
+Not Found: /apple-app-site-association
+[02/Jan/2024 07:24:30] "GET /apple-app-site-association HTTP/1.1" 404 4144
+[02/Jan/2024 07:32:07] "GET /property/add-property/ HTTP/1.1" 302 0
+[02/Jan/2024 07:32:07] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[02/Jan/2024 07:32:07] "GET /static/css/users/authenticate.css HTTP/1.1" 200 1296
+Not Found: /auth/assets/imgs/logo.jpeg
+[02/Jan/2024 07:32:08] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4148
+[02/Jan/2024 07:32:12] "POST /login/ HTTP/1.1" 302 0
+[02/Jan/2024 07:32:12] "GET /accounts/profile HTTP/1.1" 301 0
+[02/Jan/2024 07:32:12] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[02/Jan/2024 07:32:12] "GET /static/css/users/main.css HTTP/1.1" 200 227
+Not Found: /accounts/profile/assets/imgs/logo.jpeg
+[02/Jan/2024 07:32:13] "GET /accounts/profile/assets/imgs/logo.jpeg HTTP/1.1" 404 5721
+[02/Jan/2024 07:32:16] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 07:32:17] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:32:19] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 07:32:19] "GET /static/js/property/add-property-interface.js HTTP/1.1" 200 1233
+[02/Jan/2024 07:32:19] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[02/Jan/2024 07:32:20] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5774
+[02/Jan/2024 07:32:24] "GET /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 200 35403
+[02/Jan/2024 07:32:24] "GET /static/js/property/add-property1.js HTTP/1.1" 200 34540
+[02/Jan/2024 07:32:24] "GET /static/css/property/add-property.css HTTP/1.1" 200 10618
+[02/Jan/2024 07:32:24] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+Not Found: /property/add-property/new/sell/apartment_rent/assets/imgs/logo.jpeg
+[02/Jan/2024 07:32:25] "GET /property/add-property/new/sell/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5846
+Not Found: /node_modules/.git/config
+[02/Jan/2024 07:37:51] "GET /node_modules/.git/config HTTP/1.1" 404 4143
+Not Found: /.DS_Store
+[02/Jan/2024 07:40:48] "GET /.DS_Store HTTP/1.1" 404 4102
+Internal Server Error: /property/add-property/new/sell/apartment_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '171.4'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 191, in add_property
+    property_obj = Property.objects.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/albdah-rebuild/albdah-rebuild/property/models.py", line 209, in save
+    super(Property, self).save(*args, **kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1745, in as_sql
+    value_rows = [
+                 ^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1746, in <listcomp>
+    [
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1747, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 954, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2060, in get_db_prep_value
+    value = super().get_db_prep_value(value, connection, prepared)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 947, in get_db_prep_value
+    value = self.get_prep_value(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'space' expected a number but got '171.4'.
+[02/Jan/2024 07:49:12] "POST /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 500 212686
+Not Found: /favicon.ico
+[02/Jan/2024 07:49:14] "GET /favicon.ico HTTP/1.1" 404 4103
+[02/Jan/2024 07:50:46] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 07:50:46] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:50:50] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 07:50:53] "GET /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 200 35403
+[02/Jan/2024 07:50:53] "GET /static/js/property/add-property1.js HTTP/1.1" 304 0
+[02/Jan/2024 07:50:53] "GET /static/css/property/add-property.css HTTP/1.1" 304 0
+Internal Server Error: /property/add-property/new/sell/apartment_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '171.4'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 191, in add_property
+    property_obj = Property.objects.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/albdah-rebuild/albdah-rebuild/property/models.py", line 209, in save
+    super(Property, self).save(*args, **kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1745, in as_sql
+    value_rows = [
+                 ^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1746, in <listcomp>
+    [
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1747, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 954, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2060, in get_db_prep_value
+    value = super().get_db_prep_value(value, connection, prepared)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 947, in get_db_prep_value
+    value = self.get_prep_value(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'space' expected a number but got '171.4'.
+[02/Jan/2024 07:54:52] "POST /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 500 214352
+[02/Jan/2024 07:55:14] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 07:55:16] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 07:55:18] "GET /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 200 35403
+Internal Server Error: /property/add-property/new/sell/apartment_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2053, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '171.4'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 191, in add_property
+    property_obj = Property.objects.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/albdah-rebuild/albdah-rebuild/property/models.py", line 209, in save
+    super(Property, self).save(*args, **kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1745, in as_sql
+    value_rows = [
+                 ^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1746, in <listcomp>
+    [
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1747, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 954, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2060, in get_db_prep_value
+    value = super().get_db_prep_value(value, connection, prepared)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 947, in get_db_prep_value
+    value = self.get_prep_value(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'space' expected a number but got '171.4'.
+[02/Jan/2024 07:56:37] "POST /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 500 208404
+[02/Jan/2024 07:57:19] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 07:57:19] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:57:22] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 07:57:22] "GET /static/js/property/add-property-interface.js HTTP/1.1" 200 1233
+[02/Jan/2024 07:57:22] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[02/Jan/2024 07:57:22] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5774
+[02/Jan/2024 07:57:24] "GET /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 200 35403
+[02/Jan/2024 07:57:24] "GET /static/css/property/add-property.css HTTP/1.1" 200 10618
+[02/Jan/2024 07:57:24] "GET /static/js/property/add-property1.js HTTP/1.1" 200 34540
+[02/Jan/2024 07:57:24] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+Not Found: /property/add-property/new/sell/apartment_rent/assets/imgs/logo.jpeg
+[02/Jan/2024 07:57:25] "GET /property/add-property/new/sell/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5846
+[02/Jan/2024 07:57:39] "POST /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 302 0
+[02/Jan/2024 07:57:39] "GET /property/ad-uploaded/ HTTP/1.1" 200 6060
+Not Found: /property/ad-uploaded/assets/imgs/logo.jpeg
+[02/Jan/2024 07:57:39] "GET /property/ad-uploaded/assets/imgs/logo.jpeg HTTP/1.1" 404 5771
+[02/Jan/2024 07:57:40] "GET / HTTP/1.1" 200 18184
+[02/Jan/2024 07:57:52] "GET /property/80FmP/details/ HTTP/1.1" 200 15554
+Not Found: /property/80FmP/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:57:52] "GET /property/80FmP/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+Not Found: /favicon.ico
+[02/Jan/2024 07:57:52] "GET /favicon.ico HTTP/1.1" 404 4103
+[02/Jan/2024 07:58:06] "GET / HTTP/1.1" 200 18168
+[02/Jan/2024 07:58:35] "GET /admin HTTP/1.1" 301 0
+[02/Jan/2024 07:58:35] "GET /admin/ HTTP/1.1" 200 12894
+[02/Jan/2024 07:58:35] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[02/Jan/2024 07:58:35] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[02/Jan/2024 07:58:35] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[02/Jan/2024 07:58:35] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[02/Jan/2024 07:58:36] "GET /static/admin/css/rtl.css HTTP/1.1" 200 4788
+[02/Jan/2024 07:58:36] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[02/Jan/2024 07:58:36] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[02/Jan/2024 07:58:36] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 200 1785
+[02/Jan/2024 07:58:36] "GET /static/override.css HTTP/1.1" 200 156
+[02/Jan/2024 07:58:36] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[02/Jan/2024 07:58:36] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[02/Jan/2024 07:58:36] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[02/Jan/2024 07:58:36] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+Not Found: /favicon.ico
+[02/Jan/2024 07:58:36] "GET /favicon.ico HTTP/1.1" 404 4103
+[02/Jan/2024 07:58:38] "GET /admin/property/property/ HTTP/1.1" 200 13732
+[02/Jan/2024 07:58:38] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[02/Jan/2024 07:58:38] "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[02/Jan/2024 07:58:38] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[02/Jan/2024 07:58:38] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[02/Jan/2024 07:58:38] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[02/Jan/2024 07:58:38] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[02/Jan/2024 07:58:38] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[02/Jan/2024 07:58:38] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[02/Jan/2024 07:58:38] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[02/Jan/2024 07:58:38] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[02/Jan/2024 07:58:38] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[02/Jan/2024 07:58:38] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[02/Jan/2024 07:58:40] "GET /admin/property/property/59/change/ HTTP/1.1" 200 48295
+[02/Jan/2024 07:58:40] "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+[02/Jan/2024 07:58:40] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[02/Jan/2024 07:58:40] "GET /static/markdownx/js/markdownx.js HTTP/1.1" 200 32685
+[02/Jan/2024 07:58:40] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[02/Jan/2024 07:58:40] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[02/Jan/2024 07:58:40] "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[02/Jan/2024 07:58:40] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[02/Jan/2024 07:58:41] "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[02/Jan/2024 07:58:41] "GET /admin/property/property/ HTTP/1.1" 200 13732
+[02/Jan/2024 07:58:44] "POST /admin/property/property/ HTTP/1.1" 200 10561
+[02/Jan/2024 07:58:45] "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[02/Jan/2024 07:58:45] "POST /admin/property/property/ HTTP/1.1" 302 0
+[02/Jan/2024 07:58:46] "GET /admin/property/property/ HTTP/1.1" 200 13617
+[02/Jan/2024 07:58:46] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[02/Jan/2024 07:58:46] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[02/Jan/2024 07:58:47] "GET / HTTP/1.1" 200 18333
+Not Found: /assets/imgs/logo.jpeg
+[02/Jan/2024 07:58:47] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[02/Jan/2024 07:58:48] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 07:58:49] "GET /property/75Xhu/details/ HTTP/1.1" 200 24636
+[02/Jan/2024 07:58:49] "GET /media/property/images/IMG_0487.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:58:49] "GET /media/property/images/IMG_0492.jpeg HTTP/1.1" 200 2052129
+[02/Jan/2024 07:58:49] "GET /media/property/images/IMG_0480.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:58:49] "GET /media/property/images/IMG_0481.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:58:49] "GET /media/property/images/IMG_0485.jpeg HTTP/1.1" 200 1304182
+[02/Jan/2024 07:58:49] "GET /media/property/images/IMG_0482.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:58:49] "GET /media/property/images/IMG_0483.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 07:58:49] "GET /media/property/images/IMG_0486.jpeg HTTP/1.1" 200 1441105
+[02/Jan/2024 07:58:49] "GET /media/property/images/IMG_0484.jpeg HTTP/1.1" 200 1233758
+Not Found: /property/75Xhu/details/assets/imgs/logo.jpeg
+[02/Jan/2024 07:58:50] "GET /property/75Xhu/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[02/Jan/2024 08:00:39] "GET / HTTP/1.1" 200 18333
+[02/Jan/2024 08:00:39] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+[02/Jan/2024 08:00:41] "GET /property/add-property/ HTTP/1.1" 200 12447
+[02/Jan/2024 08:00:43] "GET /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 200 35403
+[02/Jan/2024 08:01:52] "POST /property/add-property/new/sell/apartment_rent/ HTTP/1.1" 302 0
+[02/Jan/2024 08:01:52] "GET /property/ad-uploaded/ HTTP/1.1" 200 6060
+Not Found: /property/ad-uploaded/assets/imgs/logo.jpeg
+[02/Jan/2024 08:01:53] "GET /property/ad-uploaded/assets/imgs/logo.jpeg HTTP/1.1" 404 5771
+[02/Jan/2024 08:01:56] "GET / HTTP/1.1" 200 18398
+[02/Jan/2024 08:01:56] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+[02/Jan/2024 08:02:01] "GET / HTTP/1.1" 200 18382
+[02/Jan/2024 08:03:45] "GET /?page=2 HTTP/1.1" 200 17236
+/albdah-rebuild/albdah-rebuild/property/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 02, 2024 - 05:59:27
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+land_rent
+apartment_rent
+apartment_rent
+lounges
+1
+##############################
+bathrooms
+2
+##############################
+apartment_rent
+lounges
+1
+##############################
+bathrooms
+4
+##############################
+apartment_rent
+lounges
+1
+##############################
+bathrooms
+4
+##############################
+apartment_rent
+lounges
+1
+##############################
+bathrooms
+4
+##############################
+apartment_rent
+lounges
+2
+##############################
+bathrooms
+2
+##############################
+apartment_rent
+lounges
+1
+##############################
+bathrooms
+4
+##############################
+Watching for file changes with StatReloader
+[02/Jan/2024 08:03:51] "GET /?page=1 HTTP/1.1" 200 18429
+[02/Jan/2024 08:03:51] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 304 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+January 02, 2024 - 08:03:46
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+

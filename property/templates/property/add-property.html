@@ -117,7 +117,7 @@
 
             
 
-            {% if property_type == 'land_rent' %}
+            {% if property_type == 'land_rent' or property_type == 'land_sale' %}
             <div class="input" >
                 <p class="input-label">الطول <span class="input-label-highlight">(ريال سعودي)</span></p>
                 <input type="text" name="length-input" placeholder="الرجاء كتابة الطول...">
@@ -292,7 +292,7 @@
         <div class="property__details">
             
 
-            {% if property_type == 'shop_rent' or property_type == 'land_rent' or property_type == 'building_rent' or property_type == 'branch_rent' or property_type == 'villa_rent' or property_type == 'commercial_office_rent' or property_type == 'floor_rent' %}
+            {% if property_type == 'shop_rent' or property_type == 'land_rent' or property_type == 'land_sale' or property_type == 'building_rent' or property_type == 'branch_rent' or property_type == 'villa_rent' or property_type == 'commercial_office_rent' or property_type == 'floor_rent' %}
 
             <input type="hidden" name="interface-input">
             <div class="field interface-field">
@@ -358,7 +358,7 @@
             </div>
 
 
-            {% if property_type == 'land_rent' %}
+            {% if property_type == 'land_rent' or property_type == 'land_sale' %}
             <div class="box">
                 <p>الغرض</p>
                 <br>
@@ -475,7 +475,7 @@
 
             
             
-            {% if not property_type == 'land_rent' %}
+            {% if property_type != 'land_rent' and property_type != 'land_sale' %}
 
 
 
@@ -835,7 +835,7 @@
                         </label>
                         <p>مدخل خاص</p>
                     </div>
-                    {% elif property_type == 'shop_rent' or property_type == "commercial_office_rent" or property_type == 'land_rent' %}
+                    {% elif property_type == 'shop_rent' or property_type == "commercial_office_rent" or property_type == 'land_rent' or property_type == 'land_sale' %}
                     {% if property_type == "commercial_office_rent" %}
                     <div class="property__feature__item">
                         <label class="toggle-container">
