@@ -78,7 +78,7 @@ class Property(models.Model):
     city = models.CharField(max_length=250, verbose_name="المدينة", null=True, blank=True) 
     title = models.CharField(max_length=255, verbose_name="عنوان الإعلان", null=True, blank=True) 
 
-    price = models.IntegerField(verbose_name="السعر (ريال سعودي)", default=0) 
+    price = models.FloatField(verbose_name="السعر (ريال سعودي)", default=0) 
     space = models.IntegerField(verbose_name="المساحة (متر مربع)", default=0) 
     width = models.FloatField(verbose_name="العرض (متر)", blank=True, null=True) 
     length = models.FloatField(verbose_name="الطول (متر)", blank=True, null=True) 
