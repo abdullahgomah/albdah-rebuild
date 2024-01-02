@@ -139,7 +139,7 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
     if (offerTypeInput.value == 'sell') { 
         limit = 3; 
         if (document.querySelector("[name=property_type]").value == 'land_sale' ) {
-            limit = 5; 
+            limit = 6; 
         }
     } else { 
         if (document.querySelector("[name=property_type]").value == 'land_rent') {
@@ -923,7 +923,7 @@ let calc_meter_price_input_value = function () {
 }
 
 
-if (document.querySelector("[name=property_type]").value == 'land_rent') {
+if (document.querySelector("[name=property_type]").value == 'land_rent' || document.querySelector("[name=property_type]").value == 'land_sale'  ) {
 
     let priceInput = document.querySelector('[name=price-input]'); 
     let spaceInput = document.querySelector('[name=space-input]');
