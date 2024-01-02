@@ -922,21 +922,42 @@ let calc_meter_price_input_value = function () {
 
 }
 
+calc_price_input_value = function() { 
+    let meterPriceInput = document.querySelector('[name=unit-price-input]');
+    let spaceInput = document.querySelector('[name=space-input]');
+    let priceInput = document.querySelector('[name=price-input]');
+
+    priceInput.value = Number(meterPriceInput.value) * Number(spaceInput.value); 
+}
+
 
 if (document.querySelector("[name=property_type]").value == 'land_rent' || document.querySelector("[name=property_type]").value == 'land_sale'  ) {
 
     let priceInput = document.querySelector('[name=price-input]'); 
     let spaceInput = document.querySelector('[name=space-input]');
+    let meterPriceInput = document.querySelector('[name=unit-price-input]');
+
     
     console.log('land_rent');
     
     priceInput.addEventListener('input', () => {
-        calc_meter_price_input_value(); 
+        if (meterPriceInput.value == '') { 
+            calc_meter_price_input_value(); 
+        }
     })
     
     spaceInput.addEventListener('input', () => {
-        calc_meter_price_input_value(); 
+        if (priceInput.value == "") {
+            calc_price_input_value();  
+        } else {
+            calc_meter_price_input_value(); 
+        }
     })
+
+    meterPriceInput.addEventListener('input', () => {
+        calc_price_input_value(); 
+    })
+    
 
 } 
 
