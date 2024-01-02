@@ -32,6 +32,8 @@ let extraFloorInput = document.querySelector('[name=extra-floor-input]')
 
 let extraPropertyAgeInput = document.querySelector('[name=extra-property-age-input]') 
 
+let offerTypeInput = document.querySelector('[name=offer_type_input]'); 
+
 
 sliderInputs.forEach((input) => {
     input.addEventListener('input', () => {
@@ -131,15 +133,23 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
     let limit = 4; 
     console.log(document.querySelector('[name=property_type]'));
     
-    if (document.querySelector("[name=property_type]").value == 'land_rent') {
-        limit = 7; 
 
 
 
+    if (offerTypeInput.value == 'sell') { 
+        limit = 3; 
+        if (document.querySelector("[name=property_type]").value == 'land_rent') {
+            limit = 6; 
+        }
+    } else { 
+        if (document.querySelector("[name=property_type]").value == 'land_rent') {
+            limit = 7; 
+        }
     }
 
     // check form validation 
-    let inputs = propertyInfoSection.querySelectorAll('.input') 
+    let inputs = propertyInfoSection.querySelectorAll('.input')
+
     let inputsLen = inputs.length; 
     let counter = 0; 
 
@@ -159,13 +169,15 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
     })
 
 
-
-    if (rentTypeInput.textContent == "" ) {
-        rentTypeInput.parentElement.style.border= "1px solid #dc3546"; 
-    } else { 
-        counter += 1; 
-        rentTypeInput.parentElement.style.border = "1px solid #00000040"
+    if (offerTypeInput.value != 'sell') {
+        if (rentTypeInput.textContent == "" ) {
+            rentTypeInput.parentElement.style.border= "1px solid #dc3546"; 
+        } else { 
+            counter += 1; 
+            rentTypeInput.parentElement.style.border = "1px solid #00000040"
+        }
     }
+
 
     if (advertiser_relation.value == "") { 
         advertiser_relation_grid.style.border = '1px solid #dc3546'; 
@@ -194,6 +206,11 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
 
 
         
+    } else { 
+        console.log('counter is not equals') 
+        console.log(counter) ;
+        console.log('the limit is') 
+        console.log(limit); 
     }
 
 
@@ -577,13 +594,17 @@ if (document.querySelector('[name=property_type]').value == 'building_rent' || d
     })
 }
 
-let rentTypeGrid = document.querySelector('.rent-type') 
-rentTypeGrid.querySelectorAll('.item').forEach((item) => {
-    item.addEventListener('click', () => {
-        item.parentElement.querySelector('[name=rent_type_input]').textContent = item.getAttribute('data-value') 
-        item.parentElement.querySelector('[name=rent_type_input]').value = item.getAttribute('data-value') 
+
+if (offerTypeInput.value !='sell') {
+    let rentTypeGrid = document.querySelector('.rent-type') 
+    rentTypeGrid.querySelectorAll('.item').forEach((item) => {
+        item.addEventListener('click', () => {
+            item.parentElement.querySelector('[name=rent_type_input]').textContent = item.getAttribute('data-value') 
+            item.parentElement.querySelector('[name=rent_type_input]').value = item.getAttribute('data-value') 
+        })
     })
-})
+}
+
 
 
 // handle the inputs in the property__details section 

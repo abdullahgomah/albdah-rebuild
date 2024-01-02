@@ -197,7 +197,7 @@ class Property(models.Model):
             elif self.p_type.startswith("chalet"): 
                 start = "شاليه"      
 
-            if self.p_type.endswith("sale"): 
+            if self.sale == 1: 
                 mid = "للبيع" 
             else: 
                 mid = "للإيجار"   
