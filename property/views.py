@@ -560,7 +560,7 @@ def add_property(request, property_type, offer_type=None):
             )
 
         
-        elif property_type =='building_rent': 
+        elif property_type =='building_rent' or property_type == 'building_sale': 
             interface = request.POST.get('interface-input') 
             purpose = request.POST.get('purpose-input')
             furnished = request.POST.get('furnished') 

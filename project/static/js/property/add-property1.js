@@ -480,7 +480,7 @@ function disableSubmitAfterFirstSubmit() {
 
 
 
-if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'land_sale' && document.querySelector('[name=property_type]').value != "building_rent" && document.querySelector('[name=property_type]').value != "shop_rent" && document.querySelector('[name=property_type]').value != 'commercial_office_rent' && document.querySelector('[name=property_type]').value != 'branch_rent') { 
+if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'land_sale' && document.querySelector('[name=property_type]').value != "building_rent" && document.querySelector('[name=property_type]').value != "building_sale"  && document.querySelector('[name=property_type]').value != "shop_rent" && document.querySelector('[name=property_type]').value != 'commercial_office_rent' && document.querySelector('[name=property_type]').value != 'branch_rent') { 
     
     let roomCountGrid = document.querySelector('.room-count'); 
     roomCountGrid.querySelectorAll('.item').forEach((item) => {
@@ -708,7 +708,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
         limit = 3; 
     }
 
-    if (document.querySelector('[name=property_type]').value == 'building_rent') { 
+    if (document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'building_sale') { 
         limit = 7; 
     }
 
@@ -718,7 +718,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
     
 
-    if (document.querySelector('[name=property_type]').value == "shop_rent" || document.querySelector('[name=property_type]').value == 'branch_rent' || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'land_sale' || document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'villa_rent' || document.querySelector('[name=property_type]').value == 'floor_rent' || document.querySelector('[name=property_type]').value == 'commercial_office_rent') { 
+    if (document.querySelector('[name=property_type]').value == "shop_rent" || document.querySelector('[name=property_type]').value == 'branch_rent' || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'land_sale' || document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'building_sale' || document.querySelector('[name=property_type]').value == 'villa_rent' || document.querySelector('[name=property_type]').value == 'floor_rent' || document.querySelector('[name=property_type]').value == 'commercial_office_rent') { 
         if (interfaceInput.value == "") { 
             document.querySelector('.interface-field').style.border = "1px solid #dc3546" 
         } else { 
@@ -729,7 +729,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
         }
     }
 
-    if (document.querySelector('[name=property_type]').value == "land_rent" ||document.querySelector('[name=property_type]').value == "land_sale" || document.querySelector('[name=property_type]').value == 'building_rent') {
+    if (document.querySelector('[name=property_type]').value == "land_rent" ||document.querySelector('[name=property_type]').value == "land_sale" || document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'building_sale') {
         let purposeInput = document.querySelector('[name=purpose-input]'); 
         if (purposeInput.value == "") { 
             purposeInput.style.border = "1px solid #dc3546" 
@@ -741,7 +741,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
             console.log("=====")  
         }
 
-        if (document.querySelector("[name=property_type]").value == 'building_rent') {
+        if (document.querySelector("[name=property_type]").value == 'building_rent' || document.querySelector('[name=property_type]').value == "building_sale") {
             if (document.querySelector('[name=stores-count-input]').value == "") { 
                 document.querySelector('[name=stores-count-input]').parentElement.style.border = "1px solid #dc3546" 
             } else { 
@@ -772,7 +772,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
     // check purpose input, move interface validation functions from propertyInfo to propertyDetails
 
-    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'land_sale' && document.querySelector('[name=property_type]').value != 'building_rent' && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'commercial_office_rent' && document.querySelector('[name=property_type]').value != 'branch_rent') {
+    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'land_sale' && document.querySelector('[name=property_type]').value != 'building_rent' && document.querySelector('[name=property_type]').value != 'building_sale'   && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'commercial_office_rent' && document.querySelector('[name=property_type]').value != 'branch_rent') {
         if (document.querySelector("[name=property_type]").value != 'building_rent') {
             if (document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'resthouse_rent') {
                 let floorInput = document.querySelector('[name=floor-input]'); 
@@ -857,7 +857,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
 
 
 
-    if (document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'shop_rent') {
+    if (document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'building_sale' || document.querySelector('[name=property_type]').value == 'shop_rent') {
             
         
 
