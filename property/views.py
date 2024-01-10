@@ -45,8 +45,11 @@ def add_property(request, property_type, offer_type=None):
     if request.POST: 
 
         if offer_type == "sell":
-            sell = 1
-            property_type = str(property_type).split("_")[0]+"_sale"
+            sell = 1 
+            if property_type == "commercial_office_rent": 
+                property_type = "commercial_office_sale"
+            else: 
+                property_type = str(property_type).split("_")[0]+"_sale"
             print(property_type) 
         else: 
             sell = 0 
@@ -467,6 +470,7 @@ def add_property(request, property_type, offer_type=None):
 
         elif property_type == 'commercial_office_rent' or property_type == 'commercial_office_sale': 
             
+            
             interface = request.POST.get('interface-input') 
 
             floor = request.POST.get('extra-floor-input') 
@@ -728,6 +732,46 @@ def add_property(request, property_type, offer_type=None):
                 annual_payment = payments[3], 
             )
             
+        elif property_type == 'farm_sale': 
+            interface = request.POST.get('interface-input') 
+            trees_count = request.POST.get('trees-count-input') 
+            wells_count = request.POST.get('wells-count-input') 
+            hair_tent_house = request.POST.get('hair_tent_house')  
+
+            features.append(hair_tent_house) 
+
+            for i in range(len(features)) : 
+                if features[i] == 'on': 
+                    features[i] = 1 
+                else: 
+                    features[i] = 0 
+
+            property_obj = Property.objects.create( 
+                interface = interface, 
+                trees = trees_count, 
+                wells = wells_count, 
+                
+                sale = sell, 
+                user = user, 
+                lat = lat, 
+                lng = lng  , 
+                p_type = property_type, 
+                neighborhood = neighborhood, 
+                city = city, 
+                price = price, 
+                space = space, 
+                advertiser_relation= advertiser_relation, 
+                exclusive = exclusive, 
+                video = video, 
+                street_width = street_width, 
+                property_age = property_age, 
+                
+                water_exist = features[0], 
+                power_exist = features[1], 
+                sanitation_exist = features[2],  
+                hair_tent_house = features[3], 
+
+            )            
 
 
         elif property_type =='chalet_rent' or property_type == 'chalet_sale': 

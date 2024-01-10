@@ -348,6 +348,40 @@
                 {% endif %}
 
                 
+                {% if property.p_type == 'farm_sale' %}
+                <div class="col  ">
+                    <i class="fa-solid fa-compass"></i>
+                    <p>الواجهة</p>
+                    <p>{{property.interface}}</p>
+                </div>
+                <div class="col  ">
+                    <p>
+                        <i class="fa-solid fa-road"></i>
+                        عرض الشارع
+                    </p>
+                    <p>
+                        {{property.street_width}}
+                        م
+                    </p>
+                </div>
+                <div class="col  ">
+                    <p>المساحة</p>
+                    <p>{{property.space}}</p>
+                </div>
+
+                <div class="col  ">
+                    <p>عدد الأشجار</p>
+                    <p>{{property.trees}}</p>
+                </div>
+
+                <div class="col  ">
+                    <p>عدد الآبار</p>
+                    <p>{{property.trees}}</p>
+                </div>
+                {% endif %}
+                    
+
+                
                 {% if property.p_type == 'villa_rent' or property.p_type == 'villa_sale' %}
                 <div class="col  ">
                     <i class="fa-solid fa-compass"></i>
@@ -548,7 +582,7 @@
                     
                 
                 
-                {% if property.single %}
+                {% if property.single == True %}
                     <div class="col">
                         <p>عزاب</p>
                         <p>
@@ -557,7 +591,7 @@
                     </div>
                 {% endif %}
 
-                {% if property.families %}
+                {% if property.families == True %}
                     <div class="col">
                         <p>عوائل</p>
                         <p>

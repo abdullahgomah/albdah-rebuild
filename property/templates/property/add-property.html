@@ -144,7 +144,7 @@
 
 
             
-            {% if property_type == 'land_rent' or property_type == 'land_sale' %}
+            {% if property_type == 'land_rent' or property_type == 'land_sale' or property_type == 'farm_sale' %}
                 
                 
 
@@ -292,7 +292,7 @@
         <div class="property__details">
             
 
-            {% if property_type == 'shop_rent' or property_type == 'land_rent' or property_type == 'land_sale' or property_type == 'building_rent' or property_type == 'building_sale' or property_type == 'branch_rent' or property_type == 'villa_rent' or property_type == 'commercial_office_rent' or property_type == 'floor_rent' %}
+            {% if property_type == 'shop_rent' or property_type == 'farm_sale' or property_type == 'land_rent' or property_type == 'land_sale' or property_type == 'building_rent' or property_type == 'building_sale' or property_type == 'branch_rent' or property_type == 'villa_rent' or property_type == 'commercial_office_rent' or property_type == 'floor_rent' %}
 
             <input type="hidden" name="interface-input">
             <div class="field interface-field">
@@ -356,6 +356,38 @@
                     <input class="slider_input" type="range" max="100" value="0">
                 </div>
             </div>
+
+            
+            {% if property_type == 'farm_sale' %}
+            <div class="box" style="margin-top: 1rem;">
+                <input type="hidden" name="trees-count-input">
+                <div class="info">
+                    <p>عدد الأشجار</p>
+                    <p class="value">
+                        <span name="trees-count">0</span>
+                        م
+                    </p>
+                </div>
+                <div class="slider">
+                    <input class="slider_input" type="range" max="100" value="0">
+                </div>
+            </div>
+
+            <div class="box" style="margin-top: 1rem;">
+                <input type="hidden" name="wells-count-input">
+                <div class="info">
+                    <p>عدد الآبار</p>
+                    <p class="value">
+                        <span name="wells-count">0</span>
+                        م
+                    </p>
+                </div>
+                <div class="slider">
+                    <input class="slider_input" type="range" max="10" value="0">
+                </div>
+            </div>
+            {% endif %}
+                
 
 
             {% if property_type == 'land_rent' or property_type == 'land_sale' %}
@@ -511,7 +543,7 @@
             
 
 
-            {% if not property_type == "building_rent" and property_type != 'building_sale' and not property_type == "shop_rent" and not property_type == 'commercial_office_rent' and not property_type == 'branch_rent' %}
+            {% if not property_type == "building_rent" and property_type != 'farm_sale' and property_type != 'building_sale' and not property_type == "shop_rent" and not property_type == 'commercial_office_rent' and not property_type == 'branch_rent' %}
             <div class="box">
                 <div class="info">
                     <p>عدد الغرف</p>
@@ -722,6 +754,41 @@
                         <p>دفع سنوي</p>
                     </div>
                     {% endif %}
+
+                    
+                    {% if property_type == 'farm_sale' %}
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="hair_tent_house" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>بيت شعر</p>
+                    </div>
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="water_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>توفر الماء</p>
+                    </div>
+
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="power_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>توفر الكهرباء</p>
+                    </div>
+
+                    <div class="property__feature__item">
+                        <label class="toggle-container">
+                            <input type="checkbox" name="sanitation_exist" class="toggle-switch">
+                            <span class="toggle-circle"></span>
+                        </label>
+                        <p>توفر الصرف</p>
+                    </div>
+                    {% endif %}
+                        
 
                     {% if   property_type == 'apartment_rent' or property_type == 'apartment_sale' or property_type == 'floor_rent' %}
                     <div class="property__feature__item">

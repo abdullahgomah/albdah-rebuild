@@ -106,7 +106,7 @@ class Property(models.Model):
 
     property_age = models.CharField(max_length=200, verbose_name="عمر العقار", null=True, blank=True)  
 
-    families = models.BooleanField(default=True, verbose_name="عوائل ام عزاب") 
+    families = models.BooleanField(default=False, verbose_name="عوائل ام عزاب") 
 
     single = models.BooleanField(default=False, verbose_name='عزاب') 
 
@@ -199,6 +199,8 @@ class Property(models.Model):
                 start = "شقة مفروشة" 
             elif self.p_type.startswith("chalet"): 
                 start = "شاليه"      
+            elif self.p_type.startswith("farm"): 
+                start = "مزرعة"      
 
             if self.sale == 1: 
                 mid = "للبيع" 
