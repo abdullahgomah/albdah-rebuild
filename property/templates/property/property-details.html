@@ -114,10 +114,16 @@
 
         <div class="property__info">
 
-
+            
+            {% if property.sale == True %}
+            <h3 class="property__cost">
+                {{property.price}} ريال</span>
+            </h3>
+            {% else %}                
             <h3 class="property__cost">
                 {{property.price}} ريال / <span id="type">{{property.get_rent_type_display}}</span>
             </h3>
+            {% endif %}
 
             
             <input type="hidden" name="property_details_markdown" value="{{property.description|safe}}">
@@ -132,7 +138,7 @@
         <div class="property__features">
             <div class="features__grid">
                 
-                {% if property.p_type == 'furnished_apartment_rent' %}
+                {% if property.p_type == 'furnished_apartment_rent' or property.p_type == 'furnished_apartment_sale' %}
                 <div class="col  ">
                     <p>
                         <i class="fa-solid fa-road"></i>
@@ -182,7 +188,7 @@
                 {% endif %}
                 
                 
-                {% if property.p_type == 'branch_rent' %}
+                {% if property.p_type == 'branch_rent' or property.p_type == 'branch_sale' %}
                 <div class="col  ">
                     <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
@@ -204,7 +210,7 @@
                 {% endif %}
 
                 
-                {% if property.p_type == 'building_rent' %}
+                {% if property.p_type == 'building_rent' or property.p_type == 'building_sale' %}
                 <div class="col  ">
                     <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
@@ -232,7 +238,7 @@
                 {% endif %}
 
                 
-                {% if property.p_type == 'land_rent' %}
+                {% if property.p_type == 'land_rent' or property.p_type == 'land_sale' %}
                 <div class="col  ">
                     <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
@@ -260,7 +266,7 @@
                 {% endif %}
 
                 
-                {% if property.p_type == 'commercial_office_rent' %}
+                {% if property.p_type == 'commercial_office_rent' or property.p_type == 'commercial_office_sale' %}
                 <div class="col  ">
                     <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
@@ -284,7 +290,7 @@
                 {% endif %}
 
                 
-                {% if property.p_type == 'resthouse_rent' %}
+                {% if property.p_type == 'resthouse_rent' or property.p_type == 'resthouse_sale' %}
                 <div class="col  ">
                     <p>
                         <i class="fa-solid fa-road"></i>
@@ -322,7 +328,7 @@
                 {% endif %}
 
                 
-                {% if property.p_type == 'shop_rent' %}
+                {% if property.p_type == 'shop_rent' or property.p_type == 'shop_sale' %}
                 <div class="col  ">
                     <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
@@ -342,7 +348,7 @@
                 {% endif %}
 
                 
-                {% if property.p_type == 'villa_rent' %}
+                {% if property.p_type == 'villa_rent' or property.p_type == 'villa_sale' %}
                 <div class="col  ">
                     <i class="fa-solid fa-compass"></i>
                     <p>الواجهة</p>
@@ -386,7 +392,7 @@
                 {% endif %}
 
                 
-                {% if property.p_type == 'floor_rent' %}
+                {% if property.p_type == 'floor_rent' or property.p_type == 'floor_sale' %}
                 <div class="col  ">
                     
                     <p>
@@ -437,7 +443,7 @@
                 {% endif %}
                 
                 
-                {% if property.p_type == 'apartment_rent' %}
+                {% if property.p_type == 'apartment_rent' or property.p_type == 'apartment_sale' %}
                 <div class="col  ">
                     
                     <p>
@@ -463,6 +469,7 @@
                         {% endif %}
                     </p>
                 </div>
+                    
                 <div class="col  ">
                     <p>
                         <i class="fa-solid fa-bed"></i>
@@ -493,7 +500,7 @@
                 {% endif %}
 
                 
-                {% if property.p_type == 'chalet_rent' %}
+                {% if property.p_type == 'chalet_rent' or property.p_type == 'chalet_sale' %}
                 <div class="col  ">
 
                     <p>
@@ -540,7 +547,25 @@
                     
                     
                 
-                    
+                
+                {% if property.single %}
+                    <div class="col">
+                        <p>عزاب</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
+                {% if property.families %}
+                    <div class="col">
+                        <p>عوائل</p>
+                        <p>
+                            <i class="fa-solid fa-circle-check"></i>
+                        </p>
+                    </div>
+                {% endif %}
+
                 
                 {% if property.monthly_payment %}
                     <div class="col">

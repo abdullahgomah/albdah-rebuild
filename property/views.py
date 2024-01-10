@@ -40,12 +40,16 @@ def property_details(request, number):
 @login_required(login_url='/auth/')
 def add_property(request, property_type, offer_type=None): 
 
-    if offer_type == "sell":
-        sell = 1
-    else: 
-        sell = 0 
+
     
     if request.POST: 
+
+        if offer_type == "sell":
+            sell = 1
+            property_type = str(property_type).split("_")[0]+"_sale"
+            print(property_type) 
+        else: 
+            sell = 0 
 
 
         ## payment types 
@@ -234,7 +238,7 @@ def add_property(request, property_type, offer_type=None):
         )
 
         
-        elif property_type == 'shop_rent': 
+        elif property_type == 'shop_rent' or property_type == 'shop_sale': 
             interface = request.POST.get('interface-input') 
             floor = request.POST.get('extra-floor-input') 
             if floor == None or floor == '' or floor == 0: 
@@ -285,7 +289,7 @@ def add_property(request, property_type, offer_type=None):
                 # private_enternace = features[13], 
         )
 
-        elif property_type == 'villa_rent': 
+        elif property_type == 'villa_rent' or property_type == 'villa_sale': 
             interface = request.POST.get('interface-input') 
             floor = request.POST.get('extra-floor-input') 
             if floor == None or floor == '' or floor == 0: 
@@ -389,7 +393,7 @@ def add_property(request, property_type, offer_type=None):
                 annual_payment = payments[3], 
             )
 
-        elif property_type == 'resthouse_rent': 
+        elif property_type == 'resthouse_rent' or property_type == 'resthouse_sale': 
             floor = request.POST.get('extra-floor-input') 
             if floor == None or floor == '' or floor == 0: 
                 floor = request.POST.get('floor-input') 
@@ -461,7 +465,7 @@ def add_property(request, property_type, offer_type=None):
                 annual_payment = payments[3], 
             )
 
-        elif property_type == 'commercial_office_rent': 
+        elif property_type == 'commercial_office_rent' or property_type == 'commercial_office_sale': 
             
             interface = request.POST.get('interface-input') 
 
@@ -619,7 +623,7 @@ def add_property(request, property_type, offer_type=None):
             )
 
 
-        elif property_type == 'branch_rent': 
+        elif property_type == 'branch_rent' or property_type == 'branch_sale': 
             interface = request.POST.get('interface-input')
             
             for i in range(len(features)) : 
@@ -726,7 +730,7 @@ def add_property(request, property_type, offer_type=None):
             
 
 
-        elif property_type =='chalet_rent': 
+        elif property_type =='chalet_rent' or property_type == 'chalet_sale': 
 
             football_field = request.POST.get('football_field') # 3
             volly_field = request.POST.get('volly_field') # 4 

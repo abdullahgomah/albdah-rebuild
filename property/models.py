@@ -25,6 +25,7 @@ PROPERTY_TYPE_CHOICES = [
     ("branch_rent", "مستودع للايجار"), 
     ("furnished_apartment_rent", "شقة مفروشة للايجار") ,
     ("chalet_rent", "شاليه للايجار"), 
+    ("chalet_sale", "شاليه للبيع"), 
     ('land_sale', "أرض للبيع"), 
     ('villa_sale', "فيلا للبيع"), 
     ("apartment_sale", "شقة للبيع"), 
@@ -96,7 +97,9 @@ class Property(models.Model):
     rooms = models.CharField(max_length=10, verbose_name="الغرف", null=True, blank=True) 
 
     lounges = models.CharField(max_length=10, verbose_name="الصالات", null=True, blank=True) 
-
+    wells = models.CharField(max_length=10, verbose_name="عدد الآبار", null=True, blank=True) 
+    trees = models.CharField(max_length=10, verbose_name="عدد الأشجار", null=True, blank=True) 
+    
     bathroom = models.CharField(max_length=10, verbose_name="عدد دورات المياه", null=True, blank=True) 
     
     floor = models.CharField(max_length=200, verbose_name="الدور", null=True, blank=True) 
