@@ -659,6 +659,11 @@
                 </div>
                 <div class="grid property-age">
                     <input type="hidden" name="property-age-input">
+                    
+                    {% if property_type == 'farm_sale' %}
+                        <div class="item">بدون</div>
+                    {% endif %}
+                        
                     <div class="item">جديد</div>
                     <div class="item">1</div>
                     <div class="item">2</div>
