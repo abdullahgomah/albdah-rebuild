@@ -62,6 +62,18 @@ def generate():
 
 
 
+class PropertyDepartment(models.Model): 
+    name = models.CharField(max_length=100, verbose_name="الاسم البرمجي") 
+    display_name = models.CharField(max_length=100, verbose_name="الاسم الظاهر")
+    
+    class Meta: 
+        verbose_name = "قسم عقار"
+        verbose_name_plural = "أقسام العقارات"
+
+    def __str__(self):
+        return self.display_name 
+
+
 class Property(models.Model): 
     agree = models.BooleanField(default=False, verbose_name="موافقة" )
     # profile = models.ForeignKey("accounts.Profile", on_delete=models.CASCADE, null=True, blank=True)

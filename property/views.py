@@ -40,19 +40,21 @@ def property_details(request, number):
 @login_required(login_url='/auth/')
 def add_property(request, property_type, offer_type=None): 
 
-
+    if offer_type == "sell":
+        sell = 1 
+        if property_type == "commercial_office_rent": 
+            property_type = "commercial_office_sale"
+        else: 
+            property_type = str(property_type).split("_")[0]+"_sale"
+        print(property_type) 
+    else: 
+        sell = 0 
+    
+    property_type_display_name = PropertyDepartment.objects.get(name=property_type) 
     
     if request.POST: 
 
-        if offer_type == "sell":
-            sell = 1 
-            if property_type == "commercial_office_rent": 
-                property_type = "commercial_office_sale"
-            else: 
-                property_type = str(property_type).split("_")[0]+"_sale"
-            print(property_type) 
-        else: 
-            sell = 0 
+
 
 
         ## payment types 
@@ -858,7 +860,8 @@ def add_property(request, property_type, offer_type=None):
     print(property_type) 
     context = {
         'property_type': property_type, 
-        'offer_type': offer_type 
+        'offer_type': offer_type,
+        'property_type_display_name': property_type_display_name, 
     }
     return render(request, 'property/add-property.html', context) 
 

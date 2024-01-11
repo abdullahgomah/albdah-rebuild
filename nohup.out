@@ -45589,3 +45589,445 @@ Not Found: /property/03WIC/details/assets/imgs/logo.jpeg
 [11/Jan/2024 12:07:02] "GET / HTTP/1.1" 200 19282
 Not Found: /logon.htm
 [11/Jan/2024 12:07:28] "GET /logon.htm HTTP/1.1" 404 4098
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 11, 2024 - 11:44:35
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+farm_sale
+farm_sale
+lounges
+None
+##############################
+bathrooms
+None
+##############################
+Watching for file changes with StatReloader
+[11/Jan/2024 12:10:02] "GET /property/add-property/ HTTP/1.1" 200 13422
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[11/Jan/2024 12:10:03] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5770
+[11/Jan/2024 12:10:19] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:10:21] "GET /property/03WIC/details/ HTTP/1.1" 200 25224
+[11/Jan/2024 12:10:22] "GET /media/df79a361-8dbb-4e65-9cfe-f6d3d7059e79.mp4 HTTP/1.1" 200 10378513
+[11/Jan/2024 12:10:35] "GET /property/add-to-favourite/03WIC/ HTTP/1.1" 302 0
+[11/Jan/2024 12:10:35] "GET /property/03WIC/details/ HTTP/1.1" 200 25242
+[11/Jan/2024 12:10:36] "GET /media/df79a361-8dbb-4e65-9cfe-f6d3d7059e79.mp4 HTTP/1.1" 200 10378513
+[11/Jan/2024 12:10:43] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:10:44] "GET /property/91xzo/details/ HTTP/1.1" 200 26408
+[11/Jan/2024 12:10:45] "GET /media/property/images/IMG_0530.jpeg HTTP/1.1" 200 880068
+[11/Jan/2024 12:10:45] "GET /media/property/images/IMG_0531.jpeg HTTP/1.1" 200 875152
+[11/Jan/2024 12:10:45] "GET /media/property/images/IMG_0534.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 12:10:45] "GET /media/property/images/IMG_0537.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 12:10:45] "GET /media/property/images/IMG_0538.jpeg HTTP/1.1" 304 0
+Not Found: /property/91xzo/details/assets/imgs/logo.jpeg
+[11/Jan/2024 12:10:45] "GET /property/91xzo/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[11/Jan/2024 12:10:45] "GET /media/property/images/IMG_0535.jpeg HTTP/1.1" 200 1832074
+[11/Jan/2024 12:10:45] "GET /media/property/images/IMG_0536.jpeg HTTP/1.1" 200 1965863
+[11/Jan/2024 12:10:45] "GET /media/property/images/IMG_0533.jpeg HTTP/1.1" 200 1797026
+[11/Jan/2024 12:10:46] "GET /media/property/images/IMG_0539.jpeg HTTP/1.1" 200 1952612
+[11/Jan/2024 12:10:46] "GET /static/imgs/%D9%85%D9%83%D9%8A%D9%81-removebg-preview.png HTTP/1.1" 200 7501
+[11/Jan/2024 12:10:48] "GET /media/613dc463-a840-4b99-812d-b9304a014f43.mp4 HTTP/1.1" 200 13088201
+[11/Jan/2024 12:11:19] "GET / HTTP/1.1" 200 19266
+[11/Jan/2024 12:11:19] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 12:11:19] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 12:11:19] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 12:11:19] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 12:11:20] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 12:11:20] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 12:11:20] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 12:11:20] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 12:11:20] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 12:11:21] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+[11/Jan/2024 12:11:21] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 12:11:21] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+[11/Jan/2024 12:11:22] "GET /property/03WIC/details/ HTTP/1.1" 200 25208
+[11/Jan/2024 12:11:22] "GET /static/css/property/property-details.css HTTP/1.1" 200 7032
+[11/Jan/2024 12:11:22,295] - Broken pipe from ('127.0.0.1', 57570)
+[11/Jan/2024 12:11:22] "GET /media/property/images/50340241-8ad5-42e9-abda-6a3bef95b6b9.jpeg HTTP/1.1" 200 43045
+[11/Jan/2024 12:11:22] "GET /media/property/images/60f2dd25-266d-4c6e-a684-eed230231daa.jpeg HTTP/1.1" 200 24355
+[11/Jan/2024 12:11:22] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[11/Jan/2024 12:11:22] "GET /media/property/images/81c98ff7-a197-4b71-a9e9-f1741b3783fa.jpeg HTTP/1.1" 200 27895
+[11/Jan/2024 12:11:23] "GET /media/property/images/9db4f89e-9004-4d49-a1ab-b8b28526857e.jpeg HTTP/1.1" 200 24106
+[11/Jan/2024 12:11:23] "GET /media/property/images/93bf5a3f-3d81-47d8-b3b1-1a23abb364c5.jpeg HTTP/1.1" 200 25405
+[11/Jan/2024 12:11:23] "GET /media/df79a361-8dbb-4e65-9cfe-f6d3d7059e79.mp4 HTTP/1.1" 200 10378513
+[11/Jan/2024 12:11:23] "GET /media/property/images/2683790e-0026-4338-8151-6cec1c8d3896.jpeg HTTP/1.1" 200 40200
+[11/Jan/2024 12:11:23] "GET /media/property/images/1d71e848-b7a9-4e74-9f91-6fa8424a04a4.jpeg HTTP/1.1" 200 43059
+[11/Jan/2024 12:11:23] "GET /media/property/images/b74a64d5-2727-4395-94d5-4b19abfddc0e.jpeg HTTP/1.1" 200 36010
+Not Found: /property/03WIC/details/assets/imgs/logo.jpeg
+[11/Jan/2024 12:11:26] "GET /property/03WIC/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 11, 2024 - 12:08:21
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[11/Jan/2024 12:12:44] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:12:47] "GET /property/03WIC/details/ HTTP/1.1" 200 25242
+[11/Jan/2024 12:12:48] "GET /media/df79a361-8dbb-4e65-9cfe-f6d3d7059e79.mp4 HTTP/1.1" 200 10378513
+Not Found: /login.jsp
+[11/Jan/2024 12:12:50] "GET /login.jsp HTTP/1.1" 404 4098
+[11/Jan/2024 12:13:39] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:13:40] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:13:52] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37672
+[11/Jan/2024 12:13:52] "GET /static/js/property/add-property1.js HTTP/1.1" 200 37766
+[11/Jan/2024 12:13:53] "GET /static/css/property/add-property.css HTTP/1.1" 304 0
+[11/Jan/2024 12:13:53] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:13:54] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[11/Jan/2024 12:13:54] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:13:57] "GET /property/add-property/new/sell/chalet_rent/ HTTP/1.1" 200 32739
+Not Found: /property/add-property/new/sell/chalet_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:13:57] "GET /property/add-property/new/sell/chalet_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5833
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 11, 2024 - 12:12:29
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+apartment_rent
+chalet_rent
+Watching for file changes with StatReloader
+[11/Jan/2024 12:15:53] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:15:53] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 12:15:54] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:15:54] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 12:15:54] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 12:15:55] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 12:15:55] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 12:15:55] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 12:15:55] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 12:15:55] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+[11/Jan/2024 12:15:55] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 12:15:55] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 12:15:55] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+[11/Jan/2024 12:15:55] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 12:15:55] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+Not Found: /assets/imgs/logo.jpeg
+[11/Jan/2024 12:15:56] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[11/Jan/2024 12:15:57] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:15:57] "GET /static/js/property/add-property-interface.js HTTP/1.1" 200 1233
+[11/Jan/2024 12:15:57] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[11/Jan/2024 12:15:58] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5774
+[11/Jan/2024 12:16:00] "GET /property/add-property/new/sell/farm_sale/ HTTP/1.1" 200 29921
+[11/Jan/2024 12:16:00] "GET /static/js/property/add-property1.js HTTP/1.1" 200 37766
+[11/Jan/2024 12:16:00] "GET /static/css/property/add-property.css HTTP/1.1" 200 10618
+[11/Jan/2024 12:16:00] "GET /static/js/property/init-map.js HTTP/1.1" 200 5988
+Not Found: /property/add-property/new/sell/farm_sale/assets/imgs/logo.jpeg
+[11/Jan/2024 12:16:00] "GET /property/add-property/new/sell/farm_sale/assets/imgs/logo.jpeg HTTP/1.1" 404 5831
+[11/Jan/2024 12:17:34] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:18:08] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37672
+[11/Jan/2024 12:19:01] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:19:08] "GET /property/add-property/new/sell/farm_sale/ HTTP/1.1" 200 29921
+[11/Jan/2024 12:19:09] "GET /property/add-property/ HTTP/1.1" 200 13422
+Not Found: /property/add-property/new/sell/farm_sale/assets/imgs/logo.jpeg
+[11/Jan/2024 12:19:09] "GET /property/add-property/new/sell/farm_sale/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[11/Jan/2024 12:19:12] "GET /property/add-property/new/sell/chalet_rent/ HTTP/1.1" 200 32739
+[11/Jan/2024 12:19:13] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:19:47] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37672
+[11/Jan/2024 12:19:49] "GET /property/add-property/new/floor_rent/ HTTP/1.1" 200 39487
+Not Found: /property/add-property/new/floor_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:19:49] "GET /property/add-property/new/floor_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5815
+[11/Jan/2024 12:19:50] "GET /property/add-property/new/villa_rent/ HTTP/1.1" 200 39019
+Not Found: /property/add-property/new/villa_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:19:51] "GET /property/add-property/new/villa_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5815
+[11/Jan/2024 12:19:52] "GET /property/add-property/new/shop_rent/ HTTP/1.1" 200 30218
+Not Found: /property/add-property/new/shop_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:19:52] "GET /property/add-property/new/shop_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5812
+[11/Jan/2024 12:19:53] "GET /property/add-property/new/resthouse_rent/ HTTP/1.1" 200 35059
+Not Found: /property/add-property/new/resthouse_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:19:53] "GET /property/add-property/new/resthouse_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[11/Jan/2024 12:19:54] "GET /property/add-property/new/commercial_office_rent/ HTTP/1.1" 200 30644
+Not Found: /property/add-property/new/commercial_office_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:19:54] "GET /property/add-property/new/commercial_office_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5851
+[11/Jan/2024 12:19:55] "GET /property/add-property/new/land_rent/ HTTP/1.1" 200 29582
+Not Found: /property/add-property/new/land_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:19:56] "GET /property/add-property/new/land_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5812
+[11/Jan/2024 12:19:58] "GET /property/add-property/new/building_rent/ HTTP/1.1" 200 37598
+Not Found: /property/add-property/new/building_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:19:58] "GET /property/add-property/new/building_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5824
+[11/Jan/2024 12:19:59] "GET /property/add-property/new/branch_rent/ HTTP/1.1" 200 30267
+Not Found: /property/add-property/new/branch_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:19:59] "GET /property/add-property/new/branch_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5818
+[11/Jan/2024 12:20:01] "GET /property/add-property/new/furnished_apartment_rent/ HTTP/1.1" 200 35578
+Not Found: /property/add-property/new/furnished_apartment_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:01] "GET /property/add-property/new/furnished_apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5857
+[11/Jan/2024 12:20:03] "GET /property/add-property/new/chalet_rent/ HTTP/1.1" 200 34783
+Not Found: /property/add-property/new/chalet_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:03] "GET /property/add-property/new/chalet_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5818
+[11/Jan/2024 12:20:05] "GET /property/add-property/new/sell/apartment_sale/ HTTP/1.1" 200 35198
+Not Found: /property/add-property/new/sell/apartment_sale/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:05] "GET /property/add-property/new/sell/apartment_sale/assets/imgs/logo.jpeg HTTP/1.1" 404 5842
+[11/Jan/2024 12:20:06] "GET /property/add-property/new/sell/floor_rent/ HTTP/1.1" 200 37443
+Not Found: /property/add-property/new/sell/floor_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:06] "GET /property/add-property/new/sell/floor_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5830
+[11/Jan/2024 12:20:07] "GET /property/add-property/new/sell/villa_rent/ HTTP/1.1" 200 36975
+Not Found: /property/add-property/new/sell/villa_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:07] "GET /property/add-property/new/sell/villa_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5830
+[11/Jan/2024 12:20:07] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:20:08] "GET /property/add-property/new/sell/shop_rent/ HTTP/1.1" 200 28174
+Not Found: /property/add-property/new/sell/shop_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:09] "GET /property/add-property/new/sell/shop_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[11/Jan/2024 12:20:09] "GET /property/add-property/new/sell/resthouse_rent/ HTTP/1.1" 200 33015
+Not Found: /property/add-property/new/sell/resthouse_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:10] "GET /property/add-property/new/sell/resthouse_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5842
+[11/Jan/2024 12:20:12] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37672
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:14] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[11/Jan/2024 12:20:14] "GET /property/add-property/new/sell/land_sale/ HTTP/1.1" 200 27538
+Not Found: /property/add-property/new/sell/land_sale/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:15] "GET /property/add-property/new/sell/land_sale/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[11/Jan/2024 12:20:17] "GET /property/add-property/new/sell/building_sale/ HTTP/1.1" 200 35554
+Not Found: /property/add-property/new/sell/building_sale/assets/imgs/logo.jpeg
+[11/Jan/2024 12:20:17] "GET /property/add-property/new/sell/building_sale/assets/imgs/logo.jpeg HTTP/1.1" 404 5839
+[11/Jan/2024 12:20:23] "GET /property/add-property/new/sell/chalet_rent/ HTTP/1.1" 200 32739
+Not Found: /login.jsp
+[11/Jan/2024 12:20:29] "GET /login.jsp HTTP/1.1" 404 4098
+[11/Jan/2024 12:21:04] "GET /property/add-property/new/sell/farm_sale/ HTTP/1.1" 200 29921
+Not Found: /property/add-property/new/sell/farm_sale/assets/imgs/logo.jpeg
+[11/Jan/2024 12:21:05] "GET /property/add-property/new/sell/farm_sale/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[11/Jan/2024 12:21:06] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:21:08] "GET /property/add-property/new/sell/branch_rent/ HTTP/1.1" 200 28223
+Not Found: /property/add-property/new/sell/branch_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:21:09] "GET /property/add-property/new/sell/branch_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5833
+[11/Jan/2024 12:21:09] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:21:13] "GET /property/add-property/new/sell/commercial_office_rent/ HTTP/1.1" 200 28600
+Not Found: /property/add-property/new/sell/commercial_office_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 12:21:13] "GET /property/add-property/new/sell/commercial_office_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5866
+[11/Jan/2024 12:26:39] "GET / HTTP/1.1" 200 19266
+[11/Jan/2024 12:27:24] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:33:33] "GET / HTTP/1.1" 200 19266
+Not Found: /vpn/index.html
+[11/Jan/2024 12:33:34] "GET /vpn/index.html HTTP/1.1" 404 4113
+[11/Jan/2024 12:44:44] "GET /?page=2 HTTP/1.1" 200 19401
+[11/Jan/2024 12:44:50] "GET /?page=3 HTTP/1.1" 200 16654
+[11/Jan/2024 12:44:50] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[11/Jan/2024 12:44:59] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:57:21] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:57:34] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37672
+[11/Jan/2024 13:01:05] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 13:01:05] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 13:01:05] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 13:01:05] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 13:01:05] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 13:01:08] "GET /admin/ HTTP/1.1" 200 13317
+[11/Jan/2024 13:01:08] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[11/Jan/2024 13:01:08] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[11/Jan/2024 13:01:08] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[11/Jan/2024 13:01:08] "GET /static/admin/css/rtl.css HTTP/1.1" 200 4788
+[11/Jan/2024 13:01:08] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[11/Jan/2024 13:01:09] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[11/Jan/2024 13:01:09] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[11/Jan/2024 13:01:09] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[11/Jan/2024 13:01:12] "GET /admin/property/property/ HTTP/1.1" 200 14844
+[11/Jan/2024 13:01:12] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[11/Jan/2024 13:01:12] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[11/Jan/2024 13:01:12] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 13:01:12] "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[11/Jan/2024 13:01:12] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[11/Jan/2024 13:01:12] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[11/Jan/2024 13:01:12] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[11/Jan/2024 13:01:12] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[11/Jan/2024 13:01:13] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[11/Jan/2024 13:01:15] "GET /admin/property/property/46/change/ HTTP/1.1" 200 50814
+[11/Jan/2024 13:01:15] "GET /static/markdownx/js/markdownx.js HTTP/1.1" 200 32685
+[11/Jan/2024 13:01:15] "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+[11/Jan/2024 13:01:15] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[11/Jan/2024 13:01:15] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 13:01:15] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[11/Jan/2024 13:01:16] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[11/Jan/2024 13:01:16] "POST /markdownx/markdownify/ HTTP/1.1" 200 522
+[11/Jan/2024 13:08:25] "POST /property/add-property/new/apartment_rent/ HTTP/1.1" 302 0
+[11/Jan/2024 13:08:25] "GET /property/ad-uploaded/ HTTP/1.1" 200 6060
+Not Found: /property/ad-uploaded/assets/imgs/logo.jpeg
+[11/Jan/2024 13:08:26] "GET /property/ad-uploaded/assets/imgs/logo.jpeg HTTP/1.1" 404 5767
+[11/Jan/2024 13:08:27] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 13:08:28] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 200 76084
+[11/Jan/2024 13:08:37] "GET /property/24hAz/details/ HTTP/1.1" 200 28661
+[11/Jan/2024 13:08:37] "GET /media/property/images/e41e73f1-ec19-42db-be91-80f7581cf875.jpeg HTTP/1.1" 200 47078
+Not Found: /property/24hAz/details/assets/imgs/logo.jpeg
+[11/Jan/2024 13:08:37] "GET /property/24hAz/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[11/Jan/2024 13:08:37] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:08:37] "GET /media/property/images/07da8307-8fda-439b-b669-898282990bd2.jpeg HTTP/1.1" 200 56559
+[11/Jan/2024 13:08:38] "GET /media/property/images/011323f4-a318-4ee1-820e-c29ea9ead01e.jpeg HTTP/1.1" 200 49652
+[11/Jan/2024 13:08:38] "GET /media/property/images/adc9331b-501e-40b4-a66f-8b6e3a02cb6c.jpeg HTTP/1.1" 200 51822
+[11/Jan/2024 13:08:38] "GET /media/property/images/d6cddcc8-639c-41ed-9b52-8d0071eca0e4.jpeg HTTP/1.1" 200 40378
+[11/Jan/2024 13:08:38] "GET /media/property/images/39c7ca07-06db-4c93-b168-d910c19219b5.jpeg HTTP/1.1" 200 55031
+[11/Jan/2024 13:08:38] "GET /media/property/images/a03cccd3-2ca2-4c0d-a4d9-9692f6afb11b.jpeg HTTP/1.1" 200 42890
+[11/Jan/2024 13:08:38] "GET /media/property/images/7835d35d-88fd-4590-97fc-fb5dc759b853.jpeg HTTP/1.1" 200 41736
+[11/Jan/2024 13:08:38] "GET /media/property/images/71397239-c486-4386-8481-3d2e41a5936b.jpeg HTTP/1.1" 200 63018
+[11/Jan/2024 13:08:38] "GET /media/property/images/d90a1992-ebd0-4d04-ae6d-0d5b7267faa6.jpeg HTTP/1.1" 200 44878
+[11/Jan/2024 13:08:39] "GET /media/property/images/71a0449f-1a07-4a35-b91d-f8024545fa7f.jpeg HTTP/1.1" 200 57226
+[11/Jan/2024 13:08:39] "GET /media/property/images/8bce25b1-07b0-47f1-b0d4-d5ffbc939643.jpeg HTTP/1.1" 200 101611
+[11/Jan/2024 13:08:39] "GET /media/property/images/2bd8b1a6-7f29-4fda-9c3f-bd7a1d5a0209.jpeg HTTP/1.1" 200 97571
+[11/Jan/2024 13:08:39] "GET /media/34762a6c-c58b-4522-87f7-af442613b762.mp4 HTTP/1.1" 200 12027026
+[11/Jan/2024 13:12:16] "GET /admin/property/property/ HTTP/1.1" 200 15107
+[11/Jan/2024 13:12:16] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 13:12:18] "GET /admin/property/property/66/change/ HTTP/1.1" 200 50844
+[11/Jan/2024 13:12:18] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 13:12:18] "POST /markdownx/markdownify/ HTTP/1.1" 200 571
+[11/Jan/2024 13:12:31] "POST /admin/property/property/66/change/ HTTP/1.1" 302 0
+[11/Jan/2024 13:12:31] "GET /admin/property/property/ HTTP/1.1" 200 15359
+[11/Jan/2024 13:12:32] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 13:12:32] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[11/Jan/2024 13:12:37] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 13:12:37] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:39] "GET /property/24hAz/details/ HTTP/1.1" 200 28911
+[11/Jan/2024 13:12:39] "GET /media/property/images/e41e73f1-ec19-42db-be91-80f7581cf875.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:39] "GET /media/property/images/adc9331b-501e-40b4-a66f-8b6e3a02cb6c.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:39] "GET /media/property/images/39c7ca07-06db-4c93-b168-d910c19219b5.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:39] "GET /media/property/images/d90a1992-ebd0-4d04-ae6d-0d5b7267faa6.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:39] "GET /media/property/images/d6cddcc8-639c-41ed-9b52-8d0071eca0e4.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:39] "GET /media/property/images/07da8307-8fda-439b-b669-898282990bd2.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:39] "GET /media/property/images/011323f4-a318-4ee1-820e-c29ea9ead01e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:39] "GET /media/property/images/a03cccd3-2ca2-4c0d-a4d9-9692f6afb11b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:40] "GET /media/property/images/71a0449f-1a07-4a35-b91d-f8024545fa7f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:40] "GET /media/property/images/7835d35d-88fd-4590-97fc-fb5dc759b853.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:40] "GET /media/property/images/71397239-c486-4386-8481-3d2e41a5936b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:40] "GET /media/property/images/8bce25b1-07b0-47f1-b0d4-d5ffbc939643.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:40] "GET /media/property/images/2bd8b1a6-7f29-4fda-9c3f-bd7a1d5a0209.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:12:41] "GET /media/34762a6c-c58b-4522-87f7-af442613b762.mp4 HTTP/1.1" 200 12027026
+[11/Jan/2024 13:34:38] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 13:35:49] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 13:35:52] "GET / HTTP/1.1" 200 19283
+Not Found: /.vscode/sftp.json
+[11/Jan/2024 13:35:52] "GET /.vscode/sftp.json HTTP/1.1" 404 4122
+[11/Jan/2024 13:35:52] "GET /about HTTP/1.1" 301 0
+Not Found: /debug/default/view
+[11/Jan/2024 13:35:52] "GET /debug/default/view?panel=config HTTP/1.1" 404 4138
+Not Found: /v2/_catalog
+[11/Jan/2024 13:35:53] "GET /v2/_catalog HTTP/1.1" 404 4104
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+[11/Jan/2024 13:35:53] "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application HTTP/1.1" 404 4296
+Not Found: /login.action
+[11/Jan/2024 13:35:53] "GET /login.action HTTP/1.1" 404 4107
+Not Found: /_all_dbs
+[11/Jan/2024 13:35:54] "GET /_all_dbs HTTP/1.1" 404 4095
+Not Found: /.DS_Store
+[11/Jan/2024 13:35:54] "GET /.DS_Store HTTP/1.1" 404 4098
+Not Found: /.env
+[11/Jan/2024 13:35:54] "GET /.env HTTP/1.1" 404 4083
+Not Found: /.git/config
+[11/Jan/2024 13:35:55] "GET /.git/config HTTP/1.1" 404 4104
+Not Found: /s/231323e20393e2939313e2839313/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties
+[11/Jan/2024 13:35:55] "GET /s/231323e20393e2939313e2839313/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties HTTP/1.1" 404 4373
+Not Found: /config.json
+[11/Jan/2024 13:35:55] "GET /config.json HTTP/1.1" 404 4104
+Not Found: /telescope/requests
+[11/Jan/2024 13:35:55] "GET /telescope/requests HTTP/1.1" 404 4125
+[11/Jan/2024 13:35:56] "GET /?rest_route=/wp/v2/users/ HTTP/1.1" 200 19283
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 11, 2024 - 12:15:35
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+farm_sale
+apartment_rent
+farm_sale
+chalet_rent
+apartment_rent
+floor_rent
+villa_rent
+shop_rent
+resthouse_rent
+commercial_office_rent
+land_rent
+building_rent
+branch_rent
+furnished_apartment_rent
+chalet_rent
+apartment_sale
+floor_rent
+villa_rent
+shop_rent
+resthouse_rent
+apartment_rent
+land_sale
+building_sale
+chalet_rent
+farm_sale
+branch_rent
+commercial_office_rent
+apartment_rent
+lounges
+1
+##############################
+bathrooms
+2
+##############################
+Watching for file changes with StatReloader
+[11/Jan/2024 13:39:08] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 13:39:08] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 13:39:08] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 200 76084
+[11/Jan/2024 13:39:08] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 13:39:08] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 13:39:11] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 13:39:11] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 13:39:11] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 13:39:11] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 13:39:11] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 13:39:11] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 13:39:11] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 200 76084
+[11/Jan/2024 13:39:11] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 13:39:11] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 13:39:11] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 13:39:11] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 13:39:11] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 13:39:11] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+Not Found: /assets/imgs/logo.jpeg
+[11/Jan/2024 13:39:12] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[11/Jan/2024 13:39:42] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 13:39:42] "GET /static/css/property/add-property-interface.css HTTP/1.1" 200 1745
+[11/Jan/2024 13:39:43] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37672
+Not Found: /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg
+[11/Jan/2024 13:39:43] "GET /property/add-property/new/apartment_rent/assets/imgs/logo.jpeg HTTP/1.1" 404 5831
+[11/Jan/2024 13:40:07] "POST /property/add-property/new/apartment_rent/ HTTP/1.1" 302 0
+[11/Jan/2024 13:40:07] "GET /property/ad-uploaded/ HTTP/1.1" 200 6060
+Not Found: /property/ad-uploaded/assets/imgs/logo.jpeg
+[11/Jan/2024 13:40:07] "GET /property/ad-uploaded/assets/imgs/logo.jpeg HTTP/1.1" 404 5771
+[11/Jan/2024 13:40:08] "GET / HTTP/1.1" 200 19166
+Not Found: /assets/imgs/logo.jpeg
+[11/Jan/2024 13:40:08] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[11/Jan/2024 13:40:08] "GET /property/89yCM/details/ HTTP/1.1" 200 15925
+[11/Jan/2024 13:40:09] "GET /static/css/property/property-details.css HTTP/1.1" 200 7032
+Not Found: /property/89yCM/details/assets/imgs/logo.jpeg
+[11/Jan/2024 13:40:09] "GET /property/89yCM/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[11/Jan/2024 13:40:40] "GET /property/89yCM/details/ HTTP/1.1" 200 15925
+[11/Jan/2024 13:40:41] "GET /property/89yCM/details/ HTTP/1.1" 200 15925
+Not Found: /property/89yCM/details/assets/imgs/logo.jpeg
+[11/Jan/2024 13:40:41] "GET /property/89yCM/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[11/Jan/2024 13:40:41] "GET /property/89yCM/details/ HTTP/1.1" 200 15925
+[11/Jan/2024 13:40:52] "GET /property/89yCM/details/ HTTP/1.1" 200 15925
+[11/Jan/2024 13:40:53] "GET /property/89yCM/details/ HTTP/1.1" 200 15925
+Not Found: /property/89yCM/details/assets/imgs/logo.jpeg
+[11/Jan/2024 13:40:53] "GET /property/89yCM/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[11/Jan/2024 13:40:53] "GET /property/89yCM/details/ HTTP/1.1" 200 15925
+[11/Jan/2024 13:40:53] "GET /property/89yCM/details/ HTTP/1.1" 200 15925
+/albdah-rebuild/albdah-rebuild/property/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 11, 2024 - 13:38:56
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+apartment_rent
+lounges
+3
+##############################
+bathrooms
+2
+##############################
+Watching for file changes with StatReloader
