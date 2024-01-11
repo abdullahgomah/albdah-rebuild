@@ -46095,3 +46095,39 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 
 Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 3 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+January 11, 2024 - 13:59:59
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[11/Jan/2024 14:00:41] "GET /property/89yCM/details/ HTTP/1.1" 200 16099
+[11/Jan/2024 14:00:41] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+Not Found: /property/89yCM/details/assets/imgs/logo.jpeg
+[11/Jan/2024 14:00:41] "GET /property/89yCM/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[11/Jan/2024 14:00:44] "GET /property/89yCM/details/ HTTP/1.1" 200 16099
+[11/Jan/2024 14:00:45] "GET /property/89yCM/details/ HTTP/1.1" 200 16099
+[11/Jan/2024 14:00:46] "GET /property/89yCM/details/ HTTP/1.1" 200 16099
+[11/Jan/2024 14:00:46] "GET /property/89yCM/details/ HTTP/1.1" 200 16099
+Not Found: /property/89yCM/details/assets/imgs/logo.jpeg
+[11/Jan/2024 14:00:47] "GET /property/89yCM/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[11/Jan/2024 14:00:52] "GET /admin HTTP/1.1" 301 0
+[11/Jan/2024 14:00:52] "GET /admin/ HTTP/1.1" 200 13819
+[11/Jan/2024 14:00:54] "GET /admin/property/property/ HTTP/1.1" 200 15715
+[11/Jan/2024 14:00:54] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 14:00:59] "POST /admin/property/property/ HTTP/1.1" 200 10918
+[11/Jan/2024 14:01:00] "POST /admin/property/property/ HTTP/1.1" 302 0
+[11/Jan/2024 14:01:00] "GET /admin/property/property/ HTTP/1.1" 200 15596
+[11/Jan/2024 14:01:00] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 14:01:01] "GET /admin/property/property/ HTTP/1.1" 200 15460
+[11/Jan/2024 14:01:01] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+Not Found: /logon/LogonPoint/index.html
+[11/Jan/2024 14:06:27] "GET /logon/LogonPoint/index.html HTTP/1.1" 404 4152
+Not Found: /logon/LogonPoint/custom.html
+[11/Jan/2024 14:06:27] "GET /logon/LogonPoint/custom.html HTTP/1.1" 404 4155
