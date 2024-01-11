@@ -1027,6 +1027,7 @@
     
     closeBtn.addEventListener('click', () => {
         closePopup() 
+        document.body.style.overflow = 'visible';
     })
 
     document.querySelectorAll('.property__img__item').forEach((item) => {
