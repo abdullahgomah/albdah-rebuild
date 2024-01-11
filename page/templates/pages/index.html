@@ -170,9 +170,9 @@
                         <p class="property__price">
                             
                             {% if property.sale == True %}
-                            {{property.price}} ريال
+                            {{property.price|floatformat:"0"}} ريال
                             {% else %}
-                            {{property.price}} ريال / <span>{{property.get_rent_type_display }}</span>
+                            {{property.price|floatformat:"0"}} ريال / <span>{{property.get_rent_type_display }}</span>
                             {% endif %}
 
                                 
