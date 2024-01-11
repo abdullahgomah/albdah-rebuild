@@ -46031,3 +46031,67 @@ bathrooms
 2
 ##############################
 Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+January 11, 2024 - 13:41:31
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[11/Jan/2024 13:42:00] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+Not Found: /property/89yCM/details/assets/imgs/logo.jpeg
+[11/Jan/2024 13:42:00] "GET /property/89yCM/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[11/Jan/2024 13:42:01] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:42:01] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:42:01] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:42:49] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:42:49] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:42:50] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+Not Found: /property/89yCM/details/assets/imgs/logo.jpeg
+[11/Jan/2024 13:42:50] "GET /property/89yCM/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[11/Jan/2024 13:43:38] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:43:39] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:43:55] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:43:55] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:43:56] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+Not Found: /property/89yCM/details/assets/imgs/logo.jpeg
+[11/Jan/2024 13:43:56] "GET /property/89yCM/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[11/Jan/2024 13:43:56] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:43:57] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+[11/Jan/2024 13:44:06] "GET /property/89yCM/details/ HTTP/1.1" 200 15863
+Not Found: /property/89yCM/details/assets/imgs/logo.jpeg
+[11/Jan/2024 13:44:06] "GET /property/89yCM/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+Not Found: /Public/home/js/check.js
+[11/Jan/2024 13:53:06] "GET /Public/home/js/check.js HTTP/1.1" 404 4140
+[11/Jan/2024 13:53:07] "GET /static/admin/javascript/hetong.js HTTP/1.1" 404 1938
+[11/Jan/2024 13:58:44] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:58:44] "GET /media/property/images/50340241-8ad5-42e9-abda-6a3bef95b6b9.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:58:44] "GET /media/property/images/60f2dd25-266d-4c6e-a684-eed230231daa.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:58:44] "GET /media/property/images/93bf5a3f-3d81-47d8-b3b1-1a23abb364c5.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:58:44] "GET /media/property/images/81c98ff7-a197-4b71-a9e9-f1741b3783fa.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:58:45] "GET /media/property/images/9db4f89e-9004-4d49-a1ab-b8b28526857e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:58:45] "GET /media/property/images/b74a64d5-2727-4395-94d5-4b19abfddc0e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:58:45] "GET /media/property/images/1d71e848-b7a9-4e74-9f91-6fa8424a04a4.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:58:45] "GET /media/property/images/2683790e-0026-4338-8151-6cec1c8d3896.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 13:58:45] "GET /media/df79a361-8dbb-4e65-9cfe-f6d3d7059e79.mp4 HTTP/1.1" 304 0
+Not Found: /property/03WIC/details/assets/imgs/logo.jpeg
+[11/Jan/2024 13:58:45] "GET /property/03WIC/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[11/Jan/2024 13:58:55] "GET /media/df79a361-8dbb-4e65-9cfe-f6d3d7059e79.mp4 HTTP/1.1" 200 10378513
+/albdah-rebuild/albdah-rebuild/property/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+January 11, 2024 - 13:41:53
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader

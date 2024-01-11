@@ -118,7 +118,7 @@ class Property(models.Model):
 
     property_age = models.CharField(max_length=200, verbose_name="عمر العقار", null=True, blank=True)  
 
-    families = models.BooleanField(default=False, verbose_name="عوائل ام عزاب") 
+    families = models.BooleanField(default=False, verbose_name="عوائل") 
 
     single = models.BooleanField(default=False, verbose_name='عزاب') 
 
