@@ -304,7 +304,7 @@ async function initMap() {
 
         // get the apartment 
         let property = properties_data[i], 
-            propertytPrice = formatPrice(property.price), 
+            propertytPrice = formatPrice(parseInt(property.price)), 
             // propertytPrice = 2000, 
             propertyTitle = property.title, 
             propertyDescription = property.description, 
