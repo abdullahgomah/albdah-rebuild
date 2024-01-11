@@ -168,7 +168,14 @@
                             <a href="{% url 'property:property-details' property.number %}">{{property.title}}</a>
                         </h4>
                         <p class="property__price">
+                            
+                            {% if property.sale == True %}
+                            {{property.price}} ريال
+                            {% else %}
                             {{property.price}} ريال / <span>{{property.get_rent_type_display }}</span>
+                            {% endif %}
+
+                                
                         </p>
                         <p class="property__description">
                             <!-- {{property.description|safe|truncatewords:5}} -->
