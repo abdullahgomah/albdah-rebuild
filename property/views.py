@@ -43,14 +43,14 @@ def add_property(request, property_type, offer_type=None):
     if offer_type == "sell":
         sell = 1 
         if property_type == "commercial_office_rent": 
-            property_type = "commercial_office_sale"
+            p_type = "commercial_office_sale"
         else: 
-            property_type = str(property_type).split("_")[0]+"_sale"
-        print(property_type) 
+            p_type = str(property_type).split("_")[0]+"_sale"
+        print(p_type) 
     else: 
         sell = 0 
     
-    property_type_display_name = PropertyDepartment.objects.get(name=property_type) 
+    property_type_display_name = PropertyDepartment.objects.get(name=p_type) 
     
     if request.POST: 
 
