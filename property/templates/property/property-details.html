@@ -159,8 +159,24 @@
                     <p>عوائل أم عزاب</p>
                     <p>
                         
+                        {% if property.families == True and property.single == True %}
+                            
+                        عوائل وعزاب
+
+                        {% else %}
+
+                        
                         {% if property.families == True %}
                             عوائل
+                        {% endif %}
+
+                        
+                        {% if property.single == True %}
+                            عزاب
+                        {% endif %}
+                            
+                            
+                                
                         {% endif %}
                     </p>
                 </div>
@@ -494,8 +510,24 @@
                     <p>عوائل أم عزاب</p>
                     <p>
                         
+                        {% if property.families == True and property.single == True %}
+                            
+                        عوائل وعزاب
+
+                        {% else %}
+
+                        
                         {% if property.families == True %}
                             عوائل
+                        {% endif %}
+
+                        
+                        {% if property.single == True %}
+                            عزاب
+                        {% endif %}
+                            
+                            
+                                
                         {% endif %}
                     </p>
                 </div>
@@ -578,23 +610,23 @@
                     
                 
                 
-                {% if property.single == True %}
+                <!-- {% if property.single == True %}
                     <div class="col">
                         <p>عزاب</p>
                         <p>
                             <i class="fa-solid fa-circle-check"></i>
                         </p>
                     </div>
-                {% endif %}
+                {% endif %} -->
 
-                {% if property.families == True %}
+                <!-- {% if property.families == True %}
                     <div class="col">
                         <p>عوائل</p>
                         <p>
                             <i class="fa-solid fa-circle-check"></i>
                         </p>
                     </div>
-                {% endif %}
+                {% endif %} -->
 
                 
                 {% if property.monthly_payment %}

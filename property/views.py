@@ -233,6 +233,7 @@ def add_property(request, property_type, offer_type=None):
                 sanitation_exist = features[2], 
                 private_enternace = features[13], 
                 single = features[14], 
+                families = features[3], 
                 lat = lat, 
                 lng = lng ,
                 monthly_payment= payments[0] ,
@@ -577,6 +578,8 @@ def add_property(request, property_type, offer_type=None):
             basement = request.POST.get('basement')
             stores_count = request.POST.get('stores-count-input')
             single = request.POST.get('single') 
+            families = request.POST.get('families') 
+
 
 
             apartments_count = request.POST.get('extra-apartments-count-input') 
@@ -587,6 +590,8 @@ def add_property(request, property_type, offer_type=None):
             features.append(furnished) # 3 
             features.append(basement)  # 4 
             features.append(single) # 5 
+            features.append(families) # 6 
+
 
 
             for i in range(len(features)) : 
@@ -622,6 +627,7 @@ def add_property(request, property_type, offer_type=None):
                 stores_count = stores_count, 
                 apartments_count = apartments_count, 
                 single = features[5], 
+                families = features[6], 
                 monthly_payment= payments[0] ,
                 quarterly_payment = payments[1], 
                 semi_annual_payment = payments[2], 
