@@ -46131,3 +46131,968 @@ Not Found: /logon/LogonPoint/index.html
 [11/Jan/2024 14:06:27] "GET /logon/LogonPoint/index.html HTTP/1.1" 404 4152
 Not Found: /logon/LogonPoint/custom.html
 [11/Jan/2024 14:06:27] "GET /logon/LogonPoint/custom.html HTTP/1.1" 404 4155
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 3 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+January 11, 2024 - 14:00:33
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[11/Jan/2024 14:22:30] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 14:31:46] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[11/Jan/2024 14:31:46] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 14:31:46] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 14:31:46] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 304 0
+[11/Jan/2024 14:31:47] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 304 0
+[11/Jan/2024 14:37:47] "GET /login HTTP/1.1" 301 0
+[11/Jan/2024 14:42:00] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 15:14:32] "GET /?XDEBUG_SESSION_START=phpstorm HTTP/1.1" 200 19283
+[11/Jan/2024 15:24:15] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 15:25:05] "GET /property/03WIC/details/ HTTP/1.1" 200 25494
+Not Found: /property/03WIC/details/assets/imgs/logo.jpeg
+[11/Jan/2024 15:25:06] "GET /property/03WIC/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[11/Jan/2024 15:32:47] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 16:04:10] "GET /property/19cQG/details/ HTTP/1.1" 200 19400
+[11/Jan/2024 16:04:10] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 16:04:10] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 16:04:11] "GET /static/css/property/property-details.css HTTP/1.1" 200 7030
+[11/Jan/2024 16:04:11] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 16:04:11] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 16:04:11] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 16:04:11] "GET /static/imgs/%D9%85%D8%AF%D8%AE%D9%84_%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-removebg-preview.png HTTP/1.1" 200 11666
+[11/Jan/2024 16:04:11] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[11/Jan/2024 16:04:11] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 16:04:11] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+Not Found: /property/19cQG/details/assets/imgs/logo.jpeg
+[11/Jan/2024 16:04:13] "GET /property/19cQG/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[11/Jan/2024 16:04:14] "GET /media/e007e0ff-3145-4059-a4f1-800d8d78cbeb.mp4 HTTP/1.1" 200 18809011
+[11/Jan/2024 16:04:23,214] - Broken pipe from ('127.0.0.1', 45076)
+[11/Jan/2024 16:05:52] "GET / HTTP/1.1" 200 19283
+Not Found: /assets/imgs/logo.jpeg
+[11/Jan/2024 16:06:03] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4134
+Not Found: /robots.txt
+[11/Jan/2024 16:06:05] "GET /robots.txt HTTP/1.1" 404 4101
+Not Found: /sitemap.xml
+[11/Jan/2024 16:06:07] "GET /sitemap.xml HTTP/1.1" 404 4104
+[11/Jan/2024 16:06:38] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 16:12:53] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 16:21:14] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 16:21:51] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 16:23:14] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 16:40:53] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 16:40:53] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 16:40:54] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 16:40:54] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 16:40:54] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 16:40:54] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 16:40:54] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 16:40:54] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 200 76084
+[11/Jan/2024 16:40:54] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 16:40:55] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 16:40:55] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 16:40:55] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 16:40:56] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+Not Found: /assets/imgs/logo.jpeg
+[11/Jan/2024 16:40:56] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4133
+[11/Jan/2024 16:41:01] "GET /?page=2 HTTP/1.1" 200 19435
+[11/Jan/2024 16:41:01] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+[11/Jan/2024 16:41:01] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 200 1564963
+[11/Jan/2024 16:41:02] "GET /media/property/images/e5d50aaa-eaa0-4007-84cd-b9485974269c.jpeg HTTP/1.1" 200 55655
+[11/Jan/2024 16:41:03] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[11/Jan/2024 16:41:03] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[11/Jan/2024 16:41:09] "GET /property/19cQG/details/ HTTP/1.1" 200 19400
+[11/Jan/2024 16:41:09] "GET /static/imgs/%D9%85%D8%AF%D8%AE%D9%84_%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-removebg-preview.png HTTP/1.1" 200 11666
+[11/Jan/2024 16:41:09] "GET /static/css/property/property-details.css HTTP/1.1" 200 7030
+[11/Jan/2024 16:41:09] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[11/Jan/2024 16:41:14] "GET /media/e007e0ff-3145-4059-a4f1-800d8d78cbeb.mp4 HTTP/1.1" 200 18809011
+Not Found: /property/19cQG/details/assets/imgs/logo.jpeg
+[11/Jan/2024 16:41:16] "GET /property/19cQG/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5777
+[11/Jan/2024 16:42:20] "GET /?page=3 HTTP/1.1" 200 17937
+[11/Jan/2024 16:42:21] "GET /media/property/images/5.jpeg HTTP/1.1" 200 115116
+[11/Jan/2024 16:42:21] "GET /media/property/images/WhatsApp_Image_2023-12-04_at_4.44.54_PM_1_QuI4UwR.jpeg HTTP/1.1" 200 112841
+[11/Jan/2024 16:42:21] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[11/Jan/2024 16:42:22] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+[11/Jan/2024 16:42:34] "GET /?page=3 HTTP/1.1" 200 17937
+[11/Jan/2024 16:42:38] "GET /?page=1 HTTP/1.1" 200 19283
+[11/Jan/2024 16:42:43] "GET /?page=2 HTTP/1.1" 200 19435
+[11/Jan/2024 16:42:52] "GET /?page=3 HTTP/1.1" 200 17937
+[11/Jan/2024 16:44:04] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 16:44:05] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 16:44:05] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 16:44:05] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 16:44:05] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 16:44:06] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 16:44:06] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 16:44:06] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 200 76084
+[11/Jan/2024 16:44:06] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 16:44:06] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 16:44:07] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 16:44:07] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+[11/Jan/2024 16:44:07] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+Not Found: /robots.txt
+[11/Jan/2024 16:44:40] "GET /robots.txt HTTP/1.1" 404 4096
+[11/Jan/2024 16:52:22] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 16:52:23] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 16:52:23] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:10] "GET /property/24hAz/details/ HTTP/1.1" 200 29147
+[11/Jan/2024 17:05:10] "GET /static/css/property/property-details.css HTTP/1.1" 200 7030
+[11/Jan/2024 17:05:10] "GET /media/property/images/e41e73f1-ec19-42db-be91-80f7581cf875.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:10] "GET /media/property/images/39c7ca07-06db-4c93-b168-d910c19219b5.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:10] "GET /media/property/images/adc9331b-501e-40b4-a66f-8b6e3a02cb6c.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:10] "GET /media/property/images/d90a1992-ebd0-4d04-ae6d-0d5b7267faa6.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:10] "GET /media/property/images/a03cccd3-2ca2-4c0d-a4d9-9692f6afb11b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:10] "GET /media/property/images/011323f4-a318-4ee1-820e-c29ea9ead01e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:10] "GET /media/property/images/d6cddcc8-639c-41ed-9b52-8d0071eca0e4.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:10] "GET /media/property/images/7835d35d-88fd-4590-97fc-fb5dc759b853.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:10] "GET /media/property/images/07da8307-8fda-439b-b669-898282990bd2.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:11] "GET /media/property/images/71397239-c486-4386-8481-3d2e41a5936b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:11] "GET /media/property/images/71a0449f-1a07-4a35-b91d-f8024545fa7f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:11] "GET /media/property/images/2bd8b1a6-7f29-4fda-9c3f-bd7a1d5a0209.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:11] "GET /media/property/images/8bce25b1-07b0-47f1-b0d4-d5ffbc939643.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:05:15] "GET /media/34762a6c-c58b-4522-87f7-af442613b762.mp4 HTTP/1.1" 200 12027026
+[11/Jan/2024 17:05:25] "GET /property/24hAz/details/ HTTP/1.1" 200 29131
+Not Found: /property/24hAz/details/assets/imgs/logo.jpeg
+[11/Jan/2024 17:05:25] "GET /property/24hAz/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[11/Jan/2024 17:05:42] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 17:05:43] "GET /property/add-property/ HTTP/1.1" 200 13422
+Internal Server Error: /property/add-property/new/apartment_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: property_propertydepartment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 53, in add_property
+    property_type_display_name = PropertyDepartment.objects.get(name=property_type)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: property_propertydepartment
+[11/Jan/2024 17:05:44] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 500 138949
+Internal Server Error: /property/add-property/new/floor_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: property_propertydepartment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 53, in add_property
+    property_type_display_name = PropertyDepartment.objects.get(name=property_type)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: property_propertydepartment
+[11/Jan/2024 17:05:47] "GET /property/add-property/new/floor_rent/ HTTP/1.1" 500 138849
+Internal Server Error: /property/add-property/new/apartment_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: property_propertydepartment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 53, in add_property
+    property_type_display_name = PropertyDepartment.objects.get(name=property_type)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: property_propertydepartment
+[11/Jan/2024 17:06:19] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 500 138949
+Internal Server Error: /property/add-property/new/sell/apartment_sale/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: property_propertydepartment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 53, in add_property
+    property_type_display_name = PropertyDepartment.objects.get(name=property_type)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: property_propertydepartment
+[11/Jan/2024 17:06:33] "GET /property/add-property/new/sell/apartment_sale/ HTTP/1.1" 500 139100
+[11/Jan/2024 17:06:36] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 17:06:43] "GET /?page=2 HTTP/1.1" 200 19451
+[11/Jan/2024 17:06:44] "GET /maps/search HTTP/1.1" 200 21206
+[11/Jan/2024 17:06:56] "GET /media/property/images/IMG_0306.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:06:57] "GET /media/property/images/7.jpeg HTTP/1.1" 200 128729
+[11/Jan/2024 17:06:58] "GET /media/property/images/c4a81362-6672-48f4-9ce9-cb4956b71b7d.jpeg HTTP/1.1" 200 106629
+[11/Jan/2024 17:10:45] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 17:13:09] "GET /property/24hAz/details/ HTTP/1.1" 200 29131
+[11/Jan/2024 17:13:10] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 17:13:10] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 17:13:10] "GET /static/css/property/property-details.css HTTP/1.1" 200 7030
+[11/Jan/2024 17:13:10] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 17:13:10] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 17:13:10] "GET /media/property/images/07da8307-8fda-439b-b669-898282990bd2.jpeg HTTP/1.1" 200 56559
+[11/Jan/2024 17:13:10] "GET /media/property/images/e41e73f1-ec19-42db-be91-80f7581cf875.jpeg HTTP/1.1" 200 47078
+[11/Jan/2024 17:13:10] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 200 76084
+[11/Jan/2024 17:13:10] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 17:13:10] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[11/Jan/2024 17:13:11] "GET /media/property/images/011323f4-a318-4ee1-820e-c29ea9ead01e.jpeg HTTP/1.1" 200 49652
+[11/Jan/2024 17:13:11] "GET /media/property/images/d6cddcc8-639c-41ed-9b52-8d0071eca0e4.jpeg HTTP/1.1" 200 40378
+[11/Jan/2024 17:13:11] "GET /media/property/images/a03cccd3-2ca2-4c0d-a4d9-9692f6afb11b.jpeg HTTP/1.1" 200 42890
+[11/Jan/2024 17:13:11] "GET /media/property/images/39c7ca07-06db-4c93-b168-d910c19219b5.jpeg HTTP/1.1" 200 55031
+[11/Jan/2024 17:13:11] "GET /media/property/images/adc9331b-501e-40b4-a66f-8b6e3a02cb6c.jpeg HTTP/1.1" 200 51822
+[11/Jan/2024 17:13:11] "GET /media/property/images/7835d35d-88fd-4590-97fc-fb5dc759b853.jpeg HTTP/1.1" 200 41736
+[11/Jan/2024 17:13:11] "GET /media/property/images/71397239-c486-4386-8481-3d2e41a5936b.jpeg HTTP/1.1" 200 63018
+[11/Jan/2024 17:13:11] "GET /media/property/images/d90a1992-ebd0-4d04-ae6d-0d5b7267faa6.jpeg HTTP/1.1" 200 44878
+[11/Jan/2024 17:13:11] "GET /media/property/images/71a0449f-1a07-4a35-b91d-f8024545fa7f.jpeg HTTP/1.1" 200 57226
+[11/Jan/2024 17:13:11] "GET /media/property/images/8bce25b1-07b0-47f1-b0d4-d5ffbc939643.jpeg HTTP/1.1" 200 101611
+[11/Jan/2024 17:13:11] "GET /media/property/images/2bd8b1a6-7f29-4fda-9c3f-bd7a1d5a0209.jpeg HTTP/1.1" 200 97571
+[11/Jan/2024 17:13:11] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+Not Found: /property/24hAz/details/assets/imgs/logo.jpeg
+[11/Jan/2024 17:13:13] "GET /property/24hAz/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[11/Jan/2024 17:13:15] "GET /media/34762a6c-c58b-4522-87f7-af442613b762.mp4 HTTP/1.1" 200 12027026
+[11/Jan/2024 17:13:19,802] - Broken pipe from ('127.0.0.1', 43248)
+[11/Jan/2024 17:13:24] "GET /property/24hAz/details/ HTTP/1.1" 200 29131
+[11/Jan/2024 17:13:29] "GET /media/34762a6c-c58b-4522-87f7-af442613b762.mp4 HTTP/1.1" 200 12027026
+[11/Jan/2024 17:13:41,412] - Broken pipe from ('127.0.0.1', 59924)
+[11/Jan/2024 17:14:35] "GET /property/24hAz/details/ HTTP/1.1" 200 29131
+[11/Jan/2024 17:28:42] "GET /property/24hAz/details/ HTTP/1.1" 200 29131
+[11/Jan/2024 17:28:45] "GET /media/34762a6c-c58b-4522-87f7-af442613b762.mp4 HTTP/1.1" 200 12027026
+Not Found: /actuator/gateway/routes
+[11/Jan/2024 17:29:41] "GET /actuator/gateway/routes HTTP/1.1" 404 4144
+[11/Jan/2024 17:35:09] "GET / HTTP/1.1" 200 19283
+Not Found: /.git/index
+[11/Jan/2024 17:36:23] "GET /.git/index HTTP/1.1" 404 4101
+[11/Jan/2024 17:39:13] "GET /property/24hAz/details/ HTTP/1.1" 200 29131
+[11/Jan/2024 17:39:14] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/e41e73f1-ec19-42db-be91-80f7581cf875.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/011323f4-a318-4ee1-820e-c29ea9ead01e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/07da8307-8fda-439b-b669-898282990bd2.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/d6cddcc8-639c-41ed-9b52-8d0071eca0e4.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/a03cccd3-2ca2-4c0d-a4d9-9692f6afb11b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/39c7ca07-06db-4c93-b168-d910c19219b5.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/7835d35d-88fd-4590-97fc-fb5dc759b853.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/adc9331b-501e-40b4-a66f-8b6e3a02cb6c.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:14] "GET /media/property/images/71397239-c486-4386-8481-3d2e41a5936b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:15] "GET /media/property/images/71a0449f-1a07-4a35-b91d-f8024545fa7f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:15] "GET /media/property/images/d90a1992-ebd0-4d04-ae6d-0d5b7267faa6.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:15] "GET /media/property/images/8bce25b1-07b0-47f1-b0d4-d5ffbc939643.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 17:39:15] "GET /media/property/images/2bd8b1a6-7f29-4fda-9c3f-bd7a1d5a0209.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:08:20] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 18:11:37] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.01_PM_2.jpeg HTTP/1.1" 200 1050159
+[11/Jan/2024 18:16:47] "GET /property/24hAz/details/ HTTP/1.1" 200 29131
+[11/Jan/2024 18:16:47] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[11/Jan/2024 18:16:47] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:47] "GET /media/property/images/e41e73f1-ec19-42db-be91-80f7581cf875.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/07da8307-8fda-439b-b669-898282990bd2.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/011323f4-a318-4ee1-820e-c29ea9ead01e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/d6cddcc8-639c-41ed-9b52-8d0071eca0e4.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/a03cccd3-2ca2-4c0d-a4d9-9692f6afb11b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/39c7ca07-06db-4c93-b168-d910c19219b5.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/adc9331b-501e-40b4-a66f-8b6e3a02cb6c.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/7835d35d-88fd-4590-97fc-fb5dc759b853.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/71397239-c486-4386-8481-3d2e41a5936b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/d90a1992-ebd0-4d04-ae6d-0d5b7267faa6.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/71a0449f-1a07-4a35-b91d-f8024545fa7f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/8bce25b1-07b0-47f1-b0d4-d5ffbc939643.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/property/images/2bd8b1a6-7f29-4fda-9c3f-bd7a1d5a0209.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 18:16:48] "GET /media/34762a6c-c58b-4522-87f7-af442613b762.mp4 HTTP/1.1" 304 0
+Not Found: /.env
+[11/Jan/2024 18:27:30] "GET /.env HTTP/1.1" 404 4083
+Forbidden (CSRF cookie not set.): /
+[11/Jan/2024 18:27:31] "POST / HTTP/1.1" 403 3071
+Not Found: /core/.env
+[11/Jan/2024 18:27:32] "POST /core/.env HTTP/1.1" 404 4099
+Not Found: /core/.env
+[11/Jan/2024 18:27:32] "GET /core/.env HTTP/1.1" 404 4098
+Forbidden (CSRF cookie not set.): /
+[11/Jan/2024 18:27:33] "POST / HTTP/1.1" 403 3071
+Not Found: /core/.env
+[11/Jan/2024 18:27:34] "POST /core/.env HTTP/1.1" 404 4099
+[11/Jan/2024 18:57:06] "GET /property/26ZCy/details/ HTTP/1.1" 200 26037
+[11/Jan/2024 18:57:06] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 18:57:07] "GET /static/css/property/property-details.css HTTP/1.1" 200 7030
+[11/Jan/2024 18:57:07] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[11/Jan/2024 18:57:07] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 18:57:07] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 18:57:07] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 18:57:07] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.51_PM.jpeg HTTP/1.1" 200 934299
+[11/Jan/2024 18:57:07] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM_1.jpeg HTTP/1.1" 200 556676
+[11/Jan/2024 18:57:08] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 18:57:09] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_2.jpeg HTTP/1.1" 200 655265
+[11/Jan/2024 18:57:09] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM_1.jpeg HTTP/1.1" 200 672127
+[11/Jan/2024 18:57:09] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.50_PM.jpeg HTTP/1.1" 200 532680
+[11/Jan/2024 18:57:09] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_1.jpeg HTTP/1.1" 200 662309
+[11/Jan/2024 18:57:09] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM_2.jpeg HTTP/1.1" 200 648945
+[11/Jan/2024 18:57:09] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.49_PM.jpeg HTTP/1.1" 200 690843
+[11/Jan/2024 18:57:09] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM.jpeg HTTP/1.1" 200 646758
+[11/Jan/2024 18:57:10] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 18:57:10] "GET /static/imgs/%D9%85%D8%AF%D8%AE%D9%84_%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-removebg-preview.png HTTP/1.1" 200 11666
+[11/Jan/2024 18:57:12] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 18:57:12] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 200 76084
+[11/Jan/2024 18:57:12] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 18:57:13] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 18:57:13] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 18:57:13] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 18:57:13] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+Not Found: /assets/imgs/logo.jpeg
+[11/Jan/2024 18:57:14] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[11/Jan/2024 18:57:17] "GET /?page=2 HTTP/1.1" 200 19435
+[11/Jan/2024 18:57:17] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+[11/Jan/2024 18:57:17] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 200 1564963
+[11/Jan/2024 18:57:18] "GET /media/property/images/e5d50aaa-eaa0-4007-84cd-b9485974269c.jpeg HTTP/1.1" 200 55655
+[11/Jan/2024 18:57:18] "GET /media/property/images/IMG_0288.jpeg HTTP/1.1" 200 1663351
+[11/Jan/2024 18:57:18] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[11/Jan/2024 19:12:52] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 19:12:52] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:12:54] "GET /property/add-property/ HTTP/1.1" 200 13422
+Internal Server Error: /property/add-property/new/apartment_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: property_propertydepartment
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 53, in add_property
+    property_type_display_name = PropertyDepartment.objects.get(name=property_type)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: property_propertydepartment
+[11/Jan/2024 19:12:55] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 500 138949
+Not Found: /robots.txt
+[11/Jan/2024 19:48:57] "GET /robots.txt HTTP/1.1" 404 4096
+[11/Jan/2024 19:48:57] "GET /media/property/images/WhatsApp_Image_2023-12-06_at_4.43.48_PM.jpeg HTTP/1.1" 200 646758
+[11/Jan/2024 19:49:59] "GET /static/imgs/%D8%A7%D9%8A%D9%82%D9%88%D9%86%D8%A9%20%D8%B9%D9%82%D8%AF%20%D8%A7%D9%8A%D8%AC%D8%A7%D8%B1%20%D9%85%D9%88%D8%AD%D8%AF.png HTTP/1.1" 200 48220
+[11/Jan/2024 19:50:43] "GET /static/imgs/%D9%85%D9%83%D9%8A%D9%81-removebg-preview.png HTTP/1.1" 200 7501
+[11/Jan/2024 19:52:19] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[11/Jan/2024 19:52:19] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:19] "GET /media/property/images/e41e73f1-ec19-42db-be91-80f7581cf875.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:19] "GET /media/property/images/07da8307-8fda-439b-b669-898282990bd2.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/011323f4-a318-4ee1-820e-c29ea9ead01e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/39c7ca07-06db-4c93-b168-d910c19219b5.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/d6cddcc8-639c-41ed-9b52-8d0071eca0e4.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/a03cccd3-2ca2-4c0d-a4d9-9692f6afb11b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/7835d35d-88fd-4590-97fc-fb5dc759b853.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/71397239-c486-4386-8481-3d2e41a5936b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/adc9331b-501e-40b4-a66f-8b6e3a02cb6c.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/8bce25b1-07b0-47f1-b0d4-d5ffbc939643.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/71a0449f-1a07-4a35-b91d-f8024545fa7f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:20] "GET /media/property/images/d90a1992-ebd0-4d04-ae6d-0d5b7267faa6.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 19:52:21] "GET /media/property/images/2bd8b1a6-7f29-4fda-9c3f-bd7a1d5a0209.jpeg HTTP/1.1" 304 0
+Not Found: /property/24hAz/details/assets/imgs/logo.jpeg
+[11/Jan/2024 19:52:21] "GET /property/24hAz/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[11/Jan/2024 20:08:18] "GET / HTTP/1.1" 200 19283
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 3 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): property.
+Run 'python manage.py migrate' to apply them.
+January 11, 2024 - 14:20:48
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+apartment_sale
+Watching for file changes with StatReloader
+[11/Jan/2024 20:28:13] "GET /admin/ HTTP/1.1" 200 13747
+[11/Jan/2024 20:28:22] "GET /admin/property/propertydepartment/ HTTP/1.1" 200 10795
+[11/Jan/2024 20:28:23] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:28:23] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[11/Jan/2024 20:28:23] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[11/Jan/2024 20:28:35] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12272
+[11/Jan/2024 20:28:35] "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+[11/Jan/2024 20:28:35] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[11/Jan/2024 20:28:35] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:28:35] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[11/Jan/2024 20:28:35] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[11/Jan/2024 20:28:44] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:28:44] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12561
+[11/Jan/2024 20:28:44] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:28:49] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:28:49] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12561
+[11/Jan/2024 20:28:49] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:28:55] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:28:55] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12563
+[11/Jan/2024 20:28:55] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:29:01] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:01] "GET /admin/property/propertydepartment/ HTTP/1.1" 200 12988
+[11/Jan/2024 20:29:01] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:29:03] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 20:29:04] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 20:29:04] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 20:29:05] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12272
+[11/Jan/2024 20:29:05] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 20:29:06] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:29:07] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37717
+[11/Jan/2024 20:29:07] "GET /static/js/property/add-property1.js HTTP/1.1" 304 0
+[11/Jan/2024 20:29:09] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:10] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12569
+[11/Jan/2024 20:29:10] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+Internal Server Error: /property/add-property/new/sell/chalet_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 53, in add_property
+    property_type_display_name = PropertyDepartment.objects.get(name=property_type)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+property.models.PropertyDepartment.DoesNotExist: PropertyDepartment matching query does not exist.
+[11/Jan/2024 20:29:12] "GET /property/add-property/new/sell/chalet_rent/ HTTP/1.1" 500 76957
+[11/Jan/2024 20:29:14] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:14] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12574
+[11/Jan/2024 20:29:14] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+Internal Server Error: /property/add-property/new/sell/shop_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 53, in add_property
+    property_type_display_name = PropertyDepartment.objects.get(name=property_type)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+property.models.PropertyDepartment.DoesNotExist: PropertyDepartment matching query does not exist.
+[11/Jan/2024 20:29:20] "GET /property/add-property/new/sell/shop_rent/ HTTP/1.1" 500 76989
+[11/Jan/2024 20:29:21] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:21] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12561
+[11/Jan/2024 20:29:21] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:29:24] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37717
+[11/Jan/2024 20:29:28] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:28] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12565
+[11/Jan/2024 20:29:28] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+Internal Server Error: /property/add-property/new/sell/apartment_sale/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 53, in add_property
+    property_type_display_name = PropertyDepartment.objects.get(name=property_type)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+property.models.PropertyDepartment.DoesNotExist: PropertyDepartment matching query does not exist.
+[11/Jan/2024 20:29:29] "GET /property/add-property/new/sell/apartment_sale/ HTTP/1.1" 500 77175
+[11/Jan/2024 20:29:34] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:34] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12567
+[11/Jan/2024 20:29:34] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:29:38] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:39] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12575
+[11/Jan/2024 20:29:39] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:29:44] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:45] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12566
+[11/Jan/2024 20:29:45] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:29:51] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:51] "GET /admin/property/propertydepartment/ HTTP/1.1" 200 14926
+[11/Jan/2024 20:29:51] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:29:53] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12272
+[11/Jan/2024 20:29:53] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:29:58] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:29:58] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12558
+[11/Jan/2024 20:29:59] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:30:07] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:30:07] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12560
+[11/Jan/2024 20:30:07] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:30:13] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:30:13] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12558
+[11/Jan/2024 20:30:13] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:30:19] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:30:19] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12562
+[11/Jan/2024 20:30:19] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:30:23] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:30:24] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12566
+[11/Jan/2024 20:30:24] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:30:28] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:30:28] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12562
+[11/Jan/2024 20:30:28] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:30:33] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:30:33] "GET /admin/property/propertydepartment/ HTTP/1.1" 200 16571
+[11/Jan/2024 20:30:34] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:30:36] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12272
+[11/Jan/2024 20:30:36] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:30:39] "POST /admin/property/propertydepartment/add/ HTTP/1.1" 302 0
+[11/Jan/2024 20:30:39] "GET /admin/property/propertydepartment/add/ HTTP/1.1" 200 12558
+[11/Jan/2024 20:30:39] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 20:30:41] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 20:30:41] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 20:30:41] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 20:30:42] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 20:30:42] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 200 76084
+[11/Jan/2024 20:30:42] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 20:30:42] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 20:30:42] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 20:30:42] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 20:30:42] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+[11/Jan/2024 20:30:42] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 20:31:36] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 20:33:02] "GET /property/add-property/new/sell/apartment_sale/ HTTP/1.1" 200 35239
+[11/Jan/2024 20:33:15] "GET /property/add-property/new/sell/villa_rent/ HTTP/1.1" 200 29542
+[11/Jan/2024 20:52:47] "GET /media/property/images/WhatsApp_Image_2023-11-26_at_4.36.00_PM.jpeg HTTP/1.1" 200 894955
+Not Found: /ecPD
+[11/Jan/2024 20:53:13] "GET /ecPD HTTP/1.1" 404 4083
+Not Found: /UOkN
+[11/Jan/2024 20:53:13] "GET /UOkN HTTP/1.1" 404 4083
+[11/Jan/2024 21:00:54] "GET /property/add-property/new/apartment_rent/ HTTP/1.1" 200 37717
+[11/Jan/2024 21:06:00] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 21:06:00] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 21:06:00] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 21:06:00] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 21:06:00] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 21:06:01] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 21:06:01] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 21:06:01] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 200 76084
+[11/Jan/2024 21:06:01] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 21:06:01] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 21:06:01] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 21:06:01] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 21:06:01] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+[11/Jan/2024 21:25:39] "GET /property/03WIC/details/ HTTP/1.1" 200 25494
+[11/Jan/2024 21:25:40] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 21:25:40] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 21:25:40] "GET /media/property/images/60f2dd25-266d-4c6e-a684-eed230231daa.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 21:25:40] "GET /media/property/images/81c98ff7-a197-4b71-a9e9-f1741b3783fa.jpeg HTTP/1.1" 200 27895
+[11/Jan/2024 21:25:40] "GET /media/property/images/9db4f89e-9004-4d49-a1ab-b8b28526857e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 21:25:40] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[11/Jan/2024 21:25:40] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 21:25:40] "GET /media/property/images/50340241-8ad5-42e9-abda-6a3bef95b6b9.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 21:25:40] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[11/Jan/2024 21:25:40] "GET /media/property/images/2683790e-0026-4338-8151-6cec1c8d3896.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 21:25:41] "GET /media/property/images/93bf5a3f-3d81-47d8-b3b1-1a23abb364c5.jpeg HTTP/1.1" 200 25405
+[11/Jan/2024 21:25:41] "GET /media/property/images/b74a64d5-2727-4395-94d5-4b19abfddc0e.jpeg HTTP/1.1" 200 36010
+[11/Jan/2024 21:25:41] "GET /media/property/images/1d71e848-b7a9-4e74-9f91-6fa8424a04a4.jpeg HTTP/1.1" 200 43059
+[11/Jan/2024 21:25:42] "GET /media/df79a361-8dbb-4e65-9cfe-f6d3d7059e79.mp4 HTTP/1.1" 200 10378513
+Not Found: /.env
+[11/Jan/2024 21:26:08] "GET /.env HTTP/1.1" 404 4083
+Internal Server Error: /property/add-property/new/sell/villa_rent/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 1957, in get_prep_value
+    return float(value)
+           ^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 351, in add_property
+    property_obj = Property.objects.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/albdah-rebuild/albdah-rebuild/property/models.py", line 226, in save
+    super(Property, self).save(*args, **kwargs)
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1821, in execute_sql
+    for sql, params in self.as_sql():
+                       ^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1745, in as_sql
+    value_rows = [
+                 ^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1746, in <listcomp>
+    [
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1747, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1686, in prepare_value
+    return field.get_db_prep_save(value, connection=self.connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 954, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 947, in get_db_prep_value
+    value = self.get_prep_value(value)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/fields/__init__.py", line 1959, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'street_width' expected a number but got ''.
+[11/Jan/2024 21:58:46] "POST /property/add-property/new/sell/villa_rent/ HTTP/1.1" 500 211210
+[11/Jan/2024 21:58:50] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 21:58:50] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 21:58:52] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 21:58:53] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 21:58:55] "GET /property/add-property/new/sell/villa_rent/ HTTP/1.1" 200 29542
+[11/Jan/2024 22:00:23] "GET /media/property/images/1.jpeg HTTP/1.1" 200 264304
+[11/Jan/2024 22:02:44] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 22:04:10] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 22:04:11] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 22:04:15] "GET /property/add-property/new/sell/villa_rent/ HTTP/1.1" 200 29542
+[11/Jan/2024 22:20:37] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 22:20:38] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 22:35:27] "GET /static/imgs/%D9%85%D8%AF%D8%AE%D9%84_%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-removebg-preview.png HTTP/1.1" 200 11666
+Not Found: /robots.txt
+[11/Jan/2024 22:36:51] "GET /robots.txt HTTP/1.1" 404 4100
+[11/Jan/2024 22:38:52] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 22:40:23] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 23:02:32] "GET / HTTP/1.1" 200 19283
+[11/Jan/2024 23:15:01] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 23:15:01] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 23:15:05] "GET /static/js/property/property-details-map.js HTTP/1.1" 200 3519
+[11/Jan/2024 23:15:19] "GET /static/css/property/property-details.css HTTP/1.1" 200 7030
+[11/Jan/2024 23:19:35] "GET /property/add-property/new/sell/villa_rent/ HTTP/1.1" 200 29542
+[11/Jan/2024 23:19:36] "GET /property/03WIC/details/ HTTP/1.1" 200 25528
+[11/Jan/2024 23:19:36] "GET /media/property/images/60f2dd25-266d-4c6e-a684-eed230231daa.jpeg HTTP/1.1" 200 24355
+[11/Jan/2024 23:19:36] "GET /media/property/images/93bf5a3f-3d81-47d8-b3b1-1a23abb364c5.jpeg HTTP/1.1" 200 25405
+[11/Jan/2024 23:19:37] "GET /media/property/images/81c98ff7-a197-4b71-a9e9-f1741b3783fa.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:19:37] "GET /media/property/images/1d71e848-b7a9-4e74-9f91-6fa8424a04a4.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:19:37] "GET /media/property/images/50340241-8ad5-42e9-abda-6a3bef95b6b9.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:19:37] "GET /static/js/property/property-details-map.js HTTP/1.1" 304 0
+[11/Jan/2024 23:19:37] "GET /static/css/property/property-details.css HTTP/1.1" 304 0
+[11/Jan/2024 23:19:37] "GET /media/property/images/9db4f89e-9004-4d49-a1ab-b8b28526857e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:19:37] "GET /media/property/images/2683790e-0026-4338-8151-6cec1c8d3896.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:19:37] "GET /media/property/images/b74a64d5-2727-4395-94d5-4b19abfddc0e.jpeg HTTP/1.1" 200 36010
+[11/Jan/2024 23:19:39] "GET /media/df79a361-8dbb-4e65-9cfe-f6d3d7059e79.mp4 HTTP/1.1" 200 10378513
+[11/Jan/2024 23:21:24] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 23:21:24] "GET /media/property/images/4258f2d2-6a03-4c6b-9c29-756dec10436d.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:21:26] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 23:21:28] "GET /property/add-property/new/resthouse_rent/ HTTP/1.1" 200 35112
+[11/Jan/2024 23:22:20] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 23:22:26] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 23:22:31] "GET /property/add-property/new/sell/villa_rent/ HTTP/1.1" 200 29542
+[11/Jan/2024 23:23:09] "GET / HTTP/1.1" 200 19299
+[11/Jan/2024 23:23:18] "GET /property/24hAz/details/ HTTP/1.1" 200 29147
+[11/Jan/2024 23:23:19] "GET /media/property/images/07da8307-8fda-439b-b669-898282990bd2.jpeg HTTP/1.1" 200 56559
+[11/Jan/2024 23:23:19] "GET /media/property/images/011323f4-a318-4ee1-820e-c29ea9ead01e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:23:19] "GET /media/property/images/adc9331b-501e-40b4-a66f-8b6e3a02cb6c.jpeg HTTP/1.1" 200 51822
+[11/Jan/2024 23:23:19] "GET /media/property/images/d6cddcc8-639c-41ed-9b52-8d0071eca0e4.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:23:19] "GET /media/property/images/a03cccd3-2ca2-4c0d-a4d9-9692f6afb11b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:23:19] "GET /media/property/images/71397239-c486-4386-8481-3d2e41a5936b.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:23:19] "GET /media/property/images/e41e73f1-ec19-42db-be91-80f7581cf875.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:23:19] "GET /media/property/images/39c7ca07-06db-4c93-b168-d910c19219b5.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:23:19] "GET /media/property/images/71a0449f-1a07-4a35-b91d-f8024545fa7f.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:23:19] "GET /media/property/images/2bd8b1a6-7f29-4fda-9c3f-bd7a1d5a0209.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 23:23:19] "GET /media/property/images/7835d35d-88fd-4590-97fc-fb5dc759b853.jpeg HTTP/1.1" 200 41736
+[11/Jan/2024 23:23:19] "GET /media/property/images/d90a1992-ebd0-4d04-ae6d-0d5b7267faa6.jpeg HTTP/1.1" 200 44878
+[11/Jan/2024 23:23:19] "GET /media/property/images/8bce25b1-07b0-47f1-b0d4-d5ffbc939643.jpeg HTTP/1.1" 200 101611
+[11/Jan/2024 23:23:20] "GET /media/34762a6c-c58b-4522-87f7-af442613b762.mp4 HTTP/1.1" 200 12027026
+[11/Jan/2024 23:23:58] "GET / HTTP/1.1" 200 19283
+/albdah-rebuild/albdah-rebuild/property/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 11, 2024 - 20:26:51
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+apartment_rent
+chalet_sale
+shop_sale
+apartment_rent
+apartment_sale
+apartment_sale
+apartment_sale
+villa_sale
+villa_sale
+apartment_rent
+villa_sale
+lounges
+3
+##############################
+bathrooms
++8
+##############################
+villa_sale
+villa_sale
+villa_sale
+villa_sale
+villa_sale
+villa_sale
+resthouse_rent
+villa_sale
+villa_sale
+Watching for file changes with StatReloader
