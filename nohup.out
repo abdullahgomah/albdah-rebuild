@@ -45402,3 +45402,190 @@ Not Found: /index.html
 Not Found: /+CSCOE+/logon.html
 [11/Jan/2024 11:38:56] "GET /+CSCOE+/logon.html HTTP/1.1" 404 4125
 [11/Jan/2024 11:42:01] "GET /property/03WIC/details/ HTTP/1.1" 200 25155
+Not Found: /+CSCOE+/logon.html
+[11/Jan/2024 11:44:07] "GET /+CSCOE+/logon.html HTTP/1.1" 404 4125
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 11, 2024 - 11:24:26
+Django version 4.2.6, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Watching for file changes with StatReloader
+[11/Jan/2024 11:46:43] "GET / HTTP/1.1" 200 19266
+[11/Jan/2024 11:46:43] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 11:46:43] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 11:46:43] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 11:46:43] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 11:46:44] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 11:46:44] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+[11/Jan/2024 11:46:44] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 11:46:44] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 11:46:44] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 11:46:46] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+[11/Jan/2024 11:46:46] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 11:46:46] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+Not Found: /cgi-bin/login.cgi
+[11/Jan/2024 11:50:44] "GET /cgi-bin/login.cgi HTTP/1.1" 404 4122
+Not Found: /cgi-bin/login.cgi
+[11/Jan/2024 11:56:38] "GET /cgi-bin/login.cgi HTTP/1.1" 404 4122
+[11/Jan/2024 12:00:59] "GET / HTTP/1.1" 200 19266
+[11/Jan/2024 12:00:59] "GET /static/css/normalize.css HTTP/1.1" 304 0
+[11/Jan/2024 12:00:59] "GET /static/css/pages/main.css HTTP/1.1" 304 0
+[11/Jan/2024 12:01:00] "GET /static/imgs/logo.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 12:01:00] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 304 0
+[11/Jan/2024 12:01:00] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 12:01:00] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 200 197532
+[11/Jan/2024 12:01:00] "GET /static/js/pages/app.js HTTP/1.1" 304 0
+[11/Jan/2024 12:01:00] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[11/Jan/2024 12:01:00] "GET /static/imgs/logo-transparent.png HTTP/1.1" 304 0
+[11/Jan/2024 12:01:01] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 12:01:01] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 12:01:01] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+Not Found: /assets/imgs/logo.jpeg
+[11/Jan/2024 12:01:02] "GET /assets/imgs/logo.jpeg HTTP/1.1" 404 4129
+[11/Jan/2024 12:01:04] "GET / HTTP/1.1" 200 19266
+[11/Jan/2024 12:01:08] "GET / HTTP/1.1" 200 19266
+[11/Jan/2024 12:01:12] "GET / HTTP/1.1" 200 19266
+[11/Jan/2024 12:01:15] "GET /property/add-property/ HTTP/1.1" 302 0
+[11/Jan/2024 12:01:15] "GET /auth/?next=/property/add-property/ HTTP/1.1" 200 8277
+[11/Jan/2024 12:01:15] "GET /static/css/users/authenticate.css HTTP/1.1" 304 0
+Not Found: /auth/assets/imgs/logo.jpeg
+[11/Jan/2024 12:01:16] "GET /auth/assets/imgs/logo.jpeg HTTP/1.1" 404 4144
+Not Found: /logon.htm
+[11/Jan/2024 12:01:20] "GET /logon.htm HTTP/1.1" 404 4098
+[11/Jan/2024 12:01:39] "POST /login/ HTTP/1.1" 302 0
+[11/Jan/2024 12:01:39] "GET /accounts/profile HTTP/1.1" 301 0
+[11/Jan/2024 12:01:39] "GET /accounts/profile/ HTTP/1.1" 200 10354
+[11/Jan/2024 12:01:39] "GET /static/css/users/main.css HTTP/1.1" 304 0
+Not Found: /accounts/profile/assets/imgs/logo.jpeg
+[11/Jan/2024 12:01:40] "GET /accounts/profile/assets/imgs/logo.jpeg HTTP/1.1" 404 5717
+[11/Jan/2024 12:01:42] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:01:45] "GET /property/add-property/ HTTP/1.1" 200 13422
+[11/Jan/2024 12:01:45] "GET /static/css/property/add-property-interface.css HTTP/1.1" 304 0
+[11/Jan/2024 12:01:45] "GET /static/js/property/add-property-interface.js HTTP/1.1" 304 0
+Not Found: /property/add-property/assets/imgs/logo.jpeg
+[11/Jan/2024 12:01:46] "GET /property/add-property/assets/imgs/logo.jpeg HTTP/1.1" 404 5770
+[11/Jan/2024 12:01:48] "GET /property/add-property/new/sell/farm_sale/ HTTP/1.1" 200 29776
+[11/Jan/2024 12:01:48] "GET /static/css/property/add-property.css HTTP/1.1" 200 10618
+[11/Jan/2024 12:01:48] "GET /static/js/property/add-property1.js HTTP/1.1" 200 37766
+[11/Jan/2024 12:01:49] "GET /static/js/property/init-map.js HTTP/1.1" 304 0
+Not Found: /property/add-property/new/sell/farm_sale/assets/imgs/logo.jpeg
+[11/Jan/2024 12:01:50] "GET /property/add-property/new/sell/farm_sale/assets/imgs/logo.jpeg HTTP/1.1" 404 5827
+[11/Jan/2024 12:02:54] "POST /property/add-property/new/sell/farm_sale/ HTTP/1.1" 302 0
+[11/Jan/2024 12:02:54] "GET / HTTP/1.1" 200 19064
+[11/Jan/2024 12:02:55] "GET /property/ad-uploaded/ HTTP/1.1" 200 6060
+Not Found: /property/ad-uploaded/assets/imgs/logo.jpeg
+[11/Jan/2024 12:02:55] "GET /property/ad-uploaded/assets/imgs/logo.jpeg HTTP/1.1" 404 5767
+[11/Jan/2024 12:02:56] "GET / HTTP/1.1" 200 19080
+[11/Jan/2024 12:03:03] "GET / HTTP/1.1" 200 19080
+[11/Jan/2024 12:03:03] "GET /static/css/normalize.css HTTP/1.1" 200 6138
+[11/Jan/2024 12:03:04] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 12:03:04] "GET /static/css/pages/main.css HTTP/1.1" 200 9847
+[11/Jan/2024 12:03:04] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 12:03:04] "GET /static/imgs/logo.jpeg HTTP/1.1" 200 32248
+[11/Jan/2024 12:03:04] "GET /static/imgs/logoText-e961f794.png HTTP/1.1" 200 5115
+[11/Jan/2024 12:03:04] "GET /media/property/images/IMG_0529.jpeg HTTP/1.1" 200 1240841
+[11/Jan/2024 12:03:04] "GET /media/property/images/7151c90a-2d36-49a9-b8da-53c065c9ba1f.jpeg HTTP/1.1" 200 62176
+[11/Jan/2024 12:03:05] "GET /static/imgs/logo-transparent.png HTTP/1.1" 200 1465
+[11/Jan/2024 12:03:05] "GET /media/property/images/%D8%B5%D9%83_%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%85%D9%84%D9%8A%D8%AF%D8%A7_375%D9%85.png HTTP/1.1" 200 432608
+[11/Jan/2024 12:03:06] "GET /admin HTTP/1.1" 301 0
+[11/Jan/2024 12:03:06] "GET /admin/ HTTP/1.1" 302 0
+[11/Jan/2024 12:03:06] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4418
+[11/Jan/2024 12:03:06] "GET /media/property/images/%D8%A7%D8%B1%D8%B6_%D8%A7%D9%84%D9%86%D9%82%D9%8A%D8%A8_%D8%A7%D9%84%D9%86%D8%AE%D9%8A%D9%84_330%D9%85.png HTTP/1.1" 200 22791
+[11/Jan/2024 12:03:06] "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[11/Jan/2024 12:03:06] "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[11/Jan/2024 12:03:06] "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[11/Jan/2024 12:03:06] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[11/Jan/2024 12:03:06] "GET /static/admin/css/responsive_rtl.css HTTP/1.1" 200 1785
+[11/Jan/2024 12:03:06] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[11/Jan/2024 12:03:06] "GET /static/override.css HTTP/1.1" 200 156
+[11/Jan/2024 12:03:06] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[11/Jan/2024 12:03:06] "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[11/Jan/2024 12:03:06] "GET /static/admin/css/rtl.css HTTP/1.1" 200 4788
+[11/Jan/2024 12:03:09] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[11/Jan/2024 12:03:09] "GET /admin/ HTTP/1.1" 200 13391
+[11/Jan/2024 12:03:09] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[11/Jan/2024 12:03:10] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[11/Jan/2024 12:03:10] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[11/Jan/2024 12:03:10] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[11/Jan/2024 12:03:11] "GET /maps/search HTTP/1.1" 200 21065
+Not Found: /maps/assets/imgs/logo.jpeg
+[11/Jan/2024 12:03:12] "GET /maps/assets/imgs/logo.jpeg HTTP/1.1" 404 4221
+[11/Jan/2024 12:03:12] "GET /admin/property/property/ HTTP/1.1" 200 15110
+[11/Jan/2024 12:03:12] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+[11/Jan/2024 12:03:12] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[11/Jan/2024 12:03:12] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[11/Jan/2024 12:03:12] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 12:03:12] "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[11/Jan/2024 12:03:12] "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[11/Jan/2024 12:03:12] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[11/Jan/2024 12:03:12] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[11/Jan/2024 12:03:12] "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[11/Jan/2024 12:03:12] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[11/Jan/2024 12:03:12] "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[11/Jan/2024 12:03:13] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[11/Jan/2024 12:03:16] "GET /admin/property/property/65/change/ HTTP/1.1" 200 49635
+[11/Jan/2024 12:03:16] "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[11/Jan/2024 12:03:16] "GET /static/markdownx/js/markdownx.js HTTP/1.1" 200 32685
+[11/Jan/2024 12:03:16] "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+[11/Jan/2024 12:03:16] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[11/Jan/2024 12:03:16] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 12:03:16] "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[11/Jan/2024 12:03:16] "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[11/Jan/2024 12:03:16] "POST /markdownx/markdownify/ HTTP/1.1" 200 0
+[11/Jan/2024 12:03:18] "GET /admin/property/property/ HTTP/1.1" 200 15110
+[11/Jan/2024 12:03:21] "POST /admin/property/property/ HTTP/1.1" 200 10576
+[11/Jan/2024 12:03:21] "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[11/Jan/2024 12:03:22] "POST /admin/property/property/ HTTP/1.1" 302 0
+[11/Jan/2024 12:03:22] "GET /admin/property/property/ HTTP/1.1" 200 14980
+[11/Jan/2024 12:03:23] "GET /admin/jsi18n/ HTTP/1.1" 200 14011
+[11/Jan/2024 12:03:23] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[11/Jan/2024 12:03:24] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:03:24] "GET /static/js/pages/app.js HTTP/1.1" 200 199
+[11/Jan/2024 12:03:25] "GET / HTTP/1.1" 200 19282
+Internal Server Error: /property/85OhB/details/
+Traceback (most recent call last):
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/albdah-rebuild/property/views.py", line 20, in property_details
+    property = Property.objects.get(number = number)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/albdah-rebuild/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+property.models.Property.DoesNotExist: Property matching query does not exist.
+[11/Jan/2024 12:03:26] "GET /property/85OhB/details/ HTTP/1.1" 500 71953
+Not Found: /favicon.ico
+[11/Jan/2024 12:03:27] "GET /favicon.ico HTTP/1.1" 404 4099
+[11/Jan/2024 12:06:22] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:06:22] "GET /static/js/pages/index.js HTTP/1.1" 200 1089
+[11/Jan/2024 12:06:22] "GET /media/property/images/WhatsApp_Image_2023-12-27_at_7.32.28_PM.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 12:06:31] "GET /?page=2 HTTP/1.1" 200 19401
+[11/Jan/2024 12:06:31] "GET /media/property/images/IMG_0479.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 12:06:32] "GET /media/property/images/IMG_0278.png HTTP/1.1" 200 3102935
+[11/Jan/2024 12:06:38] "GET /?page=1 HTTP/1.1" 200 19282
+[11/Jan/2024 12:06:40] "GET /property/03WIC/details/ HTTP/1.1" 200 25171
+[11/Jan/2024 12:06:40] "GET /media/property/images/60f2dd25-266d-4c6e-a684-eed230231daa.jpeg HTTP/1.1" 200 24355
+[11/Jan/2024 12:06:41] "GET /media/property/images/9db4f89e-9004-4d49-a1ab-b8b28526857e.jpeg HTTP/1.1" 200 24106
+[11/Jan/2024 12:06:41] "GET /media/property/images/81c98ff7-a197-4b71-a9e9-f1741b3783fa.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 12:06:41] "GET /media/property/images/50340241-8ad5-42e9-abda-6a3bef95b6b9.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 12:06:41] "GET /media/property/images/b74a64d5-2727-4395-94d5-4b19abfddc0e.jpeg HTTP/1.1" 304 0
+[11/Jan/2024 12:06:41] "GET /media/property/images/93bf5a3f-3d81-47d8-b3b1-1a23abb364c5.jpeg HTTP/1.1" 200 25405
+[11/Jan/2024 12:06:41] "GET /media/property/images/2683790e-0026-4338-8151-6cec1c8d3896.jpeg HTTP/1.1" 200 40200
+Not Found: /property/03WIC/details/assets/imgs/logo.jpeg
+[11/Jan/2024 12:06:41] "GET /property/03WIC/details/assets/imgs/logo.jpeg HTTP/1.1" 404 5773
+[11/Jan/2024 12:06:41] "GET /media/property/images/1d71e848-b7a9-4e74-9f91-6fa8424a04a4.jpeg HTTP/1.1" 200 43059
+[11/Jan/2024 12:06:42] "GET /media/df79a361-8dbb-4e65-9cfe-f6d3d7059e79.mp4 HTTP/1.1" 200 10378513
+[11/Jan/2024 12:06:51] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:06:59] "GET / HTTP/1.1" 200 19282
+[11/Jan/2024 12:07:02] "GET / HTTP/1.1" 200 19282
+Not Found: /logon.htm
+[11/Jan/2024 12:07:28] "GET /logon.htm HTTP/1.1" 404 4098

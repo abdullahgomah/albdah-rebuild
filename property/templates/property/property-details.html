@@ -1032,6 +1032,7 @@
     document.querySelectorAll('.property__img__item').forEach((item) => {
         item.addEventListener('click', () => {
             openPopup(item.src) 
+            document.body.style.overflow = 'hidden';
         })
     })
 </script>
