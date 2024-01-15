@@ -50,7 +50,8 @@ def add_property(request, property_type, offer_type=None):
     else: 
         sell = 0 
     
-    property_type_display_name = PropertyDepartment.objects.get(name=p_type) 
+    # print(p_type)
+    # property_type_display_name = PropertyDepartment.objects.get(name=p_type) 
     
     if request.POST: 
 
@@ -867,7 +868,7 @@ def add_property(request, property_type, offer_type=None):
     context = {
         'property_type': property_type, 
         'offer_type': offer_type,
-        'property_type_display_name': property_type_display_name, 
+        # 'property_type_display_name': property_type_display_name, 
     }
     return render(request, 'property/add-property.html', context) 
 
