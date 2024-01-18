@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['198.199.90.212', '*']
 
 INSTALLED_APPS = [
     'markdownx',
-    'codes',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -64,14 +63,18 @@ MIDDLEWARE = [
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+
+
 ROOT_URLCONF = 'project.urls'
 
-## LOGIN SETTINGS 
+## LOGIN SETTING
 LOGIN_REDIRECT_URL = '/'
 AUTHENTICATION_BACKENDS = [
     # 'accounts.backends.PhoneNumberBackend',
     'django.contrib.auth.backends.ModelBackend',  # Keep the ModelBackend for other authentication methods
 ]
+
+AUTH_USER_MODEL= 'user.CustomUser'
 
 
 TEMPLATES = [
