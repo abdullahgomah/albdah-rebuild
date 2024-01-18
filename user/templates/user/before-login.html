@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+
+{% block title %}
+    تسجيل الدخول 
+{% endblock title %}
+    
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'css/user/before-login.css' %}">
+{% endblock stylesheets %}
+
+
+
+{% block content %}
+
+<section>
+    <div class="container">
+        <h1 class="section__heading">التسجيل كـ </h1>
+
+        <div class="grid">
+            <div class="box">
+                <a href="{% url 'user:user-register' %}">
+                    مستخدم
+                </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                    مكتب عقاري
+                </a>
+            </div>
+            <div class="box">
+                <a href="#">
+                    مسوق عقاري
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+{% endblock content %}
+    
