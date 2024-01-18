@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from property.models import * 
-from accounts.models import * 
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 

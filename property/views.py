@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse 
 from django.contrib.auth.decorators import login_required
 from .models import * 
-from accounts.models import Favourite
+# from accounts.models import Favourite
 import uuid 
 import os 
 
@@ -20,16 +20,16 @@ def property_details(request, number):
     property = Property.objects.get(number = number)
     if request.user.is_authenticated: 
 
-        is_favourite = False 
-        try: 
-            ad = Favourite.objects.get(user=request.user, property=property) 
-            is_favourite = True
-        except Favourite.DoesNotExist: 
-            is_favourite = False 
+        # is_favourite = False 
+        # try: 
+        #     ad = Favourite.objects.get(user=request.user, property=property) 
+        #     is_favourite = True
+        # except Favourite.DoesNotExist: 
+        #     is_favourite = False 
 
         context = {
             'property': property, 
-            'is_favourite': is_favourite
+            # 'is_favourite': is_favourite
         } 
     else: 
         context = {
@@ -883,12 +883,12 @@ def add_to_favourite(request, property_number):
     user = request.user 
     property = Property.objects.get(number = property_number)  
 
-    try: 
-        ad = Favourite.objects.get(user=user, property=property)
-        ad.delete() 
+    # try: 
+    #     ad = Favourite.objects.get(user=user, property=property)
+    #     ad.delete() 
 
-    except Favourite.DoesNotExist: 
-        ad = Favourite.objects.create(property=property, user=user) 
+    # except Favourite.DoesNotExist: 
+    #     ad = Favourite.objects.create(property=property, user=user) 
 
 
     return redirect(reverse('property:property-details', kwargs={'number': property.number}))

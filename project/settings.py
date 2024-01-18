@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['198.199.90.212', '*']
 
 INSTALLED_APPS = [
     'markdownx',
-    'accounts', 
     'codes',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,7 +43,8 @@ INSTALLED_APPS = [
     'page', 
     'crispy_forms', 
     'crispy_bootstrap4',
-    'maps'
+    'maps',
+    'user', 
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -68,10 +68,8 @@ ROOT_URLCONF = 'project.urls'
 
 ## LOGIN SETTINGS 
 LOGIN_REDIRECT_URL = '/'
-AUTH_USER_MODEL = 'accounts.User'
-
 AUTHENTICATION_BACKENDS = [
-    'accounts.backends.PhoneNumberBackend',
+    # 'accounts.backends.PhoneNumberBackend',
     'django.contrib.auth.backends.ModelBackend',  # Keep the ModelBackend for other authentication methods
 ]
 
