@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block stylesheets %}
+    
+{% endblock stylesheets %}
+    
+
+{% block content %}
+    
+
+<style>
+
+form .field {
+    margin: 1rem 0;
+}
+form .field .input { 
+    color: #6c757d;
+    padding: .375rem .75rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    width: 100%;
+}
+
+</style>
+
+<section>
+    <div class="container">
+        <h2>تسجيل دخول</h2>
+        <form method="POST">  
+            {% csrf_token %}
+            {{form}}
+            <div class="field">
+                <input type="text" placeholder="أدخل رقم الهوية" class="input" name="id_number_input">
+            </div>
+            <div class="field">
+                <input type="password" placeholder="اكتب كلمة المرور" class="input" name="password_input">
+            </div>
+            <button class="btn btn-solid" type="submit">تسجيل دخول</button>
+        </form>
+    </div>
+</section>
+
+{% endblock content %}
+    

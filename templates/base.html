@@ -53,10 +53,10 @@
                     
                     {% if user.is_authenticated %}
                     <li><a href=""class="btn btn-solid">الملف الشخصي</a></li>
-                    <li><a href="" class="btn btn-outline">تسجيل خروج</a></li>
+                    <li><a href="{% url 'user:custom-logout' %}" class="btn btn-outline">تسجيل خروج</a></li>
                     {% else %}
                     <li><a href="{% url 'property:add-property-interface' %}" class="btn btn-solid">إضافة عقار</a></li>
-                    <li><a href="" class="btn btn-outline">تسجيل دخول</a></li>
+                    <li><a href="{% url 'user:user-login' %}" class="btn btn-outline">تسجيل دخول</a></li>
                     {% endif %}
 
                 </ul>
