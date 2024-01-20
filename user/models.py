@@ -8,7 +8,15 @@ SEX_CHOICES = (
     ("f", "أنثى")
 )
 
+
+ROLE_CHOICES = (
+    ('user', "مستخدم"), 
+    ("real_estate_marketer", "مسوق عقاري"), 
+    ("real_estate_office", 'مكتب عقاري') 
+)
+
 class CustomUser(AbstractUser):
+    role = models.CharField(max_length=200, choices=ROLE_CHOICES, verbose_name='نوع المستخدم', null=True, blank=True)
     id_number = models.CharField(max_length=10, verbose_name="رقم الهوية", null=True, blank=True) 
     sex = models.CharField(max_length=200, verbose_name='الجنس', choices=SEX_CHOICES, null=True, blank=True)
     phone_number = models.CharField(max_length=12, verbose_name="رقم الجوال", null=True, blank=True) 

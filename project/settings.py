@@ -64,7 +64,6 @@ MIDDLEWARE = [
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-
 ROOT_URLCONF = 'project.urls'
 
 ## LOGIN SETTING
@@ -72,6 +71,7 @@ LOGIN_REDIRECT_URL = '/'
 AUTHENTICATION_BACKENDS = [
     # 'accounts.backends.PhoneNumberBackend',
     'django.contrib.auth.backends.ModelBackend',  # Keep the ModelBackend for other authentication methods
+    'user.backends.CustomIdBackend', 
 ]
 
 AUTH_USER_MODEL= 'user.CustomUser'
