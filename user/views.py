@@ -16,13 +16,51 @@ def user_register(request):
 
     if request.POST: 
         form = UserForm(request.POST) 
-        form.save(commit=False) 
-        form.instance.role = 'user' 
-        form.save() 
+        if form.is_valid(): 
+            form.save(commit=False) 
+            form.instance.role = 'user' 
+            form.save() 
 
     context = {
         'form': form 
     }
+    return render(request, 'user/signup.html', context)
+
+
+def office_register(request): 
+    form = OfficeRegister() 
+
+    if request.POST: 
+        form = OfficeRegister(request.POST) 
+        if form.is_valid(): 
+            form.save(commit=False) 
+            form.instance.role = 'real_estate_office'
+            form.save() 
+        
+        
+
+    context ={ 
+        'form': form 
+    }
+
+    return render(request, 'user/signup.html', context)
+    
+
+def markter_register(request): 
+    form = MarkterRegister() 
+
+    if request.POST: 
+        form = MarkterRegister(request.POST) 
+        if form.is_valid(): 
+            form.save(commit=False) 
+            form.instance.role = 'real_estate_marketer' 
+            form.save() 
+            
+
+    context = {
+        'form': form 
+    }
+
     return render(request, 'user/signup.html', context)
 
 def user_login(request):
