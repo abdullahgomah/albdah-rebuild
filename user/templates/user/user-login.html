@@ -17,34 +17,89 @@
 
 <style>
 
-form .field {
-    margin: 1rem 0;
-}
-form .field .input { 
-    color: #6c757d;
-    padding: .375rem .75rem;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    width: 100%;
-}
+    .login__section { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .login__section .container { 
+        border: 1px solid #99999950;
+        width: fit-content; 
+        padding: 2rem; 
+        border-radius: 30px;
+        max-width: 100% !important;
+    }
+
+    form .field {
+        margin: 1rem 0;
+        position: relative; 
+    }
+    form .field i { 
+        position: absolute; 
+        line-height: 50px;
+        right: 1.5rem;
+        font-size: 1.1rem;
+        color: #888888; 
+    }
+    form .field .input { 
+        color: #6c757d;
+        padding: .375rem .75rem;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        width: 400px;
+        max-width: 90% !important;
+        height: 50px !important; 
+        border-radius: 50px;
+        padding-right: 3.5rem !important;
+    }
+
+    .login__section__header  {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .fields {
+        margin: 3rem 0;
+    }
+
+    .ahref { 
+        color: var(--primary-color); 
+    }
+
+    .btn {
+        border-radius: 20px;
+    }
 
 </style>
 
-<section>
+<section class="login__section">
     <div class="container">
-        <h2>تسجيل دخول</h2>
+        <div class="login__section__header">
+            <h2>تسجيل دخول</h2>
+            <a href="{% url 'user:before-register' %}" class="btn btn-solid">تسجيل جديد</a>
+        </div>
         <form method="POST">  
             {% csrf_token %}
-            {{form}}
-            <div class="field">
-                <input type="text" placeholder="أدخل رقم الهوية" class="input" name="id_number_input">
+            <!-- {{form}} -->
+            <div class="fields">
+                <div class="field">
+                    <i class="fa-solid fa-id-card"></i>
+                    <input type="text" placeholder="أدخل رقم الهوية" class="input" name="id_number_input">
+                </div>
+                <div class="field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="اكتب كلمة المرور" class="input" name="password_input">
+                </div>
             </div>
-            <div class="field">
-                <input type="password" placeholder="اكتب كلمة المرور" class="input" name="password_input">
+
+            <div class="login__section__footer">
+                <button class="btn btn-solid" type="submit">تسجيل دخول</button>
+                <br>
+                <a href="" class="ahref">هل نسيت كلمة المرور؟</a>
             </div>
-            <button class="btn btn-solid" type="submit">تسجيل دخول</button>
-            <br>
-            <a href="{% url 'user:before-register' %}">ليس لديك حساب؟ تسجيل جديد</a>
         </form>
     </div>
 </section>
