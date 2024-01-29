@@ -10,7 +10,7 @@ import os
 # Create your views here.
 
 
-@login_required(login_url='/auth/')
+@login_required
 def add_property_interface(request):
     context = {} 
     return render(request, 'property/add-property-interface.html', context)
