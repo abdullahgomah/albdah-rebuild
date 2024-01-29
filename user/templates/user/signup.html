@@ -27,7 +27,7 @@
     }
 
     .signup__wrapper form {
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 1rem;
         border: 1px solid #1e1e1e30;
         border-radius: 2rem;
@@ -57,6 +57,18 @@
         padding: 0.4rem 1.5rem !important;
         border-radius: 2rem  !important;
     }
+
+    .form__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    .form__header h2 {
+        font-weight: bold ;
+        font-size: 1.5rem !important;
+    }
     
 
 </style>
@@ -64,10 +76,10 @@
 <section class="signup__wrapper">
     <div class="container">
         <form method="POST">
-            <h4>
-                تسجيل جديد
-            </h4>
-            <hr>
+            <div class="form__header">
+                <h2>تسجيل</h2>
+                <a href="{% url 'user:user-login' %}" class="btn btn-solid">تسجيل دخول</a>
+            </div>
             {% csrf_token %}
             {{form|crispy}}
             <button type="submit" class="btn btn-solid">تسجيل</button>
