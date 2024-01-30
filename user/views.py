@@ -5,6 +5,7 @@ from .backends import CustomIdBackend
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required  
 from .utils import generate_otp 
+from django.contrib import messages
 
 from dotenv import load_dotenv 
 from twilio.rest import Client
@@ -97,12 +98,21 @@ def user_login(request):
         id_number = request.POST.get('id_number_input') 
         password= request.POST.get('password_input') 
         
-        user = CustomIdBackend().authenticate(request, id_number=id_number, password=password) 
+        try:
+            user = CustomIdBackend().authenticate(request, id_number=id_number, password=password)
+        except:
+            # Catch any exceptions during authentication and display an error message
+            messages.add_message(request, messages.ERROR, "رقم الهوية أو كلمة المرور غير صحيحة. أعد المحاولة مرة أخرى")
+            return redirect('user:user-login')
 
-        if user is not None: 
+        if user is not None:
+            # If authentication is successful, log in the user
             login(request, user=user, backend='user.backends.CustomIdBackend')
             return redirect('page:index')
-
+        else:
+            # If authentication fails, display an error message
+            messages.add_message(request, messages.ERROR, "رقم الهوية أو كلمة المرور غير صحيحة. أعد المحاولة مرة أخرى")
+    
 
     context = {
     } 
@@ -143,7 +153,7 @@ def check_otp(request):
                 user_obj = CustomUser.objects.get(phone_number=user.phone_number)
                 user_obj.phone_number_verify_status = True 
                 user_obj.save() 
-                
+
                 print(user_obj) 
             else: 
                 return redirect('user:check-otp') 
