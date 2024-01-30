@@ -112,6 +112,8 @@ def user_login(request):
         else:
             # If authentication fails, display an error message
             messages.add_message(request, messages.ERROR, "رقم الهوية أو كلمة المرور غير صحيحة. أعد المحاولة مرة أخرى")
+            return redirect('user:user-login')
+
     
 
     context = {
