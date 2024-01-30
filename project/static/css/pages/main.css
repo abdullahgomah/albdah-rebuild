@@ -26,6 +26,13 @@ body {
 
 }
 
+.messages .error { 
+    list-style: none;
+    padding: 0.5rem 1rem;
+    background: #dc3545;
+    color: white;
+}
+
 .error_message {
     background: #dc3545;
     color: #f9f9f9;
