@@ -68,7 +68,7 @@ button {
     text-decoration: none;
     color: var(--primary-color); 
     padding: 0.6rem 1.5rem;
-    border-radius: 0.3rem ;
+    border-radius: 2rem ;
     display: block;
     outline: none; 
     border: none; 

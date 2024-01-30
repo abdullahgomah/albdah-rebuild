@@ -12,6 +12,9 @@ import os
 
 @login_required
 def add_property_interface(request):
+    user = request.user 
+    if user.phone_number_verify_status == False: 
+        return redirect('user:verify-phone-number') 
     context = {} 
     return render(request, 'property/add-property-interface.html', context)
 
@@ -39,6 +42,9 @@ def property_details(request, number):
 
 @login_required(login_url='/auth/')
 def add_property(request, property_type, offer_type=None): 
+    user = request.user 
+    if user.phone_number_verify_status == False: 
+        return redirect('user:verify-phone-number') 
 
     if offer_type == "sell":
         sell = 1 
