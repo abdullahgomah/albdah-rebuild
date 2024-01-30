@@ -97,6 +97,21 @@
     let password1Wrapper = document.querySelector('#div_id_password1')
 
     
+    function restrictCountryCode(event) {
+        const countryCode = '+966';
+
+        // Get the input element
+        const phoneNumberInput = event.target;
+
+        // Check if the input starts with the country code
+        if (!phoneNumberInput.value.startsWith(countryCode)) {
+            // If not, set the value to the country code
+            phoneNumberInput.value = countryCode;
+        }
+    }
+
+    phoneNumberWrapper.querySelector('input').value = '+966'
+    phoneNumberWrapper.querySelector('input').oninput = restrictCountryCode 
     phoneNumberWrapper.querySelector('input').placeholder = "+9665xxxxxx"
     phoneNumberWrapper.querySelector('input').style.direction = "ltr"
 

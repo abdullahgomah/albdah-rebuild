@@ -7,7 +7,7 @@ class UserForm(UserCreationForm):
     last_name = forms.CharField(required=True, label="الاسم الأخير")
     email = forms.EmailField(required=True, label="الايميل") 
     id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
-    phone_number = forms.CharField(max_length=12, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
+    phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
     # sex = forms.CharField(widget=forms.Select, required=True, label='الجنس')
     class Meta: 
         model = CustomUser 
@@ -22,7 +22,7 @@ class OfficeRegister(UserCreationForm):
     email = forms.EmailField(required=True, label="الايميل") 
     id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
     office_name = forms.CharField(max_length=10, label='اسم المكتب كما هو مكتوب في السجل التجاري', required=True)
-    phone_number = forms.CharField(max_length=12, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
+    phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
     commercial_registration_img = forms.ImageField(required=True, label="صورة السجل التجاري", widget=forms.FileInput(attrs={'class': 'form-control' })) 
     class Meta: 
         model = CustomUser 
@@ -42,7 +42,7 @@ class MarkterRegister(UserCreationForm):
     last_name = forms.CharField(required=True, label="الاسم الأخير")
     email = forms.EmailField(required=True, label="الايميل") 
     id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
-    phone_number = forms.CharField(max_length=12, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
+    phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
     fal_license = forms.ImageField(required=True, label="صورة رخصة فال", widget=forms.FileInput(attrs={'class': 'form-control' })) 
 
     class Meta: 
