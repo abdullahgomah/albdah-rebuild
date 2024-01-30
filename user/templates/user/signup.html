@@ -20,6 +20,10 @@
 
 <style>
 
+    #hint_id_password1 {
+        display: none !important;
+    }
+
     .signup__wrapper .container {
         display: flex;
         justify-content: center;
@@ -86,5 +90,24 @@
         </form>
     </div>
 </section>
+
+
+<script>
+    let phoneNumberWrapper = document.querySelector('#div_id_phone_number'); 
+    let password1Wrapper = document.querySelector('#div_id_password1')
+
+    
+    phoneNumberWrapper.querySelector('input').placeholder = "+9665xxxxxx"
+    phoneNumberWrapper.querySelector('input').style.direction = "ltr"
+
+    let password1HelpText = document.createElement('small') 
+    password1Wrapper.classList.add('form-text') 
+    password1Wrapper.classList.add('text-muted') 
+    password1HelpText.textContent= "اكتب كلمة مرور مكونة من 8 عناصر على الأقل من حروف إنجليزية ورموز وأرقام فقط"
+
+    password1Wrapper.querySelector('div').appendChild(password1HelpText) 
+
+
+</script>
 
 {% endblock content %}
