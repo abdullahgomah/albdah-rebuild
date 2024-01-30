@@ -9,4 +9,6 @@ urlpatterns = [
     path('markter-register/', markter_register, name='markter-register'), 
     path('user-login/', user_login, name='user-login'), 
     path('logout/', custom_logout, name='custom-logout'), 
+    path('verify-phone-number/', verify_phone_number, name="verify-phone-number"),
+    path('check-otp/', check_otp, name='check-otp'), 
 ]

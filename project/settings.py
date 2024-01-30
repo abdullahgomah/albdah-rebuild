@@ -61,10 +61,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+SESSION_COOKIE_AGE = 300
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 ROOT_URLCONF = 'project.urls'
+
+LOGIN_URL = '/user/user-login/' 
 
 ## LOGIN SETTING
 LOGIN_REDIRECT_URL = '/'

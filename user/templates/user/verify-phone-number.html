@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    التحقق من رقم الهاتف
+{% endblock title %}
+
+
+
+{% block content %}
+
+<section class="verify__section">
+    <div class="container">
+        <h2>التحقق من رقم الهاتف</h2>
+        <br>
+        <a href="{% url 'user:check-otp' %}" class="btn btn-solid">طلب الحصول على الرمز</a>
+    </div>
+</section>
+
+{% endblock content %}

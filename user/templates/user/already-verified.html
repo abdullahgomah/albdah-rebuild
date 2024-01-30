@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    تم تفعيل الرقم بنجاح
+{% endblock title %}
+    
+
+
+{% block content %}
+
+<style>
+
+    .verify__section .container h2 {
+        color: var(--primary-color); 
+    }
+
+    .verify__section .container 
+    {
+        height: 400px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+<section class="verify__section">
+    <div class="container">
+        <center>
+            <br>
+            <h2>تم تفعيل رقم هاتفك</h2>
+            <br>
+            <a href="{% url 'page:index' %}" class="btn btn-solid">الصفحة الرئيسية</a>
+        </center>
+    </div>
+</section>
+{% endblock content %}
+    

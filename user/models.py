@@ -19,7 +19,7 @@ class CustomUser(AbstractUser):
     role = models.CharField(max_length=200, choices=ROLE_CHOICES, verbose_name='نوع المستخدم', null=True, blank=True)
     id_number = models.CharField(max_length=10, verbose_name="رقم الهوية", null=True, blank=True, unique=True) 
     sex = models.CharField(max_length=200, verbose_name='الجنس', choices=SEX_CHOICES, null=True, blank=True)
-    phone_number = models.CharField(max_length=12, verbose_name="رقم الجوال", null=True, blank=True) 
+    phone_number = models.CharField(max_length=15, verbose_name="رقم الجوال", null=True, blank=True) 
     phone_number_verify_status = models.BooleanField(default=False, null=True, blank=True)
     fal_license = models.ImageField(upload_to='uploads/fal/', null=True, blank=True, verbose_name="صورة رخصة فال") 
     office_name = models.CharField(max_length=200, verbose_name="اسم المكتب كما هو مكتوب في السجل التجاري", null=True, blank=True) 
