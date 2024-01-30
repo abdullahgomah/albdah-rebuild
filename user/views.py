@@ -153,6 +153,9 @@ def check_otp(request):
                 user_obj = CustomUser.objects.get(phone_number=user.phone_number)
                 user_obj.phone_number_verify_status = True 
                 user_obj.save() 
+                
+                return redirect('user:user-verified')
+
 
                 print(user_obj) 
             else: 
@@ -163,3 +166,7 @@ def check_otp(request):
 
     context = {} 
     return render(request, 'user/check-otp.html', context)
+
+def user_verified(request): 
+    context = {} 
+    return render(request, 'user/user-verified.html', context)

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+تم التحقق من رقم الجوال بنجاح
+{% endblock title %}
+    
+
+
+{% block stylesheets %}
+<style>
+    .content {
+        height: calc(100vh - 80px - 175px ) ; 
+    }
+    .content .container { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    .content h2 { 
+        color: var(--primary-color); 
+    }
+    .content i {
+        font-size: 2.2rem;
+        color: var(--primary-color); 
+    }
+</style>
+{% endblock stylesheets %}
+    
+
+
+{% block content %}
+    <div class="content">
+        <div class="container">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>تم التحقق من رقم الجوال بنجاح</h2>
+            <a href="{% url 'page:index' %}" class="btn btn-solid">العودة للصفحة الرئيسية</a>
+        </div>
+    </div>
+{% endblock content %}
