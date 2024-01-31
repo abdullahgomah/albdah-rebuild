@@ -5,7 +5,8 @@
     margin: 0;
     box-sizing: border-box;
     /* font-family: 'Cairo', sans-serif; */
-    font-family: 'Readex Pro', sans-serif;
+    /* font-family: 'Readex Pro', sans-serif; */
+    font-family: "Rubik", sans-serif;
     transition: padding .2s ease-in-out;
 }
 
@@ -24,6 +25,13 @@ body {
     display: flex;
     flex-direction: column;
 
+}
+
+.messages .error { 
+    list-style: none;
+    padding: 0.5rem 1rem;
+    background: #dc3545;
+    color: white;
 }
 
 .error_message {
@@ -68,7 +76,7 @@ button {
     text-decoration: none;
     color: var(--primary-color); 
     padding: 0.6rem 1.5rem;
-    border-radius: 0.3rem ;
+    border-radius: 2rem ;
     display: block;
     outline: none; 
     border: none; 
