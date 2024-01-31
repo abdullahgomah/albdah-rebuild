@@ -21,7 +21,7 @@ class UserForm(UserCreationForm):
 class OfficeRegister(UserCreationForm): 
     email = forms.EmailField(required=True, label="الايميل") 
     id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
-    office_name = forms.CharField(max_length=10, label='اسم المكتب كما هو مكتوب في السجل التجاري', required=True)
+    office_name = forms.CharField(max_length=250, label='اسم المكتب كما هو مكتوب في السجل التجاري', required=True)
     phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
     commercial_registration_img = forms.ImageField(required=True, label="صورة السجل التجاري", widget=forms.FileInput(attrs={'class': 'form-control' })) 
     class Meta: 
