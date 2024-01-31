@@ -63,7 +63,7 @@
             <form method="POST">
                 <h3>تحقق من الرمز</h3>
                 {% csrf_token %}
-                <input type="text" class="otp__input" name="otp-input" placeholder="أدخل الرمز المكون من خمسة أرقام">
+                <input type="text" class="otp__input" required name="otp-input" placeholder="أدخل الرمز المكون من خمسة أرقام">
                 <p class="form-text text-muted">
                     سيصلك رمز خلال دقائق على الرقم {{user.phone_number}}
                 </p>
