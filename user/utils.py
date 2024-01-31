@@ -18,4 +18,4 @@ def send_otp(to, otp):
                  )
     
 def generate_otp(): 
-    return random.randint(10000, 99999)
+    return str(random.randint(10000, 99999)) 

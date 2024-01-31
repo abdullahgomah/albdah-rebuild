@@ -40,7 +40,11 @@
             <p>
                 يرجى إتمام خطوة التحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات
             </p>
-            <a href="{% url 'user:check-otp' %}" class="btn btn-solid">تحقق</a>
+            <form method="POST">
+                {% csrf_token %}
+                <button class="btn btn-solid" type="submit">تحقق</button>
+                <!-- <a href="{% url 'user:check-otp' %}" class="btn btn-solid">تحقق</a> -->
+            </form>
         </div>
     </div>
 {% endblock content %}

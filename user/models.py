@@ -16,7 +16,7 @@ ROLE_CHOICES = (
 )
 
 class CustomUser(AbstractUser):
-    username = models.CharField(max_length=150 ,blank=True, unique=False)
+    username = models.CharField(max_length=150 ,blank=True, unique=True)
     role = models.CharField(max_length=200, choices=ROLE_CHOICES, verbose_name='نوع المستخدم', null=True, blank=True)
     id_number = models.CharField(max_length=10, verbose_name="رقم الهوية", null=True, blank=True, unique=True) 
     sex = models.CharField(max_length=200, verbose_name='الجنس', choices=SEX_CHOICES, null=True, blank=True)

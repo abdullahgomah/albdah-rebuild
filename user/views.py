@@ -17,13 +17,13 @@ load_dotenv()
 ACCOUNT_SID = os.getenv("ACCOUNT_SID") 
 AUTH_TOKEN = os.getenv("AUTH_TOKEN") 
 
-client = Client("ACb93085c0516e9504af4446acddce07ed", "3cb77c1f1f1d6cae22df4b5dc03ea357")
+client = Client("AC04198717d36d8c9038fef643ebdef958", "c22632326f0eb6cd61b62b670bb64d61")
 
 def send_otp(to, otp): 
     message = client.messages.create(
                     body=f"مرحباً بكم في مكتب البداح للعقارات. رمز ال دخول هو {otp}", 
-                    from_='+18052197512',
-                    to=to 
+                    from_='+16193993076',
+                    to="+20 15 08420041" 
                 )
 
 
@@ -132,7 +132,12 @@ def custom_logout(request):
 def verify_phone_number(request): 
     user = request.user 
     if user.phone_number_verify_status == False: 
-        pass 
+        if request.POST: 
+            otp = generate_otp() 
+            request.session['otp'] = otp 
+            send_otp('192', otp)
+            print('message sent') 
+            return redirect('user:check-otp')
     else: 
         ## already verified 
         return render(request, 'user/already-verified.html')
@@ -142,22 +147,17 @@ def verify_phone_number(request):
 @login_required
 def check_otp(request): 
     user =  request.user
-    print(user) 
-    print(user.phone_number) 
 
     if user.phone_number_verify_status == False: 
-        otp = generate_otp() 
-        request.session['otp'] = otp
-        print(otp) 
-        print(request.session['otp'])
-        number = str(user.phone_number) 
-        send_otp('+966540213290', otp) 
-        print('sent') 
         if request.POST: 
             stored_otp = request.session['otp']
-            otp_input = request.POST['otp-input'] 
+            otp_input = request.POST.get('otp-input')  
+            print(type(stored_otp))
+            print(type(otp_input))
+            print(otp_input) 
             if otp_input != None: 
-                if str(otp_input) == str(stored_otp): 
+                print('otp input is not none') 
+                if str(stored_otp) == otp_input: 
                     print('yes') 
                     user_obj = CustomUser.objects.get(phone_number=user.phone_number)
                     user_obj.phone_number_verify_status = True 
