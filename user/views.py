@@ -44,7 +44,8 @@ def user_register(request):
             form.save(commit=False) 
             form.instance.role = 'user' 
             form.save() 
-            return redirect('user:user-login') 
+            messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
+            return redirect('page:index') 
 
 
     context = {
@@ -62,8 +63,8 @@ def office_register(request):
             form.save(commit=False) 
             form.instance.role = 'real_estate_office'
             form.save() 
-            return redirect('user:user-login') 
-        
+            messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
+            return redirect('page:index') 
         
 
     context ={ 
@@ -82,7 +83,8 @@ def markter_register(request):
             form.save(commit=False) 
             form.instance.role = 'real_estate_marketer' 
             form.save() 
-            return redirect('user:user-login') 
+            messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
+            return redirect('page:index') 
 
             
 
