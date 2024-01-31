@@ -153,16 +153,17 @@ def check_otp(request):
         number = str(user.phone_number) 
         send_otp('+966540213290', otp) 
         print('sent') 
-        stored_otp = request.session['otp']
         if request.POST: 
+            stored_otp = request.session['otp']
             otp_input = request.POST['otp-input'] 
-            if str(otp_input) == str(stored_otp): 
-                print('yes') 
-                user_obj = CustomUser.objects.get(phone_number=user.phone_number)
-                user_obj.phone_number_verify_status = True 
-                user_obj.save() 
-                
-                return redirect('user:user-verified')
+            if otp_input != None: 
+                if str(otp_input) == str(stored_otp): 
+                    print('yes') 
+                    user_obj = CustomUser.objects.get(phone_number=user.phone_number)
+                    user_obj.phone_number_verify_status = True 
+                    user_obj.save() 
+                    
+                    return redirect('user:user-verified')
 
 
                 print(user_obj) 
