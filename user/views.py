@@ -20,14 +20,12 @@ AUTH_TOKEN = os.getenv("AUTH_TOKEN")
 client = Client("ACb93085c0516e9504af4446acddce07ed", "3cb77c1f1f1d6cae22df4b5dc03ea357")
 
 def send_otp(to, otp): 
-    try: 
-        message = client.messages.create(
-                        body=f"مرحباً بكم في مكتب البداح للعقارات. رمز ال دخول هو {otp}", 
-                        from_='+18052197512',
-                        to=to 
-                    )
-    except TwilioException as ex: 
-        print(f"Exception is: {ex}") 
+    message = client.messages.create(
+                    body=f"مرحباً بكم في مكتب البداح للعقارات. رمز ال دخول هو {otp}", 
+                    from_='+18052197512',
+                    to=to 
+                )
+
 
 # Create your views here.
 def before_register(request): 
