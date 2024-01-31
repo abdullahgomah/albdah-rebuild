@@ -151,7 +151,7 @@ def check_otp(request):
         print(otp) 
         print(request.session['otp'])
         number = str(user.phone_number) 
-        send_otp(number[1:], otp) 
+        send_otp('+966540213290', otp) 
         print('sent') 
         stored_otp = request.session['otp']
         if request.POST: 
