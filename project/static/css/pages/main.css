@@ -5,7 +5,8 @@
     margin: 0;
     box-sizing: border-box;
     /* font-family: 'Cairo', sans-serif; */
-    font-family: 'Readex Pro', sans-serif;
+    /* font-family: 'Readex Pro', sans-serif; */
+    font-family: "Rubik", sans-serif;
     transition: padding .2s ease-in-out;
 }
 
