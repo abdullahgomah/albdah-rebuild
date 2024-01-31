@@ -12,7 +12,7 @@ class UserForm(UserCreationForm):
     class Meta: 
         model = CustomUser 
         fields = [
-            'username', 
+            # 'username', 
             'first_name', 'last_name', 'email', 'password1', 'password2', 
             'sex', 'id_number', 'phone_number'
         ]
@@ -27,7 +27,7 @@ class OfficeRegister(UserCreationForm):
     class Meta: 
         model = CustomUser 
         fields = [
-            'username', 
+            # 'username', 
             'office_name', 
             'email', 
             'id_number',
@@ -50,7 +50,7 @@ class MarkterRegister(UserCreationForm):
         fields = [
             'first_name', 
             'last_name', 
-            'username', 
+            # 'username', 
             'phone_number',
             'email', 
             'id_number', 
