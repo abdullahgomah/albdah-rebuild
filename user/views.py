@@ -141,13 +141,18 @@ def verify_phone_number(request):
 
 @login_required
 def check_otp(request): 
-    user =  request.user  
+    user =  request.user
+    print(user) 
+    print(user.phone_number) 
 
     if user.phone_number_verify_status == False: 
         otp = generate_otp() 
         request.session['otp'] = otp
+        print(otp) 
+        print(request.session['otp'])
         number = str(user.phone_number) 
         send_otp(user.phone_number, otp) 
+        print('sent') 
         stored_otp = request.session['otp']
         if request.POST: 
             otp_input = request.POST['otp-input'] 
