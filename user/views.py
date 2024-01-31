@@ -166,7 +166,6 @@ def check_otp(request):
                     return redirect('user:user-verified')
 
 
-                print(user_obj) 
             else: 
                 return redirect('user:check-otp') 
             
