@@ -134,10 +134,7 @@ def custom_logout(request):
 def verify_phone_number(request): 
     user = request.user 
     if user.phone_number_verify_status == False: 
-        otp = generate_otp() 
-        request.session['otp'] = otp
-        number = str(user.phone_number) 
-        send_otp(number, otp) 
+        pass 
     else: 
         ## already verified 
         return render(request, 'user/already-verified.html')
@@ -147,13 +144,18 @@ def verify_phone_number(request):
 @login_required
 def check_otp(request): 
     user =  request.user  
-    print(user.phone_number)
+
+
 
     if user.phone_number_verify_status == False: 
+        otp = generate_otp() 
+        request.session['otp'] = otp
+        number = str(user.phone_number) 
+        send_otp(number, otp) 
         stored_otp = request.session['otp']
         if request.POST: 
             otp_input = request.POST['otp-input'] 
-            if int(otp_input) == stored_otp: 
+            if str(otp_input) == str(stored_otp): 
                 print('yes') 
                 user_obj = CustomUser.objects.get(phone_number=user.phone_number)
                 user_obj.phone_number_verify_status = True 
