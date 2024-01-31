@@ -166,8 +166,8 @@ def check_otp(request):
                     return redirect('user:user-verified')
 
 
-            else: 
-                return redirect('user:check-otp') 
+                else: 
+                    return redirect('user:check-otp') 
             
     else: 
         return redirect('user:verify-phone-number') 
