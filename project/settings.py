@@ -62,7 +62,6 @@ MIDDLEWARE = [
 ]
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
-SESSION_COOKIE_AGE = 300
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
