@@ -2,6 +2,7 @@
 {% load static %}
 
 
+
 {% block title %}
     مكتب البداح للعقارات | الصفحة الرئيسية
 {% endblock title %}
@@ -67,7 +68,7 @@
         transition: all .2s ease-in-out;
     }
 </style>
-    
+
     
 {% if messages %}
 <ul class="messages">
@@ -80,9 +81,13 @@
     <main>
         <div class="container">
             <div class="intro">
-                <h1 class="intro__title">البداح ... حلِّك بحِلِّك وترحالك </h1>
+                <h1 class="intro__title">
+                    <!-- البداح ... حلِّك بحِلِّك وترحالك -->
+                    {{info.title}}
+                </h1>
                 <p>
-                    تجربة آمنة تقدمها لكم مكاتب البداح للعقارات من خلال تقديم أفضل الخدمات والحلول التسويقية
+                    <!-- تجربة آمنة تقدمها لكم مكاتب البداح للعقارات من خلال تقديم أفضل الخدمات والحلول التسويقية -->
+                    {{info.slogan}}
                 </p>
             </div>
             <div class="cta">

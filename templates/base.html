@@ -1,4 +1,6 @@
 {% load static %}
+{% load extras %}
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -72,8 +74,8 @@
 
     
     <!-- MAIN -->
+    {% get_info as info %}
 
-    
     {% block content %}
         
     {% endblock content %}
@@ -103,23 +105,23 @@
                     <h4>تابعنا على</h4>
 
                     <ul>
-                        <li><a href="#" class="list-item social-link">
+                        <li><a href="{{info.snapchat}}" class="list-item social-link">
                             <i class="fa-brands fa-snapchat"></i>
                         </a></li>
 
-                        <li><a href="#" class="list-item social-link">
+                        <li><a href="tel:{{info.phone}}" class="list-item social-link">
                             <i class="fa-solid fa-phone"></i>
                         </a></li>
                         
-                        <li><a href="#" class="list-item social-link">
+                        <li><a href="{{info.whatsapp}}" class="list-item social-link">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a></li>
                         
-                        <li><a href="#" class="list-item social-link">
+                        <li><a href="{{info.tiktok}}" class="list-item social-link">
                             <i class="fa-brands fa-tiktok"></i>
                         </a></li>
                         
-                        <li><a href="#" class="list-item social-link">
+                        <li><a href="{{info.location}}" class="list-item social-link">
                             <i class="fa-solid fa-location-dot"></i>
                         </a></li>
                         
