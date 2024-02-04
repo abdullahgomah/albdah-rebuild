@@ -22,21 +22,21 @@
         
 <main class="about-us">
     <div class="container">
-        <h1 class="about__title">من نحن؟</h1>
+        <h1 class="about__title">{{about.main_text}}</h1>
         <p class="about__description">
-            مكتب البداح للعقارات يقدم لكم حلول متكاملة وخدمات منافسة 
+            {{about.sub_text|safe}}
         </p>
     </div>
 </main>
 
 
-<section class="section gallery">
+{% comment %} <section class="section gallery">
     <div class="container">
         <img src="./assets/imgs/albdah-gallery-1.jpeg" alt="">
         <img src="./assets/imgs/albdah-gallery-2.jpeg" alt="">
         <img src="./assets/imgs/albdah-gallery-3.jpeg" alt="">
     </div>
-</section>
+</section> {% endcomment %}
 
 
 {% endblock content %}

@@ -23,16 +23,16 @@ def property_details(request, number):
     property = Property.objects.get(number = number)
     if request.user.is_authenticated: 
 
-        # is_favourite = False 
-        # try: 
-        #     ad = Favourite.objects.get(user=request.user, property=property) 
-        #     is_favourite = True
-        # except Favourite.DoesNotExist: 
-        #     is_favourite = False 
+        is_favourite = False 
+        try: 
+            ad = Favourite.objects.get(user=request.user, ad=property) 
+            is_favourite = True
+        except Favourite.DoesNotExist: 
+            is_favourite = False 
 
         context = {
             'property': property, 
-            # 'is_favourite': is_favourite
+            'is_favourite': is_favourite
         } 
     else: 
         context = {
@@ -884,17 +884,20 @@ def ad_uploaded(request):
     return render(request, 'pages/ad-uploaded-successfully.html', context)
 
 
-@login_required(login_url='/auth/')
+@login_required
 def add_to_favourite(request, property_number): 
     user = request.user 
+
     property = Property.objects.get(number = property_number)  
 
-    # try: 
-    #     ad = Favourite.objects.get(user=user, property=property)
-    #     ad.delete() 
+    try: 
+        ad = Favourite.objects.get(user=user, ad=property)
+        ad.delete() 
+        is_favourite = False 
 
-    # except Favourite.DoesNotExist: 
-    #     ad = Favourite.objects.create(property=property, user=user) 
+    except Favourite.DoesNotExist: 
+        ad = Favourite.objects.create(ad=property, user=user) 
+        is_favourite = True 
 
 
     return redirect(reverse('property:property-details', kwargs={'number': property.number}))

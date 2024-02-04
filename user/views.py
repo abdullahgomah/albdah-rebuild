@@ -178,3 +178,34 @@ def check_otp(request):
 def user_verified(request): 
     context = {} 
     return render(request, 'user/user-verified.html', context)
+
+
+@login_required
+def profile(request):
+    user= request.user
+    role = user.role 
+    
+    if role =='user':
+        form =UserUpdateForm(instance=user)
+    elif role == 'real_estate_office':
+        form = OfficeUpdate(instance=user)
+    elif role == 'real_estate_marketer': 
+        form = MarkterUpdate(instance=user)
+
+    if request.POST:
+        if role=='user': 
+            form = UserUpdateForm(request.POST, instance=user) 
+        elif role=='real_estate_office': 
+            form = OfficeUpdate(request.POST, instance=user) 
+        elif role=='real_estate_marketer':
+            form = MarkterUpdate(request.POST, instance=user) 
+
+        if form.is_valid():
+            form.save() 
+            return redirect('user:profile') 
+        
+
+    context = {
+        'form': form, 
+    } 
+    return render(request, 'user/profile.html', context)
