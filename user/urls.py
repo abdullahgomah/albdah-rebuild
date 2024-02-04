@@ -12,4 +12,5 @@ urlpatterns = [
     path('verify-phone-number/', verify_phone_number, name="verify-phone-number"),
     path('check-otp/', check_otp, name='check-otp'), 
     path('user-verified/', user_verified, name='user-verified'),
+    path('profile/', profile, name='profile'), 
 ]

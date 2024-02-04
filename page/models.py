@@ -9,7 +9,7 @@ class Home(models.Model):
     whatsapp = models.TextField(verbose_name="رابط واتساب", null=True, blank=True) 
     tiktok = models.TextField(verbose_name="رابط تيكتوك", null=True, blank=True) 
     location = models.TextField(verbose_name="رابط لوكيشن", null=True, blank=True) 
-
+    
     def __str__(self):
         return str(self.title[:10])
     
