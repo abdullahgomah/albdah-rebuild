@@ -14,3 +14,10 @@ class Home(models.Model):
         return str(self.title[:10])
     
 
+class About(models.Model):
+    main_text = models.CharField(max_length=255, verbose_name="الجملة الرئيسية")
+    sub_text = models.TextField(verbose_name="النص الفرعي")
+
+    class Meta:
+        verbose_name='من نحن'
+        verbose_name_plural='من نحن'
