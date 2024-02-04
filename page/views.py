@@ -9,7 +9,7 @@ from .models import *
 
 def index(request): 
     all_properties = Property.objects.all()[::-1]
-    paginator = Paginator(all_properties, 5) 
+    paginator = Paginator(all_properties, 10) 
     page_number = request.GET.get('page') 
     page_obj = paginator.get_page(page_number) 
 
