@@ -12,10 +12,16 @@
 
 {% block content %}
 
+<style>
+    .section__title {
+        color: var(--primary-color); 
+    }
+</style>
+
 <section>
     <div class="container">
 
-        <h1>الملف الشخصي</h1>
+        <h1 class="section__title">الملف الشخصي</h1>
 
         <section class="profile-edit">
             <form method="POST" enctype="multipart/form-data">

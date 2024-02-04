@@ -260,3 +260,11 @@ class Report(models.Model):
         return f"{self.ad} {self.date}"
     
 
+
+class Favourite(models.Model):
+    ad = models.ForeignKey(Property, on_delete=models.CASCADE) 
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE) 
+
+    class Meta:
+        verbose_name="المفضلة"
+        verbose_name_plural = 'المفضلة' 
