@@ -78,10 +78,18 @@ button {
     padding: 0.6rem 1.5rem;
     border-radius: 2rem ;
     display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap:.4rem;
     outline: none; 
     border: none; 
     width: fit-content !important;
     text-align: center !important;
+}
+
+.btn img {
+    height: 30px !important;
 }
 
 .btn.btn-solid {
