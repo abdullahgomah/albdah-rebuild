@@ -92,7 +92,10 @@
             </div>
             <div class="cta">
                 <a href="#" class="btn btn-solid-success">ابحث عن عقار</a>
-                <a href="{% url 'maps:search-with-map' %}" class="btn btn-solid-success">بحث بالخريطة</a>
+                <a href="{% url 'maps:search-with-map' %}" class="btn btn-solid-success">
+                    بحث بالخريطة
+                    <img src="{% static 'imgs/map-logo.svg.png' %}" alt="">
+                </a>
                 <a href="{% url 'property:add-property-interface' %}" class="btn btn-solid-success">إضافة عقار</a>
             </div>
         </div>
