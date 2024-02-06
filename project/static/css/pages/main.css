@@ -270,6 +270,13 @@ form .grid {
     font-size: 16px !important;
 }
 
+input {
+    border-radius: 40px;
+    border: none; 
+    outline: none; 
+    border:1px solid #1e1e1e20;  
+}
+
 form input {
     height: 100% !important; 
 }
