@@ -4,27 +4,9 @@ from .forms import *
 from .backends import CustomIdBackend
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required  
-from .utils import generate_otp 
+from .utils import * 
 from django.contrib import messages
 
-from dotenv import load_dotenv 
-from twilio.rest import Client
-from twilio.base.exceptions import TwilioException
-import os 
-
-load_dotenv() 
-
-ACCOUNT_SID = os.getenv("ACCOUNT_SID") 
-AUTH_TOKEN = os.getenv("AUTH_TOKEN") 
-
-client = Client("AC04198717d36d8c9038fef643ebdef958", "c22632326f0eb6cd61b62b670bb64d61")
-
-def send_otp(to, otp): 
-    message = client.messages.create(
-                    body=f"مرحباً بكم في مكتب البداح للعقارات. رمز ال دخول هو {otp}", 
-                    from_='+16193993076',
-                    to="+20 15 08420041" 
-                )
 
 
 # Create your views here.

@@ -11,7 +11,7 @@
 
 {% block stylesheets %}
     <!-- <link rel="stylesheet" href="{% static 'css/pages/main.css' %}"> -->
-    
+    <link rel="stylesheet" href="{% static 'css/pages/index.css' %}">
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -67,6 +67,11 @@
     .messages li {
         transition: all .2s ease-in-out;
     }
+
+    .intro__title {
+        font-family: "Rakkas", serif; 
+        
+    }
 </style>
 
     
@@ -91,7 +96,7 @@
                 </p>
             </div>
             <div class="cta">
-                <a href="#" class="btn btn-solid-success">ابحث عن عقار</a>
+                <a class="btn btn-solid-success" id="search-filter-open-btn">ابحث عن عقار</a>
                 <a href="{% url 'maps:search-with-map' %}" class="btn btn-solid-success">
                     بحث بالخريطة
                     <img src="{% static 'imgs/map-logo.svg.png' %}" alt="">
@@ -274,6 +279,20 @@
         </div>
     </section>
 
+    <section class="search-filters">
+        <div class="container">
+            <div class="section__heading">
+                <h3>ابحث عن عقار</h3>
+                <div id="search-filter-close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="section__content">
+                <div class="field"></div>
+            </div>
+        </div>
+    </section>
+
     <script src="{% static 'js/pages/app.js' %}"></script>
     <script src="{% static 'js/pages/index.js' %}"></script>
 
@@ -285,6 +304,18 @@
                     msg.style.display = 'none'
                 }, 5000)
             }
+        })
+
+        let searchFilters = document.querySelector(".search-filters") 
+
+        let searchFilterOpenBtn = document.querySelector('#search-filter-open-btn')
+        searchFilterOpenBtn.addEventListener('click', () => {
+            searchFilters.style.left = '0' ;
+        })
+
+        let searchFilterCloseBtn = document.querySelector('#search-filter-close-btn i') 
+        searchFilterCloseBtn.addEventListener('click', () => {
+            searchFilters.style.left = '-100%'; 
         })
 
     </script>
