@@ -3,8 +3,8 @@ from .models import CustomUser
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm 
 
 class UserUpdateForm(UserChangeForm): 
-    first_name = forms.CharField(required=True, label="الاسم الأول")
-    last_name = forms.CharField(required=True, label="الاسم الأخير")
+    name = forms.CharField(required=True, label="الاسم الأول والأخير")
+    # last_name = forms.CharField(required=True, label="الاسم الأخير")
     email = forms.EmailField(required=True, label="الايميل") 
     id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
     phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
@@ -13,14 +13,17 @@ class UserUpdateForm(UserChangeForm):
         model = CustomUser 
         fields = [
             # 'username', 
-            'first_name', 'last_name', 'email', 
+            "name", 
+            'email', 
             'sex', 'id_number', 'phone_number'
         ]
 
 
 class UserForm(UserCreationForm): 
-    first_name = forms.CharField(required=True, label="الاسم الأول")
-    last_name = forms.CharField(required=True, label="الاسم الأخير")
+    name = forms.CharField(required=True, label="الاسم الأول والأخير")
+
+    # first_name = forms.CharField(required=True, label="الاسم الأول")
+    # last_name = forms.CharField(required=True, label="الاسم الأخير")
     email = forms.EmailField(required=True, label="الايميل") 
     id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
     phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
@@ -29,7 +32,8 @@ class UserForm(UserCreationForm):
         model = CustomUser 
         fields = [
             # 'username', 
-            'first_name', 'last_name', 'email', 'password1', 'password2', 
+            "name", 
+            'email', 'password1', 'password2', 
             'sex', 'id_number', 'phone_number'
         ]
 
@@ -72,8 +76,10 @@ class OfficeRegister(UserCreationForm):
         ]
 
 class MarkterUpdate(UserCreationForm): 
-    first_name = forms.CharField(required=True, label="الاسم الأول")
-    last_name = forms.CharField(required=True, label="الاسم الأخير")
+    # first_name = forms.CharField(required=True, label="الاسم الأول")
+    # last_name = forms.CharField(required=True, label="الاسم الأخير")
+    name = forms.CharField(required=True, label="الاسم الأول والأخير")
+
     email = forms.EmailField(required=True, label="الايميل") 
     id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
     phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
@@ -82,8 +88,7 @@ class MarkterUpdate(UserCreationForm):
     class Meta: 
         model = CustomUser 
         fields = [
-            'first_name', 
-            'last_name', 
+            'name', 
             # 'username', 
             'phone_number',
             'email', 
@@ -97,8 +102,10 @@ class MarkterUpdate(UserCreationForm):
 
 
 class MarkterRegister(UserCreationForm): 
-    first_name = forms.CharField(required=True, label="الاسم الأول")
-    last_name = forms.CharField(required=True, label="الاسم الأخير")
+    # first_name = forms.CharField(required=True, label="الاسم الأول")
+    # last_name = forms.CharField(required=True, label="الاسم الأخير")
+    name = forms.CharField(required=True, label="الاسم الأول والأخير")
+
     email = forms.EmailField(required=True, label="الايميل") 
     id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
     phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
@@ -107,8 +114,7 @@ class MarkterRegister(UserCreationForm):
     class Meta: 
         model = CustomUser 
         fields = [
-            'first_name', 
-            'last_name', 
+            'name', 
             # 'username', 
             'phone_number',
             'email', 
