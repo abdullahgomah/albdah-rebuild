@@ -6,6 +6,7 @@ section.search-filters {
     top: 50%; 
     left: 150%; 
     width: 400px; 
+    max-width: 90%;
     transform: translate(-200px, -50% ); 
     height: 80%; 
     z-index: 30000;
