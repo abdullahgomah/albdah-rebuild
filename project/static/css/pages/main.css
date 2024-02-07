@@ -6,7 +6,9 @@
     box-sizing: border-box;
     /* font-family: 'Cairo', sans-serif; */
     /* font-family: 'Readex Pro', sans-serif; */
-    font-family: "Rubik", sans-serif;
+    /* font-family: "Rubik", sans-serif; */
+    font-family: "Tajawal", sans-serif;
+    font-weight: 400;
     transition: padding .2s ease-in-out;
 }
 
@@ -24,6 +26,7 @@ body {
     margin: 0 ; 
     display: flex;
     flex-direction: column;
+    overflow: hidden !important;
 
 }
 

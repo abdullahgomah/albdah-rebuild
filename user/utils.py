@@ -43,4 +43,4 @@ def verify_otp():
 
     response = requests.post(url, json=payload, headers=headers)
 
-    print(response.text)
+    print(response.text) 
