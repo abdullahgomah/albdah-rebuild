@@ -3,10 +3,11 @@ section.search-filters {
     box-shadow: 3px 3px 20px #1e1e1e30;
     /* border-radius: 2rem; */
     position: absolute;
-    top: 0; 
-    left: -100%; 
-    width: 100%; 
-    height: 100%; 
+    top: 50%; 
+    left: 120%; 
+    width: 400px; 
+    transform: translate(-200px, -50% ); 
+    height: 80%; 
     z-index: 30000;
     transition: all .3s ease-in-out;
     margin: 0 !important; 
