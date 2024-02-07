@@ -316,30 +316,36 @@
                 </div>
                 <div class="field">
                     <p>المدينة</p>
-                    <select name="city">
+                    <select name="city" id="city-select-input">
                         <option value="" disabled selected>اختر المدينة</option>
-                        <option value="الرياض">الرياض</option>
-                        <option value="جدة">جدة</option>
-                        <option value="مكة المكرمة">مكة المكرمة</option>
-                        <option value="المدينة المنورة">المدينة المنورة</option>
-                        <option value="الدمام">الدمام</option>
-                        <option value="الخبر">الخبر</option>
-                        <option value="الظهران">الظهران</option>
-                        <option value="الطائف">الطائف</option>
-                        <option value="تبوك">تبوك</option>
-                        <option value="بريدة">بريدة</option>
-                        <option value="خميس مشيط">خميس مشيط</option>
-                        <option value="أبها">أبها</option>
-                        <option value="ينبع">ينبع</option>
-                        <option value="الجبيل">الجبيل</option>
-                        <option value="الخرج">الخرج</option>
-                        <option value="حائل">حائل</option>
-                        <option value="نجران">نجران</option>
-                        <option value="القصيم">القصيم</option>
-                        <option value="الخبر">الخبر</option>
-                        <option value="الباحة">الباحة</option>
+                        <option value="الرياض" data-city="Riyadh">الرياض</option>
+                        <option value="جدة" data-city="Jeddah">جدة</option>
+                        <option value="مكة المكرمة" data-city="Mecca">مكة المكرمة</option>
+                        <option value="المدينة المنورة" data-city="Medina">المدينة المنورة</option>
+                        <option value="الدمام" data-city="Dammam">الدمام</option>
+                        <option value="الخبر" data-city="Khobar">الخبر</option>
+                        <option value="الظهران" data-city="Dhahran">الظهران</option>
+                        <option value="الطائف" data-city="Taif">الطائف</option>
+                        <option value="تبوك" data-city="Tabuk">تبوك</option>
+                        <option value="بريدة" data-city="Buraydah">بريدة</option>
+                        <option value="خميس مشيط" data-city="KhamisMushait">خميس مشيط</option>
+                        <option value="أبها" data-city="Abha">أبها</option>
+                        <option value="ينبع" data-city="Yanbu">ينبع</option>
+                        <option value="الجبيل" data-city="Jubail">الجبيل</option>
+                        <option value="الخرج" data-city="Hofuf">الخرج</option>
+                        <option value="حائل" data-city="Hail">حائل</option>
+                        <option value="نجران" data-city="Najran">نجران</option>
+                        <option value="القصيم" data-city="Qassim">القصيم</option>
+                        <option value="الخبر" data-city="Khobar">الخبر</option>
+                        <option value="الباحة" data-city="Bahah">الباحة</option>                        
                     </select>
-                    
+                </div>
+                <div class="field">
+                    <p>الحي</p>
+                    <select name="district" id="district-select-input">
+                        <option value="" disabled selected>اختر الحي</option>
+                        {% comment %} this process can be handled using ajax {% endcomment %}
+                    </select>
                 </div>
             </div>
             <div class="section__content">
@@ -381,6 +387,95 @@
             searchFilters.style.right = '-400px'; 
             overlayLayer.style.display = 'none';
         })
+
+
+        var BuraydaDistricts = [
+            "الأندلس",
+            "الوادي",
+            "اليرموك",
+            "الرمال",
+            "المروة",
+            "الخضر",
+            "اللسيب",
+            "القضيعة",
+            "الغدير",
+            "السالمية",
+            "الروابي",
+            "حويلان",
+            "خضراء",
+            "الصباخ",
+            "واسط",
+            "السلام",
+            "الجنوب",
+            "الخليج",
+            "الضاحي",
+            "خب البريدي",
+            "السادة",
+            "الهلال",
+            "العجيبة",
+            "العريضي",
+            "البساتين",
+            "النسيم",
+            "الموطاء",
+            "التعليم",
+            "الجردة",
+            "الصالحية",
+            "المريدسية",
+            "الشروق",
+            "خب الثنيان",
+            "الشماس",
+            "القادسية",
+            "الصفاء",
+            "الخبيب",
+            "المرقب",
+            "الربيع",
+            "الرفيعة",
+            "الزرقاء",
+            "النور",
+            "الشفق",
+            "الحمر",
+            "القاع البارد",
+            "الربوة",
+            "المنار",
+            "الوسيطي",
+            "المنتزه",
+            "الصفراء",
+            "الفايزية",
+            "النقع",
+            "النخيل",
+            "الروضه",
+            "الإسكان",
+            "الأخضر",
+            "الشقة السفلى",
+            "الرابية",
+            "الريان",
+            "النهضة",
+            "الافق",
+            "الورود",
+            "الخزامي",
+            "الجزيرة",
+            "الفاروق",
+            "المرواج",
+            "رواق"
+        ];
+
+
+        let districtSelectInput = document.querySelector("#district-select-input"); 
+        let citySelectInput = document.querySelector('#city-select-input') 
+        citySelectInput.addEventListener('change', ()=> {
+            districtSelectInput.innerHTML = "" ;
+            if (citySelectInput.value =='بريدة') {
+                BuraydaDistricts.forEach((city) => {
+                    let new_option = document.createElement('option') 
+                    new_option.value = city; 
+                    new_option.textContent = city; 
+                    
+                    
+                    districtSelectInput.appendChild(new_option)
+                })
+            }
+        })
+    
 
     </script>
 
