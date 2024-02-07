@@ -7,7 +7,7 @@ section.search-filters {
     left: 150%; 
     width: 400px; 
     transform: translate(-200px, -50% ); 
-    height: 80%; 
+    height: 80vh; 
     z-index: 30000;
     transition: all .3s ease-in-out;
     margin: 0 !important; 
