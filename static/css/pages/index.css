@@ -57,3 +57,13 @@ section.search-filters {
     z-index: 20000;
     display: none;
 }
+
+
+.search-filters .field {
+    margin-bottom: 1rem;
+}
+
+.search-filters select {
+    width: 100%;
+    min-height: 40px;
+}
