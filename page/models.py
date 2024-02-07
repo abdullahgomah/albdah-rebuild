@@ -16,7 +16,7 @@ class Home(models.Model):
 
 class About(models.Model):
     main_text = models.CharField(max_length=255, verbose_name="الجملة الرئيسية")
-    sub_text = models.TextField(verbose_name="النص الفرعي")
+    sub_text = models.TextField(verbose_name="النص الفرعي", null=True, blank=True) 
 
     class Meta:
         verbose_name='من نحن'
