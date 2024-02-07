@@ -4,7 +4,7 @@ section.search-filters {
     /* border-radius: 2rem; */
     position: absolute;
     top: 50%; 
-    left: 120%; 
+    left: 150%; 
     width: 400px; 
     transform: translate(-200px, -50% ); 
     height: 80%; 
