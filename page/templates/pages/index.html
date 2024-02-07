@@ -293,6 +293,10 @@
         </div>
     </section>
 
+    <div class="overlay-layer"></div>
+
+
+
     <script src="{% static 'js/pages/app.js' %}"></script>
     <script src="{% static 'js/pages/index.js' %}"></script>
 
@@ -306,17 +310,20 @@
             }
         })
 
+        let overlayLayer = document.querySelector('.overlay-layer')
         let searchFilters = document.querySelector(".search-filters") 
 
         let searchFilterOpenBtn = document.querySelector('#search-filter-open-btn')
         searchFilterOpenBtn.addEventListener('click', () => {
             searchFilters.style.display = 'block'
             searchFilters.style.right = '0'; 
+            overlayLayer.style.display = 'block';
         })
 
         let searchFilterCloseBtn = document.querySelector('#search-filter-close-btn i') 
         searchFilterCloseBtn.addEventListener('click', () => {
             searchFilters.style.right = '-400px'; 
+            overlayLayer.style.display = 'none';
         })
 
     </script>

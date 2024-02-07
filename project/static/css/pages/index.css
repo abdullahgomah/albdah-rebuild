@@ -5,8 +5,7 @@ section.search-filters {
     position: fixed;
     display: none;
     right: 0; 
-    top:0; 
-    left: 150%; 
+    top:0;  
     width: 400px; 
     max-width: 90%;
     height: 100%; 
@@ -30,4 +29,15 @@ section.search-filters {
 #search-filter-close-btn i {
     color: #1e1e1e;
     cursor: pointer;
+}
+
+.overlay-layer {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    background: #1e1e1e20; 
+    height: 100%;
+    z-index: 20000;
+    display: none;
 }
