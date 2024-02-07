@@ -311,11 +311,12 @@
         let searchFilterOpenBtn = document.querySelector('#search-filter-open-btn')
         searchFilterOpenBtn.addEventListener('click', () => {
             searchFilters.style.left = '50%'; 
+            {% comment %} searchFilters.style.top = '50%';  {% endcomment %}
         })
 
         let searchFilterCloseBtn = document.querySelector('#search-filter-close-btn i') 
         searchFilterCloseBtn.addEventListener('click', () => {
-            searchFilters.style.left = '120%'; 
+            searchFilters.style.left = '150%'; 
         })
 
     </script>
