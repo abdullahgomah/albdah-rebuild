@@ -288,6 +288,61 @@
                 </div>
             </div>
             <div class="section__content">
+                <div class="field">
+                    <p>قسم العقار</p>
+                    <select name="property_type">
+                        <option value="" disabled selected>عقارات</option>
+                        <option value="apartment_rent">شقة للايجار</option>
+                        <option value="floor_rent">دور للايجار</option>
+                        <option value="villa_rent">فيلا للايجار</option>
+                        <option value="shop_rent">محل للايجار</option>
+                        <option value="resthouse_rent">استراحة للايجار</option>
+                        <option value="commercial_office_rent">مكتب تجاري للايجار</option>
+                        <option value="land_rent">أرض للايجار</option>
+                        <option value="building_rent">عمارة للايجار</option>
+                        <option value="branch_rent">مستودع للايجار</option>
+                        <option value="furnished_apartment_rent">شقة مفروشة للايجار</option>
+                        <option value="chalet_rent">شاليه للايجار</option>
+                        <option value="chalet_sale">شاليه للبيع</option>
+                        <option value="land_sale">أرض للبيع</option>
+                        <option value="villa_sale">فيلا للبيع</option>
+                        <option value="apartment_sale">شقة للبيع</option>
+                        <option value="building_sale">عمارة للبيع</option>
+                        <option value="resthouse_sale">استراحة للبيع</option>
+                        <option value="farm_sale">مزرعة للبيع</option>
+                        <option value="shop_sale">محل للبيع</option>
+                        <option value="floor_sale">دور للبيع</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <p>المدينة</p>
+                    <select name="city">
+                        <option value="" disabled selected>اختر المدينة</option>
+                        <option value="الرياض">الرياض</option>
+                        <option value="جدة">جدة</option>
+                        <option value="مكة المكرمة">مكة المكرمة</option>
+                        <option value="المدينة المنورة">المدينة المنورة</option>
+                        <option value="الدمام">الدمام</option>
+                        <option value="الخبر">الخبر</option>
+                        <option value="الظهران">الظهران</option>
+                        <option value="الطائف">الطائف</option>
+                        <option value="تبوك">تبوك</option>
+                        <option value="بريدة">بريدة</option>
+                        <option value="خميس مشيط">خميس مشيط</option>
+                        <option value="أبها">أبها</option>
+                        <option value="ينبع">ينبع</option>
+                        <option value="الجبيل">الجبيل</option>
+                        <option value="الخرج">الخرج</option>
+                        <option value="حائل">حائل</option>
+                        <option value="نجران">نجران</option>
+                        <option value="القصيم">القصيم</option>
+                        <option value="الخبر">الخبر</option>
+                        <option value="الباحة">الباحة</option>
+                    </select>
+                    
+                </div>
+            </div>
+            <div class="section__content">
                 <div class="field"></div>
             </div>
         </div>
@@ -318,6 +373,7 @@
             searchFilters.style.display = 'block'
             searchFilters.style.right = '0'; 
             overlayLayer.style.display = 'block';
+            document.body.style.overflow = 'hidden'; 
         })
 
         let searchFilterCloseBtn = document.querySelector('#search-filter-close-btn i') 
