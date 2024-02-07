@@ -4,12 +4,12 @@ section.search-filters {
     /* border-radius: 2rem; */
     position: absolute;
     display: none;
-    top: 50vh; 
+    right: 0; 
+    top:0; 
     left: 150%; 
     width: 400px; 
     max-width: 90%;
-    transform: translate(-50%, -50% ); 
-    height: 500px; 
+    height: 100%; 
     z-index: 30000;
     transition: all .3s ease-in-out;
     margin: 0 !important; 
