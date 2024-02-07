@@ -2,7 +2,7 @@ section.search-filters {
     background: var(--secondary-color); 
     box-shadow: 3px 3px 20px #1e1e1e30;
     /* border-radius: 2rem; */
-    position: absolute;
+    position: fixed;
     display: none;
     right: 0; 
     top:0; 
