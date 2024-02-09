@@ -17,7 +17,6 @@ def before_register(request):
 
 def user_register(request): 
     form = UserForm()
-
     if request.POST: 
         form = UserForm(request.POST) 
         if form.is_valid(): 
