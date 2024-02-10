@@ -22,16 +22,17 @@ def generate_otp():
     return str(random.randint(10000, 99999)) 
 
 
-def verify_otp(): 
-
+def verify_otp(to, otp): 
     url = "https://control.msg91.com/api/v5/flow/"
 
     payload = {
         "template_id": "65c32758d6fc055098443712",
+        "sender_id": "albdah", 
         "short_url": "0",
         "recipients": [
             {
-                "mobiles": "+201508420041",
+                "mobiles": to,
+                "otp": otp
             }
         ]
     }
@@ -43,4 +44,4 @@ def verify_otp():
 
     response = requests.post(url, json=payload, headers=headers)
 
-    print(response.text) 
+    print(response.text)

@@ -6,7 +6,7 @@ class UserUpdateForm(UserChangeForm):
     name = forms.CharField(required=True, label="الاسم الأول والأخير")
     # last_name = forms.CharField(required=True, label="الاسم الأخير")
     email = forms.EmailField(required=True, label="الايميل") 
-    id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
+    # id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
     phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
     # sex = forms.CharField(widget=forms.Select, required=True, label='الجنس')
     class Meta: 
@@ -15,7 +15,9 @@ class UserUpdateForm(UserChangeForm):
             # 'username', 
             "name", 
             'email', 
-            'sex', 'id_number', 'phone_number'
+            # 'sex', 
+            # 'id_number', 
+            'phone_number'
         ]
 
 
@@ -25,7 +27,7 @@ class UserForm(UserCreationForm):
     # first_name = forms.CharField(required=True, label="الاسم الأول")
     # last_name = forms.CharField(required=True, label="الاسم الأخير")
     email = forms.EmailField(required=True, label="الايميل") 
-    id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
+    # id_number = forms.CharField(max_length=10, label='رقم الهوية', required=True)
     phone_number = forms.CharField(max_length=13, required=True, label="رقم الجوال", help_text="سيصلك رمز على هذا الرقم لذلك تأكد من الرقم") 
     # sex = forms.CharField(widget=forms.Select, required=True, label='الجنس')
     class Meta: 
@@ -34,7 +36,9 @@ class UserForm(UserCreationForm):
             # 'username', 
             "name", 
             'email', 'password1', 'password2', 
-            'sex', 'id_number', 'phone_number'
+            # 'sex', 
+            # 'id_number', 
+            'phone_number'
         ]
 
 
@@ -94,7 +98,7 @@ class MarkterUpdate(UserCreationForm):
             'email', 
             'id_number', 
             'fal_license', 
-            'sex',
+            # 'sex',
             'password1', 
             'password2',    
         ]
@@ -120,7 +124,7 @@ class MarkterRegister(UserCreationForm):
             'email', 
             'id_number', 
             'fal_license', 
-            'sex',
+            # 'sex',
             'password1', 
             'password2',    
         ]
