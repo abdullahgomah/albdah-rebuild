@@ -91,7 +91,7 @@ button {
 }
 
 .btn img {
-    height: 30px !important;
+    height: 20px !important;
 }
 
 .btn.btn-solid {
@@ -309,14 +309,19 @@ section.property_list .grid .item {
     text-decoration: none; 
     /* color: var(--primary-color); */
     color: black;
+    font-weight: 600;
 }
 
 .item .property__price {
     margin : 1rem 0;
     /* font-size: 18px; */
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--primary-color);
+}
+
+.itme .property__price span { 
+    font-weight: 600;
 }
 
 .item .property__info .property__description {
