@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import * 
 from .forms import * 
-from .backends import CustomIdBackend
+from .backends import CustomPhoneNumberBackend
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required  
 from .utils import * 
@@ -76,11 +76,11 @@ def markter_register(request):
 def user_login(request):
 
     if request.POST: 
-        id_number = request.POST.get('id_number_input') 
+        phone_number_input = request.POST.get('phone_number_input') 
         password= request.POST.get('password_input') 
         
         try:
-            user = CustomIdBackend().authenticate(request, id_number=id_number, password=password)
+            user = CustomPhoneNumberBackend().authenticate(request, phone_number=phone_number_input, password=password)
         except:
             # Catch any exceptions during authentication and display an error message
             messages.add_message(request, messages.ERROR, "رقم الهوية أو كلمة المرور غير صحيحة. أعد المحاولة مرة أخرى")

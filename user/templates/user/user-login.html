@@ -86,8 +86,9 @@
             <!-- {{form}} -->
             <div class="fields">
                 <div class="field">
-                    <i class="fa-solid fa-id-card"></i>
-                    <input type="text" required placeholder="أدخل رقم الهوية" class="input" name="id_number_input">
+                    {% comment %} <i class="fa-solid fa-id-card"></i> {% endcomment %}
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" required placeholder="أدخل رقم الجوال" class="input" name="phone_number_input">
                 </div>
                 <div class="field">
                     <i class="fa-solid fa-lock"></i>
@@ -111,6 +112,28 @@
         </form>
     </div>
 </section>
+
+<script>
+
+    function restrictCountryCode(event) {
+        const countryCode = '+966';
+
+        // Get the input element
+        const phoneNumberInput = event.target;
+
+        // Check if the input starts with the country code
+        if (!phoneNumberInput.value.startsWith(countryCode)) {
+            // If not, set the value to the country code
+            phoneNumberInput.value = countryCode;
+        }
+    }
+
+    let phone_number_input = document.querySelector('[name=phone_number_input]')
+    phone_number_input.value = "+966" 
+    phone_number_input.oninput = restrictCountryCode
+    phone_number_input.style.direction= 'ltr'
+
+</script>
 
 {% endblock content %}
     

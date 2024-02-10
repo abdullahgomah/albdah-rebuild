@@ -13,3 +13,19 @@ class CustomIdBackend(ModelBackend):
         if user.check_password(password): 
             return user 
         return None 
+    
+
+class CustomPhoneNumberBackend(ModelBackend): 
+    def authenticate(self, request, phone_number=None, password=None, *args, **kwargs):
+        User = get_user_model() 
+        try: 
+            user = User.objects.get(Q(phone_number=phone_number))
+        except User.DoesNotExist: 
+            try: 
+                user = User.objects.get(Q(phone_number="+966"+phone_number[5:]))
+            except User.DoesNotExist: 
+                return None 
+
+        if user.check_password(password): 
+            return user 
+        return None 
