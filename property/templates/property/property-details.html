@@ -121,7 +121,7 @@
             </h3>
             {% else %}                
             <h3 class="property__cost">
-                {{property.price|floatformat:"0"}} ريال / <span id="type">{{property.get_rent_type_display}}</span>
+                {{property.price|floatformat:"0"}} ريال / {{property.get_rent_type_display}}
             </h3>
             {% endif %}
 
