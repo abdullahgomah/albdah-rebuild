@@ -96,12 +96,18 @@
                 </p>
             </div>
             <div class="cta">
-                <a class="btn btn-solid-success" id="search-filter-open-btn">ابحث عن عقار</a>
+                <a class="btn btn-solid-success" id="search-filter-open-btn">
+                    ابحث عن عقار
+                    <img src="{% static 'imgs/search-icon.png' %}" alt="">
+                </a>
                 <a href="{% url 'maps:search-with-map' %}" class="btn btn-solid-success">
                     بحث بالخريطة
                     <img src="{% static 'imgs/map-logo.svg.png' %}" alt="">
                 </a>
-                <a href="{% url 'property:add-property-interface' %}" class="btn btn-solid-success">إضافة عقار</a>
+                <a href="{% url 'property:add-property-interface' %}" class="btn btn-solid-success">
+                    إضافة عقار
+                    <img src="{% static 'imgs/add-property-icon.png' %}" alt="">
+                </a>
             </div>
         </div>
     </main>
