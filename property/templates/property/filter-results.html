@@ -1,0 +1,37 @@
+
+    {% for property in result %}
+    
+
+    <div class="item property">
+        <input type="hidden" name="propertyFirstImgUrl" value="{{property.imgs.first.img.url}}">
+        <input type="hidden" name="property_type_input" value="{{property.p_type}}">
+        <div class="property__info">
+            <h4 class="property__title">
+                <a href="{% url 'property:property-details' property.number %}">{{property.title}}</a>
+            </h4>
+            <p class="property__price">
+                
+                {% if property.sale == True %}
+                {{property.price|floatformat:"0"}} ريال
+                {% else %}
+                {{property.price|floatformat:"0"}} ريال / {{property.get_rent_type_display }}
+                {% endif %}
+
+                    
+            </p>
+            <p class="property__description">
+                <!-- {{property.description|safe|truncatewords:5}} -->
+            </p>
+        </div>
+        <div class="property__cover_img">
+        
+        
+            <img src="{% for img in property.imgs.all %}{% if img.main %}{{img.img.url}}{% endif %}{% endfor %}" alt="">
+            
+            
+        </div>
+    </div>
+    {% endfor %}
+
+
+
