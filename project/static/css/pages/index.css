@@ -66,6 +66,7 @@ section.search-filters {
     max-width: 100%;
     box-sizing: border-box;
     cursor: pointer;
+    color: block !important;
 }
 
 select::-ms-expand {
