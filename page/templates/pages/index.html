@@ -353,9 +353,15 @@
                         {% comment %} this process can be handled using ajax {% endcomment %}
                     </select>
                 </div>
-            </div>
-            <div class="section__content">
-                <div class="field"></div>
+
+                <div class="fields-wrapper">
+
+
+                </div>
+                
+                <div class="field">
+                    <a class="btn btn-solid" id="filter-btn">بحث</a>
+                </div>
             </div>
         </div>
     </section>
@@ -476,13 +482,456 @@
                     let new_option = document.createElement('option') 
                     new_option.value = city; 
                     new_option.textContent = city; 
-                    
-                    
                     districtSelectInput.appendChild(new_option)
                 })
             }
         })
-    
+
+        let fieldsWrapper = document.querySelector('.fields-wrapper'); 
+        
+        function appendRentTypeField() {
+
+            // Create the div element with class "field"
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+
+            // Create the div element with class "field__heading"
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+
+            // Create the paragraph element with class "field__heading__title" and text content "مدة الإيجار"
+            const titleParagraph = document.createElement('p');
+            titleParagraph.classList.add('field__heading__title');
+            titleParagraph.textContent = 'مدة الإيجار';
+
+            // Append the title paragraph to the heading div
+            headingDiv.appendChild(titleParagraph);
+
+            // Append the heading div to the field div
+            fieldDiv.appendChild(headingDiv);
+
+            // Create the div element with class "field__content"
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+
+            // Create the input element with type "hidden" and name "rent_type_input"
+            const hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'rent_type_input');
+            hiddenInput.setAttribute('value', '');
+
+            // Append the hidden input to the content div
+            contentDiv.appendChild(hiddenInput);
+
+            // Create the div element with class "grid" and class "rent_type"
+            const gridDiv = document.createElement('div');
+            gridDiv.classList.add('grid', 'rent_type');
+
+            // Create the three div elements with class "item" and respective data-value attributes
+            const withoutDiv = document.createElement('div');
+            withoutDiv.setAttribute('data-value', '');
+            withoutDiv.classList.add('item');
+            withoutDiv.textContent = 'بدون';
+
+            const monthlyDiv = document.createElement('div');
+            monthlyDiv.setAttribute('data-value', 'monthly');
+            monthlyDiv.classList.add('item');
+            monthlyDiv.textContent = 'شهري';
+
+            const yearlyDiv = document.createElement('div');
+            yearlyDiv.setAttribute('data-value', 'yearly');
+            yearlyDiv.classList.add('item');
+            yearlyDiv.textContent = 'سنوي';
+
+            // Append the three item divs to the grid div
+            gridDiv.appendChild(withoutDiv);
+            gridDiv.appendChild(monthlyDiv);
+            gridDiv.appendChild(yearlyDiv);
+
+            // Append the grid div to the content div
+            contentDiv.appendChild(gridDiv);
+
+            // Append the content div to the field div
+            fieldDiv.appendChild(contentDiv);
+
+            // Now, you can append the field div to any existing HTML element in your document to display it
+            // For example:
+
+            changeItemValue(fieldDiv.querySelector('.grid'))
+            fieldsWrapper.appendChild(fieldDiv);  
+
+        }
+
+        function appendRoomsCountField() {
+            // Create the div element with class "field"
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            // Create the div element with class "field__heading"
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            // Create the paragraph element with class "field__heading__title" and text content "عدد الغرف"
+            const titleParagraph = document.createElement('p');
+            titleParagraph.classList.add('field__heading__title');
+            titleParagraph.textContent = 'عدد الغرف';
+        
+            // Append the title paragraph to the heading div
+            headingDiv.appendChild(titleParagraph);
+        
+            // Append the heading div to the field div
+            fieldDiv.appendChild(headingDiv);
+        
+            // Create the div element with class "field__content"
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            // Create the input element with type "hidden" and name "rooms-count-input"
+            const hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'rooms-count-input');
+            hiddenInput.setAttribute('value', '');
+        
+            // Append the hidden input to the content div
+            contentDiv.appendChild(hiddenInput);
+        
+            // Create the div element with class "grid" and class "roomsCount"
+            const gridDiv = document.createElement('div');
+            gridDiv.classList.add('grid', 'roomsCount');
+        
+            // Create the six div elements with class "item" and respective data-value attributes
+            const allDiv = document.createElement('div');
+            allDiv.setAttribute('data-value', '');
+            allDiv.classList.add('item');
+            allDiv.textContent = 'الكل';
+        
+            const oneDiv = document.createElement('div');
+            oneDiv.setAttribute('data-value', '1');
+            oneDiv.classList.add('item');
+            oneDiv.textContent = '1';
+        
+            const twoDiv = document.createElement('div');
+            twoDiv.setAttribute('data-value', '2');
+            twoDiv.classList.add('item');
+            twoDiv.textContent = '2';
+        
+            const threeDiv = document.createElement('div');
+            threeDiv.setAttribute('data-value', '3');
+            threeDiv.classList.add('item');
+            threeDiv.textContent = '3';
+        
+            const fourDiv = document.createElement('div');
+            fourDiv.setAttribute('data-value', '4');
+            fourDiv.classList.add('item');
+            fourDiv.textContent = '4';
+        
+            const plusFiveDiv = document.createElement('div');
+            plusFiveDiv.setAttribute('data-value', '+5');
+            plusFiveDiv.classList.add('item');
+            plusFiveDiv.textContent = '+5';
+        
+            // Append the item divs to the grid div
+            gridDiv.appendChild(allDiv);
+            gridDiv.appendChild(oneDiv);
+            gridDiv.appendChild(twoDiv);
+            gridDiv.appendChild(threeDiv);
+            gridDiv.appendChild(fourDiv);
+            gridDiv.appendChild(plusFiveDiv);
+        
+            // Append the grid div to the content div
+            contentDiv.appendChild(gridDiv);
+        
+            // Append the content div to the field div
+            fieldDiv.appendChild(contentDiv);
+        
+            
+            // Append the field div to the fields wrapper
+            changeItemValue(fieldDiv.querySelector('.grid'))
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+        function changeItemValue(grid) {
+            grid.querySelectorAll(".item").forEach((item)=> {
+                item.addEventListener('click', () => {
+                    grid.querySelectorAll(".item").forEach((item) => {
+                        item.style.background = 'white'; 
+                        item.style.color = 'black'
+                    })
+                    item.style.color = 'var(--secondary-color)'
+                    item.style.background = 'var(--primary-color)'
+
+                    item.parentElement.parentElement.querySelector('input').value = item.dataset.value; 
+                    {% comment %} console.log(item);  {% endcomment %}
+                    {% comment %} console.log(item.parentElement.parentElement.querySelector('input'));  {% endcomment %}
+                    {% comment %} console.log(item.dataset.value); {% endcomment %}
+                })
+            })
+        }
+
+        function appendFamiliesSinglesField() {
+            // Create the div element with class "field"
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            // Create the div element with class "field__heading"
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            // Create the paragraph element with class "field__heading__title" and text content "عوائل أم عزاب"
+            const titleParagraph = document.createElement('p');
+            titleParagraph.classList.add('field__heading__title');
+            titleParagraph.textContent = 'عوائل أم عزاب';
+        
+            // Append the title paragraph to the heading div
+            headingDiv.appendChild(titleParagraph);
+        
+            // Append the heading div to the field div
+            fieldDiv.appendChild(headingDiv);
+        
+            // Create the div element with class "field__content"
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            // Create the input element with type "hidden" and name "single-or-family-input"
+            const hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'single-or-family-input');
+        
+            // Append the hidden input to the content div
+            contentDiv.appendChild(hiddenInput);
+        
+            // Create the div element with class "grid" and class "families-single"
+            const gridDiv = document.createElement('div');
+            gridDiv.classList.add('grid', 'families-single');
+        
+            // Create the three div elements with class "item" and respective data-value attributes
+            const unspecifiedDiv = document.createElement('div');
+            unspecifiedDiv.setAttribute('data-value', '');
+            unspecifiedDiv.classList.add('item');
+            unspecifiedDiv.textContent = 'غير محدد';
+        
+            const familiesDiv = document.createElement('div');
+            familiesDiv.setAttribute('data-value', 'families');
+            familiesDiv.classList.add('item');
+            familiesDiv.textContent = 'عوائل';
+        
+            const singleDiv = document.createElement('div');
+            singleDiv.setAttribute('data-value', 'single');
+            singleDiv.classList.add('item');
+            singleDiv.textContent = 'عزاب';
+        
+            // Append the item divs to the grid div
+            gridDiv.appendChild(unspecifiedDiv);
+            gridDiv.appendChild(familiesDiv);
+            gridDiv.appendChild(singleDiv);
+        
+            // Append the grid div to the content div
+            contentDiv.appendChild(gridDiv);
+        
+            // Append the content div to the field div
+            fieldDiv.appendChild(contentDiv);
+
+            changeItemValue(fieldDiv.querySelector('.grid'))
+        
+            // Append the field div to the fields wrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+        function appendMinMaxPrice() {
+            // Create the div element with class "field"
+            const minPriceField = document.createElement('div');
+            minPriceField.classList.add('field');
+        
+            // Create the div element with class "field__heading"
+            const minPriceHeading = document.createElement('div');
+            minPriceHeading.classList.add('field__heading');
+        
+            // Create the paragraph element with class "field__heading__title" and text content "السعر الأدنى"
+            const minPriceTitle = document.createElement('p');
+            minPriceTitle.classList.add('field__heading__title');
+            minPriceTitle.textContent = 'السعر الأدنى';
+        
+            // Append the title paragraph to the heading div
+            minPriceHeading.appendChild(minPriceTitle);
+        
+            // Append the heading div to the field div
+            minPriceField.appendChild(minPriceHeading);
+        
+            // Create the div element with class "field__content"
+            const minPriceContent = document.createElement('div');
+            minPriceContent.classList.add('field__content');
+        
+            // Create the input element with type "text" and placeholder "أدخل السعر الأدنى ر.س" and name 'min-price-input'
+            const minPriceInput = document.createElement('input');
+            minPriceInput.setAttribute('type', 'text');
+            minPriceInput.setAttribute('placeholder', 'أدخل السعر الأدنى ر.س');
+            minPriceInput.setAttribute('name', 'min-price-input');
+            minPriceInput.setAttribute('id', 'min-price-input');
+        
+            // Append the input to the content div
+            minPriceContent.appendChild(minPriceInput);
+        
+            // Append the content div to the field div
+            minPriceField.appendChild(minPriceContent);
+        
+            // Append the minPriceField to the fields wrapper
+            fieldsWrapper.appendChild(minPriceField);
+        
+            // Create the div element with class "field"
+            const maxPriceField = document.createElement('div');
+            maxPriceField.classList.add('field');
+        
+            // Create the div element with class "field__heading"
+            const maxPriceHeading = document.createElement('div');
+            maxPriceHeading.classList.add('field__heading');
+        
+            // Create the paragraph element with class "field__heading__title" and text content "السعر الأعلى"
+            const maxPriceTitle = document.createElement('p');
+            maxPriceTitle.classList.add('field__heading__title');
+            maxPriceTitle.textContent = 'السعر الأعلى';
+        
+            // Append the title paragraph to the heading div
+            maxPriceHeading.appendChild(maxPriceTitle);
+        
+            // Append the heading div to the field div
+            maxPriceField.appendChild(maxPriceHeading);
+        
+            // Create the div element with class "field__content"
+            const maxPriceContent = document.createElement('div');
+            maxPriceContent.classList.add('field__content');
+        
+            // Create the input element with type "text" and placeholder "أدخل السعر الأعلى ر.س" and name 'max-price-input'
+            const maxPriceInput = document.createElement('input');
+            maxPriceInput.setAttribute('type', 'text');
+            maxPriceInput.setAttribute('placeholder', 'أدخل السعر الأعلى ر.س');
+            maxPriceInput.setAttribute('name', 'max-price-input');
+            maxPriceInput.setAttribute('id', 'max-price-input');
+        
+            // Append the input to the content div
+            maxPriceContent.appendChild(maxPriceInput);
+        
+            // Append the content div to the field div
+            maxPriceField.appendChild(maxPriceContent);
+        
+            // Append the maxPriceField to the fields wrapper
+            fieldsWrapper.appendChild(maxPriceField);
+        }
+                
+        function appendFloorInputField() {
+            // Create the div element with class "field"
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            // Create the div element with class "field__heading"
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            // Create the paragraph element with class "field__heading__title" and text content "الدور"
+            const titleParagraph = document.createElement('p');
+            titleParagraph.classList.add('field__heading__title');
+            titleParagraph.textContent = 'الدور';
+        
+            // Append the title paragraph to the heading div
+            headingDiv.appendChild(titleParagraph);
+        
+            // Append the heading div to the field div
+            fieldDiv.appendChild(headingDiv);
+        
+            // Create the div element with class "field__content"
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            // Create the input element with type "hidden" and name "floor-input"
+            const hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'floor-input');
+        
+            // Append the hidden input to the content div
+            contentDiv.appendChild(hiddenInput);
+        
+            // Create the div element with class "grid" and class "floor"
+            const gridDiv = document.createElement('div');
+            gridDiv.classList.add('grid', 'floor');
+        
+            // Create the six div elements with class "item" and respective data-value attributes
+            const allDiv = document.createElement('div');
+            allDiv.setAttribute('data-value', '');
+            allDiv.classList.add('item');
+            allDiv.textContent = 'الكل';
+        
+            const groundDiv = document.createElement('div');
+            groundDiv.setAttribute('data-value', 'أرضي');
+            groundDiv.classList.add('item');
+            groundDiv.textContent = 'أرضي';
+        
+            const upperDiv = document.createElement('div');
+            upperDiv.setAttribute('data-value', 'علوي');
+            upperDiv.classList.add('item');
+            upperDiv.textContent = 'علوي';
+        
+            const thirdDiv = document.createElement('div');
+            thirdDiv.setAttribute('data-value', '3');
+            thirdDiv.classList.add('item');
+            thirdDiv.textContent = '3';
+        
+            const fourthDiv = document.createElement('div');
+            fourthDiv.setAttribute('data-value', '4');
+            fourthDiv.classList.add('item');
+            fourthDiv.textContent = '4';
+        
+            const moreDiv = document.createElement('div');
+            moreDiv.setAttribute('data-value', 'أكثر');
+            moreDiv.classList.add('item');
+            moreDiv.textContent = 'أكثر';
+        
+            // Append the item divs to the grid div
+            gridDiv.appendChild(allDiv);
+            gridDiv.appendChild(groundDiv);
+            gridDiv.appendChild(upperDiv);
+            gridDiv.appendChild(thirdDiv);
+            gridDiv.appendChild(fourthDiv);
+            gridDiv.appendChild(moreDiv);
+        
+            // Append the grid div to the content div
+            contentDiv.appendChild(gridDiv);
+        
+            // Append the content div to the field div
+            fieldDiv.appendChild(contentDiv);
+        
+
+            changeItemValue(fieldDiv.querySelector('.grid'))
+
+            // Append the field div to the fields wrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+        
+        
+        
+        let filterBtn = document.querySelector('#filter-btn'); 
+        let propertyTypeSelect = document.querySelector("[name=property_type]");
+
+        propertyTypeSelect.addEventListener('change', ()=> {
+            propertyTypeSelectValue = propertyTypeSelect.value; 
+            if (propertyTypeSelectValue == 'apartment_rent' || propertyTypeSelectValue == 'apartment_sale') {
+                // show the filters for apartment 
+                fieldsWrapper.innerHTML = "";
+                appendRentTypeField();
+                appendRoomsCountField();
+                appendFamiliesSinglesField(); 
+                appendMinMaxPrice(); 
+                appendFloorInputField(); 
+            }
+        })
+
+        filterBtn.addEventListener('click', ()=> {
+            if  (propertyTypeSelect.value == 'apartment_rent') {
+                // rent_type 
+                // rooms_count 
+                // familes_singles
+
+            }
+        })
 
     </script>
 

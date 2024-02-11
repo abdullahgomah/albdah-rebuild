@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'maps',
     'user', 
+    'django_filters', 
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
