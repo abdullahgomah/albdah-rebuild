@@ -370,7 +370,7 @@
     <div class="overlay-layer"></div>
 
 
-
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="{% static 'js/pages/app.js' %}"></script>
     <script src="{% static 'js/pages/index.js' %}"></script>
 
@@ -943,10 +943,70 @@
             ];
         
             // Add options for ages from 2 to 35+
-            for (let i = 2; i <= 34; i++) {
+            for (let i = 2; i <= 24; i++) {
                 options.push({ value: i.toString(), text: i.toString() });
             }
-            options.push({ value: '35+', text: '35+' });
+            options.push({ value: '25+', text: '25+' });
+        
+            // Create and append option elements to select element
+            options.forEach(optionData => {
+                const option = document.createElement('option');
+                option.setAttribute('value', optionData.value);
+                option.textContent = optionData.text;
+                selectElement.appendChild(option);
+            });
+        
+            // Append the select element to the content div
+            contentDiv.appendChild(selectElement);
+        
+            // Append the content div to the field div
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fields wrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendPropertyFloorSelect() {
+            // Create the div element with class "field"
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            // Create the div element with class "field__heading"
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            // Create the paragraph element with class "field__heading__title" and text content "الدور"
+            const titleParagraph = document.createElement('p');
+            titleParagraph.classList.add('field__heading__title');
+            titleParagraph.textContent = 'الدور';
+        
+            // Append the title paragraph to the heading div
+            headingDiv.appendChild(titleParagraph);
+        
+            // Append the heading div to the field div
+            fieldDiv.appendChild(headingDiv);
+        
+            // Create the div element with class "field__content"
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            // Create the select element with name "property-floor-select" and id "property-floor-select"
+            const selectElement = document.createElement('select');
+            selectElement.setAttribute('name', 'property-floor-select');
+            selectElement.setAttribute('id', 'property-floor-select');
+        
+            // Create options for select element
+            const options = [
+                { value: '', text: 'الكل' },
+                { value: 'أرضي', text: 'أرضي' },
+                { value: 'علوي', text: 'علوي' }
+            ];
+        
+            // Add options for floors from 3 to 7
+            for (let i = 3; i <= 7; i++) {
+                options.push({ value: i.toString(), text: i.toString() });
+            }
+            options.push({ value: '+8', text: '+8' });
         
             // Create and append option elements to select element
             options.forEach(optionData => {
@@ -972,24 +1032,91 @@
         let propertyTypeSelect = document.querySelector("[name=property_type]");
 
         propertyTypeSelect.addEventListener('change', ()=> {
+            fieldsWrapper.innerHTML = "";
             propertyTypeSelectValue = propertyTypeSelect.value; 
             if (propertyTypeSelectValue == 'apartment_rent' || propertyTypeSelectValue == 'apartment_sale') {
                 // show the filters for apartment 
-                fieldsWrapper.innerHTML = "";
                 appendRentTypeField();
                 appendRoomsCountField();
                 appendFamiliesSinglesField(); 
                 appendMinMaxPrice(); 
-                appendFloorInputField(); 
+                appendPropertyFloorSelect(); 
                 appendPropertyAgeField(); 
-            }
+                
+            } 
         })
 
         filterBtn.addEventListener('click', ()=> {
+            let cityInput = document.querySelector('[name=city]').value; 
+            let district = document.querySelector('[name=district]').value; 
+
+
             if  (propertyTypeSelect.value == 'apartment_rent') {
                 // rent_type 
                 // rooms_count 
                 // familes_singles
+
+
+                // get all variables 
+                let rentTypeInput = document.querySelector('[name=rent_type_input]').value 
+                let roomCountInput = document.querySelector('[name=rooms-count-input]').value; 
+                let familes_singlesInput = document.querySelector('[name=single-or-family-input]').value;  
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let propertyFloorSelect = document.querySelector('[name=property-floor-select]').value; 
+                let propertyAgeSelect = document.querySelector("[name=property-age-select]").value;
+                
+                let families, single= 0; 
+                if (familes_singlesInput == 'families') { 
+                    families = 1; 
+                    single = 0; 
+                } else if (familes_singlesInput == 'single') { 
+                    single = 1; 
+                    families = 0 ;
+                } else if (familes_singlesInput == '') {
+                    families = 1; 
+                    single = 1; 
+                }
+
+                if (minPriceInput.value == "" ) { 
+                    minPriceInput.value = 0; 
+                } 
+                
+                if (maxPriceInput.value == "" ) {
+                    maxPriceInput.value = 0;
+                }
+
+                var filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood': district, 
+                    'rent_type': rentTypeInput, 
+                    'rooms': roomCountInput, 
+                    'families': families, 
+                    'single': single, 
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'floor': propertyFloorSelect, 
+                    'property_age': propertyAgeSelect
+                }
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+                  
+
 
             }
         })

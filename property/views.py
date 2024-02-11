@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
 from django.urls import reverse 
 from django.contrib.auth.decorators import login_required
 from .models import * 
@@ -921,3 +922,42 @@ def show_reported(request):
     context = {} 
     return render(request, 'property/reported.html', context=context )    
 
+
+
+
+
+def filter_properties(request):
+    # property_type = request.GET.get('p_type')
+    filters = request.GET.dict()
+    p_type = filters['p_type']
+
+
+    # Remove 'property_type' from filters
+    del filters["p_type"]
+
+    new_filters = {'p_type': p_type}
+
+    for i in filters.items(): 
+        if i[1] != '': 
+            new_filters[i[0]] = i[1]
+    
+    print(new_filters)
+
+    # Construct filter query
+    filter_query = { 'p_type': p_type }
+    for key, value in filters.items():
+        filter_query[key] = value
+
+    # Filter properties
+    filtered_properties = Property.objects.filter(**new_filters)
+
+    print(type(filter_properties))
+    print('*'* 30) 
+
+    context = {
+        'result': list(filtered_properties)
+    }
+
+
+    # return JsonResponse(list(filtered_properties), safe=False)
+    return render(request, 'property/filter-results.html', context)
