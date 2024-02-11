@@ -356,6 +356,8 @@
 
                 <div class="fields-wrapper">
                     
+
+
                 </div>
                 
                 <div class="field">
@@ -905,6 +907,65 @@
         }
 
         
+        function appendPropertyAgeField() {
+            // Create the div element with class "field"
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            // Create the div element with class "field__heading"
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            // Create the paragraph element with class "field__heading__title" and text content "عمر العقار"
+            const titleParagraph = document.createElement('p');
+            titleParagraph.classList.add('field__heading__title');
+            titleParagraph.textContent = 'عمر العقار';
+        
+            // Append the title paragraph to the heading div
+            headingDiv.appendChild(titleParagraph);
+        
+            // Append the heading div to the field div
+            fieldDiv.appendChild(headingDiv);
+        
+            // Create the div element with class "field__content"
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            // Create the select element with name "property-age-select" and id "property-age-select"
+            const selectElement = document.createElement('select');
+            selectElement.setAttribute('name', 'property-age-select');
+            selectElement.setAttribute('id', 'property-age-select');
+        
+            // Create options for select element
+            const options = [
+                { value: '', text: 'غير محدد' },
+                { value: 'جديد', text: 'جديد' }
+            ];
+        
+            // Add options for ages from 2 to 35+
+            for (let i = 2; i <= 34; i++) {
+                options.push({ value: i.toString(), text: i.toString() });
+            }
+            options.push({ value: '35+', text: '35+' });
+        
+            // Create and append option elements to select element
+            options.forEach(optionData => {
+                const option = document.createElement('option');
+                option.setAttribute('value', optionData.value);
+                option.textContent = optionData.text;
+                selectElement.appendChild(option);
+            });
+        
+            // Append the select element to the content div
+            contentDiv.appendChild(selectElement);
+        
+            // Append the content div to the field div
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fields wrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
         
         
         let filterBtn = document.querySelector('#filter-btn'); 
@@ -920,6 +981,7 @@
                 appendFamiliesSinglesField(); 
                 appendMinMaxPrice(); 
                 appendFloorInputField(); 
+                appendPropertyAgeField(); 
             }
         })
 
