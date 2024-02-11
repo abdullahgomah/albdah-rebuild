@@ -3,7 +3,7 @@ section.search-filters {
     box-shadow: 3px 3px 20px #1e1e1e30;
     /* border-radius: 2rem; */
     position: fixed;
-    display: none;
+    /* display: none; */
     right: 0; 
     top:0;  
     width: 400px; 
@@ -69,4 +69,61 @@ section.search-filters {
 
 select::-ms-expand {
     display: none;
+}
+
+
+.fields-wrapper .field__content .grid {
+    display: grid;
+    border: 1px solid #1e1e1e30;
+}
+
+.grid.rent_type {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.roomsCount {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid.families-single {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.floor {
+    grid-template-columns: repeat(6, 1fr);
+}
+.grid.floor .item:first-child {
+    background: var(--primary-color); 
+    color: var(--secondary-color);
+}
+
+.grid.families-single .item:first-child {
+    background: var(--primary-color); 
+    color: var(--secondary-color);
+}
+
+.grid.roomsCount .item:first-child {
+    background: var(--primary-color); 
+    color: var(--secondary-color); 
+}
+
+.fields-wrapper .field__content .item {
+    padding: .75rem; 
+    text-align: center;
+    cursor: pointer; 
+}
+
+.fields-wrapper .field__content .grid.rent_type .item:nth-child(2) {
+    border-right: 1px solid #1e1e1e30;
+    border-left: 1px solid #1e1e1e30;
+}
+
+.fields-wrapper .grid.rent_type .item:first-child {
+    background: var(--primary-color); 
+    color: var(--secondary-color); 
+}
+
+.field input {
+    width: 100%; 
+    padding: .5rem 1rem; 
 }
