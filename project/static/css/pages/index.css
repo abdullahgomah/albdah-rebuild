@@ -4,7 +4,7 @@ section.search-filters {
     overflow-x: scroll;
     /* border-radius: 2rem; */
     position: fixed;
-    /* display: none; */
+    display: none;
     right: 0; 
     top:0;  
     width: 400px; 
