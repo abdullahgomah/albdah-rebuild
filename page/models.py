@@ -1,4 +1,6 @@
 from django.db import models
+from django_ckeditor_5.fields import CKEditor5Field
+
 
 # Create your models here.
 class Home(models.Model): 
@@ -21,3 +23,10 @@ class About(models.Model):
     class Meta:
         verbose_name='من نحن'
         verbose_name_plural='من نحن'
+
+class PropertyOwner(models.Model): 
+    text = CKEditor5Field(config_name="extends")
+
+    class Meta: 
+        verbose_name = "أصحاب العقار"
+        verbose_name_plural = "أصحاب العقار"
