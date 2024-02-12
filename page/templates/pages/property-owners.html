@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}أصحاب العقار{% endblock title %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+        {{property_owner_info|safe}}
+        
+        <br>
+        <a style="direction: ltr;" class="btn btn-solid" href="https://wa.link/53ukow">
+            <i class="fa-brands fa-whatsapp"></i>
+            +966 56 559 4599
+        </a>
+    </div>
+</section>
+
+
+
+{% endblock content %}

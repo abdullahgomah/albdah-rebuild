@@ -44,3 +44,11 @@ def favourites(request):
     } 
     return render(request, 'pages/favourites.html', context=context)
 
+
+
+def property_owners(request): 
+    info  = PropertyOwner.objects.first() 
+    context = {
+        'property_owner_info': info.text,
+    } 
+    return render(request, 'pages/property-owners.html', context)
