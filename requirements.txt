@@ -7,8 +7,11 @@ certifi==2024.2.2
 charset-normalizer==3.3.2
 crispy-bootstrap4==2023.1
 Django==5.0.1
+django-ckeditor==6.7.1
+django-ckeditor-5==0.2.11
 django-crispy-forms==2.1
 django-filter==23.5
+django-js-asset==2.2.0
 django-markdownx==4.0.7
 frozenlist==1.4.1
 idna==3.6
