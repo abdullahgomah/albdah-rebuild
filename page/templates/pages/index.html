@@ -1078,13 +1078,13 @@
                     single = "" 
                 }
 
-                if (minPriceInput.value == "" ) { 
+                {% comment %} if (minPriceInput.value == "" ) { 
                     minPriceInput.value = 0; 
                 } 
                 
                 if (maxPriceInput.value == "" ) {
                     maxPriceInput.value = 0;
-                }
+                } {% endcomment %}
 
                 var filters = {
                     'p_type': propertyTypeSelectValue,
