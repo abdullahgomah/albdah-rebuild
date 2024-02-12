@@ -925,7 +925,6 @@ def show_reported(request):
 
 
 
-
 def filter_properties(request):
     # property_type = request.GET.get('p_type')
     filters = request.GET.dict()
