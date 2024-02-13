@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django_filters',
     'django_ckeditor_5',
     'ckeditor_uploader', 
-    'django_extensions', 
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
