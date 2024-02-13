@@ -172,6 +172,8 @@ def profile(request):
         form = OfficeUpdate(instance=user)
     elif role == 'real_estate_marketer': 
         form = MarkterUpdate(instance=user)
+    else: 
+        form =UserUpdateForm(instance=user)
 
     if request.POST:
         if role=='user': 
