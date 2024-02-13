@@ -173,8 +173,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True 
 EMAIL_HOST_USER= 'djangodeveloper6@gmail.com'
 EMAIL_HOST_PASSWORD = "qawsedrevyzcguqq"
-<<<<<<< HEAD
-=======
 
 
 
@@ -267,4 +265,4 @@ CKEDITOR_5_CONFIGS = {
         }
     }
 }
->>>>>>> refs/remotes/origin/main
+

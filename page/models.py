@@ -26,6 +26,7 @@ class About(models.Model):
 
 class PropertyOwner(models.Model): 
     text = CKEditor5Field(config_name="extends")
+    data = models.DateTimeField(auto_now_add=True, null=True, blank=True) 
 
     class Meta: 
         verbose_name = "أصحاب العقار"
