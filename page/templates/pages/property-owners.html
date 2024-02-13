@@ -4,7 +4,32 @@
 
 {% block content %}
 
-<section>
+<style>
+.heading__section {
+    width: 100%; 
+    background: var(--primary-color); 
+    min-height: 200px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 0 !important;
+}
+
+.heading__section h1 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+</style>
+
+<section class="heading__section">
+    <h1>
+        أصحاب العقار
+    </h1>
+    <!-- <img src="./assets/imgs/توثيق عقد ايجار الموحد.jpg" alt=""> -->
+</section>
+
+<section class="mt-2">
     <div class="container">
         {{property_owner_info|safe}}
         

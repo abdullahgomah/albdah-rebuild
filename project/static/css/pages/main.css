@@ -12,6 +12,10 @@
     transition: padding .2s ease-in-out;
 }
 
+*.mt-2{ 
+    margin-top: 1rem;
+}
+
 :root { 
     --primary-color: #1e2957; 
     --secondary-color: white; 
