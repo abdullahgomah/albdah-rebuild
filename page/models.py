@@ -26,6 +26,7 @@ class About(models.Model):
 
 class PropertyOwner(models.Model): 
     text = CKEditor5Field(config_name="extends")
+    a = models.CharField(null=True, blank=True, max_length=100) 
 
     class Meta: 
         verbose_name = "أصحاب العقار"
