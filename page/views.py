@@ -47,8 +47,8 @@ def favourites(request):
 
 
 def property_owners(request): 
-    info  = PropertyOwner.objects.first() 
+#    info  = PropertyOwner.objects.first() 
     context = {
-        'property_owner_info': info.text,
+        'property_owner_info': "allah",
     } 
     return render(request, 'pages/property-owners.html', context)
