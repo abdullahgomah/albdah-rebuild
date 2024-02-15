@@ -363,6 +363,9 @@
                 <div class="field">
                     <a class="btn btn-solid" id="filter-btn">بحث</a>
                 </div>
+                <div class="field">
+                    <a id='reset-btn' >مسح الفلاتر</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1120,6 +1123,30 @@
 
             }
         })
+
+        // Code reset btn 
+        let resetBtn = document.querySelector('#reset-btn'); 
+        resetBtn.addEventListener('click', () => {
+            searchFilters.querySelectorAll('select').forEach((select)=> {
+                if (select.name != 'property_type') { 
+                    select.selectedIndex = 0 ;
+                }
+            })
+            searchFilters.querySelectorAll("input").forEach((input) => {
+                input.value = ""; 
+            })
+            searchFilters.querySelectorAll('.grid').forEach((grid) => {
+                let gridItems = grid.querySelectorAll(".item"); 
+                gridItems.forEach((item) => {
+                    item.style.background = 'var(--secondary-color)'
+                    item.style.color = "var(--primary-color)"; 
+                })
+                gridItems[0].style.background = "var(--primary-color)"; 
+                gridItems[0].style.color = 'var(--secondary-color)';
+                grid.parentElement.querySelector('input').value = ""; 
+            })
+        })
+
 
     </script>
 
