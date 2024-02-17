@@ -1029,6 +1029,84 @@
             fieldsWrapper.appendChild(fieldDiv);
         }
         
+        function appendPrivateEnternaceInput() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="private_enternace">مدخل خاص</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="private_enternace" id="private_enternace">
+                </div>
+            `;
+        
+            // Get reference to the fieldWrapper div
+            var fieldWrapper = document.querySelector('.fieldWrapper');
+        
+            // Append the field div to the fieldWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendACInput() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="ac">مكيف</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="ac" id="ac">
+                </div>
+            `;
+        
+            // Append the field div to the fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendCarEntranceInput() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="car_entrance">مدخل سيارة</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="car_entrance" id="car_entrance">
+                </div>
+            `;
+        
+            // Append the field div directly to the existing fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendFurnishedInput() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="furnished">مؤثثة</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="furnished" id="furnished">
+                </div>
+            `;
+        
+            // Append the field div directly to the existing fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
         
         
         let filterBtn = document.querySelector('#filter-btn'); 
@@ -1045,7 +1123,10 @@
                 appendMinMaxPrice(); 
                 appendPropertyFloorSelect(); 
                 appendPropertyAgeField(); 
-                
+                appendPrivateEnternaceInput();
+                appendACInput();
+                appendCarEntranceInput();
+                appendFurnishedInput();
             } 
         })
 
@@ -1055,9 +1136,10 @@
 
 
             if  (propertyTypeSelect.value == 'apartment_rent') {
-                // rent_type 
-                // rooms_count 
-                // familes_singles
+                // مدخل خاص
+                // مكيف 
+                // مدخل سيارة 
+                // مؤثثة 
 
 
                 // get all variables 
@@ -1068,7 +1150,37 @@
                 let maxPriceInput = document.querySelector('[name=max-price-input]'); 
                 let propertyFloorSelect = document.querySelector('[name=property-floor-select]').value; 
                 let propertyAgeSelect = document.querySelector("[name=property-age-select]").value;
+                let privateEnteranceInput = document.querySelector('input[name=private_enternace]'); 
+                let acInput = document.querySelector('input[name=ac]'); 
+                let carEntranceInput = document.querySelector('input[name=car_entrance]'); 
+                let furnishedInput = document.querySelector('input[name=furnished]'); 
                 
+                let privateEnteranceInputValue, acInputValue, carEntranceInputValue, furnishedInputValue; 
+
+                if (privateEnteranceInput.checked)  {
+                    privateEnteranceInput = 1; 
+                } else { 
+                    privateEnteranceInputValue = "" ; 
+                }
+
+                if (acInput.checked)  {
+                    acInputValue = 1; 
+                } else { 
+                    acInputValue == "" ; 
+                }
+
+                if (carEntranceInput.checked)  {
+                    carEntranceInputValue = 1; 
+                } else { 
+                    carEntranceInputValue = "" 
+                }
+
+                if (furnishedInput.checked)  {
+                    furnishedInputValue = 1; 
+                } else { 
+                    furnishedInputValue = "" 
+                }
+
                 let families, single= 0; 
                 if (familes_singlesInput == 'families') { 
                     families = 1; 
@@ -1100,7 +1212,12 @@
                     'price__gte': minPriceInput.value, 
                     'price__lte': maxPriceInput.value, 
                     'floor': propertyFloorSelect, 
-                    'property_age': propertyAgeSelect
+                    'property_age': propertyAgeSelect, 
+                    'private_enternace': privateEnteranceInputValue, 
+                    'ac': acInputValue, 
+                    'car_entrance': carEntranceInputValue, 
+                    'furnished': furnishedInputValue, 
+                    'sale': 0
                 }
 
                 $.ajax({
@@ -1144,6 +1261,10 @@
                 gridItems[0].style.background = "var(--primary-color)"; 
                 gridItems[0].style.color = 'var(--secondary-color)';
                 grid.parentElement.querySelector('input').value = ""; 
+            })
+
+            searchFilters.querySelectorAll('input[type=checkbox]').forEach((input) => {
+                input.checked = false; 
             })
         })
 
