@@ -17,21 +17,27 @@
 
 <section>
     <div class="container">
-        <h1 class="section__heading">التسجيل كـ </h1>
+        {% comment %} <h1 class="section__heading">التسجيل كـ </h1> {% endcomment %}
+        <h1 class="section__headin">
+            اختر نوع المستخدم:
+        </h1>
 
         <div class="grid">
             <div class="box">
                 <a href="{% url 'user:user-register' %}">
+                    <i class="fa-solid fa-user"></i>
                     مستخدم
                 </a>
             </div>
             <div class="box">
                 <a href="{% url 'user:office-register' %}">
+                    <i class="fa-solid fa-house-laptop"></i>
                     مكتب عقاري
                 </a>
             </div>
             <div class="box">
                 <a href="{% url 'user:markter-register' %}">
+                    <i class="fa-solid fa-bullhorn"></i>
                     مسوق عقاري
                 </a>
             </div>
