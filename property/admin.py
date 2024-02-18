@@ -10,6 +10,6 @@ admin.site.register(Favourite)
 
 class PropertyAdmin(admin.ModelAdmin): 
     model = Property
-    search_fields = ('number',)
-    
+    search_fields = ('number', 'interface')
+
 admin.site.register(Property, PropertyAdmin) 

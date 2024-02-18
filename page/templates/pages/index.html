@@ -355,7 +355,9 @@
                 </div>
 
                 <div class="fields-wrapper">
-                    
+
+
+
 
 
                 </div>
@@ -481,6 +483,10 @@
         let citySelectInput = document.querySelector('#city-select-input') 
         citySelectInput.addEventListener('change', ()=> {
             districtSelectInput.innerHTML = "" ;
+            let allOption = document.createElement('option'); 
+            allOption.value = "" ;
+            allOption.textContent = "الكل"
+            districtSelectInput.appendChild(allOption);
             if (citySelectInput.value =='بريدة') {
                 BuraydaDistricts.forEach((city) => {
                     let new_option = document.createElement('option') 
@@ -492,6 +498,25 @@
         })
 
         let fieldsWrapper = document.querySelector('.fields-wrapper'); 
+        function changeItemValue(grid) {
+            grid.querySelectorAll(".item").forEach((item)=> {
+                item.addEventListener('click', () => {
+                    console.log(item);
+                    grid.querySelectorAll(".item").forEach((item) => {
+                        item.style.background = 'white'; 
+                        item.style.color = 'black'
+                    })
+                    item.style.color = 'var(--secondary-color)'
+                    item.style.background = 'var(--primary-color)'
+
+                    item.parentElement.parentElement.querySelector('input').value = item.dataset.value; 
+                    {% comment %} console.log(item);  {% endcomment %}
+                    {% comment %} console.log(item.parentElement.parentElement.querySelector('input'));  {% endcomment %}
+                    {% comment %} console.log(item.dataset.value); {% endcomment %}
+                })
+            })
+        }
+
         
         function appendRentTypeField() {
 
@@ -566,111 +591,7 @@
 
         }
 
-        function appendRoomsCountField() {
-            // Create the div element with class "field"
-            const fieldDiv = document.createElement('div');
-            fieldDiv.classList.add('field');
-        
-            // Create the div element with class "field__heading"
-            const headingDiv = document.createElement('div');
-            headingDiv.classList.add('field__heading');
-        
-            // Create the paragraph element with class "field__heading__title" and text content "عدد الغرف"
-            const titleParagraph = document.createElement('p');
-            titleParagraph.classList.add('field__heading__title');
-            titleParagraph.textContent = 'عدد الغرف';
-        
-            // Append the title paragraph to the heading div
-            headingDiv.appendChild(titleParagraph);
-        
-            // Append the heading div to the field div
-            fieldDiv.appendChild(headingDiv);
-        
-            // Create the div element with class "field__content"
-            const contentDiv = document.createElement('div');
-            contentDiv.classList.add('field__content');
-        
-            // Create the input element with type "hidden" and name "rooms-count-input"
-            const hiddenInput = document.createElement('input');
-            hiddenInput.setAttribute('type', 'hidden');
-            hiddenInput.setAttribute('name', 'rooms-count-input');
-            hiddenInput.setAttribute('value', '');
-        
-            // Append the hidden input to the content div
-            contentDiv.appendChild(hiddenInput);
-        
-            // Create the div element with class "grid" and class "roomsCount"
-            const gridDiv = document.createElement('div');
-            gridDiv.classList.add('grid', 'roomsCount');
-        
-            // Create the six div elements with class "item" and respective data-value attributes
-            const allDiv = document.createElement('div');
-            allDiv.setAttribute('data-value', '');
-            allDiv.classList.add('item');
-            allDiv.textContent = 'الكل';
-        
-            const oneDiv = document.createElement('div');
-            oneDiv.setAttribute('data-value', '1');
-            oneDiv.classList.add('item');
-            oneDiv.textContent = '1';
-        
-            const twoDiv = document.createElement('div');
-            twoDiv.setAttribute('data-value', '2');
-            twoDiv.classList.add('item');
-            twoDiv.textContent = '2';
-        
-            const threeDiv = document.createElement('div');
-            threeDiv.setAttribute('data-value', '3');
-            threeDiv.classList.add('item');
-            threeDiv.textContent = '3';
-        
-            const fourDiv = document.createElement('div');
-            fourDiv.setAttribute('data-value', '4');
-            fourDiv.classList.add('item');
-            fourDiv.textContent = '4';
-        
-            const plusFiveDiv = document.createElement('div');
-            plusFiveDiv.setAttribute('data-value', '+5');
-            plusFiveDiv.classList.add('item');
-            plusFiveDiv.textContent = '+5';
-        
-            // Append the item divs to the grid div
-            gridDiv.appendChild(allDiv);
-            gridDiv.appendChild(oneDiv);
-            gridDiv.appendChild(twoDiv);
-            gridDiv.appendChild(threeDiv);
-            gridDiv.appendChild(fourDiv);
-            gridDiv.appendChild(plusFiveDiv);
-        
-            // Append the grid div to the content div
-            contentDiv.appendChild(gridDiv);
-        
-            // Append the content div to the field div
-            fieldDiv.appendChild(contentDiv);
-        
-            
-            // Append the field div to the fields wrapper
-            changeItemValue(fieldDiv.querySelector('.grid'))
-            fieldsWrapper.appendChild(fieldDiv);
-        }
 
-        function changeItemValue(grid) {
-            grid.querySelectorAll(".item").forEach((item)=> {
-                item.addEventListener('click', () => {
-                    grid.querySelectorAll(".item").forEach((item) => {
-                        item.style.background = 'white'; 
-                        item.style.color = 'black'
-                    })
-                    item.style.color = 'var(--secondary-color)'
-                    item.style.background = 'var(--primary-color)'
-
-                    item.parentElement.parentElement.querySelector('input').value = item.dataset.value; 
-                    {% comment %} console.log(item);  {% endcomment %}
-                    {% comment %} console.log(item.parentElement.parentElement.querySelector('input'));  {% endcomment %}
-                    {% comment %} console.log(item.dataset.value); {% endcomment %}
-                })
-            })
-        }
 
         function appendFamiliesSinglesField() {
             // Create the div element with class "field"
@@ -910,6 +831,8 @@
         }
 
         
+
+
         function appendPropertyAgeField() {
             // Create the div element with class "field"
             const fieldDiv = document.createElement('div');
@@ -1108,6 +1031,284 @@
             fieldsWrapper.appendChild(fieldDiv);
         }
         
+
+        function appendMinMaxSpace() {
+            // Create the minimum space field
+            const minSpaceField = document.createElement('div');
+            minSpaceField.classList.add('field');
+        
+            const minSpaceHeading = document.createElement('div');
+            minSpaceHeading.classList.add('field__heading');
+            minSpaceHeading.innerHTML = '<p>المساحة الأدنى</p>';
+        
+            const minSpaceContent = document.createElement('div');
+            minSpaceContent.classList.add('field__content');
+            const minSpaceInput = document.createElement('input');
+            minSpaceInput.setAttribute('name', 'min-space-input');
+            minSpaceInput.setAttribute('placeholder', 'أدخل المساحة الأدنى بالمتر المربع');
+            minSpaceContent.appendChild(minSpaceInput);
+        
+            minSpaceField.appendChild(minSpaceHeading);
+            minSpaceField.appendChild(minSpaceContent);
+        
+            // Create the maximum space field
+            const maxSpaceField = document.createElement('div');
+            maxSpaceField.classList.add('field');
+        
+            const maxSpaceHeading = document.createElement('div');
+            maxSpaceHeading.classList.add('field__heading');
+            maxSpaceHeading.innerHTML = '<p>المساحة الأقصى</p>';
+        
+            const maxSpaceContent = document.createElement('div');
+            maxSpaceContent.classList.add('field__content');
+            const maxSpaceInput = document.createElement('input');
+            maxSpaceInput.setAttribute('name', 'max-space-input');
+            maxSpaceInput.setAttribute('placeholder', 'أدخل المساحة الأقصى بالمتر المربع');
+            maxSpaceContent.appendChild(maxSpaceInput);
+        
+            maxSpaceField.appendChild(maxSpaceHeading);
+            maxSpaceField.appendChild(maxSpaceContent);
+        
+            // Append both fields to the fieldsWrapper
+            fieldsWrapper.appendChild(minSpaceField);
+            fieldsWrapper.appendChild(maxSpaceField);
+        }
+        
+        function appendInterfaceSelectField() {
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            const headingParagraph = document.createElement('p');
+            headingParagraph.textContent = 'الواجهة';
+        
+            headingDiv.appendChild(headingParagraph);
+        
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            const selectElement = document.createElement('select');
+            selectElement.setAttribute('name', 'interface-select');
+            selectElement.setAttribute('id', 'interface-select');
+        
+            const options = [
+                { value: '', text: 'الكل' },
+                { value: 'شمالية', text: 'شمالية' },
+                { value: 'جنوبية', text: 'جنوبية' },
+                { value: 'شرقية', text: 'شرقية' },
+                { value: 'غربية', text: 'غربية' },
+                { value: 'شمالية شرقية', text: 'شمالية شرقية' },
+                { value: 'شمالية غربية', text: 'شمالية غربية' },
+                { value: 'جنوبية شرقية', text: 'جنوبية شرقية' },
+                { value: 'جنوبية غربية', text: 'جنوبية غربية' }
+            ];
+        
+            options.forEach(optionData => {
+                const option = document.createElement('option');
+                option.setAttribute('value', optionData.value);
+                option.textContent = optionData.text;
+                selectElement.appendChild(option);
+            });
+        
+            contentDiv.appendChild(selectElement);
+        
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+        
+        function appendStreetWidthSelect() {
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            const headingParagraph = document.createElement('p');
+            headingParagraph.textContent = 'عرض الشارع';
+        
+            headingDiv.appendChild(headingParagraph);
+        
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            const selectElement = document.createElement('select');
+            selectElement.setAttribute('name', 'street-width-input');
+            selectElement.setAttribute('id', 'street-width-input');
+        
+            const optionAll = document.createElement('option');
+            optionAll.setAttribute('value', '');
+            optionAll.textContent = 'الكل';
+            selectElement.appendChild(optionAll);
+        
+            for (let i = 1; i <= 30; i++) {
+                const option = document.createElement('option');
+                option.setAttribute('value', i.toString());
+                option.textContent = i.toString();
+                selectElement.appendChild(option);
+            }
+        
+            const option30Plus = document.createElement('option');
+            option30Plus.setAttribute('value', '30');
+            option30Plus.textContent = '+30';
+            selectElement.appendChild(option30Plus);
+        
+            contentDiv.appendChild(selectElement);
+        
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendSwimInput() {
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field', 'flex');
+        
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            const labelSwim = document.createElement('label');
+            labelSwim.setAttribute('for', 'pool');
+            labelSwim.textContent = 'مسبح';
+        
+            headingDiv.appendChild(labelSwim);
+        
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            const inputSwim = document.createElement('input');
+            inputSwim.setAttribute('type', 'checkbox');
+            inputSwim.setAttribute('name', 'pool-input');
+            inputSwim.setAttribute('id', 'pool-input');
+        
+            contentDiv.appendChild(inputSwim);
+        
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendDuplexInput() {
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field', 'flex');
+        
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            const labelDuplex = document.createElement('label');
+            labelDuplex.setAttribute('for', 'duplex-input');
+            labelDuplex.textContent = 'دوبلكس';
+        
+            headingDiv.appendChild(labelDuplex);
+        
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            const inputDuplex = document.createElement('input');
+            inputDuplex.setAttribute('type', 'checkbox');
+            inputDuplex.setAttribute('name', 'duplex-input');
+            inputDuplex.setAttribute('id', 'duplex-input');
+        
+            contentDiv.appendChild(inputDuplex);
+        
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+    
+
+        function appendRoomsCountInput() {
+            // Define the HTML string for the rooms count input
+            var roomsCountInputHTML = `
+                <div class="field">
+                    <div class="field__heading">
+                        <p>عدد الغرف</p>
+                    </div>
+                    <div class="field__content">
+                        <select name="rooms-count-input">
+                            <option value="">الكل</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="+8">+8</option>
+                        </select>
+                    </div>
+                </div>
+            `;
+            
+            // Append the HTML to the fieldsWrapper variable
+            fieldsWrapper.innerHTML += roomsCountInputHTML;
+        }
+        
+        function appendLoungesCountInput() {
+            // Define the HTML string for the lounges count input
+            var loungesCountInputHTML = `
+            <div class="field">
+                <div class="field__heading">
+                    <p>عدد الصالات</p> <!-- Changed text content to "عدد الصالات" -->
+                </div>
+                <div class="field__content">
+                    <select name="lounges-count-input"> <!-- Changed select name to "lounges-count-input" -->
+                        <option value="">الكل</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="+8">+8</option>
+                    </select>
+                </div>
+            </div>
+            
+            `;
+            
+            // Append the HTML to the fieldsWrapper variable
+            fieldsWrapper.innerHTML += loungesCountInputHTML;
+        }
+    
+        function appendBathroomsCountInput() {
+            // Define the HTML string for the bathrooms count input
+            var bathroomsCountInputHTML = `
+                <div class="field">
+                    <div class="field__heading">
+                        <p>عدد دورات المياه</p>
+                    </div>
+                    <div class="field__content">
+                        <select name="bathrooms-count-input">
+                            <option value="">الكل</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="+8">+8</option>
+                        </select>
+                    </div>
+                </div>
+            `;
+            
+            // Append the HTML to the fieldsWrapper variable
+            fieldsWrapper.innerHTML += bathroomsCountInputHTML;
+        }
+        
+        
+        
         
         let filterBtn = document.querySelector('#filter-btn'); 
         let propertyTypeSelect = document.querySelector("[name=property_type]");
@@ -1118,7 +1319,7 @@
             if (propertyTypeSelectValue == 'apartment_rent' || propertyTypeSelectValue == 'apartment_sale') {
                 // show the filters for apartment 
                 appendRentTypeField();
-                appendRoomsCountField();
+                appendRoomsCountInput(); 
                 appendFamiliesSinglesField(); 
                 appendMinMaxPrice(); 
                 appendPropertyFloorSelect(); 
@@ -1127,7 +1328,20 @@
                 appendACInput();
                 appendCarEntranceInput();
                 appendFurnishedInput();
-            } 
+            }  else if (propertyTypeSelectValue =='villa_rent') {
+                appendMinMaxPrice();
+                appendRoomsCountInput(); 
+                appendBathroomsCountInput(); 
+                appendLoungesCountInput();
+                appendMinMaxSpace();
+                appendPropertyAgeField();
+                appendStreetWidthSelect();
+                appendInterfaceSelectField();
+                appendSwimInput();
+                appendDuplexInput();
+                appendFurnishedInput(); 
+
+            }
         })
 
         filterBtn.addEventListener('click', ()=> {
@@ -1143,8 +1357,8 @@
 
 
                 // get all variables 
+                let roomsCountInput = document.querySelector('[name=rooms-count-input]').value; 
                 let rentTypeInput = document.querySelector('[name=rent_type_input]').value 
-                let roomCountInput = document.querySelector('[name=rooms-count-input]').value; 
                 let familes_singlesInput = document.querySelector('[name=single-or-family-input]').value;  
                 let minPriceInput = document.querySelector('[name=min-price-input]'); 
                 let maxPriceInput = document.querySelector('[name=max-price-input]'); 
@@ -1193,20 +1407,13 @@
                     single = "" 
                 }
 
-                {% comment %} if (minPriceInput.value == "" ) { 
-                    minPriceInput.value = 0; 
-                } 
-                
-                if (maxPriceInput.value == "" ) {
-                    maxPriceInput.value = 0;
-                } {% endcomment %}
 
                 var filters = {
                     'p_type': propertyTypeSelectValue,
                     'city': cityInput, 
+                    'rooms': roomsCountInput, 
                     'neighborhood__icontains': district, 
-                    'rent_type': rentTypeInput, 
-                    'rooms': roomCountInput, 
+                    'rent_type': rentTypeInput,
                     'families': families, 
                     'single': single, 
                     'price__gte': minPriceInput.value, 
@@ -1238,6 +1445,90 @@
                   
 
 
+            } else if (propertyTypeSelect.value =='villa_rent') {
+                // min max price 
+                // rooms count 
+                // lounges count 
+                // bathroom count 
+                // min max space 
+                // property age 
+                // street width 
+                // swim 
+                // duplex 
+                // furnished 
+                // interface 
+
+
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let roomsCount = document.querySelector('[name=rooms-count-input]'), 
+                    loungesCount = document.querySelector('[name=lounges-count-input]'), 
+                    bathroomsCount = document.querySelector('[name=bathrooms-count-input]'), 
+                    minSpaceInput = document.querySelector('[name=min-space-input]'),
+                    maxSpaceInput =document.querySelector('[name=max-space-input]'), 
+                    propertyAge = document.querySelector("[name=property-age-select]"), 
+                    streetWidth = document.querySelector('[name=street-width-input]'), 
+                    poolInput = document.querySelector('[name=pool-input]'), 
+                    duplexInput = document.querySelector("[name=duplex-input]"), 
+                    furnishedInput = document.querySelector('[name=furnished]'), 
+                    interfaceInput = document.querySelector('[name=interface-select]'); 
+
+
+                let poolInputValue = "" 
+                if (poolInput.checked) {
+                    poolInputValue = "1"; 
+                } 
+                let furnishedInputValue = "";
+                if (furnishedInput.checked) {
+                    furnishedInputValue = "1";
+                }
+                
+                let duplexInputValue = "";
+                if (duplexInput.checked) {
+                    duplexInputValue = "1";
+                }
+
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'rooms': roomsCount.value, 
+                    'neighborhood__icontains': district,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'lounges': loungesCount.value, 
+                    'bathroom': bathroomsCount.value, 
+                    'property_age': propertyAge.value, 
+                    'street_width': streetWidth.value, 
+                    'pool': poolInputValue, 
+                    'duplex': duplexInputValue, 
+                    'furnished': furnishedInputValue, 
+                    'interface': interfaceInput.value ,
+                    'sale': 0
+                }
+
+            
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+
+                
+
             }
         })
 
@@ -1266,6 +1557,11 @@
             searchFilters.querySelectorAll('input[type=checkbox]').forEach((input) => {
                 input.checked = false; 
             })
+        })
+
+
+        document.querySelector('.property_list').querySelectorAll('img').forEach((img) => {
+            img.setAttribute('src', ''); 
         })
 
 
