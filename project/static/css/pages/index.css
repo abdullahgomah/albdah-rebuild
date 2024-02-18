@@ -3,7 +3,7 @@ section.search-filters {
     box-shadow: 3px 3px 20px #1e1e1e30;
     overflow-x: scroll;
     /* border-radius: 2rem; */
-    display: block !important;
+    /* display: block !important; */
     position: fixed;
     display: none;
     right: 0; 
