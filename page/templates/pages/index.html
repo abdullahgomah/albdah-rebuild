@@ -1120,6 +1120,45 @@
             fieldsWrapper.appendChild(fieldDiv);
         }
 
+        function appendTwoEnterance() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="two_enterance">مدخلين</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="two_enterance" id="two_enterance">
+                </div>
+            `;
+        
+            // Append the field div to the fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+        function appendInVilla() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="in_villa">في فيلا</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="in_villa" id="in_villa">
+                </div>
+            `;
+        
+            // Append the field div to the fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+        
         
         function appendStreetWidthSelect() {
             const fieldDiv = document.createElement('div');
@@ -1341,6 +1380,19 @@
                 appendDuplexInput();
                 appendFurnishedInput(); 
 
+            } else if (propertyTypeSelectValue == 'floor_rent') { 
+                appendRoomsCountInput(); 
+                appendLoungesCountInput() ;
+                appendBathroomsCountInput(); 
+                appendPropertyFloorSelect();
+                appendMinMaxSpace(); 
+                appendPropertyAgeField(); 
+                appendMinMaxPrice(); 
+                appendACInput(); 
+                appendPrivateEnternaceInput(); 
+                appendCarEntranceInput();   
+                appendTwoEnterance(); 
+                appendInVilla();
             }
         })
 
@@ -1446,17 +1498,6 @@
 
 
             } else if (propertyTypeSelect.value =='villa_rent') {
-                // min max price 
-                // rooms count 
-                // lounges count 
-                // bathroom count 
-                // min max space 
-                // property age 
-                // street width 
-                // swim 
-                // duplex 
-                // furnished 
-                // interface 
 
 
                 let minPriceInput = document.querySelector('[name=min-price-input]'); 
@@ -1528,6 +1569,104 @@
 
 
                 
+
+            } else if (propertyTypeSelect.value == 'floor_rent') { 
+                // rooms 
+                // lounges 
+                // bathrooms 
+                // floor 
+                // space 
+                // property age 
+                // price 
+                // car_entrance 
+                // ac 
+                // in_villa 
+                // two_enterance
+                // private_enternace
+
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let roomsCount = document.querySelector('[name=rooms-count-input]'), 
+                    loungesCount = document.querySelector('[name=lounges-count-input]'), 
+                    bathroomsCount = document.querySelector('[name=bathrooms-count-input]'), 
+                    minSpaceInput = document.querySelector('[name=min-space-input]'),
+                    maxSpaceInput =document.querySelector('[name=max-space-input]'), 
+                    propertyAge = document.querySelector("[name=property-age-select]") 
+                
+                let propertyAgeSelect = document.querySelector("[name=property-age-select]").value;
+                let privateEnteranceInput = document.querySelector('input[name=private_enternace]'); 
+                let acInput = document.querySelector('input[name=ac]'); 
+                let carEntranceInput = document.querySelector('input[name=car_entrance]'); 
+                let propertyFloorSelect = document.querySelector('[name=property-floor-select]').value; 
+                let inVillaInput = document.querySelector('[name=in_villa]')
+                let two_enterance = document.querySelector('[name=two_enterance]')
+
+                let acInputValue = "" 
+                if (acInput.checked) { 
+                    acInputValue = '1'
+                }
+
+
+                let inVillaInputValue = ""; 
+                if (inVillaInput.checked) { 
+                    inVillaInputValue = '1';
+                }
+                
+                let two_enterance_value = ""; 
+                if (two_enterance.checked) { 
+                    two_enterance_value = '1';
+                }
+                
+                let privateEnteranceInputValue = ""; 
+                if (privateEnteranceInput.checked) { 
+                    privateEnteranceInputValue = '1';
+                }
+                
+                let carEntranceInputValue = ""; 
+                if (carEntranceInput.checked) { 
+                    carEntranceInputValue = '1';
+                }
+                
+
+                var filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'rooms': roomsCount.value, 
+                    'neighborhood__icontains': district, 
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'floor': propertyFloorSelect, 
+                    'bathroom': bathroomsCount.value, 
+                    'property_age': propertyAgeSelect, 
+                    'private_enternace': privateEnteranceInputValue, 
+                    'car_entrance': carEntranceInputValue, 
+                    'sale': 0,
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'lounges': loungesCount.value, 
+                    'ac': acInputValue, 
+                    'in_villa': inVillaInputValue, 
+                    'two_enternace': two_enterance_value, 
+                    'private_enternace': privateEnteranceInputValue, 
+                    'car_entrance': carEntranceInputValue
+                }
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
 
             }
         })
