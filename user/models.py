@@ -19,7 +19,7 @@ class CustomUser(AbstractUser):
     first_name = None  
     last_name = None 
     name = models.CharField(max_length=255, verbose_name="الاسم الاول والأخير", null=True, blank=True)
-    username = models.CharField(max_length=150 ,blank=True, unique=True)
+    username = models.CharField(max_length=150 ,blank=True, unique=True, null=True)
     role = models.CharField(max_length=200, choices=ROLE_CHOICES, verbose_name='نوع المستخدم', null=True, blank=True)
     id_number = models.CharField(max_length=10, verbose_name="رقم الهوية", null=True, blank=True, unique=True) 
     sex = models.CharField(max_length=200, verbose_name='الجنس', choices=SEX_CHOICES, null=True, blank=True)
