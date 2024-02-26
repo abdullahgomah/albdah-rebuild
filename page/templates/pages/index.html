@@ -358,8 +358,6 @@
 
 
 
-
-
                 </div>
                 
                 <div class="field">
@@ -1159,6 +1157,58 @@
         }
 
         
+        function appendStreetWidthInput() {
+            // Create div for the field
+            var fieldDiv = document.createElement("div");
+            fieldDiv.classList.add("field");
+        
+            // Create div for the field heading
+            var headingDiv = document.createElement("div");
+            headingDiv.classList.add("field__heading");
+            var headingText = document.createElement("p");
+            headingText.textContent = "عرض الشارع";
+            headingDiv.appendChild(headingText);
+        
+            // Create div for the field content
+            var contentDiv = document.createElement("div");
+            contentDiv.classList.add("field__content");
+        
+            // Create input range element
+            var rangeInput = document.createElement("input");
+            rangeInput.setAttribute("type", "range");
+            rangeInput.setAttribute("name", "street-width-input");
+            rangeInput.setAttribute("min", "0");
+            rangeInput.setAttribute("max", "100");
+            rangeInput.setAttribute("value", "0");
+            rangeInput.setAttribute("id", "select-street-width");
+        
+            // Create paragraph for displaying selected value
+            var valueParagraph = document.createElement("p");
+            valueParagraph.setAttribute("id", "street-width-input-value");
+            var spanElement = document.createElement("span");
+            spanElement.textContent = "0";
+            valueParagraph.appendChild(spanElement);
+            valueParagraph.innerHTML += "م";
+        
+            // Append elements to contentDiv
+            contentDiv.appendChild(rangeInput);
+            contentDiv.appendChild(valueParagraph);
+        
+            // Append headingDiv and contentDiv to fieldDiv
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+
+            rangeInput.addEventListener('input', () => {
+                controlRangeInput(rangeInput);
+            }) 
+            
+        }
+
+        function controlRangeInput(rangeInput) { 
+            rangeInput.parentElement.querySelector('#street-width-input-value span').textContent = rangeInput.value;
+        }
         
         function appendStreetWidthSelect() {
             const fieldDiv = document.createElement('div');
@@ -1374,7 +1424,8 @@
                 appendLoungesCountInput();
                 appendMinMaxSpace();
                 appendPropertyAgeField();
-                appendStreetWidthSelect();
+                {% comment %} appendStreetWidthSelect(); {% endcomment %}
+                appendStreetWidthInput(); 
                 appendInterfaceSelectField();
                 appendSwimInput();
                 appendDuplexInput();
@@ -1393,6 +1444,9 @@
                 appendCarEntranceInput();   
                 appendTwoEnterance(); 
                 appendInVilla();
+            } else if (propertyTypeSelectValue == 'shop_rent') {
+                appendMinMaxSpace(); 
+                appendStreetWidthInput();
             }
         })
 
@@ -1530,7 +1584,7 @@
                 }
 
 
-                filters = {
+                    filters = {
                     'p_type': propertyTypeSelectValue,
                     'city': cityInput, 
                     'rooms': roomsCount.value, 
@@ -1668,6 +1722,37 @@
                 });
 
 
+            } else if (propertyTypeSelect.value == 'shop_rent') { 
+
+                let streetWidth = document.querySelector('[name=street-width-input]'),
+                minSpaceInput = document.querySelector('[name=min-space-input]'),
+                maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+
+
+                var filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value,
+                    'street_width': streetWidth.value, 
+                    'sale': 0
+                }
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
             }
         })
 

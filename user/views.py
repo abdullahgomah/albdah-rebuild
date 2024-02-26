@@ -88,7 +88,7 @@ def user_login(request):
 
         if user is not None:
             # If authentication is successful, log in the user
-            login(request, user=user, backend='user.backends.CustomIdBackend')
+            login(request, user=user, backend='user.backends.CustomPhoneNumberBackend')
             messages.add_message(request, messages.SUCCESS, "تم تسجيل الدخول بنجاح")
             return redirect('page:index')
         else:
