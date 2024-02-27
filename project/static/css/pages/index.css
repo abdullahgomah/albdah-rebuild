@@ -5,7 +5,7 @@ section.search-filters {
     /* border-radius: 2rem; */
     /* display: block !important; */
     position: fixed;
-    display: block;
+    display: none;
     right: 0; 
     top:0;  
     width: 400px; 
