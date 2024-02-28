@@ -399,7 +399,7 @@
 
         let searchFilterOpenBtn = document.querySelector('#search-filter-open-btn')
         searchFilterOpenBtn.addEventListener('click', () => {
-            searchFilters.style.display = 'block'
+            {% comment %} searchFilters.style.display = 'block' {% endcomment %}
             searchFilters.style.right = '0'; 
             overlayLayer.style.display = 'block';
             document.body.style.overflow = 'hidden'; 
