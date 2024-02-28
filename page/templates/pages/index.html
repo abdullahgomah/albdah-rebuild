@@ -356,7 +356,14 @@
 
                 <div class="fields-wrapper">
 
-
+                    <div class="field flex">
+                        <div class="field__heading">
+                            <p>قسم عوائل</p>
+                        </div>
+                        <div class="field__content">
+                            <input type="checkbox" name="family_part" id="family_part">
+                        </div>
+                    </div>
 
                 </div>
                 
@@ -1396,6 +1403,180 @@
             fieldsWrapper.innerHTML += bathroomsCountInputHTML;
         }
         
+        function appendFootballField() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "ملعب كرة قدم"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "football_field";
+            checkboxInput.id = "football_field";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendVolleyballField() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "ملعب كرة طائرة"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "volly_field";
+            checkboxInput.id = "volly_field";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+
+        function appendHairTentHouse() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "بيت شعر"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "hair_tent_house";
+            checkboxInput.id = "hair_tent_house";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendKitchen() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "مطبخ"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "kitchen";
+            checkboxInput.id = "kitchen";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendAmusement() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "ملاهي"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "amusement";
+            checkboxInput.id = "amusement";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+    
+        function appendFamilyPart() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "قسم عوائل"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "family_part";
+            checkboxInput.id = "family_part";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
         
         
         
@@ -1447,6 +1628,18 @@
             } else if (propertyTypeSelectValue == 'shop_rent') {
                 appendMinMaxSpace(); 
                 appendStreetWidthInput();
+            } else if (propertyTypeSelectValue == 'resthouse_rent') {
+                appendFamilyPart(); 
+                appendRentTypeField(); 
+                appendMinMaxPrice(); 
+                appendMinMaxSpace();
+                appendSwimInput(); 
+                appendFootballField(); 
+                appendVolleyballField();
+                appendHairTentHouse();
+                appendKitchen();
+                appendAmusement();  
+
             }
         })
 
@@ -1753,6 +1946,99 @@
                       console.error(xhr, status, error);
                     }
                 });
+            } else if (propertyTypeSelect.value == 'resthouse_rent') {
+                let familyPart = document.querySelector('#family_part'); 
+                let rentTypeInput = document.querySelector('[name=rent_type_input]').value; 
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]'); 
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let poolInput = document.querySelector('[name=pool-input]'); 
+                let footballField = document.querySelector('#football_field'); 
+                let vollyField = document.querySelector('#volly_field'); 
+                let hairTentHouse = document.querySelector('#hair_tent_house'); 
+                let kitchen = document.querySelector('#kitchen'); 
+                let amusement = document.querySelector("#amusement");
+                
+                let familyPartValue = ""; 
+                if (familyPart.checked) { 
+                    familyPartValue = 1; 
+                }
+
+                // For poolInput
+                let poolInputValue = ""; 
+                if (poolInput.checked) { 
+                    poolInputValue = 1; 
+                }
+
+                // For footballField
+                let footballFieldValue = ""; 
+                if (footballField.checked) { 
+                    footballFieldValue = 1; 
+                }
+
+                // For vollyField
+                let vollyFieldValue = ""; 
+                if (vollyField.checked) { 
+                    vollyFieldValue = 1; 
+                }
+
+                // For hairTentHouse
+                let hairTentHouseValue = ""; 
+                if (hairTentHouse.checked) { 
+                    hairTentHouseValue = 1; 
+                }
+
+                // For kitchen
+                let kitchenValue = ""; 
+                if (kitchen.checked) { 
+                    kitchenValue = 1; 
+                }
+
+                // For amusement
+                let amusementValue = ""; 
+                if (amusement.checked) { 
+                    amusementValue = 1; 
+                }
+
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,  
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'rent_type': rentTypeInput.value, 
+                    'family_part': familyPartValue, 
+                    'pool': poolInputValue, 
+                    'football_field': footballFieldValue, 
+                    'volly_field': vollyFieldValue, 
+                    'hair_tent_house': hairTentHouseValue, 
+                    'kitchen': kitchenValue, 
+                    'amusement': amusementValue, 
+                    'sale': 0
+                }
+
+                
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+                
             }
         })
 
