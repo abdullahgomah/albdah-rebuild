@@ -199,3 +199,19 @@ input[name=street-width-input]::-webkit-slider-thumb {
     height: 20px;
     border-radius: 50%;
 }
+
+
+.property__summary {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    font-size: .9rem;
+}
+
+.property__summary i { 
+    color: var(--primary-color);
+}
+
+.property__summary span { 
+    font-weight: 600;
+}

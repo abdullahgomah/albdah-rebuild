@@ -218,6 +218,43 @@
 
                                 
                         </p>
+                        <!-- short info about property -->
+
+                        <div class="property__summary">
+                            
+                            {% if property.p_type == 'apartment_rent' or property.p_type == 'apartment_sale' %}
+
+                            <div class="property__summary__item">
+                                <span>{{property.space}}</span>
+                                <span>م&sup2;</span>
+                            </div>
+
+                            <div class="property__summary__item">
+                                <i class="fa-solid fa-bed"></i>
+
+                                <span>{{property.rooms}}</span>
+                            </div>
+
+                            <div class="property__summary__item">
+                                <i class="fa-solid fa-couch"></i>
+                                <span>{{property.lounges}}</span>
+                            </div>
+
+
+                            <div class="property__summary__item">
+                                <i class="fa-solid fa-bath"></i>
+                                <span>{{property.bathroom}}</span>
+                            </div>
+
+                            {% elif property.p_type == 'shop_rent' or property.p_type == 'shop_sale' or property.p_type == 'commercial_office_rent' or property.p_type == 'farm_sale' or property.p_type == 'building_sale' or property.p_type == 'building_rent' or property.p_type == 'branch_rent' %}
+                            <div class="property__summary__item">
+                                <span>{{property.space}}</span>
+                                <span>م&sup2;</span>
+                            </div>
+                            {% endif %}
+                                
+                        </div>
+
                         <p class="property__description">
                             <!-- {{property.description|safe|truncatewords:5}} -->
                         </p>
