@@ -219,8 +219,8 @@ input[name=street-width-input]::-webkit-slider-thumb {
 
 .property__number {
     position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
+    top: 0.25rem;
+    left: 0.25rem;
     font-size: 0.85rem;
     background: var(--secondary-color);
     padding: 0.2rem .4rem;
