@@ -84,6 +84,15 @@ select::-ms-expand {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.grid.purpose {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.purpose .item:first-child {
+    color: var(--secondary-color); 
+    background: var(--primary-color); 
+}
+
 .grid.lounges-count {
     grid-template-columns: repeat(6, 1fr);
 }

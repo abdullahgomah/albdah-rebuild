@@ -356,14 +356,6 @@
 
                 <div class="fields-wrapper">
 
-                    <div class="field flex">
-                        <div class="field__heading">
-                            <p>قسم عوائل</p>
-                        </div>
-                        <div class="field__content">
-                            <input type="checkbox" name="family_part" id="family_part">
-                        </div>
-                    </div>
 
                 </div>
                 
@@ -1216,6 +1208,63 @@
         function controlRangeInput(rangeInput) { 
             rangeInput.parentElement.querySelector('#street-width-input-value span').textContent = rangeInput.value;
         }
+
+        function appendPurposeInput() {
+            // Create a new div element with class "field"
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            // Create a div for heading
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+            const headingParagraph = document.createElement('p');
+            headingParagraph.textContent = 'سكني أو تجاري';
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create a div for content
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            // Create hidden input
+            const hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'purpose-input');
+        
+            // Create grid div
+            const gridDiv = document.createElement('div');
+            gridDiv.classList.add('grid');
+            gridDiv.classList.add('purpose');
+        
+            // Create items for grid
+            const items = [
+                { value: '', text: 'بدون' },
+                { value: 'تجاري', text: 'تجاري' },
+                { value: 'سكني', text: 'سكني' }
+            ];
+        
+            items.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('item');
+                itemDiv.setAttribute('data-value', item.value);
+                itemDiv.textContent = item.text;
+                gridDiv.appendChild(itemDiv);
+            });
+        
+            // Append elements to content div
+            contentDiv.appendChild(hiddenInput);
+            contentDiv.appendChild(gridDiv);
+        
+            // Append heading and content divs to field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            changeItemValue(fieldDiv.querySelector('.grid'));
+
+            // Append field div to fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+
+        }
+
         
         function appendStreetWidthSelect() {
             const fieldDiv = document.createElement('div');
@@ -1640,6 +1689,31 @@
                 appendKitchen();
                 appendAmusement();  
 
+            } else if (propertyTypeSelectValue == 'commercial_office_rent') { 
+                appendFurnishedInput(); 
+                appendMinMaxPrice(); 
+                appendStreetWidthInput(); 
+                appendMinMaxSpace();
+            } else if (propertyTypeSelectValue == 'land_rent') {
+                appendPurposeInput();
+                appendMinMaxSpace(); 
+                appendInterfaceSelectField(); 
+                appendStreetWidthInput(); 
+            } else if (propertyTypeSelectValue == 'shop_sale') { 
+                appendMinMaxPrice(); 
+                appendStreetWidthInput(); 
+                appendMinMaxSpace() ;
+            } else if (propertyTypeSelectValue == 'resthouse_sale') { 
+                appendMinMaxPrice(); 
+                appendMinMaxSpace(); 
+                appendStreetWidthInput(); 
+                appendPropertyAgeField();
+            } else if (propertyTypeSelectValue =='land_sale') {
+                appendPurposeInput(); 
+                appendMinMaxPrice(); 
+                appendMinMaxSpace();
+                appendInterfaceSelectField(); 
+                appendStreetWidthInput(); 
             }
         })
 
@@ -2039,6 +2113,205 @@
                 });
 
                 
+            } else if (propertyTypeSelect.value == 'commercial_office_rent')  {
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]'); 
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]'); 
+                let furnishedInput = document.querySelector('input[name=furnished]'); 
+                let furnishedInputValue = "";
+                if (furnishedInput.checked)  {
+                    furnishedInputValue = 1; 
+                } else { 
+                    furnishedInputValue = "" 
+                }
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,  
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'street_width': streetWidth.value, 
+                    'sale': '0', 
+                    'furnished': furnishedInputValue
+                }
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+
+
+            } else if (propertyTypeSelect.value == 'land_rent') { 
+                let minSpaceInput = document.querySelector('[name=min-space-input]'); 
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]'); 
+                let interfaceInput = document.querySelector('[name=interface-select]'); 
+                let purposeInput = document.querySelector('[name=purpose-input]'); 
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,  
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value,
+                    'sale':'0',
+                    'street_width': streetWidth.value, 
+                    'interface': interfaceInput.value ,
+                    'purpose': purposeInput.value 
+                }
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+                                
+                
+            } else if (propertyTypeSelect.value == 'shop_sale') {
+
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]');
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]'); 
+
+                
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'street_width': streetWidth.value, 
+                    'sale': 1
+                }
+
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+            } else if (propertyTypeSelect.value == 'resthouse_sale') { 
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]');
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]'); 
+                let propertyAgeSelect = document.querySelector("[name=property-age-select]").value;
+
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'street_width': streetWidth.value, 
+                    'property_age': propertyAgeSelect, 
+                    'sale': 1
+                }
+
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+
+
+            } else if (propertyTypeSelect.value == 'land_sale') {
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]');
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]');
+                let interfaceInput = document.querySelector('[name=interface-select]'); 
+                let purposeInput = document.querySelector('[name=purpose-input]'); 
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'street_width': streetWidth.value, 
+                    'purpose': purposeInput.value,
+                    'interface': interfaceInput.value, 
+                    'sale': 1
+                }
+
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+
             }
         })
 
