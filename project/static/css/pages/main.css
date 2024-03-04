@@ -299,13 +299,14 @@ section.property_list .grid .item {
     justify-content: space-between;
     /* align-items: center; */
     /* min-height: 250px !important; */
-    height: 170px !important; 
+    min-height: 170px !important; 
     max-width: 900px !important;
     margin: 0 auto;
     /* background: white; */
     /* padding: 1rem 0 ; */
     background: #e8eaec; 
     border-radius: 5px;
+    position: relative;
 }
 
 .item .property__info {

@@ -216,3 +216,18 @@ input[name=street-width-input]::-webkit-slider-thumb {
     font-weight: 500;
     color: #000;
 }
+
+.property__number {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.85rem;
+    background: var(--secondary-color);
+    padding: 0.2rem .4rem;
+    border-radius: 2rem;
+    font-weight: 600;
+}
+
+.property__number span {
+    font-weight: 600;
+}
