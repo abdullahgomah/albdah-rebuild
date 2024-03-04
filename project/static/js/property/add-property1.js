@@ -734,6 +734,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
         limit = 3; 
     }
 
+
     if (propertyType == 'farm_sale') { 
         // declare trees count input 
         // declare wells count input 
@@ -750,7 +751,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
         }
     }
 
-    if (document.querySelector('[name=property_type]').value == "shop_rent" || propertyType == 'farm_sale' || document.querySelector('[name=property_type]').value == 'branch_rent' || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'land_sale' || document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'building_sale' || document.querySelector('[name=property_type]').value == 'villa_rent' || document.querySelector('[name=property_type]').value == 'floor_rent' || document.querySelector('[name=property_type]').value == 'commercial_office_rent') { 
+    if (document.querySelector('[name=property_type]').value == "shop_rent" || propertyType == 'farm_sale' || document.querySelector('[name=property_type]').value == 'branch_rent' || document.querySelector('[name=property_type]').value == 'branch_sale' || document.querySelector('[name=property_type]').value == 'land_rent' || document.querySelector('[name=property_type]').value == 'land_sale' || document.querySelector('[name=property_type]').value == 'building_rent' || document.querySelector('[name=property_type]').value == 'building_sale' || document.querySelector('[name=property_type]').value == 'villa_rent' || document.querySelector('[name=property_type]').value == 'floor_rent' || document.querySelector('[name=property_type]').value == 'commercial_office_rent') { 
         if (interfaceInput.value == "") { 
             document.querySelector('.interface-field').style.border = "1px solid #dc3546" 
         } else { 
@@ -871,7 +872,7 @@ propertyDetailsNextPrev.querySelector('.btn-next').addEventListener('click', () 
     } 
 
 
-    if (document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'land_sale'  && document.querySelector('[name=property_type]').value != 'floor_rent' && document.querySelector('[name=property_type]').value != 'resthouse_rent' && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'apartment_rent' && document.querySelector('[name=property_type]').value != 'apartment_sale' && document.querySelector('[name=property_type]').value != 'chalet_rent' && document.querySelector('[name=property_type]').value != 'furnished_apartment_rent') {
+    if (document.querySelector('[name=property_type]').value != 'branch_sale' && document.querySelector('[name=property_type]').value != 'land_rent' && document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'land_sale'  && document.querySelector('[name=property_type]').value != 'floor_rent' && document.querySelector('[name=property_type]').value != 'resthouse_rent' && document.querySelector('[name=property_type]').value != 'shop_rent' && document.querySelector('[name=property_type]').value != 'villa_rent' && document.querySelector('[name=property_type]').value != 'apartment_rent' && document.querySelector('[name=property_type]').value != 'apartment_sale' && document.querySelector('[name=property_type]').value != 'chalet_rent' && document.querySelector('[name=property_type]').value != 'furnished_apartment_rent') {
         // 5
         if (propertyAgeInput.value == "") {
             propertyAgeInput.parentElement.style.border = "1px solid #dc3546"

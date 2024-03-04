@@ -56,8 +56,8 @@ def add_property(request, property_type, offer_type=None):
         print(p_type) 
     else: 
         sell = 0 
-    
-    # print(p_type)
+        p_type = property_type
+
     # property_type_display_name = PropertyDepartment.objects.get(name=p_type) 
     
     if request.POST: 
@@ -209,7 +209,7 @@ def add_property(request, property_type, offer_type=None):
                 sale = sell, 
                 interface = interface, 
                 user= user, 
-                p_type = property_type, 
+                p_type = p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 price = price, 
@@ -284,7 +284,7 @@ def add_property(request, property_type, offer_type=None):
                 # lounges = lounges, 
                 # bathroom = bathrooms, 
                 floor =floor, 
-                property_age = property_age, 
+                property_age = p_type, 
                 # family_part = family_part, 
                 rent_type = rent_type ,
                 # purpose = purpose, 
@@ -385,7 +385,7 @@ def add_property(request, property_type, offer_type=None):
                 lounges = lounges, 
                 bathroom = bathrooms, 
                 floor =floor, 
-                property_age = property_age, 
+                property_age = p_type, 
                 # family_part = family_part, 
                 rent_type = rent_type ,
                 # purpose = purpose, 
@@ -448,7 +448,7 @@ def add_property(request, property_type, offer_type=None):
                 volly_field = features[5], 
                 hair_tent_house = features[6],
                 pool = features[3], 
-                p_type = property_type, 
+                p_type = p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 price = price, 
@@ -503,7 +503,7 @@ def add_property(request, property_type, offer_type=None):
                 user = user , 
                 lat = lat, 
                 lng = lng  , 
-                p_type = property_type, 
+                p_type = p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 price = price, 
@@ -533,7 +533,6 @@ def add_property(request, property_type, offer_type=None):
 
 
 
-
         elif property_type == 'land_rent' or property_type == 'land_sale': 
             purpose = request.POST.get('purpose-input')
             interface = request.POST.get('interface-input') 
@@ -554,7 +553,7 @@ def add_property(request, property_type, offer_type=None):
                 purpose = purpose, 
                 lat = lat, 
                 lng = lng  , 
-                p_type = property_type, 
+                p_type = p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 price = price, 
@@ -613,7 +612,7 @@ def add_property(request, property_type, offer_type=None):
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
-                p_type = property_type, 
+                p_type =p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 price = price, 
@@ -657,7 +656,7 @@ def add_property(request, property_type, offer_type=None):
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
-                p_type = property_type, 
+                p_type = p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 price = price, 
@@ -719,7 +718,7 @@ def add_property(request, property_type, offer_type=None):
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
-                p_type = property_type, 
+                p_type = p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 rooms=rooms, 
@@ -771,7 +770,7 @@ def add_property(request, property_type, offer_type=None):
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
-                p_type = property_type, 
+                p_type = p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 price = price, 
@@ -821,7 +820,7 @@ def add_property(request, property_type, offer_type=None):
                 user = user, 
                 lat = lat, 
                 lng = lng  , 
-                p_type = property_type, 
+                p_type = p_type, 
                 bathroom = bathrooms, 
                 neighborhood = neighborhood, 
                 lounges = lounges, 
@@ -869,9 +868,7 @@ def add_property(request, property_type, offer_type=None):
         ## redirect to sucessfully uploaded ad 
         return redirect(reverse('property:ad-uploaded'))
 
-
-        
-    print(property_type) 
+ 
     context = {
         'property_type': property_type, 
         'offer_type': offer_type,

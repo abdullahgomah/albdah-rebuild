@@ -25,6 +25,7 @@ PROPERTY_TYPE_CHOICES = [
     ("land_rent", "أرض للايجار"), 
     ("building_rent", "عمارة للايجار"), 
     ("branch_rent", "مستودع للايجار"), 
+    ("branch_sale", "مستودع للبيع"), 
     ("furnished_apartment_rent", "شقة مفروشة للايجار") ,
     ("chalet_rent", "شاليه للايجار"), 
     ("chalet_sale", "شاليه للبيع"), 

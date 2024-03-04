@@ -205,13 +205,14 @@ input[name=street-width-input]::-webkit-slider-thumb {
     display: flex;
     justify-content: flex-start;
     column-gap: 1rem;
-    font-size: .9rem;
+    font-size: .85rem;
 }
 
 .property__summary i { 
-    color: var(--primary-color);
+    color: #1e1e1e80;
 }
 
 .property__summary span { 
-    font-weight: 600;
+    font-weight: 500;
+    color: #000;
 }
