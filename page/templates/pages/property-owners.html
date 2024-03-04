@@ -1,21 +1,90 @@
-{% extends 'base.html' %}
 
-{% block title %}أصحاب العقار{% endblock title %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    البداح | أصحاب العقار
+{% endblock title %}
+
+
+{% block stylesheets %}
+
+
+<style>
+    #content_section .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border:1px solid #12121230;
+        padding: 1rem; 
+        padding-top: 2.5rem;
+        border-radius: 1rem;
+    }
+    section h2 {
+        background: var(--primary-color) !important;
+        color: var(--secondary-color);
+        padding: .5rem 1rem; 
+        border-radius: 2rem;
+        width: fit-content;
+        text-align: center; 
+        {% comment %} font-size: 1rem; {% endcomment %}
+    }
+    section .container p { 
+        margin-top: 1rem; 
+        text-align: center;
+        opacity: .6;
+    }
+    section .container > div {
+        margin-bottom: 2rem !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+
+
+</style>
+
+
+
+{% endblock stylesheets %}
+    
+
 
 {% block content %}
 
-<section>
+
+
+<section style="margin-top: 4rem;" id="content_section">
     <div class="container">
-        {{property_owner_info|safe}}
-        
-        <br>
-        <a style="direction: ltr;" class="btn btn-solid" href="https://wa.link/53ukow">
-            <i class="fa-brands fa-whatsapp"></i>
-            +966 56 559 4599
-        </a>
+        <div>
+            <h2>تسويق عقارك صار أسهل</h2>
+            <p>
+                عندك عقار وتريد بيعه ؟ أو تأجيره ؟ أو إستثماره ؟
+                كل ماعليك هو التسجيل في موقعنا كـ مستخدم وإضافة عقارك
+                وخل الباقي علينا .
+            </p>
+        </div>
+
+        <div>
+            <h2>إدارة أملاك</h2>
+            <p>
+                اذا كنت صاحب عقار وتريد توكيلنا بتنفيذ جميع إلتزامات عقارك من توثيق عقود إيجار السكنيه كانت او التجارية
+ أو تحصيل إيجارات وتوثيق العدادات بإسم المستأجر سوف نخصص لعقارك ملف خاص فيه جميع بيانات العقار
+وتخصيص موظف خاص لعمل الاجراءات كل ماعليك هو التواصل معنا عبر الواتس آب.
+            </p>
+        </div>
+
+        <div>
+            <a href="https://wa.link/53ukow" class="btn btn-solid">
+                <i class="fa-brands fa-whatsapp"></i>
+                +966 56 559 4599
+            </a>
+        </div>
+
     </div>
 </section>
 
 
-
-{% endblock content %}
+{% endblock %}

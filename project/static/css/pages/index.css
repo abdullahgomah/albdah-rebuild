@@ -3,9 +3,10 @@ section.search-filters {
     box-shadow: 3px 3px 20px #1e1e1e30;
     overflow-x: scroll;
     /* border-radius: 2rem; */
+    /* display: block !important; */
     position: fixed;
-    display: none;
-    right: 0; 
+    display: block;
+    right:-400px; 
     top:0;  
     width: 400px; 
     max-width: 90%;
@@ -83,6 +84,33 @@ select::-ms-expand {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.grid.purpose {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.purpose .item:first-child {
+    color: var(--secondary-color); 
+    background: var(--primary-color); 
+}
+
+.grid.lounges-count {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid.bathroom-count {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid.bathroom-count .item:first-child {
+    background: var(--primary-color); 
+    color: var(--secondary-color); 
+}
+
+.grid.lounges-count .item:first-child {
+    background: var(--primary-color); 
+    color: var(--secondary-color); 
+}
+
 .grid.roomsCount {
     grid-template-columns: repeat(6, 1fr);
 }
@@ -128,4 +156,46 @@ select::-ms-expand {
 .field input {
     width: 100%; 
     padding: .5rem 1rem; 
+}
+
+
+#reset-btn {
+    text-decoration: underline;
+    color: var(--primary-color); 
+}
+
+.field.flex { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.field.flex .field__content {
+    flex:  1;
+}
+
+
+.field.flex .field__content input[type='checkbox'] {
+    width: 16px; 
+    height: 16px; 
+    float: left; 
+}
+
+
+/* Input Range Styling */
+input[name=street-width-input] { 
+    -webkit-appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin:0; 
+}
+
+input[name=street-width-input]::-webkit-slider-thumb { 
+
+    appearance: None;
+    background: var(--primary-color) !important;
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%;
 }

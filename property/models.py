@@ -38,6 +38,7 @@ PROPERTY_TYPE_CHOICES = [
     ("floor_sale", "دور للبيع")
 ]
 
+
 INTERFACE_CHOICES = [
     ('شمالية', 'شمالية'),
     ('جنوبية', 'جنوبية'),

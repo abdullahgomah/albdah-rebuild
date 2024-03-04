@@ -3,8 +3,13 @@ from .models import Property, PropertyImage, Report, PropertyDepartment, Favouri
 
 # Register your models here.
 
-admin.site.register(Property) 
 admin.site.register(PropertyDepartment) 
 admin.site.register(PropertyImage)   
 admin.site.register(Report)   
 admin.site.register(Favourite)
+
+class PropertyAdmin(admin.ModelAdmin): 
+    model = Property
+    search_fields = ('number', 'interface')
+
+admin.site.register(Property, PropertyAdmin) 

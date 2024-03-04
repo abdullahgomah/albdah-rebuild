@@ -19,20 +19,20 @@ def send_otp(to, otp):
                  )
     
 def generate_otp(): 
-    return str(random.randint(10000, 99999)) 
+    return str(random.randint(1000, 9999)) 
 
 
 def verify_otp(to, otp): 
     url = "https://control.msg91.com/api/v5/flow/"
 
     payload = {
-        "template_id": "65c32758d6fc055098443712",
+        "template_id": "65c4ff99d6fc0534a54ffe32",
         "sender_id": "albdah", 
         "short_url": "0",
         "recipients": [
             {
                 "mobiles": to,
-                "otp": otp
+                "var1": otp
             }
         ]
     }

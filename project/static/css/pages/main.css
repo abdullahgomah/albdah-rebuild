@@ -12,6 +12,11 @@
     transition: padding .2s ease-in-out;
 }
 
+*.mt-2{ 
+    margin-top: 1rem;
+}
+
+
 :root { 
     --primary-color: #1e2957; 
     --secondary-color: white; 
@@ -139,6 +144,10 @@ header .container .logo-container a {
     align-items: center;
     justify-content: flex-start;
     flex: .5;
+}
+
+header .logo-container .logo-text {
+    height: 6vh;
 }
 
 header .container .logo-container img:first-child { 

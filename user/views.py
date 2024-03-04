@@ -88,7 +88,7 @@ def user_login(request):
 
         if user is not None:
             # If authentication is successful, log in the user
-            login(request, user=user, backend='user.backends.CustomIdBackend')
+            login(request, user=user, backend='user.backends.CustomPhoneNumberBackend')
             messages.add_message(request, messages.SUCCESS, "تم تسجيل الدخول بنجاح")
             return redirect('page:index')
         else:
@@ -116,7 +116,7 @@ def verify_phone_number(request):
         if request.POST: 
             otp = generate_otp() 
             request.session['otp'] = otp 
-            send_otp('192', otp)
+            verify_otp(user.phone_number, otp)
             print('message sent') 
             return redirect('user:check-otp')
     else: 
@@ -164,7 +164,8 @@ def user_verified(request):
 @login_required
 def profile(request):
     user= request.user
-    role = user.role 
+    role = user.role
+    phone_number = user.phone_number 
     
     if role =='user':
         form =UserUpdateForm(instance=user)
@@ -172,6 +173,9 @@ def profile(request):
         form = OfficeUpdate(instance=user)
     elif role == 'real_estate_marketer': 
         form = MarkterUpdate(instance=user)
+    else: 
+        form =UserUpdateForm(instance=user)
+
 
     if request.POST:
         if role=='user': 
@@ -181,10 +185,12 @@ def profile(request):
         elif role=='real_estate_marketer':
             form = MarkterUpdate(request.POST, instance=user) 
 
-        if form.is_valid():
+        if form.is_valid(): 
             form.save() 
-            return redirect('user:profile') 
-        
+            if phone_number != form.instance.phone_number: 
+                form.instance.phone_number_verify_status = False
+                form.save() 
+                return redirect('user:verify-phone-number')
 
     context = {
         'form': form, 

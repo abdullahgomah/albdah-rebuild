@@ -31,7 +31,14 @@
         
     {% endblock stylesheets %}
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SK051LM5P1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
     
+      gtag('config', 'G-SK051LM5P1');
+    </script>
 
 </head>
 <body>
@@ -44,7 +51,8 @@
             <div class="logo-container">
                 <a href="{% url 'page:index' %}">
                     <img src="{% static 'imgs/logo.jpeg' %}" alt="">
-                    <img src="{% static 'imgs/logoText-e961f794.png' %}" alt="">
+                    {% comment %} <img src="{% static 'imgs/logoText-e961f794.png' %}" alt="" class="logo-text"> {% endcomment %}
+                    <img src="{% static 'imgs/logo-text.png' %}" alt="" class="logo-text">
                 </a>
             </div>
             <nav>

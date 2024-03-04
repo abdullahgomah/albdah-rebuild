@@ -3,7 +3,6 @@ section.search-filters {
     box-shadow: 3px 3px 20px #1e1e1e30;
     overflow-x: scroll;
     /* border-radius: 2rem; */
-    /* display: block !important; */
     position: fixed;
     display: none;
     right: 0; 
@@ -82,24 +81,6 @@ select::-ms-expand {
 
 .grid.rent_type {
     grid-template-columns: repeat(3, 1fr);
-}
-
-.grid.lounges-count {
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.grid.bathroom-count {
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.grid.bathroom-count .item:first-child {
-    background: var(--primary-color); 
-    color: var(--secondary-color); 
-}
-
-.grid.lounges-count .item:first-child {
-    background: var(--primary-color); 
-    color: var(--secondary-color); 
 }
 
 .grid.roomsCount {

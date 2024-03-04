@@ -355,13 +355,15 @@
                 </div>
 
                 <div class="fields-wrapper">
-                    
 
 
                 </div>
                 
                 <div class="field">
                     <a class="btn btn-solid" id="filter-btn">بحث</a>
+                </div>
+                <div class="field">
+                    <a id='reset-btn' >مسح الفلاتر</a>
                 </div>
             </div>
         </div>
@@ -389,7 +391,7 @@
 
         let searchFilterOpenBtn = document.querySelector('#search-filter-open-btn')
         searchFilterOpenBtn.addEventListener('click', () => {
-            searchFilters.style.display = 'block'
+            {% comment %} searchFilters.style.display = 'block' {% endcomment %}
             searchFilters.style.right = '0'; 
             overlayLayer.style.display = 'block';
             document.body.style.overflow = 'hidden'; 
@@ -478,6 +480,10 @@
         let citySelectInput = document.querySelector('#city-select-input') 
         citySelectInput.addEventListener('change', ()=> {
             districtSelectInput.innerHTML = "" ;
+            let allOption = document.createElement('option'); 
+            allOption.value = "" ;
+            allOption.textContent = "الكل"
+            districtSelectInput.appendChild(allOption);
             if (citySelectInput.value =='بريدة') {
                 BuraydaDistricts.forEach((city) => {
                     let new_option = document.createElement('option') 
@@ -489,6 +495,25 @@
         })
 
         let fieldsWrapper = document.querySelector('.fields-wrapper'); 
+        function changeItemValue(grid) {
+            grid.querySelectorAll(".item").forEach((item)=> {
+                item.addEventListener('click', () => {
+                    console.log(item);
+                    grid.querySelectorAll(".item").forEach((item) => {
+                        item.style.background = 'white'; 
+                        item.style.color = 'black'
+                    })
+                    item.style.color = 'var(--secondary-color)'
+                    item.style.background = 'var(--primary-color)'
+
+                    item.parentElement.parentElement.querySelector('input').value = item.dataset.value; 
+                    {% comment %} console.log(item);  {% endcomment %}
+                    {% comment %} console.log(item.parentElement.parentElement.querySelector('input'));  {% endcomment %}
+                    {% comment %} console.log(item.dataset.value); {% endcomment %}
+                })
+            })
+        }
+
         
         function appendRentTypeField() {
 
@@ -563,111 +588,7 @@
 
         }
 
-        function appendRoomsCountField() {
-            // Create the div element with class "field"
-            const fieldDiv = document.createElement('div');
-            fieldDiv.classList.add('field');
-        
-            // Create the div element with class "field__heading"
-            const headingDiv = document.createElement('div');
-            headingDiv.classList.add('field__heading');
-        
-            // Create the paragraph element with class "field__heading__title" and text content "عدد الغرف"
-            const titleParagraph = document.createElement('p');
-            titleParagraph.classList.add('field__heading__title');
-            titleParagraph.textContent = 'عدد الغرف';
-        
-            // Append the title paragraph to the heading div
-            headingDiv.appendChild(titleParagraph);
-        
-            // Append the heading div to the field div
-            fieldDiv.appendChild(headingDiv);
-        
-            // Create the div element with class "field__content"
-            const contentDiv = document.createElement('div');
-            contentDiv.classList.add('field__content');
-        
-            // Create the input element with type "hidden" and name "rooms-count-input"
-            const hiddenInput = document.createElement('input');
-            hiddenInput.setAttribute('type', 'hidden');
-            hiddenInput.setAttribute('name', 'rooms-count-input');
-            hiddenInput.setAttribute('value', '');
-        
-            // Append the hidden input to the content div
-            contentDiv.appendChild(hiddenInput);
-        
-            // Create the div element with class "grid" and class "roomsCount"
-            const gridDiv = document.createElement('div');
-            gridDiv.classList.add('grid', 'roomsCount');
-        
-            // Create the six div elements with class "item" and respective data-value attributes
-            const allDiv = document.createElement('div');
-            allDiv.setAttribute('data-value', '');
-            allDiv.classList.add('item');
-            allDiv.textContent = 'الكل';
-        
-            const oneDiv = document.createElement('div');
-            oneDiv.setAttribute('data-value', '1');
-            oneDiv.classList.add('item');
-            oneDiv.textContent = '1';
-        
-            const twoDiv = document.createElement('div');
-            twoDiv.setAttribute('data-value', '2');
-            twoDiv.classList.add('item');
-            twoDiv.textContent = '2';
-        
-            const threeDiv = document.createElement('div');
-            threeDiv.setAttribute('data-value', '3');
-            threeDiv.classList.add('item');
-            threeDiv.textContent = '3';
-        
-            const fourDiv = document.createElement('div');
-            fourDiv.setAttribute('data-value', '4');
-            fourDiv.classList.add('item');
-            fourDiv.textContent = '4';
-        
-            const plusFiveDiv = document.createElement('div');
-            plusFiveDiv.setAttribute('data-value', '+5');
-            plusFiveDiv.classList.add('item');
-            plusFiveDiv.textContent = '+5';
-        
-            // Append the item divs to the grid div
-            gridDiv.appendChild(allDiv);
-            gridDiv.appendChild(oneDiv);
-            gridDiv.appendChild(twoDiv);
-            gridDiv.appendChild(threeDiv);
-            gridDiv.appendChild(fourDiv);
-            gridDiv.appendChild(plusFiveDiv);
-        
-            // Append the grid div to the content div
-            contentDiv.appendChild(gridDiv);
-        
-            // Append the content div to the field div
-            fieldDiv.appendChild(contentDiv);
-        
-            
-            // Append the field div to the fields wrapper
-            changeItemValue(fieldDiv.querySelector('.grid'))
-            fieldsWrapper.appendChild(fieldDiv);
-        }
 
-        function changeItemValue(grid) {
-            grid.querySelectorAll(".item").forEach((item)=> {
-                item.addEventListener('click', () => {
-                    grid.querySelectorAll(".item").forEach((item) => {
-                        item.style.background = 'white'; 
-                        item.style.color = 'black'
-                    })
-                    item.style.color = 'var(--secondary-color)'
-                    item.style.background = 'var(--primary-color)'
-
-                    item.parentElement.parentElement.querySelector('input').value = item.dataset.value; 
-                    {% comment %} console.log(item);  {% endcomment %}
-                    {% comment %} console.log(item.parentElement.parentElement.querySelector('input'));  {% endcomment %}
-                    {% comment %} console.log(item.dataset.value); {% endcomment %}
-                })
-            })
-        }
 
         function appendFamiliesSinglesField() {
             // Create the div element with class "field"
@@ -907,6 +828,8 @@
         }
 
         
+
+
         function appendPropertyAgeField() {
             // Create the div element with class "field"
             const fieldDiv = document.createElement('div');
@@ -1026,6 +949,684 @@
             fieldsWrapper.appendChild(fieldDiv);
         }
         
+        function appendPrivateEnternaceInput() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="private_enternace">مدخل خاص</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="private_enternace" id="private_enternace">
+                </div>
+            `;
+        
+            // Get reference to the fieldWrapper div
+            var fieldWrapper = document.querySelector('.fieldWrapper');
+        
+            // Append the field div to the fieldWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendACInput() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="ac">مكيف</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="ac" id="ac">
+                </div>
+            `;
+        
+            // Append the field div to the fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendCarEntranceInput() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="car_entrance">مدخل سيارة</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="car_entrance" id="car_entrance">
+                </div>
+            `;
+        
+            // Append the field div directly to the existing fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendFurnishedInput() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="furnished">مؤثثة</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="furnished" id="furnished">
+                </div>
+            `;
+        
+            // Append the field div directly to the existing fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+
+        function appendMinMaxSpace() {
+            // Create the minimum space field
+            const minSpaceField = document.createElement('div');
+            minSpaceField.classList.add('field');
+        
+            const minSpaceHeading = document.createElement('div');
+            minSpaceHeading.classList.add('field__heading');
+            minSpaceHeading.innerHTML = '<p>المساحة الأدنى</p>';
+        
+            const minSpaceContent = document.createElement('div');
+            minSpaceContent.classList.add('field__content');
+            const minSpaceInput = document.createElement('input');
+            minSpaceInput.setAttribute('name', 'min-space-input');
+            minSpaceInput.setAttribute('placeholder', 'أدخل المساحة الأدنى بالمتر المربع');
+            minSpaceContent.appendChild(minSpaceInput);
+        
+            minSpaceField.appendChild(minSpaceHeading);
+            minSpaceField.appendChild(minSpaceContent);
+        
+            // Create the maximum space field
+            const maxSpaceField = document.createElement('div');
+            maxSpaceField.classList.add('field');
+        
+            const maxSpaceHeading = document.createElement('div');
+            maxSpaceHeading.classList.add('field__heading');
+            maxSpaceHeading.innerHTML = '<p>المساحة الأقصى</p>';
+        
+            const maxSpaceContent = document.createElement('div');
+            maxSpaceContent.classList.add('field__content');
+            const maxSpaceInput = document.createElement('input');
+            maxSpaceInput.setAttribute('name', 'max-space-input');
+            maxSpaceInput.setAttribute('placeholder', 'أدخل المساحة الأقصى بالمتر المربع');
+            maxSpaceContent.appendChild(maxSpaceInput);
+        
+            maxSpaceField.appendChild(maxSpaceHeading);
+            maxSpaceField.appendChild(maxSpaceContent);
+        
+            // Append both fields to the fieldsWrapper
+            fieldsWrapper.appendChild(minSpaceField);
+            fieldsWrapper.appendChild(maxSpaceField);
+        }
+        
+        function appendInterfaceSelectField() {
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            const headingParagraph = document.createElement('p');
+            headingParagraph.textContent = 'الواجهة';
+        
+            headingDiv.appendChild(headingParagraph);
+        
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            const selectElement = document.createElement('select');
+            selectElement.setAttribute('name', 'interface-select');
+            selectElement.setAttribute('id', 'interface-select');
+        
+            const options = [
+                { value: '', text: 'الكل' },
+                { value: 'شمالية', text: 'شمالية' },
+                { value: 'جنوبية', text: 'جنوبية' },
+                { value: 'شرقية', text: 'شرقية' },
+                { value: 'غربية', text: 'غربية' },
+                { value: 'شمالية شرقية', text: 'شمالية شرقية' },
+                { value: 'شمالية غربية', text: 'شمالية غربية' },
+                { value: 'جنوبية شرقية', text: 'جنوبية شرقية' },
+                { value: 'جنوبية غربية', text: 'جنوبية غربية' }
+            ];
+        
+            options.forEach(optionData => {
+                const option = document.createElement('option');
+                option.setAttribute('value', optionData.value);
+                option.textContent = optionData.text;
+                selectElement.appendChild(option);
+            });
+        
+            contentDiv.appendChild(selectElement);
+        
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+        function appendTwoEnterance() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="two_enterance">مدخلين</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="two_enterance" id="two_enterance">
+                </div>
+            `;
+        
+            // Append the field div to the fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+        function appendInVilla() {
+            // Create a new div element to hold the input field
+            var fieldDiv = document.createElement('div');
+            fieldDiv.className = 'field flex'; // Add classes to the div
+        
+            // Create HTML content for the field div
+            fieldDiv.innerHTML = `
+                <div class="field__heading">
+                    <label for="in_villa">في فيلا</label>
+                </div>
+                <div class="field__content">
+                    <input type="checkbox" name="in_villa" id="in_villa">
+                </div>
+            `;
+        
+            // Append the field div to the fieldsWrapper div
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+        
+        function appendStreetWidthInput() {
+            // Create div for the field
+            var fieldDiv = document.createElement("div");
+            fieldDiv.classList.add("field");
+        
+            // Create div for the field heading
+            var headingDiv = document.createElement("div");
+            headingDiv.classList.add("field__heading");
+            var headingText = document.createElement("p");
+            headingText.textContent = "عرض الشارع";
+            headingDiv.appendChild(headingText);
+        
+            // Create div for the field content
+            var contentDiv = document.createElement("div");
+            contentDiv.classList.add("field__content");
+        
+            // Create input range element
+            var rangeInput = document.createElement("input");
+            rangeInput.setAttribute("type", "range");
+            rangeInput.setAttribute("name", "street-width-input");
+            rangeInput.setAttribute("min", "0");
+            rangeInput.setAttribute("max", "100");
+            rangeInput.setAttribute("value", "0");
+            rangeInput.setAttribute("id", "select-street-width");
+        
+            // Create paragraph for displaying selected value
+            var valueParagraph = document.createElement("p");
+            valueParagraph.setAttribute("id", "street-width-input-value");
+            var spanElement = document.createElement("span");
+            spanElement.textContent = "0";
+            valueParagraph.appendChild(spanElement);
+            valueParagraph.innerHTML += "م";
+        
+            // Append elements to contentDiv
+            contentDiv.appendChild(rangeInput);
+            contentDiv.appendChild(valueParagraph);
+        
+            // Append headingDiv and contentDiv to fieldDiv
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+
+            rangeInput.addEventListener('input', () => {
+                controlRangeInput(rangeInput);
+            }) 
+            
+        }
+
+        function controlRangeInput(rangeInput) { 
+            rangeInput.parentElement.querySelector('#street-width-input-value span').textContent = rangeInput.value;
+        }
+
+        function appendPurposeInput() {
+            // Create a new div element with class "field"
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            // Create a div for heading
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+            const headingParagraph = document.createElement('p');
+            headingParagraph.textContent = 'سكني أو تجاري';
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create a div for content
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            // Create hidden input
+            const hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'purpose-input');
+        
+            // Create grid div
+            const gridDiv = document.createElement('div');
+            gridDiv.classList.add('grid');
+            gridDiv.classList.add('purpose');
+        
+            // Create items for grid
+            const items = [
+                { value: '', text: 'بدون' },
+                { value: 'تجاري', text: 'تجاري' },
+                { value: 'سكني', text: 'سكني' }
+            ];
+        
+            items.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('item');
+                itemDiv.setAttribute('data-value', item.value);
+                itemDiv.textContent = item.text;
+                gridDiv.appendChild(itemDiv);
+            });
+        
+            // Append elements to content div
+            contentDiv.appendChild(hiddenInput);
+            contentDiv.appendChild(gridDiv);
+        
+            // Append heading and content divs to field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            changeItemValue(fieldDiv.querySelector('.grid'));
+
+            // Append field div to fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+
+        }
+
+        
+        function appendStreetWidthSelect() {
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field');
+        
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            const headingParagraph = document.createElement('p');
+            headingParagraph.textContent = 'عرض الشارع';
+        
+            headingDiv.appendChild(headingParagraph);
+        
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            const selectElement = document.createElement('select');
+            selectElement.setAttribute('name', 'street-width-input');
+            selectElement.setAttribute('id', 'street-width-input');
+        
+            const optionAll = document.createElement('option');
+            optionAll.setAttribute('value', '');
+            optionAll.textContent = 'الكل';
+            selectElement.appendChild(optionAll);
+        
+            for (let i = 1; i <= 30; i++) {
+                const option = document.createElement('option');
+                option.setAttribute('value', i.toString());
+                option.textContent = i.toString();
+                selectElement.appendChild(option);
+            }
+        
+            const option30Plus = document.createElement('option');
+            option30Plus.setAttribute('value', '30');
+            option30Plus.textContent = '+30';
+            selectElement.appendChild(option30Plus);
+        
+            contentDiv.appendChild(selectElement);
+        
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendSwimInput() {
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field', 'flex');
+        
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            const labelSwim = document.createElement('label');
+            labelSwim.setAttribute('for', 'pool');
+            labelSwim.textContent = 'مسبح';
+        
+            headingDiv.appendChild(labelSwim);
+        
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            const inputSwim = document.createElement('input');
+            inputSwim.setAttribute('type', 'checkbox');
+            inputSwim.setAttribute('name', 'pool-input');
+            inputSwim.setAttribute('id', 'pool-input');
+        
+            contentDiv.appendChild(inputSwim);
+        
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendDuplexInput() {
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field', 'flex');
+        
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            const labelDuplex = document.createElement('label');
+            labelDuplex.setAttribute('for', 'duplex-input');
+            labelDuplex.textContent = 'دوبلكس';
+        
+            headingDiv.appendChild(labelDuplex);
+        
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            const inputDuplex = document.createElement('input');
+            inputDuplex.setAttribute('type', 'checkbox');
+            inputDuplex.setAttribute('name', 'duplex-input');
+            inputDuplex.setAttribute('id', 'duplex-input');
+        
+            contentDiv.appendChild(inputDuplex);
+        
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+    
+
+        function appendRoomsCountInput() {
+            // Define the HTML string for the rooms count input
+            var roomsCountInputHTML = `
+                <div class="field">
+                    <div class="field__heading">
+                        <p>عدد الغرف</p>
+                    </div>
+                    <div class="field__content">
+                        <select name="rooms-count-input">
+                            <option value="">الكل</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="+8">+8</option>
+                        </select>
+                    </div>
+                </div>
+            `;
+            
+            // Append the HTML to the fieldsWrapper variable
+            fieldsWrapper.innerHTML += roomsCountInputHTML;
+        }
+        
+        function appendLoungesCountInput() {
+            // Define the HTML string for the lounges count input
+            var loungesCountInputHTML = `
+            <div class="field">
+                <div class="field__heading">
+                    <p>عدد الصالات</p> <!-- Changed text content to "عدد الصالات" -->
+                </div>
+                <div class="field__content">
+                    <select name="lounges-count-input"> <!-- Changed select name to "lounges-count-input" -->
+                        <option value="">الكل</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="+8">+8</option>
+                    </select>
+                </div>
+            </div>
+            
+            `;
+            
+            // Append the HTML to the fieldsWrapper variable
+            fieldsWrapper.innerHTML += loungesCountInputHTML;
+        }
+    
+        function appendBathroomsCountInput() {
+            // Define the HTML string for the bathrooms count input
+            var bathroomsCountInputHTML = `
+                <div class="field">
+                    <div class="field__heading">
+                        <p>عدد دورات المياه</p>
+                    </div>
+                    <div class="field__content">
+                        <select name="bathrooms-count-input">
+                            <option value="">الكل</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="+8">+8</option>
+                        </select>
+                    </div>
+                </div>
+            `;
+            
+            // Append the HTML to the fieldsWrapper variable
+            fieldsWrapper.innerHTML += bathroomsCountInputHTML;
+        }
+        
+        function appendFootballField() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "ملعب كرة قدم"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "football_field";
+            checkboxInput.id = "football_field";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendVolleyballField() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "ملعب كرة طائرة"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "volly_field";
+            checkboxInput.id = "volly_field";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+
+
+        function appendHairTentHouse() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "بيت شعر"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "hair_tent_house";
+            checkboxInput.id = "hair_tent_house";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendKitchen() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "مطبخ"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "kitchen";
+            checkboxInput.id = "kitchen";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        function appendAmusement() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "ملاهي"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "amusement";
+            checkboxInput.id = "amusement";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+    
+        function appendFamilyPart() {
+            // Create the outer div with class "field flex"
+            var fieldDiv = document.createElement("div");
+            fieldDiv.className = "field flex";
+        
+            // Create the div with class "field__heading" and the paragraph inside
+            var headingDiv = document.createElement("div");
+            headingDiv.className = "field__heading";
+            var headingParagraph = document.createElement("p");
+            headingParagraph.textContent = "قسم عوائل"; // Text in Arabic
+            headingDiv.appendChild(headingParagraph);
+        
+            // Create the div with class "field__content" and the checkbox inside
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "field__content";
+            var checkboxInput = document.createElement("input");
+            checkboxInput.type = "checkbox";
+            checkboxInput.name = "family_part";
+            checkboxInput.id = "family_part";
+            contentDiv.appendChild(checkboxInput);
+        
+            // Append the heading and content divs to the field div
+            fieldDiv.appendChild(headingDiv);
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
         
         
         let filterBtn = document.querySelector('#filter-btn'); 
@@ -1037,13 +1638,83 @@
             if (propertyTypeSelectValue == 'apartment_rent' || propertyTypeSelectValue == 'apartment_sale') {
                 // show the filters for apartment 
                 appendRentTypeField();
-                appendRoomsCountField();
+                appendRoomsCountInput(); 
                 appendFamiliesSinglesField(); 
                 appendMinMaxPrice(); 
                 appendPropertyFloorSelect(); 
                 appendPropertyAgeField(); 
-                
-            } 
+                appendPrivateEnternaceInput();
+                appendACInput();
+                appendCarEntranceInput();
+                appendFurnishedInput();
+            }  else if (propertyTypeSelectValue =='villa_rent') {
+                appendMinMaxPrice();
+                appendRoomsCountInput(); 
+                appendBathroomsCountInput(); 
+                appendLoungesCountInput();
+                appendMinMaxSpace();
+                appendPropertyAgeField();
+                {% comment %} appendStreetWidthSelect(); {% endcomment %}
+                appendStreetWidthInput(); 
+                appendInterfaceSelectField();
+                appendSwimInput();
+                appendDuplexInput();
+                appendFurnishedInput(); 
+
+            } else if (propertyTypeSelectValue == 'floor_rent') { 
+                appendRoomsCountInput(); 
+                appendLoungesCountInput() ;
+                appendBathroomsCountInput(); 
+                appendPropertyFloorSelect();
+                appendMinMaxSpace(); 
+                appendPropertyAgeField(); 
+                appendMinMaxPrice(); 
+                appendACInput(); 
+                appendPrivateEnternaceInput(); 
+                appendCarEntranceInput();   
+                appendTwoEnterance(); 
+                appendInVilla();
+            } else if (propertyTypeSelectValue == 'shop_rent') {
+                appendMinMaxSpace(); 
+                appendStreetWidthInput();
+            } else if (propertyTypeSelectValue == 'resthouse_rent') {
+                appendFamilyPart(); 
+                appendRentTypeField(); 
+                appendMinMaxPrice(); 
+                appendMinMaxSpace();
+                appendSwimInput(); 
+                appendFootballField(); 
+                appendVolleyballField();
+                appendHairTentHouse();
+                appendKitchen();
+                appendAmusement();  
+
+            } else if (propertyTypeSelectValue == 'commercial_office_rent') { 
+                appendFurnishedInput(); 
+                appendMinMaxPrice(); 
+                appendStreetWidthInput(); 
+                appendMinMaxSpace();
+            } else if (propertyTypeSelectValue == 'land_rent') {
+                appendPurposeInput();
+                appendMinMaxSpace(); 
+                appendInterfaceSelectField(); 
+                appendStreetWidthInput(); 
+            } else if (propertyTypeSelectValue == 'shop_sale') { 
+                appendMinMaxPrice(); 
+                appendStreetWidthInput(); 
+                appendMinMaxSpace() ;
+            } else if (propertyTypeSelectValue == 'resthouse_sale') { 
+                appendMinMaxPrice(); 
+                appendMinMaxSpace(); 
+                appendStreetWidthInput(); 
+                appendPropertyAgeField();
+            } else if (propertyTypeSelectValue =='land_sale') {
+                appendPurposeInput(); 
+                appendMinMaxPrice(); 
+                appendMinMaxSpace();
+                appendInterfaceSelectField(); 
+                appendStreetWidthInput(); 
+            }
         })
 
         filterBtn.addEventListener('click', ()=> {
@@ -1052,20 +1723,51 @@
 
 
             if  (propertyTypeSelect.value == 'apartment_rent') {
-                // rent_type 
-                // rooms_count 
-                // familes_singles
+                // مدخل خاص
+                // مكيف 
+                // مدخل سيارة 
+                // مؤثثة 
 
 
                 // get all variables 
+                let roomsCountInput = document.querySelector('[name=rooms-count-input]').value; 
                 let rentTypeInput = document.querySelector('[name=rent_type_input]').value 
-                let roomCountInput = document.querySelector('[name=rooms-count-input]').value; 
                 let familes_singlesInput = document.querySelector('[name=single-or-family-input]').value;  
                 let minPriceInput = document.querySelector('[name=min-price-input]'); 
                 let maxPriceInput = document.querySelector('[name=max-price-input]'); 
                 let propertyFloorSelect = document.querySelector('[name=property-floor-select]').value; 
                 let propertyAgeSelect = document.querySelector("[name=property-age-select]").value;
+                let privateEnteranceInput = document.querySelector('input[name=private_enternace]'); 
+                let acInput = document.querySelector('input[name=ac]'); 
+                let carEntranceInput = document.querySelector('input[name=car_entrance]'); 
+                let furnishedInput = document.querySelector('input[name=furnished]'); 
                 
+                let privateEnteranceInputValue, acInputValue, carEntranceInputValue, furnishedInputValue; 
+
+                if (privateEnteranceInput.checked)  {
+                    privateEnteranceInput = 1; 
+                } else { 
+                    privateEnteranceInputValue = "" ; 
+                }
+
+                if (acInput.checked)  {
+                    acInputValue = 1; 
+                } else { 
+                    acInputValue == "" ; 
+                }
+
+                if (carEntranceInput.checked)  {
+                    carEntranceInputValue = 1; 
+                } else { 
+                    carEntranceInputValue = "" 
+                }
+
+                if (furnishedInput.checked)  {
+                    furnishedInputValue = 1; 
+                } else { 
+                    furnishedInputValue = "" 
+                }
+
                 let families, single= 0; 
                 if (familes_singlesInput == 'families') { 
                     families = 1; 
@@ -1078,26 +1780,24 @@
                     single = "" 
                 }
 
-                {% comment %} if (minPriceInput.value == "" ) { 
-                    minPriceInput.value = 0; 
-                } 
-                
-                if (maxPriceInput.value == "" ) {
-                    maxPriceInput.value = 0;
-                } {% endcomment %}
 
                 var filters = {
                     'p_type': propertyTypeSelectValue,
                     'city': cityInput, 
+                    'rooms': roomsCountInput, 
                     'neighborhood__icontains': district, 
-                    'rent_type': rentTypeInput, 
-                    'rooms': roomCountInput, 
+                    'rent_type': rentTypeInput,
                     'families': families, 
                     'single': single, 
                     'price__gte': minPriceInput.value, 
                     'price__lte': maxPriceInput.value, 
                     'floor': propertyFloorSelect, 
-                    'property_age': propertyAgeSelect
+                    'property_age': propertyAgeSelect, 
+                    'private_enternace': privateEnteranceInputValue, 
+                    'ac': acInputValue, 
+                    'car_entrance': carEntranceInputValue, 
+                    'furnished': furnishedInputValue, 
+                    'sale': 0
                 }
 
                 $.ajax({
@@ -1118,8 +1818,531 @@
                   
 
 
+            } else if (propertyTypeSelect.value =='villa_rent') {
+
+
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let roomsCount = document.querySelector('[name=rooms-count-input]'), 
+                    loungesCount = document.querySelector('[name=lounges-count-input]'), 
+                    bathroomsCount = document.querySelector('[name=bathrooms-count-input]'), 
+                    minSpaceInput = document.querySelector('[name=min-space-input]'),
+                    maxSpaceInput =document.querySelector('[name=max-space-input]'), 
+                    propertyAge = document.querySelector("[name=property-age-select]"), 
+                    streetWidth = document.querySelector('[name=street-width-input]'), 
+                    poolInput = document.querySelector('[name=pool-input]'), 
+                    duplexInput = document.querySelector("[name=duplex-input]"), 
+                    furnishedInput = document.querySelector('[name=furnished]'), 
+                    interfaceInput = document.querySelector('[name=interface-select]'); 
+
+
+                let poolInputValue = "" 
+                if (poolInput.checked) {
+                    poolInputValue = "1"; 
+                } 
+                let furnishedInputValue = "";
+                if (furnishedInput.checked) {
+                    furnishedInputValue = "1";
+                }
+                
+                let duplexInputValue = "";
+                if (duplexInput.checked) {
+                    duplexInputValue = "1";
+                }
+
+
+                    filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'rooms': roomsCount.value, 
+                    'neighborhood__icontains': district,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'lounges': loungesCount.value, 
+                    'bathroom': bathroomsCount.value, 
+                    'property_age': propertyAge.value, 
+                    'street_width': streetWidth.value, 
+                    'pool': poolInputValue, 
+                    'duplex': duplexInputValue, 
+                    'furnished': furnishedInputValue, 
+                    'interface': interfaceInput.value ,
+                    'sale': 0
+                }
+
+            
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+
+                
+
+            } else if (propertyTypeSelect.value == 'floor_rent') { 
+                // rooms 
+                // lounges 
+                // bathrooms 
+                // floor 
+                // space 
+                // property age 
+                // price 
+                // car_entrance 
+                // ac 
+                // in_villa 
+                // two_enterance
+                // private_enternace
+
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let roomsCount = document.querySelector('[name=rooms-count-input]'), 
+                    loungesCount = document.querySelector('[name=lounges-count-input]'), 
+                    bathroomsCount = document.querySelector('[name=bathrooms-count-input]'), 
+                    minSpaceInput = document.querySelector('[name=min-space-input]'),
+                    maxSpaceInput =document.querySelector('[name=max-space-input]'), 
+                    propertyAge = document.querySelector("[name=property-age-select]") 
+                
+                let propertyAgeSelect = document.querySelector("[name=property-age-select]").value;
+                let privateEnteranceInput = document.querySelector('input[name=private_enternace]'); 
+                let acInput = document.querySelector('input[name=ac]'); 
+                let carEntranceInput = document.querySelector('input[name=car_entrance]'); 
+                let propertyFloorSelect = document.querySelector('[name=property-floor-select]').value; 
+                let inVillaInput = document.querySelector('[name=in_villa]')
+                let two_enterance = document.querySelector('[name=two_enterance]')
+
+                let acInputValue = "" 
+                if (acInput.checked) { 
+                    acInputValue = '1'
+                }
+
+
+                let inVillaInputValue = ""; 
+                if (inVillaInput.checked) { 
+                    inVillaInputValue = '1';
+                }
+                
+                let two_enterance_value = ""; 
+                if (two_enterance.checked) { 
+                    two_enterance_value = '1';
+                }
+                
+                let privateEnteranceInputValue = ""; 
+                if (privateEnteranceInput.checked) { 
+                    privateEnteranceInputValue = '1';
+                }
+                
+                let carEntranceInputValue = ""; 
+                if (carEntranceInput.checked) { 
+                    carEntranceInputValue = '1';
+                }
+                
+
+                var filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'rooms': roomsCount.value, 
+                    'neighborhood__icontains': district, 
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'floor': propertyFloorSelect, 
+                    'bathroom': bathroomsCount.value, 
+                    'property_age': propertyAgeSelect, 
+                    'private_enternace': privateEnteranceInputValue, 
+                    'car_entrance': carEntranceInputValue, 
+                    'sale': 0,
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'lounges': loungesCount.value, 
+                    'ac': acInputValue, 
+                    'in_villa': inVillaInputValue, 
+                    'two_enternace': two_enterance_value, 
+                    'private_enternace': privateEnteranceInputValue, 
+                    'car_entrance': carEntranceInputValue
+                }
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+
+            } else if (propertyTypeSelect.value == 'shop_rent') { 
+
+                let streetWidth = document.querySelector('[name=street-width-input]'),
+                minSpaceInput = document.querySelector('[name=min-space-input]'),
+                maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+
+
+                var filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value,
+                    'street_width': streetWidth.value, 
+                    'sale': 0
+                }
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+            } else if (propertyTypeSelect.value == 'resthouse_rent') {
+                let familyPart = document.querySelector('#family_part'); 
+                let rentTypeInput = document.querySelector('[name=rent_type_input]').value; 
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]'); 
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let poolInput = document.querySelector('[name=pool-input]'); 
+                let footballField = document.querySelector('#football_field'); 
+                let vollyField = document.querySelector('#volly_field'); 
+                let hairTentHouse = document.querySelector('#hair_tent_house'); 
+                let kitchen = document.querySelector('#kitchen'); 
+                let amusement = document.querySelector("#amusement");
+                
+                let familyPartValue = ""; 
+                if (familyPart.checked) { 
+                    familyPartValue = 1; 
+                }
+
+                // For poolInput
+                let poolInputValue = ""; 
+                if (poolInput.checked) { 
+                    poolInputValue = 1; 
+                }
+
+                // For footballField
+                let footballFieldValue = ""; 
+                if (footballField.checked) { 
+                    footballFieldValue = 1; 
+                }
+
+                // For vollyField
+                let vollyFieldValue = ""; 
+                if (vollyField.checked) { 
+                    vollyFieldValue = 1; 
+                }
+
+                // For hairTentHouse
+                let hairTentHouseValue = ""; 
+                if (hairTentHouse.checked) { 
+                    hairTentHouseValue = 1; 
+                }
+
+                // For kitchen
+                let kitchenValue = ""; 
+                if (kitchen.checked) { 
+                    kitchenValue = 1; 
+                }
+
+                // For amusement
+                let amusementValue = ""; 
+                if (amusement.checked) { 
+                    amusementValue = 1; 
+                }
+
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,  
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'rent_type': rentTypeInput.value, 
+                    'family_part': familyPartValue, 
+                    'pool': poolInputValue, 
+                    'football_field': footballFieldValue, 
+                    'volly_field': vollyFieldValue, 
+                    'hair_tent_house': hairTentHouseValue, 
+                    'kitchen': kitchenValue, 
+                    'amusement': amusementValue, 
+                    'sale': 0
+                }
+
+                
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+                
+            } else if (propertyTypeSelect.value == 'commercial_office_rent')  {
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]'); 
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]'); 
+                let furnishedInput = document.querySelector('input[name=furnished]'); 
+                let furnishedInputValue = "";
+                if (furnishedInput.checked)  {
+                    furnishedInputValue = 1; 
+                } else { 
+                    furnishedInputValue = "" 
+                }
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,  
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'street_width': streetWidth.value, 
+                    'sale': '0', 
+                    'furnished': furnishedInputValue
+                }
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+
+
+            } else if (propertyTypeSelect.value == 'land_rent') { 
+                let minSpaceInput = document.querySelector('[name=min-space-input]'); 
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]'); 
+                let interfaceInput = document.querySelector('[name=interface-select]'); 
+                let purposeInput = document.querySelector('[name=purpose-input]'); 
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,  
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value,
+                    'sale':'0',
+                    'street_width': streetWidth.value, 
+                    'interface': interfaceInput.value ,
+                    'purpose': purposeInput.value 
+                }
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+                                
+                
+            } else if (propertyTypeSelect.value == 'shop_sale') {
+
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]');
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]'); 
+
+                
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'street_width': streetWidth.value, 
+                    'sale': 1
+                }
+
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+            } else if (propertyTypeSelect.value == 'resthouse_sale') { 
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]');
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]'); 
+                let propertyAgeSelect = document.querySelector("[name=property-age-select]").value;
+
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'street_width': streetWidth.value, 
+                    'property_age': propertyAgeSelect, 
+                    'sale': 1
+                }
+
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+
+
+            } else if (propertyTypeSelect.value == 'land_sale') {
+                let minPriceInput = document.querySelector('[name=min-price-input]'); 
+                let maxPriceInput = document.querySelector('[name=max-price-input]'); 
+                let minSpaceInput = document.querySelector('[name=min-space-input]');
+                let maxSpaceInput =document.querySelector('[name=max-space-input]'); 
+                let streetWidth = document.querySelector('[name=street-width-input]');
+                let interfaceInput = document.querySelector('[name=interface-select]'); 
+                let purposeInput = document.querySelector('[name=purpose-input]'); 
+
+                filters = {
+                    'p_type': propertyTypeSelectValue,
+                    'city': cityInput, 
+                    'neighborhood__icontains': district,
+                    'price__gte': minPriceInput.value, 
+                    'price__lte': maxPriceInput.value, 
+                    'space__gte': minSpaceInput.value, 
+                    'space__lte': maxSpaceInput.value, 
+                    'street_width': streetWidth.value, 
+                    'purpose': purposeInput.value,
+                    'interface': interfaceInput.value, 
+                    'sale': 1
+                }
+
+
+                $.ajax({
+                    url: "{% url 'property:filter-properties' %}",
+                    method: 'GET', // or 'POST', 'PUT', 'DELETE', etc. depending on the HTTP method you need
+                    data: filters, 
+                    success: function(response) { // callback function to handle successful response
+                      // Do something with the response data
+                      console.log(response)
+                      let propertyGrid = document.querySelector('.property_grid') 
+                      propertyGrid.innerHTML = response;
+                    },
+                    error: function(xhr, status, error) { // callback function to handle errors
+                      // Handle the error
+                      console.error(xhr, status, error);
+                    }
+                });
+
+
             }
         })
+
+        // Code reset btn 
+        let resetBtn = document.querySelector('#reset-btn'); 
+        resetBtn.addEventListener('click', () => {
+            searchFilters.querySelectorAll('select').forEach((select)=> {
+                if (select.name != 'property_type') { 
+                    select.selectedIndex = 0 ;
+                }
+            })
+            searchFilters.querySelectorAll("input").forEach((input) => {
+                input.value = ""; 
+            })
+            searchFilters.querySelectorAll('.grid').forEach((grid) => {
+                let gridItems = grid.querySelectorAll(".item"); 
+                gridItems.forEach((item) => {
+                    item.style.background = 'var(--secondary-color)'
+                    item.style.color = "var(--primary-color)"; 
+                })
+                gridItems[0].style.background = "var(--primary-color)"; 
+                gridItems[0].style.color = 'var(--secondary-color)';
+                grid.parentElement.querySelector('input').value = ""; 
+            })
+
+            searchFilters.querySelectorAll('input[type=checkbox]').forEach((input) => {
+                input.checked = false; 
+            })
+        })
+
+
 
     </script>
 
