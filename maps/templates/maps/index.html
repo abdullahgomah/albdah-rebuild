@@ -184,6 +184,9 @@ href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/marked@2.0.3/marked.min.js"></script>
+
+
 <script>
 
     var swiper = new Swiper(".mySwiper", {
@@ -230,7 +233,7 @@ function get_properties() {
             lat: "{{property.lat}}", 
             lng: "{{property.lng}}", 
             price: "{{ property.price }}", 
-            description: "{{property.description|truncatewords:5}}",
+            description: "{{property.description|truncatewords:15}}",
             cover_img: "{{property.imgs.first.img.url}}",
             number: "{{property.number}}", 
             property_type: "{{property.p_type}}" 
@@ -335,10 +338,34 @@ async function initMap() {
                 infoCard.style.display = 'flex'; 
                 infoCardH3.textContent = propertyTitle 
                 infoCardH3.href = `/property/${propertyNumber}/details/`; 
-                infoCardP.textContent = propertyDescription 
+                infoCardP.textContent = parseTextFromMarkDown(propertyDescription)
                 coverImg.src = propertyCoverImg; 
                 
             });
+
+            function stripHTMLTags(input) {
+                return input.toString().replace(/<[^>]*>/g, "");
+            }
+
+            function parseTextFromMarkDown(mdString) {
+                const htmlString = marked(mdString);
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlString, 'text/html');
+                const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT);
+              
+                const textList = [];
+                let currentNode = walker.currentNode;
+
+
+                while(currentNode) {
+                  textList.push(currentNode.textContent);
+                  currentNode = walker.nextNode();
+                }
+
+                console.log(textList) 
+              
+                return stripHTMLTags(textList);
+              }
         // }
 
 

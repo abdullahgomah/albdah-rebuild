@@ -1805,7 +1805,7 @@
                 appendMinMaxSpace();
                 appendPropertyAgeField();
                 {% comment %} appendStreetWidthSelect(); {% endcomment %}
-                appendStreetWidthInput(); 
+                // appendStreetWidthInput(); 
                 appendInterfaceSelectField();
                 appendSwimInput();
                 appendDuplexInput();
@@ -1990,7 +1990,7 @@
                     minSpaceInput = document.querySelector('[name=min-space-input]'),
                     maxSpaceInput =document.querySelector('[name=max-space-input]'), 
                     propertyAge = document.querySelector("[name=property-age-select]"), 
-                    streetWidth = document.querySelector('[name=street-width-input]'), 
+                    // streetWidth = document.querySelector('[name=street-width-input]'), 
                     poolInput = document.querySelector('[name=pool-input]'), 
                     duplexInput = document.querySelector("[name=duplex-input]"), 
                     furnishedInput = document.querySelector('[name=furnished]'), 
@@ -2024,7 +2024,7 @@
                     'lounges': loungesCount.value, 
                     'bathroom': bathroomsCount.value, 
                     'property_age': propertyAge.value, 
-                    'street_width': streetWidth.value, 
+                    // 'street_width': streetWidth.value, 
                     'pool': poolInputValue, 
                     'duplex': duplexInputValue, 
                     'furnished': furnishedInputValue, 
