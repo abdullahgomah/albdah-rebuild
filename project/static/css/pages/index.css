@@ -232,3 +232,14 @@ input[name=street-width-input]::-webkit-slider-thumb {
 .property__number span {
     font-weight: lighter;
 }
+
+.property__cover_img {
+    position: relative;
+}
+
+.property__cover_img .rented, .property__cover_img .sold {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%) scale(.6);
+}

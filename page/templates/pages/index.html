@@ -285,6 +285,14 @@
 
 
                     <div class="property__cover_img">
+
+                        
+                        {% if property.rented == True %}
+                            <img src="{% static 'imgs/rented.png' %}" alt="" class="rented">
+                        {% elif property.sold == True %}
+                        <img src="{% static 'imgs/sold.png' %}" alt="" class="sold">
+                        {% endif %}
+                            
                     
                     
                         <img src="{% for img in property.imgs.all %}{% if img.main %}{{img.img.url}}{% endif %}{% endfor %}" alt="">
@@ -417,6 +425,7 @@
                 </div>
 
                 <div class="fields-wrapper">
+
 
 
                 </div>
@@ -576,6 +585,69 @@
             })
         }
 
+        function changeItemValue2(grid) {
+            grid.addEventListener('click', (event) => {
+                const target = event.target;
+                if (target.classList.contains('item')) {
+                    // Reset all items in the grid
+                    grid.querySelectorAll('.item').forEach((item) => {
+                        item.style.background = 'white';
+                        item.style.color = 'black';
+                    });
+        
+                    // Highlight the clicked item
+                    target.style.color = 'var(--secondary-color)';
+                    target.style.background = 'var(--primary-color)';
+                    
+                    // Set the input value
+                    target.parentElement.parentElement.querySelector('input').value = target.dataset.value;
+                }
+            });
+        }
+        
+
+        function appendPrivateSurfaceInput() {
+            // Create the div element with class "field" and "flex"
+            const fieldDiv = document.createElement('div');
+            fieldDiv.classList.add('field', 'flex');
+        
+            // Create the div element with class "field__heading"
+            const headingDiv = document.createElement('div');
+            headingDiv.classList.add('field__heading');
+        
+            // Create the label element with text and "for" attribute
+            const labelElement = document.createElement('label');
+            labelElement.setAttribute('for', 'private_surface');
+            labelElement.textContent = 'سطح خاص';
+        
+            // Append the label element to the heading div
+            headingDiv.appendChild(labelElement);
+        
+            // Append the heading div to the field div
+            fieldDiv.appendChild(headingDiv);
+        
+            // Create the div element with class "field__content"
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('field__content');
+        
+            // Create the input element with type "checkbox" and name "private_surface" and id "private_surface"
+            const inputElement = document.createElement('input');
+            inputElement.setAttribute('type', 'checkbox');
+            inputElement.setAttribute('name', 'private_surface');
+            inputElement.setAttribute('id', 'private_surface');
+        
+            // Append the input element to the content div
+            contentDiv.appendChild(inputElement);
+        
+            // Append the content div to the field div
+            fieldDiv.appendChild(contentDiv);
+        
+            // Append the field div to the fieldsWrapper
+            fieldsWrapper.appendChild(fieldDiv);
+        }
+        
+        
+
         
         function appendRentTypeField() {
 
@@ -645,10 +717,12 @@
             // Now, you can append the field div to any existing HTML element in your document to display it
             // For example:
 
-            changeItemValue(fieldDiv.querySelector('.grid'))
+            changeItemValue(fieldDiv.querySelector('.rent_type'))
             fieldsWrapper.appendChild(fieldDiv);  
 
+
         }
+
 
 
 
@@ -715,10 +789,9 @@
             // Append the content div to the field div
             fieldDiv.appendChild(contentDiv);
 
-            changeItemValue(fieldDiv.querySelector('.grid'))
-        
-            // Append the field div to the fields wrapper
             fieldsWrapper.appendChild(fieldDiv);
+            changeItemValue(fieldDiv.querySelector('.grid'))
+            // Append the field div to the fields wrapper
         }
 
         function appendMinMaxPrice() {
@@ -1697,19 +1770,34 @@
         propertyTypeSelect.addEventListener('change', ()=> {
             fieldsWrapper.innerHTML = "";
             propertyTypeSelectValue = propertyTypeSelect.value; 
-            if (propertyTypeSelectValue == 'apartment_rent' || propertyTypeSelectValue == 'apartment_sale') {
+            if (propertyTypeSelectValue == 'apartment_rent') {
                 // show the filters for apartment 
-                appendRentTypeField();
                 appendRoomsCountInput(); 
-                appendFamiliesSinglesField(); 
+                appendRentTypeField(); 
                 appendMinMaxPrice(); 
+                appendFamiliesSinglesField(); 
                 appendPropertyFloorSelect(); 
                 appendPropertyAgeField(); 
                 appendPrivateEnternaceInput();
                 appendACInput();
                 appendCarEntranceInput();
                 appendFurnishedInput();
-            }  else if (propertyTypeSelectValue =='villa_rent') {
+            } else if (propertyTypeSelectValue == 'apartment_sale') {
+                appendRoomsCountInput(); 
+                appendLoungesCountInput(); 
+                appendBathroomsCountInput() 
+                appendMinMaxPrice() 
+                appendCarEntranceInput() 
+                appendPropertyFloorSelect() 
+                appendPropertyAgeField() 
+                appendMinMaxSpace() 
+                appendPrivateSurfaceInput()
+                appendInVilla() 
+                appendTwoEnterance() 
+                appendPrivateEnternaceInput() 
+            }
+              
+            else if (propertyTypeSelectValue =='villa_rent') {
                 appendMinMaxPrice();
                 appendRoomsCountInput(); 
                 appendBathroomsCountInput(); 
@@ -1784,11 +1872,11 @@
             let district = document.querySelector('[name=district]').value; 
 
 
-            if  (propertyTypeSelect.value == 'apartment_rent') {
+            if  (propertyTypeSelect.value == 'apartment_rent' ) {
                 // مدخل خاص
                 // مكيف 
                 // مدخل سيارة 
-                // مؤثثة 
+                // مؤثثة
 
 
                 // get all variables 
