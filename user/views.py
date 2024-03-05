@@ -109,7 +109,7 @@ def user_login(request):
 def custom_logout(request): 
     logout(request) 
 
-    return redirect('page:index') 
+    return redirect('user:user-login') 
 
 
 @login_required
