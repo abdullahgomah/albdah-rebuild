@@ -44,6 +44,7 @@ def office_register(request):
             form.instance.role = 'real_estate_office'
             form.save() 
             messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
+            login(request, user=form.instance, backend='user.backends.CustomPhoneNumberBackend') 
             return redirect('page:index') 
         
 
@@ -64,6 +65,7 @@ def markter_register(request):
             form.instance.role = 'real_estate_marketer' 
             form.save() 
             messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
+            login(request, user=form.instance, backend='user.backends.CustomPhoneNumberBackend') 
             return redirect('page:index') 
 
             
