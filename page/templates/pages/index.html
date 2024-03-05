@@ -251,6 +251,26 @@
                                 <span>{{property.space}}</span>
                                 <span>م&sup2;</span>
                             </div>
+
+                            {% elif property.p_type == 'land_rent' or property.p_type == 'land_sale' %}
+
+                            <div class="property__summary__item">
+                                <span>{{property.space}}</span>
+                                <span>م&sup2;</span>
+                            </div>
+
+                            <div class="property__summary__item">
+                                <i class="fa-solid fa-road"></i>
+                                <span>{{property.street_width}}</span>
+                            </div>
+
+
+                            <div class="property__summary__item">
+                                <i class="fa-solid fa-tag"></i>
+                                <span>{{property.purpose}}</span>
+                            </div>
+
+
                             {% endif %}
                                 
                         </div>
