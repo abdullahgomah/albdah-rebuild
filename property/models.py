@@ -22,6 +22,7 @@ PROPERTY_TYPE_CHOICES = [
     ('shop_rent', 'محل للايجار'), 
     ('resthouse_rent', "استراحة للايجار"), 
     ("commercial_office_rent", "مكتب تجاري للايجار"), 
+    ("commercial_office_sale", "مكتب تجاري للبيع"), 
     ("land_rent", "أرض للايجار"), 
     ("building_rent", "عمارة للايجار"), 
     ("branch_rent", "مستودع للايجار"), 

@@ -222,7 +222,7 @@
 
                         <div class="property__summary">
                             
-                            {% if property.p_type == 'apartment_rent' or property.p_type == 'apartment_sale' %}
+                            {% if property.p_type == 'resthouse_sale' or property.p_type == 'resthouse_rent' or property.p_type == 'floor_rent' or property.p_type == 'floor_sale' or property.p_type == 'apartment_rent' or property.p_type == 'apartment_sale' or property.p_type == 'villa_rent' or property.p_type == 'villa_sale' %}
 
                             <div class="property__summary__item">
                                 <span>{{property.space}}</span>
@@ -246,7 +246,7 @@
                                 <span>{{property.bathroom}}</span>
                             </div>
 
-                            {% elif property.p_type == 'shop_rent' or property.p_type == 'shop_sale' or property.p_type == 'commercial_office_rent' or property.p_type == 'farm_sale' or property.p_type == 'building_sale' or property.p_type == 'building_rent' or property.p_type == 'branch_rent' %}
+                            {% elif property.p_type == 'shop_rent' or property.p_type == 'shop_sale' or property.p_type == 'commercial_office_rent' or property.p_type == 'farm_sale' or property.p_type == 'building_sale' or property.p_type == 'building_rent' or property.p_type == 'branch_rent' or property.p_type == 'branch_sale' %}
                             <div class="property__summary__item">
                                 <span>{{property.space}}</span>
                                 <span>م&sup2;</span>
