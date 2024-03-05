@@ -1,3 +1,4 @@
+{% load static %}
 
     {% for property in result %}
     
@@ -77,16 +78,37 @@
             <p class="property__description">
                 <!-- {{property.description|safe|truncatewords:5}} -->
             </p>
+
+            <p class="property__number">
+                #<span>{{property.id}}</span>
+            </p>
         </div>
         <div class="property__cover_img">
+
+            {% if property.rented == True %}
+                <img src="{% static 'imgs/rented.png' %}" alt="" class="rented">
+            {% elif property.sold == True %}
+                <img src="{% static 'imgs/sold.png' %}" alt="" class="sold">
+            {% endif %}
         
         
-            <img src="{% for img in property.imgs.all %}{% if img.main %}{{img.img.url}}{% endif %}{% endfor %}" alt="">
+            <img class="property__cover__img" src="{% for img in property.imgs.all %}{% if img.main %}{{img.img.url}}{% endif %}{% endfor %}" alt="">
             
             
         </div>
     </div>
     {% endfor %}
 
-
-
+    <script>
+        function update_img_src() { 
+            let propertyCoverImg = document.querySelectorAll('.property__cover__img') 
+            propertyCoverImg.forEach((img) => {
+                console.log(img)
+                if (img.getAttribute('src') == "") { 
+                    img.setAttribute('src', img.parentElement.parentElement.querySelector('[name=propertyFirstImgUrl]').value)
+                }
+            })
+        }
+    </script>
+    
+    
