@@ -80,6 +80,8 @@ class PropertyDepartment(models.Model):
 
 
 class Property(models.Model): 
+    rented = models.BooleanField(default=False, verbose_name='تم التأجير', null=True, blank=True) 
+    sold = models.BooleanField(default=False, verbose_name='تم البيع', null=True, blank=True)
     agree = models.BooleanField(default=False, verbose_name="موافقة" )
     # profile = models.ForeignKey("accounts.Profile", on_delete=models.CASCADE, null=True, blank=True)
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True, blank=True) 
