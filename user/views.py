@@ -24,6 +24,7 @@ def user_register(request):
             form.instance.role = 'user' 
             form.save() 
             messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
+            login(request, user=form.instance, backend='user.backends.CustomPhoneNumberBackend') 
             return redirect('page:index') 
 
 
@@ -190,6 +191,7 @@ def profile(request):
             if phone_number != form.instance.phone_number: 
                 form.instance.phone_number_verify_status = False
                 form.save() 
+
                 return redirect('user:verify-phone-number')
 
     context = {

@@ -83,7 +83,7 @@
 
 <section class="signup__wrapper">
     <div class="container">
-        <form method="POST" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data" id="register-form">
             <div class="form__header">
                 <h2>تسجيل</h2>
                 <a href="{% url 'user:user-login' %}" class="btn btn-solid">تسجيل دخول</a>
@@ -125,6 +125,18 @@
     password1HelpText.textContent= "اكتب كلمة مرور مكونة من 8 عناصر على الأقل من حروف إنجليزية ورموز وأرقام فقط"
 
     password1Wrapper.querySelector('div').appendChild(password1HelpText) 
+
+    let registerForm = document.querySelector('#register-form') 
+
+    registerForm.addEventListener('submit', (e) => {
+        
+        let input = phoneNumberWrapper.querySelector('input') 
+        if (input.value == '+966' || input.value.length < 10) { 
+            e.preventDefault(); 
+        }
+
+    })
+    
 
 
 </script>
