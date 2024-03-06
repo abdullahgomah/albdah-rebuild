@@ -82,15 +82,15 @@ button {
 .btn {
     text-decoration: none;
     color: var(--primary-color); 
-    padding: 0.6rem 1.5rem;
-    border-radius: 2rem ;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 2rem !important ;
     display: block;
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap:.4rem;
-    outline: none; 
-    border: none; 
+    column-gap:.4rem !important;
+    outline: none !important; 
+    border: none ;
     width: fit-content !important;
     text-align: center !important;
 }
