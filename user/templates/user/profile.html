@@ -31,7 +31,13 @@
     <div class="container">
 
         <!-- <h1 class="section__title">الملف الشخصي</h1> -->
+        
+        {% if user.img %}
         <img src="{{user.img.url}}" class="profile__img" alt="{{user.name}}">
+        {% else %}
+        <img src="" class="profile__img" alt="{{user.name}}">
+        {% endif %}
+            
         <h4>{{user.name}}</h4>
         <div class="links">
             <a href="#" class="btn btn-sm btn-solid">المفضلة</a>
