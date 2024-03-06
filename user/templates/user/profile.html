@@ -16,13 +16,22 @@
     .section__title {
         color: var(--primary-color); 
     }
+
+    .profile__img {
+        width: 100px; 
+        height: 100px;
+        object-fit: contain;
+        border-radius: 50%;
+        box-shadow: 2px 2px 20px #1e1e1e20;
+        margin: 1rem 0; 
+    }
 </style>
 
 <section>
     <div class="container">
 
         <!-- <h1 class="section__title">الملف الشخصي</h1> -->
-        <img src="{{user.img.url}}" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+        <img src="{{user.img.url}}" class="profile__img" alt="{{user.name}}">
         <h4>{{user.name}}</h4>
         <div class="links">
             <a href="#" class="btn btn-sm btn-solid">المفضلة</a>
