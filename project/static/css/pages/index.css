@@ -244,3 +244,13 @@ input[name=street-width-input]::-webkit-slider-thumb {
     left: 50%; 
     transform: translate(-50%, -50%) scale(.6);
 }
+
+#slider-btn-all {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.swiper-slide.fill a {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color);
+}
