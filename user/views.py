@@ -188,15 +188,18 @@ def profile(request):
         elif role=='real_estate_marketer':
             form = MarkterUpdate(request.POST, request.FILES, instance=user) 
 
-        # if form.is_valid(): 
-        form.save() 
-        if phone_number != form.instance.phone_number: 
-            form.instance.phone_number_verify_status = False
+        if form.is_valid(): 
             form.save() 
+            if phone_number != form.instance.phone_number: 
+                form.instance.phone_number_verify_status = False
+                form.save() 
 
-            return redirect('user:verify-phone-number')
-
-            return redirect('user:profile')
+                return redirect('user:verify-phone-number')
+        else: 
+            messages.add_message(request, messages.ERROR, message=str(form.errors))
+            return redirect('user:profile') 
+        
+        return redirect('user:profile')
 
     context = {
         'form': form, 
