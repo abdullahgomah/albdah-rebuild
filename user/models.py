@@ -18,6 +18,7 @@ ROLE_CHOICES = (
 class CustomUser(AbstractUser):
     first_name = None  
     last_name = None 
+    img = models.ImageField(upload_to='media/profile/', verbose_name="صورة الملف الشخصي", null=True, blank=True)
     name = models.CharField(max_length=255, verbose_name="الاسم الاول والأخير", null=True, blank=True)
     username = models.CharField(max_length=150 ,blank=True, unique=True, null=True)
     role = models.CharField(max_length=200, choices=ROLE_CHOICES, verbose_name='نوع المستخدم', blank=True, null=True)
