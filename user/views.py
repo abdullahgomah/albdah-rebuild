@@ -182,11 +182,11 @@ def profile(request):
 
     if request.POST:
         if role=='user': 
-            form = UserUpdateForm(request.POST, instance=user) 
+            form = UserUpdateForm(request.POST, request.FILES, instance=user) 
         elif role=='real_estate_office': 
-            form = OfficeUpdate(request.POST, instance=user) 
+            form = OfficeUpdate(request.POST, request.FILES, instance=user) 
         elif role=='real_estate_marketer':
-            form = MarkterUpdate(request.POST, instance=user) 
+            form = MarkterUpdate(request.POST, request.FILES, instance=user) 
 
         if form.is_valid(): 
             form.save() 
@@ -196,7 +196,10 @@ def profile(request):
 
                 return redirect('user:verify-phone-number')
 
+            return redirect('user:profile')
+
     context = {
         'form': form, 
+        'user': user 
     } 
     return render(request, 'user/profile.html', context)

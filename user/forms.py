@@ -12,11 +12,9 @@ class UserUpdateForm(UserChangeForm):
     class Meta: 
         model = CustomUser 
         fields = [
-            # 'username', 
+            "img",  
             "name", 
             'email', 
-            # 'sex', 
-            # 'id_number', 
             'phone_number'
         ]
 
