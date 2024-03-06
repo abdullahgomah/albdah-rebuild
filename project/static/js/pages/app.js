@@ -1,11 +1,11 @@
 var swiper = new Swiper(".mySwiper", {
-    freeMode: true,
-    slidesPerView: 1,
+    // freeMode: true,
+    slidesPerView: 7,
     spaceBetween: 1, 
-    pagination: {
+    /*pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
+    },*/
   });
 
 
