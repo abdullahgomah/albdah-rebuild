@@ -12,6 +12,15 @@
 
 {% block content %}
 
+<style>
+
+    .user_img { 
+        width: 100px; 
+        height: 100px; 
+        border-radius: 50%; 
+        object-fit: cover;
+    }
+</style>
 
 <section>
     <div class="container">
@@ -26,7 +35,7 @@
 
         
         {% if user.img %}
-        <img src="{{user.img.url}}" class="profile__img" alt="{{user.name}}">
+        <img class="user_img" src="{{user.img.url}}" alt="">
         {% else %}
         <img src="" class="profile__img" alt="{{user.name}}">
         {% endif %}
