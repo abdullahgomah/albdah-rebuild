@@ -48,6 +48,12 @@
     center .cta a {
         margin: 0 .5rem;
     }
+    .user_img { 
+        width: 100px; 
+        height: 100px; 
+        border-radius: 50%; 
+        object-fit: cover;
+    }
 </style>
 
 <section>
@@ -90,7 +96,7 @@
     <div class="container">
         <center>
             {% if user.img %}
-            <img src="{{user.img.url}}" alt="">
+            <img class="user_img" src="{{user.img.url}}" alt="">
             {% else %}
             <div class="default-user-img">
                 <i class="fa-solid fa-user"></i>
