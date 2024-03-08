@@ -25,9 +25,33 @@
         box-shadow: 2px 2px 20px #1e1e1e20;
         margin: 1rem 0; 
     }
+    .default-user-img {
+        padding: 1rem; 
+        border: 1px solid var(--primary-color);
+        width: fit-content;
+        border-radius: 50%; 
+        width: 100px; 
+        height: 100px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+    .default-user-img i {
+        font-size: 4rem;
+        color: var(--primary-color);
+    }
+    h1.username 
+    {
+        color: var(--primary-color);
+        margin: 1rem 0;
+    }
+    center .cta a {
+        margin: 0 .5rem;
+    }
 </style>
 
 <section>
+    <!--
     <div class="container">
 
         {% if messages %}
@@ -38,7 +62,6 @@
         </ul>
         {% endif %}
 
-        <!-- <h1 class="section__title">الملف الشخصي</h1> -->
         
         {% if user.img %}
         <img src="{{user.img.url}}" class="profile__img" alt="{{user.name}}">
@@ -61,11 +84,49 @@
         </section>
 
     </div>
+    -->
+
+
+    <div class="container">
+        <center>
+            {% if user.img %}
+            <img src="{{user.img.url}}" alt="">
+            {% else %}
+            <div class="default-user-img">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            {% comment %} <img src="" alt=""> {% endcomment %}
+            {% endif %}
+        </center>
+        
+        <center>
+            <h1 class="username">{{user.name}}</h1>
+        </center>
+
+        <center>
+            <table class="table ">
+                <tr>
+                    <td>الايميل</td>
+                    <td>{{user.email}}</td>
+                </tr>
+                <tr>
+                    <td>رقم الجوال</td>
+                    <td>{{user.phone_number}}</td>
+                </tr>
+            </table>
+        </center>
+
+        <center>
+            <div class="cta">
+                <a href="#" class="btn btn-solid btn-sm">إعلاناتي</a>
+                <a href="{% url 'page:favourites' %}" class="btn btn-solid btn-sm">المفضلة</a>
+                <a href="{% url 'user:profile' %}" class="btn btn-solid btn-sm">الإعدادات</a>
+            </div>
+        </center>
+
+    </div>
 </section>
 
-<script>
 
-    document.querySelector('#div_id_password').style.display = 'none'
-</script>
 
 {% endblock %}

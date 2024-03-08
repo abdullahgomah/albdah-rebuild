@@ -165,6 +165,14 @@ def user_verified(request):
 
 
 @login_required
+def profile_summary(request): 
+    user = request.user 
+    context = {
+        'user': user, 
+    }
+    return render(request, 'user/profile.html', context)
+
+@login_required
 def profile(request):
     user= request.user
     role = user.role
@@ -192,7 +200,7 @@ def profile(request):
             form.save() 
             if phone_number != form.instance.phone_number: 
                 form.instance.phone_number_verify_status = False
-                form.save() 
+                form.save() ## هنا في حالة تغيير رقم الجوال يتم تغيير حالة المستخدم لـ غير موثق
 
                 return redirect('user:verify-phone-number')
         else: 
@@ -205,4 +213,4 @@ def profile(request):
         'form': form, 
         'user': user 
     } 
-    return render(request, 'user/profile.html', context)
+    return render(request, 'user/profile-settings.html', context)
