@@ -33,3 +33,12 @@ propertyCoverImg.forEach((img) => {
     }
 })
 
+
+
+let allSwiperSlide = document.querySelectorAll('.swiper-slide') 
+allSwiperSlide.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        allSwiperSlide.forEach((b) => b.classList.remove('fill')) 
+        btn.classList.add('fill') 
+    })
+})

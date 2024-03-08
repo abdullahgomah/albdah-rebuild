@@ -16,12 +16,41 @@
     .section__title {
         color: var(--primary-color); 
     }
+
+    .profile__img {
+        width: 100px; 
+        height: 100px;
+        object-fit: contain;
+        border-radius: 50%;
+        box-shadow: 2px 2px 20px #1e1e1e20;
+        margin: 1rem 0; 
+    }
 </style>
 
 <section>
     <div class="container">
 
-        <h1 class="section__title">الملف الشخصي</h1>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <!-- <h1 class="section__title">الملف الشخصي</h1> -->
+        
+        {% if user.img %}
+        <img src="{{user.img.url}}" class="profile__img" alt="{{user.name}}">
+        {% else %}
+        <img src="" class="profile__img" alt="{{user.name}}">
+        {% endif %}
+            
+        <h4>{{user.name}}</h4>
+        <div class="links">
+            <a href="{% url 'page:favourites' %}" class="btn btn-sm btn-solid">المفضلة</a>
+            <a href="#" class="btn btn-sm btn-solid">إعلاناتي</a>
+        </div>
 
         <section class="profile-edit">
             <form method="POST" enctype="multipart/form-data">
@@ -33,5 +62,10 @@
 
     </div>
 </section>
+
+<script>
+
+    document.querySelector('#div_id_password').style.display = 'none'
+</script>
 
 {% endblock %}
