@@ -15,5 +15,6 @@ urlpatterns = [
     path('check-otp/', check_otp, name='check-otp'), 
     path('user-verified/', user_verified, name='user-verified'),
     path('profile/', profile, name='profile'), 
-    path('profile_summary/', profile_summary, name='profile_summary')
+    path('profile_summary/', profile_summary, name='profile_summary'),
+    path('my-ads/', my_ads, name='my-ads'), 
 ]

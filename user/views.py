@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import * 
 from .forms import * 
+from property.models import * 
 from .backends import CustomPhoneNumberBackend
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required  
@@ -214,3 +215,18 @@ def profile(request):
         'user': user 
     } 
     return render(request, 'user/profile-settings.html', context)
+
+
+
+@login_required
+def my_ads(request): 
+
+    user =request.user 
+
+    ads = Property.objects.filter(user=user) 
+
+
+    context ={
+        'ads': ads, 
+    } 
+    return render(request, 'user/my-ads.html',context)
