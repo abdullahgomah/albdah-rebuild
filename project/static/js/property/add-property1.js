@@ -344,20 +344,40 @@ imagesFileInput.addEventListener('change', () => {
 
 // Handle Video Uploader 
 videoFileInput.addEventListener('change', () => {
+
     // Reset the preview video container 
     previewVideoContainer.innerHTML = ""; 
 
     const file = videoFileInput.files[0]; 
-    const reader = new FileReader() 
-    reader.onload = () => {
-        const video = document.createElement('video') 
-        video.classList.add("preview_video"); 
-        video.setAttribute('controls', "true") 
-        video.src = reader.result; 
-        previewVideoContainer.appendChild(video) ; 
+    const fileSize = videoFileInput.files[0].size / (1024*1024) 
+
+    console.log(fileSize) 
+
+    if (Number(fileSize) > 50) { 
+        videoFileInput.value = ""; 
+        let fileSizePopup = document.querySelector('.file-size-error') 
+        
+        fileSizePopup.querySelector('a').addEventListener('click', () => {
+            fileSizePopup.style.display = 'none'; 
+            overlayLayer.style.display = 'none'; 
+        })
+
+        overlayLayer.style.display = 'block';
+        fileSizePopup.style.display = 'block'; 
+    } else { 
+        const reader = new FileReader() 
+        reader.onload = () => {
+            const video = document.createElement('video') 
+            video.classList.add("preview_video"); 
+            video.setAttribute('controls', "true") 
+            video.src = reader.result; 
+            previewVideoContainer.appendChild(video) ; 
+        }
+    
+        reader.readAsDataURL(file)
     }
 
-    reader.readAsDataURL(file)
+
 })
 
 propertyImgsNextPrev.querySelector('.btn-next').addEventListener('click', () => { 
