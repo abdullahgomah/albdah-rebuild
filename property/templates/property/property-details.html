@@ -277,7 +277,10 @@
                 </div>
                 <div class="col  ">
                     <p>سعر المتر</p>
-                    <p>1500.50</p>
+                    <p>
+                        {% widthratio property.price property.space 1 %}
+                         ريال 
+                    </p>
                 </div>
                 {% endif %}
 
