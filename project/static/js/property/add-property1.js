@@ -353,7 +353,7 @@ videoFileInput.addEventListener('change', () => {
 
     console.log(fileSize) 
 
-    if (Number(fileSize) > 50) { 
+    if (Number(fileSize) > 150) { 
         videoFileInput.value = ""; 
         let fileSizePopup = document.querySelector('.file-size-error') 
         
