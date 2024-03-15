@@ -68,6 +68,21 @@ href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     margin: 0 !important;
   }
 
+
+  .cover { 
+    position: relative;
+  }
+
+  .rented-sold-img {
+    position: absolute;
+    top:50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 120px !important; 
+    height: 120px !important;
+    z-index: 3000; 
+  }
+
 </style>
 
 
@@ -242,7 +257,9 @@ function get_properties() {
             description: "{{property.description|truncatewords:15}}",
             cover_img: "{{property.imgs.first.img.url}}",
             number: "{{property.number}}", 
-            property_type: "{{property.p_type}}" 
+            property_type: "{{property.p_type}}", 
+            rented: "{{property.rented}}",
+            sold: "{{property.sold}}"
         },
     {% endfor %}
     ];
@@ -250,6 +267,7 @@ function get_properties() {
 
 
     console.log(properties_data.length); 
+    console.log(properties_data)
 }
 
 
@@ -339,6 +357,8 @@ async function initMap() {
 
             
             marker.addListener('click', function () {
+                let sold = property.sold ; 
+                let rented = property.rented ; 
                 let propertyNumber = property.number; 
                 
                 infoCard.style.display = 'flex'; 
@@ -346,6 +366,28 @@ async function initMap() {
                 infoCardH3.href = `/property/${propertyNumber}/details/`; 
                 infoCardP.textContent = parseTextFromMarkDown(propertyDescription)
                 coverImg.src = propertyCoverImg; 
+
+                if (document.querySelector('.rented-sold-img') )  {
+                    document.querySelector('.rented-sold-img').remove() 
+                }
+
+                
+
+                if (rented == "True") { 
+                    let rentedImg = document.createElement('img')
+                    rentedImg.classList.add('rented-sold-img'); 
+                    rentedImg.src = '{% static "imgs/rented.png" %}'
+                    coverImg.parentElement.appendChild(rentedImg);
+                    console.log("rented"); 
+                }
+
+                if (sold == "True") { 
+                    let soldImg = document.createElement('img')
+                    soldImg.classList.add('rented-sold-img'); 
+                    soldImg.src = '{% static "imgs/sold.png" %}'
+                    coverImg.parentElement.appendChild(soldImg);
+                    console.log('sold');
+                }
                 
             });
 
