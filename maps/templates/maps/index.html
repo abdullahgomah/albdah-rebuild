@@ -366,6 +366,9 @@ async function initMap() {
                 infoCardH3.href = `/property/${propertyNumber}/details/`; 
                 infoCardP.textContent = parseTextFromMarkDown(propertyDescription)
                 coverImg.src = propertyCoverImg; 
+
+                console.log(rented) 
+                console.log(sold) 
                 
 
                 if (rented == "True") { 
