@@ -269,6 +269,9 @@ CKEDITOR_5_CONFIGS = {
 }
 
 
+DATA_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 100  # 10 MB (example limit)
+
+
 FILE_UPLOAD_HANDLERS = [
     'django.core.files.uploadhandler.MemoryFileUploadHandler',
     'django.core.files.uploadhandler.TemporaryFileUploadHandler',
