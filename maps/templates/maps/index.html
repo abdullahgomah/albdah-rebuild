@@ -341,8 +341,6 @@ async function initMap() {
             lat = property.lat, 
             // lng = Number(property.position.split(',')[1])
             lng = property.lng
-            sold = property.sold 
-            rented = property.rented 
 
         priceTag.textContent = propertytPrice
 
@@ -359,6 +357,8 @@ async function initMap() {
 
             
             marker.addListener('click', function () {
+                let sold = property.sold ; 
+                let rented = property.rented ; 
                 let propertyNumber = property.number; 
                 
                 infoCard.style.display = 'flex'; 
@@ -367,8 +367,10 @@ async function initMap() {
                 infoCardP.textContent = parseTextFromMarkDown(propertyDescription)
                 coverImg.src = propertyCoverImg; 
 
-                console.log(rented) 
-                console.log(sold) 
+                if (document.querySelector('.rented-sold-img') )  {
+                    document.querySelector('.rented-sold-img').remove() 
+                }
+
                 
 
                 if (rented == "True") { 
