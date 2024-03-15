@@ -373,6 +373,7 @@ async function initMap() {
                     rentedImg.classList.add('rented-sold-img'); 
                     rentedImg.src = '{% static "imgs/rented.png" %}'
                     coverImg.parentElement.appendChild(rentedImg);
+                    console.log("rented"); 
                 }
 
                 if (sold == "True") { 
@@ -380,6 +381,7 @@ async function initMap() {
                     soldImg.classList.add('rented-sold-img'); 
                     soldImg.src = '{% static "imgs/sold.png" %}'
                     coverImg.parentElement.appendChild(soldImg);
+                    console.log('sold');
                 }
                 
             });
