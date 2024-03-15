@@ -467,13 +467,26 @@
         let overlayLayer = document.querySelector('.overlay-layer')
         let searchFilters = document.querySelector(".search-filters") 
 
+
+
+
+
+
+        overlayLayer.addEventListener('click', () => {
+            searchFilters.style.right = '-400px'; 
+            overlayLayer.style.display = 'none';
+            document.body.style.overflow = 'visible'; 
+        })
+
         let searchFilterOpenBtn = document.querySelector('#search-filter-open-btn')
         searchFilterOpenBtn.addEventListener('click', () => {
-            {% comment %} searchFilters.style.display = 'block' {% endcomment %}
             searchFilters.style.right = '0'; 
             overlayLayer.style.display = 'block';
             document.body.style.overflow = 'hidden'; 
+
         })
+
+
 
         let searchFilterCloseBtn = document.querySelector('#search-filter-close-btn i') 
         searchFilterCloseBtn.addEventListener('click', () => {
