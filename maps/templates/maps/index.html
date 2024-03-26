@@ -295,13 +295,15 @@ async function initMap() {
         zoomControl: false, 
         // mapTypeControl: true,
         mapTypeControlOptions: {
-            mapTypeIds: ['roadmap', 'terrain', 'satellite']
+            mapTypeIds: ['roadmap', 'terrain', 'satellite'],
         },
         mapTypeControl: false, 
-        mapTypeId: "terrain",
+        // mapTypeId: "satellite",
+        // mapTypeId: google.maps.MapTypeId.HYBRID,
         fullscreenControl: false, 
         gestureHandling: "greedy"
     });
+    
 
 
     const priceTag = document.createElement("div");
@@ -426,7 +428,10 @@ async function initMap() {
 
 
     document.querySelector("#btn_satellite").addEventListener('click', function() {
-        map.setMapTypeId('satellite')
+        // map.setMapTypeId('satellite')
+        map.setMapTypeId(google.maps.MapTypeId.HYBRID)
+        
+        
     })
 
 
