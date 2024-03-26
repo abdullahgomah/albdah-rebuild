@@ -254,3 +254,18 @@ input[name=street-width-input]::-webkit-slider-thumb {
     background-color: var(--primary-color) !important;
     color: var(--secondary-color);
 }
+
+.custom-swiper {
+    display: flex;
+    overflow-x: scroll;
+    column-gap: 0.5rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: .5rem 1rem;
+}
+
+.custom-swiper .swiper-slide {
+    cursor: pointer;
+    user-select: none;
+}
+
