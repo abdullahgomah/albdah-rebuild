@@ -158,8 +158,8 @@ async function initMap() {
         btnTerrain.classList.toggle('enabled')
         if (btnTerrain.classList.contains("enabled")) { 
             map.setMapTypeId(google.maps.MapTypeId.ROADMAP); 
-        } else { 
-            map.setMapTypeId(google.maps.MapTypeId.SATELLITE); 
+        } else {  
+            map.setMapTypeId(google.maps.MapTypeId.HYBRID)
         }
     })
   
