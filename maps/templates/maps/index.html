@@ -535,7 +535,8 @@ async function initMap() {
     
     }
 
-    createMarkers(properties_data);
+    createMarkers(properties_data); 
+    displayMarkersOnMap(markers); 
 
     function displayMarkersOnMap(markers) {
         markers.forEach((marker) => {
@@ -600,6 +601,7 @@ async function initMap() {
 
 window.initMap = initMap;
 // initMap(); 
+
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
