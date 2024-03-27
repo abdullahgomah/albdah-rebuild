@@ -553,6 +553,7 @@ async function initMap() {
 
     let sliderBtnAll = document.querySelector('#slider-btn-all'); 
     sliderBtnAll.addEventListener('click', () => {
+        get_properties();
         removeAllMarkers();
         displayMarkersOnMap(markers); 
     })
@@ -566,6 +567,7 @@ async function initMap() {
                 let propertyType = btn.dataset.property_type; 
                 console.log(propertyType);
                 removeAllMarkers(); 
+                get_properties();
                 queryProperties(propertyType); 
                 createMarkers(properties_data);
                 displayMarkersOnMap(markers); 
