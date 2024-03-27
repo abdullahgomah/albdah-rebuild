@@ -281,15 +281,25 @@ function get_properties() {
         },
     {% endfor %}
     ];
-
-
-
-    console.log(properties_data.length); 
-    console.log(properties_data)
 }
 
 
-get_properties() 
+get_properties()
+
+
+
+function queryProperties(type = null) { 
+    new_properties_data  = []; 
+    if (type != null)  { 
+        properties_data.forEach((property) => {
+            if (property.property_type == type) { 
+                new_properties_data.push(property); 
+            }
+        })
+    }
+
+    properties_data = new_properties_data
+}
 
 
 
@@ -325,27 +335,13 @@ async function initMap() {
     priceTag.className = "price-tag";
 
 
-//    var apartmentsData = [
-  //  {% for apartment in apartments_rent %}
-    //    {
-      //      title: "{{apartment.title}}", 
-        //    position: "{{ apartment.position }}",
-          //  price: "{{ apartment.price }}", 
-            //description: "{{apartment.description|truncatewords:5}}",
-            //cover_img: "{{apartment.imgs.first.img.url}}",
-            //number: "{{apartment.number}}", 
-            //property_type: "apartment" 
-        //},
-    //{% endfor %}
-    //];
+    let markers = []; 
 
 
-
+    /*
 
     for (let i=0; i<properties_data.length; i++ ) {
 
-        // console.log(properties_data[i]); 
-        // console.log(i)
         const priceTag = document.createElement("div");
 
         priceTag.className = "price-tag";
@@ -368,12 +364,12 @@ async function initMap() {
 
                 
             var marker = new AdvancedMarkerElement ({
-                map,
-                // position: { lat: lat, lng:lng  },
+                // map,
                 position: new google.maps.LatLng(lat, lng), 
                 content: priceTag, 
-                // icon: './house(1).png',
             });
+
+            markers.push(marker); 
 
             
             marker.addListener('click', function () {
@@ -437,14 +433,151 @@ async function initMap() {
         // }
 
 
+    }*/
 
+
+    function createMarkers(properties_data) {
+        markers = [] 
+        for (let i=0; i<properties_data.length; i++ ) {
+
+            const priceTag = document.createElement("div");
+    
+            priceTag.className = "price-tag";
+    
+            // get the apartment 
+            let property = properties_data[i], 
+                propertytPrice = formatPrice(parseInt(property.price)), 
+                // propertytPrice = 2000, 
+                propertyTitle = property.title, 
+                propertyDescription = property.description, 
+                propertyCoverImg = property.cover_img,
+                // lat = Number(property.position.split(',')[0])
+                lat = property.lat, 
+                // lng = Number(property.position.split(',')[1])
+                lng = property.lng
+    
+            priceTag.textContent = propertytPrice
+    
+            // if ( lat != "" || lng != "" ) { 
+    
+                    
+                var marker = new AdvancedMarkerElement ({
+                    // map,
+                    position: new google.maps.LatLng(lat, lng), 
+                    content: priceTag, 
+                });
+    
+                markers.push(marker); 
+    
+                
+                marker.addListener('click', function () {
+                    let sold = property.sold ; 
+                    let rented = property.rented ; 
+                    let propertyNumber = property.number; 
+                    
+                    infoCard.style.display = 'flex'; 
+                    infoCardH3.textContent = propertyTitle 
+                    infoCardH3.href = `/property/${propertyNumber}/details/`; 
+                    infoCardP.textContent = parseTextFromMarkDown(propertyDescription)
+                    coverImg.src = propertyCoverImg; 
+    
+                    if (document.querySelector('.rented-sold-img') )  {
+                        document.querySelector('.rented-sold-img').remove() 
+                    }
+    
+                    
+    
+                    if (rented == "True") { 
+                        let rentedImg = document.createElement('img')
+                        rentedImg.classList.add('rented-sold-img'); 
+                        rentedImg.src = '{% static "imgs/rented.png" %}'
+                        coverImg.parentElement.appendChild(rentedImg);
+                        console.log("rented"); 
+                    }
+    
+                    if (sold == "True") { 
+                        let soldImg = document.createElement('img')
+                        soldImg.classList.add('rented-sold-img'); 
+                        soldImg.src = '{% static "imgs/sold.png" %}'
+                        coverImg.parentElement.appendChild(soldImg);
+                        console.log('sold');
+                    }
+                    
+                });
+    
+                function stripHTMLTags(input) {
+                    return input.toString().replace(/<[^>]*>/g, "");
+                }
+    
+                function parseTextFromMarkDown(mdString) {
+                    const htmlString = marked(mdString);
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(htmlString, 'text/html');
+                    const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT);
+                  
+                    const textList = [];
+                    let currentNode = walker.currentNode;
+    
+    
+                    while(currentNode) {
+                      textList.push(currentNode.textContent);
+                      currentNode = walker.nextNode();
+                    }
+    
+                    console.log(textList) 
+                  
+                    return stripHTMLTags(textList);
+                  }
+            // }
+    
+    
+        }
+    
     }
 
+    createMarkers(properties_data);
+
+    function displayMarkersOnMap(markers) {
+        markers.forEach((marker) => {
+            marker.setMap(map); 
+        })
+    }
+    
+
+    function removeAllMarkers () { 
+        markers.forEach((marker) => {
+            marker.setMap(null) 
+        })
+    }
+
+
+    let sliderBtnAll = document.querySelector('#slider-btn-all'); 
+    sliderBtnAll.addEventListener('click', () => {
+        removeAllMarkers();
+        displayMarkersOnMap(markers); 
+    })
+
+
+    let swiperButtons = document.querySelectorAll('.custom-swiper .swiper-slide .btn'); 
+    swiperButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+        
+            if (btn.id != 'slider-btn-all') { 
+                let propertyType = btn.dataset.property_type; 
+                console.log(propertyType);
+                removeAllMarkers(); 
+                queryProperties(propertyType); 
+                createMarkers(properties_data);
+                displayMarkersOnMap(markers); 
+            }
+
+        })
+
+    })
 
     document.querySelector("#btn_satellite").addEventListener('click', function() {
         // map.setMapTypeId('satellite')
         map.setMapTypeId(google.maps.MapTypeId.HYBRID)
-        
         
     })
 
