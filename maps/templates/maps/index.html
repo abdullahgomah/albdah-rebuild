@@ -554,6 +554,7 @@ async function initMap() {
     let sliderBtnAll = document.querySelector('#slider-btn-all'); 
     sliderBtnAll.addEventListener('click', () => {
         get_properties();
+        createMarkers(properties_data); 
         removeAllMarkers();
         displayMarkersOnMap(markers); 
     })
