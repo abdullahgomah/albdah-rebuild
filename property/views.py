@@ -58,6 +58,8 @@ def add_property(request, property_type, offer_type=None):
         sell = 0 
         p_type = property_type
 
+
+
     # property_type_display_name = PropertyDepartment.objects.get(name=p_type) 
     
     if request.POST: 
@@ -141,18 +143,12 @@ def add_property(request, property_type, offer_type=None):
         if lounges == None or lounges == "" or lounges == 0: 
             lounges = request.POST.get('lounges-input') 
         
-        print('lounges')
-        print(lounges) 
-        print('#'* 30)
+
 
         bathrooms = request.POST.get('extra-bathroom-input') 
         if bathrooms == None or bathrooms == '' or bathrooms == 0 : 
             bathrooms = request.POST.get('bathroom-input') 
 
-                
-        print('bathrooms')
-        print(bathrooms) 
-        print('#'* 30)
 
         features = [
             water_exist,
@@ -268,7 +264,7 @@ def add_property(request, property_type, offer_type=None):
             property_obj = Property.objects.create(
                 sale = sell, 
                 user = user, 
-                p_type = property_type, 
+                p_type = p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 price = price, 
@@ -371,7 +367,7 @@ def add_property(request, property_type, offer_type=None):
                 private_surface = features[10], 
                 in_villa = features[11], 
                 two_enternace = features[12], 
-                p_type = property_type, 
+                p_type = p_type, 
                 neighborhood = neighborhood, 
                 city = city, 
                 price = price, 
@@ -385,7 +381,7 @@ def add_property(request, property_type, offer_type=None):
                 lounges = lounges, 
                 bathroom = bathrooms, 
                 floor =floor, 
-                property_age = p_type, 
+                property_age = property_age, 
                 # family_part = family_part, 
                 rent_type = rent_type ,
                 # purpose = purpose, 

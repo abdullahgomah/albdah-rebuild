@@ -65,13 +65,17 @@
                 <!-- <li><a href="#" class="property_type_link">بيت للبيع</a></li> -->
                 <!-- <li><a href="#" class="property_type_link">استراحة للبيع</a></li> -->
                 <li><a href="{% url 'property:add-property-sell' "sell" "resthouse_rent" %}" class="property_type_link">استراحة للبيع</a></li>
-                <li><a href="#" class="property_type_link">مكتب تجاري للبيع</a></li>
+                {% comment %} <li><a href="#" class="property_type_link">مكتب تجاري للبيع</a></li> {% endcomment %}
+                <li><a href="{% url 'property:add-property-sell' "sell" "commercial_office_rent" %}" class="property_type_link">مكتب تجاري للبيع</a></li>
                 <li><a href="{% url 'property:add-property-sell' 'sell' 'land_sale' %}" class="property_type_link">أرض للبيع</a></li>
                 <li><a href="{% url 'property:add-property-sell' 'sell' 'building_sale' %}" class="property_type_link">عمارة للبيع</a></li>
-                <li><a href="#" class="property_type_link">مستودع للبيع</a></li>
+                {% comment %} <li><a href="#" class="property_type_link">مستودع للبيع</a></li> {% endcomment %}
+                <li><a href="{% url 'property:add-property-sell' "sell" 'branch_rent' %}" class="property_type_link">مستودع للبيع</a></li>
+
                 <!-- <li><a href="#" class="property_type_link">مخيم للبيع</a></li> -->
                 <!-- <li><a href="#" class="property_type_link">غرفة للبيع</a></li> -->
-                <li><a href="#" class="property_type_link">مزرعة للبيع</a></li>
+                {% comment %} <li><a href="#" class="property_type_link">مزرعة للبيع</a></li> {% endcomment %}
+                <li><a href="{% url 'property:add-property-sell' "sell" "farm_sale" %}" class="property_type_link">مزرعة للبيع</a></li>
                 <li><a href="{% url 'property:add-property-sell' "sell" "chalet_rent" %}" class="property_type_link">شاليه للبيع</a></li>
             </ul>
         </div>

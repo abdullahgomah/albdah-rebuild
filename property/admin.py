@@ -10,7 +10,7 @@ admin.site.register(Favourite)
 
 class PropertyAdmin(ImportExportModelAdmin, admin.ModelAdmin): 
     model = Property
-    search_fields = ('number', 'interface')
+    search_fields = ('number', 'interface', 'title')
 
 admin.site.register(Property, PropertyAdmin)
 
