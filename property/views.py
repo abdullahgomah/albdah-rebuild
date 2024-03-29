@@ -953,3 +953,17 @@ def filter_properties(request):
 
     # return JsonResponse(list(filtered_properties), safe=False)
     return render(request, 'property/filter-results.html', context)
+
+
+
+def filter_result(request, p_type):
+    if p_type != 'all': 
+        properties = Property.objects.filter(p_type=p_type) 
+    else: 
+        properties = Property.objects.all() 
+
+    context = {
+        'result': properties
+    }
+
+    return render(request, 'property/filter-results.html', context)

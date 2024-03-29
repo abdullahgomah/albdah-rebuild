@@ -2,6 +2,7 @@ let propertyTypeBtns = document.querySelectorAll('.swiper-slide .btn')
 let allProperties = document.querySelectorAll('.item.property') 
 
 
+/* 
 propertyTypeBtns.forEach((btn) => {
     // console.log(btn.dataset.property_type)
     btn.addEventListener('click', () => {
@@ -24,6 +25,30 @@ propertyTypeBtns.forEach((btn) => {
     })
 })
 
+*/ 
+
+
+propertyTypeBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        let btnDataSetValue = btn.dataset.property_type; 
+        //if (btnDataSetValue != 'all') {
+            // start ajax request 
+
+            $.ajax(
+                {
+                    type:"GET",
+                    url: `/property/filter-result/${btnDataSetValue}`,
+
+                    success: function( response ) 
+                    {
+                        let a = $('.property_list .grid'); 
+                        a.html(response);
+                    }
+                 })
+            
+        // } 
+    })
+})
 
 let propertyCoverImg = document.querySelectorAll('.property__cover_img img'); 
 

@@ -103,7 +103,6 @@
         function update_img_src() { 
             let propertyCoverImg = document.querySelectorAll('.property__cover__img') 
             propertyCoverImg.forEach((img) => {
-                console.log(img)
                 if (img.getAttribute('src') == "") { 
                     img.setAttribute('src', img.parentElement.parentElement.querySelector('[name=propertyFirstImgUrl]').value)
                 }

@@ -12,5 +12,6 @@ urlpatterns = [
     path('add-to-favourite/<str:property_number>/', add_to_favourite, name='add-to-favourite'), 
     path('report/<str:number>/', report_property, name='report-property'), 
     path('report/reported', show_reported, name='reported'), 
-    path('filter/', filter_properties, name='filter-properties')
+    path('filter/', filter_properties, name='filter-properties'), 
+    path('filter-result/<str:p_type>/', filter_result, name='filter-result'), 
 ]
