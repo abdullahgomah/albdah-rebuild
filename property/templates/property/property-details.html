@@ -927,17 +927,18 @@
 
         </div>
 
+        {% if property.video.name != '' %}
         <div class="property__video">
             
-            {% if property.video %}
             
             <video controls>
                 <source src="{{property.video.url}}" type="video/mp4">
             </video>
-            {% endif %}
-
+            
         </div>
+        {% endif %}
 
+        <br>
         <div class="property__location">
             <h3>موقع العقار</h3>
             <div id="map">
