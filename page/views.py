@@ -22,6 +22,7 @@ def index(request):
         'all_properties': all_properties, 
         'page_obj': page_obj, 
         'paginator': paginator,
+        'visits': v, 
     } 
     return render(request, 'pages/index.html', context)
 
