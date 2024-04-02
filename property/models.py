@@ -80,6 +80,7 @@ class PropertyDepartment(models.Model):
 
 
 class Property(models.Model): 
+    visits = models.IntegerField(blank=True, null=True, default=0)
     rented = models.BooleanField(default=False, verbose_name='تم التأجير', null=True, blank=True) 
     sold = models.BooleanField(default=False, verbose_name='تم البيع', null=True, blank=True)
     agree = models.BooleanField(default=False, verbose_name="موافقة" )

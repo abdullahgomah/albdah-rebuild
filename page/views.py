@@ -8,6 +8,11 @@ from .models import *
 
 
 def index(request): 
+    
+    v = Visitor.objects.first()
+    v.home +=1 
+    v.save() 
+
     all_properties = Property.objects.all()[::-1]
     paginator = Paginator(all_properties, 10) 
     page_number = request.GET.get('page') 

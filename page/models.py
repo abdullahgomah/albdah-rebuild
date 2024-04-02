@@ -31,3 +31,12 @@ class PropertyOwner(models.Model):
     class Meta: 
         verbose_name = "أصحاب العقار"
         verbose_name_plural = "أصحاب العقار"
+
+
+class Visitor(models.Model):
+    home = models.IntegerField(default=0) 
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Visitor'
+        verbose_name_plural = 'Visitors'
