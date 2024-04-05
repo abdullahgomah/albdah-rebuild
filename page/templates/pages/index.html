@@ -338,8 +338,11 @@
                                 
                         {% endfor %} -->
 
-
+                        
+                        {% if page_obj.has_previous %}
                         <a href="?page={{page_obj.previous_page_number}}">السابق</a>
+                        {% endif %}
+                            
                         {% for x in next_five %}
                             {% if x.number == page_obj.number %}
                                 <a href="/?page={{x.number}}" class="current_page">{{x.number}}</a>
