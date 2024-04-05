@@ -91,9 +91,14 @@
     <!-- MAIN -->
     {% get_info as info %}
 
-    {% block content %}
+
+
+    <div class="body__content">
+
+        {% block content %}
         
-    {% endblock content %}
+        {% endblock content %}
+    </div>
 
 
       
@@ -168,12 +173,12 @@
             if (nav.classList.contains('show') == true) { 
                 headerOverlayLayer.style.display = 'block';
                 // document.body.style.overflow = 'hidden';
-                document.querySelector('.website-content').style.overflow = 'hidden'; 
+                document.querySelector('.body__content').style.overflow = 'hidden'; 
             } 
             else {
                 headerOverlayLayer.style.display = 'none';
                 // document.body.style.overflow = 'visible';
-                document.querySelector('.website-content').style.overflow = 'visible'; 
+                document.querySelector('.body__content').style.overflow = 'visible'; 
             }
             
             setTimeout(() => {
