@@ -606,7 +606,6 @@ footer .copyrights {
     header {
         overflow: hidden !important;
         height: 80px;
-        background: transparent;
     }
 
     header.expand { 
