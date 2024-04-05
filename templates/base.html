@@ -46,8 +46,8 @@
     <div class="website-content">
 
 
-        <!--
-    <header >
+        
+    <header id="main_header">
         <div class="container">
             <div class="logo-container">
                 <a href="{% url 'page:index' %}">
@@ -85,7 +85,7 @@
 
     </header>
 
---> 
+ 
 
 
     <header class="responsive-header">
@@ -203,22 +203,28 @@
 
 
         <script>
-        burgerMenu = document.querySelector('#burger-menu')
+        burgerMenu = document.querySelectorAll('#burger-menu')[1]
         let headerOverlayLayer = document.querySelector('.header-overlay-layer'); 
+        let navsSection = document.querySelector('.navs');
+
         // let swiperMenu = document.querySelector('.mySwiper'); 
 
 
         burgerMenu.addEventListener('click', () => {
-            let navsSection = document.querySelector('.navs');
             navsSection.classList.toggle('show');
 
             if (navsSection.classList.contains('show')) { 
                 document.body.style.overflowY = 'hidden'; 
                 headerOverlayLayer.style.display = 'block';
-            } else { 
+            } else {
                 document.body.style.overflowY = 'visible'; 
                 headerOverlayLayer.style.display = 'none';
             }
+        })
+
+        headerOverlayLayer.addEventListener('click', () => {
+            navsSection.classList.remove("show"); 
+            headerOverlayLayer.style.display = 'none'; 
         })
 
 
