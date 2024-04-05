@@ -129,7 +129,7 @@
         </nav>
     </section>
     
-    <div class="hedaer-overlay-layer"></div>
+    <div class="header-overlay-layer"></div>
 
 
 
@@ -204,12 +204,21 @@
 
         <script>
         burgerMenu = document.querySelector('#burger-menu')
+        let headerOverlayLayer = document.querySelector('.header-overlay-layer'); 
         // let swiperMenu = document.querySelector('.mySwiper'); 
 
 
         burgerMenu.addEventListener('click', () => {
-            let navsSection = document.querySelector('.navs'); 
+            let navsSection = document.querySelector('.navs');
             navsSection.classList.toggle('show');
+
+            if (navsSection.classList.contains('show')) { 
+                document.body.style.overflowY = 'hidden'; 
+                headerOverlayLayer.style.display = 'block';
+            } else { 
+                document.body.style.overflowY = 'visible'; 
+                headerOverlayLayer.style.display = 'none';
+            }
         })
 
 

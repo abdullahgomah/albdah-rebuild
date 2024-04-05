@@ -639,7 +639,7 @@ footer .copyrights {
         border-bottom: 1px solid var(--primary-color) !important;
     }
     
-    .hedaer-overlay-layer { 
+    .header-overlay-layer { 
         width: 100%; 
         height: 100%; 
         position: absolute;
