@@ -46,7 +46,7 @@
     <div class="website-content">
 
 
-    <header>
+    <header class="">
         <div class="container">
             <div class="logo-container">
                 <a href="{% url 'page:index' %}">
@@ -77,7 +77,7 @@
 
                 </ul>
             </nav>
-            <a href="#" id="burger-menu">
+            <a id="burger-menu">
                 <i class="fa-solid fa-bars"></i>
             </a>
         </div>
@@ -152,14 +152,26 @@
 
         <script>
         burgerMenu = document.querySelector('#burger-menu')
-        let swiperMenu = document.querySelector('.mySwiper'); 
+        // let swiperMenu = document.querySelector('.mySwiper'); 
 
 
         burgerMenu.addEventListener('click', () => {
           document.querySelectorAll('header .container nav').forEach((nav) => {
+            
+            let header = document.querySelector('header')
+            header.style.overflow = "visible";
             nav.classList.toggle('show');
+            
+            setTimeout(() => {
+                if (!nav.classList.contains('show')) {
+                    header.style.overflow = 'hidden';
+                }
+            }, 500) 
+            
+            // nav.style.display = 'block';
+            // nav.style.left = 0;  
           })
-          swiperMenu.classList.toggle('hide'); 
+          // swiperMenu.classList.toggle('hide'); 
         })
 
 
