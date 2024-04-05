@@ -15,11 +15,7 @@ def index(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
 
-    print('ip-==========-')
-    print(ip) 
 
-    print('--------')
-    
     v = Visitor.objects.first()
     v.home +=1 
     v.save() 
@@ -29,11 +25,27 @@ def index(request):
     page_number = request.GET.get('page') 
     page_obj = paginator.get_page(page_number) 
 
+    next_page_obj = paginator.get_page(page_obj.number+1)
+    next_five_pages = [page_obj]
+    print('count') 
+    print(paginator.count) 
+    print('=====')
+    for i in range(5): 
+        p = paginator.get_page(page_obj.number +i+1)  
+        if page_obj.number +i+1 > paginator.num_pages: 
+            break 
+        else: 
+            next_five_pages.append(p) 
+
+    print(next_five_pages)
+
+
     context = {
         'all_properties': all_properties, 
         'page_obj': page_obj, 
         'paginator': paginator,
         'pages': paginator.num_pages,
+        'next_five':next_five_pages ,
         'visits': v, 
     } 
     return render(request, 'pages/index.html', context)

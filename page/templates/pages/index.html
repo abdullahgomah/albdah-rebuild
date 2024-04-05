@@ -327,7 +327,7 @@
                         {% endif %}
 
                         -->
-                        
+<!--                         
                         {% for i in paginator.page_range %}
                             
                             {% if i == page_obj.number %}
@@ -336,7 +336,18 @@
                                 <a href="/?page={{i}}">{{i}}</a>
                             {% endif %}
                                 
+                        {% endfor %} -->
+
+
+                        
+                        {% for x in next_five %}
+                            {% if x.number == page_obj.number %}
+                                <a href="/?page={{x.number}}" class="current_page">{{x.number}}</a>
+                            {% else %}
+                            <a href="/?page={{x.number}}">{{x.number}}</a>
+                            {% endif %}
                         {% endfor %}
+                            
                             
 
                         <a href="?page={{paginator.num_pages}}">الأخيرة</a>
