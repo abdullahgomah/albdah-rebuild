@@ -172,13 +172,13 @@
             let headerOverlayLayer = document.querySelector('.hedaer-overlay-layer'); 
             if (nav.classList.contains('show') == true) { 
                 headerOverlayLayer.style.display = 'block';
-                // document.body.style.overflow = 'hidden';
-                document.querySelector('.body__content').style.overflow = 'hidden'; 
+                document.body.style.overflow = 'hidden';
+                // document.querySelector('.body__content').style.overflow = 'hidden'; 
             } 
             else {
                 headerOverlayLayer.style.display = 'none';
-                // document.body.style.overflow = 'visible';
-                document.querySelector('.body__content').style.overflow = 'visible'; 
+                document.body.style.overflow = 'visible';
+                // document.querySelector('.body__content').style.overflow = 'visible'; 
             }
             
             setTimeout(() => {
