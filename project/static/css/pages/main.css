@@ -380,9 +380,8 @@ section.property_list .grid .item .property__cover_img {
 
 .navs {
     margin: 0;
-    position: absolute;
+    position: fixed;
     top: 80px;
-    left:0;
     z-index: 39000;
     width: 100%;
     background-color: white;
