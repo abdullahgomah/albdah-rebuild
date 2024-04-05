@@ -120,7 +120,7 @@ header {
     width: 100%; 
     position: sticky;
     background: var(--secondary-color);  
-    z-index: 10000;
+    z-index: 60000;
     top: 0; 
     left: 0; 
 }
