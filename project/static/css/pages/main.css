@@ -119,9 +119,10 @@ header {
     /* min-height: 85px; */
     width: 100%; 
     position: sticky;
+    position: relative !important;
     background: var(--secondary-color);  
-    z-index: 60000;
-    top: 0; 
+    z-index: 7000;
+    /* top: 0;  */
     left: 0; 
 }
 
@@ -677,7 +678,7 @@ footer .copyrights {
         top: 0; 
         left: 0; 
         background: #21212130; 
-        z-index: 7000;
+        z-index: 6000;
         display: none;
     }
 
