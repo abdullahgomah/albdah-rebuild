@@ -46,7 +46,8 @@
     <div class="website-content">
 
 
-    <header class="">
+        <!--
+    <header >
         <div class="container">
             <div class="logo-container">
                 <a href="{% url 'page:index' %}">
@@ -83,6 +84,50 @@
         </div>
 
     </header>
+
+--> 
+
+
+    <header class="responsive-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="{% url 'page:index' %}">
+                    <img src="{% static 'imgs/logo.jpeg' %}" alt="">
+                    {% comment %} <img src="{% static 'imgs/logoText-e961f794.png' %}" alt="" class="logo-text"> {% endcomment %}
+                    <img src="{% static 'imgs/logo-text.png' %}" alt="" class="logo-text">
+                </a>
+            </div>
+
+            <a id="burger-menu">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <section class="navs">
+        <nav>
+            <ul>
+                <li><a href="{% url 'page:index' %}" class="list-item">الرئيسية</a></li>
+                <li><a href="{% url 'page:property-owners' %}" class="list-item">أصحاب العقار</a></li>
+                <li><a href="{% url 'page:request-contract' %}" class="list-item">طلب عقد إلكتروني</a></li>
+                <li><a href="#" class="list-item">تواصل معنا</a></li>
+                <li><a href="{% url 'page:about' %}" class="list-item">من نحن</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'user:profile_summary' %}"class="btn btn-solid">الملف الشخصي</a></li>
+                <li><a href="{% url 'user:custom-logout' %}" class="btn btn-outline">تسجيل خروج</a></li>
+                {% else %}
+                <li><a href="{% url 'property:add-property-interface' %}" class="btn btn-solid">إضافة عقار</a></li>
+                <li><a href="{% url 'user:user-login' %}" class="btn btn-outline">تسجيل دخول</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+    </section>
     
     <div class="hedaer-overlay-layer"></div>
 
@@ -163,34 +208,8 @@
 
 
         burgerMenu.addEventListener('click', () => {
-          document.querySelectorAll('header .container nav').forEach((nav) => {
-            
-            let header = document.querySelector('header')
-            header.style.overflow = "visible";
-            nav.classList.toggle('show');
-
-            let headerOverlayLayer = document.querySelector('.hedaer-overlay-layer'); 
-            if (nav.classList.contains('show') == true) { 
-                headerOverlayLayer.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-                // document.querySelector('.body__content').style.overflow = 'hidden'; 
-            } 
-            else {
-                headerOverlayLayer.style.display = 'none';
-                document.body.style.overflow = 'visible';
-                // document.querySelector('.body__content').style.overflow = 'visible'; 
-            }
-            
-            setTimeout(() => {
-                if (!nav.classList.contains('show')) {
-                    header.style.overflow = 'hidden';
-                }
-            }, 500) 
-            
-            // nav.style.display = 'block';
-            // nav.style.left = 0;  
-          })
-          // swiperMenu.classList.toggle('hide'); 
+            let navsSection = document.querySelector('.navs'); 
+            navsSection.classList.toggle('show');
         })
 
 
