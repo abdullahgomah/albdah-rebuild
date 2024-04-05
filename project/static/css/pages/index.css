@@ -269,3 +269,9 @@ input[name=street-width-input]::-webkit-slider-thumb {
     user-select: none;
 }
 
+
+
+#close-window-btn {
+    text-decoration: underline;
+    cursor: pointer; 
+}

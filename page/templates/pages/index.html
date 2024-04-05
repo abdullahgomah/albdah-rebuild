@@ -451,6 +451,9 @@
                 <div class="field">
                     <a id='reset-btn' >مسح الفلاتر</a>
                 </div>
+                <div class="field">
+                    <a id='close-window-btn' >إغلاق النافذة</a>
+                </div>
             </div>
         </div>
     </section>
@@ -498,6 +501,13 @@
 
         let searchFilterCloseBtn = document.querySelector('#search-filter-close-btn i') 
         searchFilterCloseBtn.addEventListener('click', () => {
+            searchFilters.style.right = '-400px'; 
+            overlayLayer.style.display = 'none';
+            document.body.style.overflow = 'visible'; 
+        })
+
+        let closeWinBtn = document.querySelector('#close-window-btn'); 
+        closeWinBtn.addEventListener('click', () => {
             searchFilters.style.right = '-400px'; 
             overlayLayer.style.display = 'none';
             document.body.style.overflow = 'visible'; 
