@@ -368,7 +368,7 @@ section.property_list .grid .item .property__cover_img {
 
 /* custom header styling */
 
-#burger-menu {
+.responsive-header #burger-menu {
     position: absolute;
     top: 25px ;
     left: 5px;
@@ -387,6 +387,7 @@ section.property_list .grid .item .property__cover_img {
 
 .responsive-header { 
     width: 100%;
+    display: none;
 }
 
 .responsive-header .container {
@@ -405,6 +406,7 @@ section.property_list .grid .item .property__cover_img {
     padding-bottom: 1rem;
     left: -100%;
     transition: left .3s ease-in-out;
+
 }
 
 .navs.show {
@@ -603,9 +605,18 @@ footer .copyrights {
 }
 
 
+
  
 @media (max-width:992px) {
 
+
+    #main_header {
+        display: none;
+    }
+
+    .responsive-header {
+        display: block !important;
+    }
 
     header {
         overflow: hidden !important;
