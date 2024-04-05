@@ -231,6 +231,13 @@
         document.querySelectorAll('textarea').forEach((item) => {
             item.value = "" ;
         })
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) {
+                navsSection.classList.remove('show');   
+            }
+        })
+
     </script>
 
 </body>
