@@ -205,11 +205,12 @@
         <script>
         burgerMenu = document.querySelector('#burger-menu')
         let headerOverlayLayer = document.querySelector('.header-overlay-layer'); 
+        let navsSection = document.querySelector('.navs');
+
         // let swiperMenu = document.querySelector('.mySwiper'); 
 
 
         burgerMenu.addEventListener('click', () => {
-            let navsSection = document.querySelector('.navs');
             navsSection.classList.toggle('show');
 
             if (navsSection.classList.contains('show')) { 
@@ -219,6 +220,11 @@
                 document.body.style.overflowY = 'visible'; 
                 headerOverlayLayer.style.display = 'none';
             }
+        })
+
+        headerOverlayLayer.addEventListener('click', () => {
+            navsSection.classList.remove("show"); 
+            headerOverlayLayer.style.display = 'none'; 
         })
 
 

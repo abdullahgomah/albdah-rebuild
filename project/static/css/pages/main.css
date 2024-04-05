@@ -432,6 +432,10 @@ body {
     column-gap: 1rem;
 }
 
+.navs ul a {
+    font-weight: 500;
+}
+
 
 /* footer style */
 
