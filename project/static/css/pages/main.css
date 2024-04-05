@@ -368,13 +368,29 @@ section.property_list .grid .item .property__cover_img {
 
 /* custom header styling */
 
-.responsive-header {
-    background: red; 
+#burger-menu {
+    position: absolute;
+    top: 25px ;
+    left: 5px;
+    width: 30px ;
+    height: 30px;
+    /* background: blue;  */
+    z-index: 3000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color); 
+    text-decoration: none;
+    font-size: 22px;
+}
+
+
+.responsive-header { 
     width: 100%;
 }
 
 .responsive-header .container {
-    
+    position: relative;   
 }
 
 
