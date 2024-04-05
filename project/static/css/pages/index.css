@@ -275,3 +275,9 @@ input[name=street-width-input]::-webkit-slider-thumb {
     text-decoration: underline;
     cursor: pointer; 
 }
+
+.pagination .container {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    justify-content: center;
+}

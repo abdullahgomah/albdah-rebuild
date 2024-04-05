@@ -753,7 +753,7 @@ footer .copyrights {
     display: inline-block;
     color: var(--primary-color);
     width: fit-content;
-    padding: .4rem 1rem;
+    padding: .2rem 0.5rem;
     border: 1px solid var(--primary-color); 
     border-radius: 5px;
     text-decoration: none;
