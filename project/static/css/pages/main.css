@@ -571,6 +571,24 @@ footer .copyrights {
         transition: left 0.25s ease-in-out;
     }
 
+    header .container nav:nth-child(2) {
+        border-bottom: 1px solid var(--primary-color) !important;
+    }
+    
+    .hedaer-overlay-layer { 
+        width: 100%; 
+        height: 100%; 
+        position: absolute;
+        top: 0; 
+        left: 0; 
+        background: #21212130; 
+        z-index: 7000;
+        display: none;
+    }
+
+
+
+
     header .container nav.show {
         display: block;
         left: 0 !important; 

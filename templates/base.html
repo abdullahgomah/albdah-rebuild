@@ -81,8 +81,10 @@
                 <i class="fa-solid fa-bars"></i>
             </a>
         </div>
-    </header>
 
+    </header>
+    
+    <div class="hedaer-overlay-layer"></div>
 
 
 
@@ -161,6 +163,15 @@
             let header = document.querySelector('header')
             header.style.overflow = "visible";
             nav.classList.toggle('show');
+
+            let headerOverlayLayer = document.querySelector('.hedaer-overlay-layer'); 
+            if (nav.classList.contains('show') == true) { 
+                headerOverlayLayer.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            } else {
+                headerOverlayLayer.style.display = 'none';
+                document.body.style.overflow = 'visible';
+            }
             
             setTimeout(() => {
                 if (!nav.classList.contains('show')) {
