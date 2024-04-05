@@ -400,7 +400,7 @@ section.property_list .grid .item .property__cover_img {
     margin: 0;
     position: fixed;
     top: 80px;
-    z-index: 39000;
+    z-index: 49000;
     width: 100%;
     background-color: white;
     border-bottom: 1px solid var(--primary-color);
