@@ -388,6 +388,7 @@ section.property_list .grid .item .property__cover_img {
 .responsive-header { 
     width: 100%;
     display: none;
+    position: block !important;
 }
 
 .responsive-header .container {
