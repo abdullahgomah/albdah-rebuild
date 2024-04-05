@@ -342,14 +342,31 @@
                         {% if page_obj.has_previous %}
                         <a href="?page={{page_obj.previous_page_number}}">السابق</a>
                         {% endif %}
+
+                        
+                        {% if page_obj.number == paginator.num_pages %}
+
+                            {% for x in prev_five %}
+                                {% if x.number == page_obj.number %}
+                                    <a href="/?page={{x.number}}" class="current_page">{{x.number}}</a>
+                                {% else %}
+                                    <a href="/?page={{x.number}}">{{x.number}}</a>
+                                {% endif %}
+                            {% endfor %}
+
+
+                        {% else %}
+                            {% for x in next_five %}
+                                {% if x.number == page_obj.number %}
+                                    <a href="/?page={{x.number}}" class="current_page">{{x.number}}</a>
+                                {% else %}
+                                <a href="/?page={{x.number}}">{{x.number}}</a>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
                             
-                        {% for x in next_five %}
-                            {% if x.number == page_obj.number %}
-                                <a href="/?page={{x.number}}" class="current_page">{{x.number}}</a>
-                            {% else %}
-                            <a href="/?page={{x.number}}">{{x.number}}</a>
-                            {% endif %}
-                        {% endfor %}
+                            
+
                             
                             
 
