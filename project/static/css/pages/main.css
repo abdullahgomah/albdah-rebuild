@@ -399,7 +399,7 @@ section.property_list .grid .item .property__cover_img {
     position: fixed;
     top: 80px;
     z-index: 39000;
-    width: 75%;
+    width: 100%;
     background-color: white;
     border-bottom: 1px solid var(--primary-color);
     padding-bottom: 1rem;
