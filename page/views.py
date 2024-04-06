@@ -34,18 +34,16 @@ def index(request):
         else: 
             next_five_pages.append(p) 
 
-    prev_five_pages = []
-    for i in range(5, 0, -1): 
-        print(i) 
-        p = paginator.get_page(page_obj.number-i) 
-        prev_five_pages.append(p) 
-
-    prev_five_pages.append(page_obj)
-
-
-    print('prev five pages')
-    print(prev_five_pages) 
-    print('='* 30) 
+    if page_obj.number == paginator.num_pages: 
+        next_five_pages = [page_obj] 
+        for i in range(page_obj.number-1, page_obj.number-1-5, -1):
+            if i == 0: 
+                break 
+            else: 
+                p = paginator.get_page(i) 
+                print(p) 
+                next_five_pages.append(p)
+        next_five_pages.reverse()
 
     context = {
         'all_properties': all_properties, 
@@ -53,7 +51,6 @@ def index(request):
         'paginator': paginator,
         'pages': paginator.num_pages,
         'next_five':next_five_pages, 
-        'prev_five': prev_five_pages, 
         'visits': v,
     } 
     return render(request, 'pages/index.html', context)
