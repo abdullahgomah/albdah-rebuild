@@ -339,8 +339,12 @@
                         {% endfor %} -->
 
                         
+                        {% if page_obj.number != paginator.num_pages %}
+                        
                         {% if page_obj.has_previous %}
-                        <a href="?page={{page_obj.previous_page_number}}">السابق</a>
+                        <a href="?page={{page_obj.number|add:'-1'}}">{{page_obj.number|add:"-1"}}</a>
+                        {% endif %}
+
                         {% endif %}
 
                         
