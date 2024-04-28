@@ -288,9 +288,8 @@ body {
     min-height: 200px;
 }
 
-.advertiser .advertiser_pic {
-    height: 50px;
-    opacity: .7;
+.advertiser .office_logo {
+    height: 70px;
 }
 
 .advertiser__contact {
