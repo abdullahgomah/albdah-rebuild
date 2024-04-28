@@ -4,7 +4,6 @@ from import_export.admin import ImportExportModelAdmin
 # Register your models here.
 
 admin.site.register(PropertyDepartment) 
-admin.site.register(PropertyImage)   
 admin.site.register(Report)   
 admin.site.register(Favourite)
 
@@ -13,4 +12,12 @@ class PropertyAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ('number', 'interface', 'title')
 
 admin.site.register(Property, PropertyAdmin)
+
+
+
+
+class PropertyImageAdmin(ImportExportModelAdmin, admin.ModelAdmin): 
+    model = PropertyImage
+
+admin.site.register(PropertyImage, PropertyImageAdmin)
 

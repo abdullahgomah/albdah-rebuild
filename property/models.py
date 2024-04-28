@@ -78,14 +78,13 @@ class PropertyDepartment(models.Model):
     def __str__(self):
         return self.display_name 
 
-
 class Property(models.Model): 
     visits = models.IntegerField(blank=True, null=True, default=0)
     rented = models.BooleanField(default=False, verbose_name='تم التأجير', null=True, blank=True) 
     sold = models.BooleanField(default=False, verbose_name='تم البيع', null=True, blank=True)
     agree = models.BooleanField(default=False, verbose_name="موافقة" )
     # profile = models.ForeignKey("accounts.Profile", on_delete=models.CASCADE, null=True, blank=True)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True, blank=True) 
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, null=True, blank=True)
     lat = models.CharField(max_length=200, null=True, blank=True) 
     lng = models.CharField(max_length=200, null=True, blank=True)  
     
@@ -186,9 +185,14 @@ class Property(models.Model):
     semi_annual_payment= models.BooleanField(default=False, verbose_name="دفع نصف سنوي") 
     annual_payment = models.BooleanField(default=False, verbose_name="دفع سنوي") 
 
+    class Meta: 
+        verbose_name = 'عقار'
+        verbose_name_plural = 'عقارات' 
+
+
     def __str__(self):
         return str(self.title )
-
+    
     def save(self, *args, **kwargs): 
         if not self.number: 
             self.number = generate()
@@ -233,9 +237,7 @@ class Property(models.Model):
             self.title = sentence 
         super(Property, self).save(*args, **kwargs)
 
-    class Meta: 
-        verbose_name = 'عقار'
-        verbose_name_plural = 'عقارات' 
+
 
 
 class PropertyImage(models.Model): 

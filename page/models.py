@@ -40,3 +40,15 @@ class Visitor(models.Model):
         managed = True
         verbose_name = 'Visitor'
         verbose_name_plural = 'Visitors'
+
+    
+class PropertyDetails(models.Model): 
+    tel = models.CharField(max_length=25, blank=True, null=True) 
+    whatsapp_tel = models.CharField(max_length=25, blank=True, null=True) 
+
+    def __str__(self): 
+        return str(self.tel) 
+    
+    class Meta: 
+        verbose_name = "صفحة تفاصيل الإعلان" 
+        verbose_name_plural = 'صفحة تفاصيل الإعلان'
