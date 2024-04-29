@@ -77,10 +77,9 @@ LOGIN_URL = '/user/user-login/'
 ## LOGIN SETTING
 LOGIN_REDIRECT_URL = '/'
 AUTHENTICATION_BACKENDS = [
-    # 'accounts.backends.PhoneNumberBackend',
     'django.contrib.auth.backends.ModelBackend',  # Keep the ModelBackend for other authentication methods
-    'user.backends.CustomIdBackend', 
-    'user.backends.CustomPhoneNumberBackend' 
+    # 'user.backends.CustomIdBackend', 
+    # 'user.backends.CustomPhoneNumberBackend',  
 ]
 
 AUTH_USER_MODEL= 'user.CustomUser'

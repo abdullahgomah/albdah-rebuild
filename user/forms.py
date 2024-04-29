@@ -127,4 +127,3 @@ class MarkterRegister(UserCreationForm):
             'password2',    
         ]
 
-

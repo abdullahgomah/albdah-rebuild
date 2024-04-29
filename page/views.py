@@ -16,9 +16,9 @@ def index(request):
         ip = request.META.get('REMOTE_ADDR')
 
 
-    try: 
+    if Visitor.objects.first():
         v = Visitor.objects.first()
-    except: 
+    else: 
         v = Visitor.objects.create()
     v.home +=1 
     v.save() 
