@@ -7,6 +7,7 @@ from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required  
 from .utils import * 
 from django.contrib import messages
+import string, random
 
 
 
@@ -21,8 +22,10 @@ def user_register(request):
     if request.POST: 
         form = UserForm(request.POST) 
         if form.is_valid(): 
+            username = ''.join(random.choice(string.ascii_uppercase+ string.ascii_lowercase + string.digits) for _ in range(20))
             form.save(commit=False) 
             form.instance.role = 'user' 
+            form.instance.username = username
             form.save() 
             messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
             login(request, user=form.instance, backend='user.backends.CustomPhoneNumberBackend') 
@@ -41,8 +44,10 @@ def office_register(request):
     if request.POST: 
         form = OfficeRegister(request.POST) 
         if form.is_valid(): 
+            username = ''.join(random.choice(string.ascii_uppercase+ string.ascii_lowercase + string.digits) for _ in range(20))
             form.save(commit=False) 
             form.instance.role = 'real_estate_office'
+            form.instance.username = username
             form.save() 
             messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
             login(request, user=form.instance, backend='user.backends.CustomPhoneNumberBackend') 
@@ -62,8 +67,10 @@ def markter_register(request):
     if request.POST: 
         form = MarkterRegister(request.POST, request.FILES) 
         if form.is_valid(): 
+            username = ''.join(random.choice(string.ascii_uppercase+ string.ascii_lowercase + string.digits) for _ in range(20))
             form.save(commit=False) 
             form.instance.role = 'real_estate_marketer' 
+            form.instance.username = username
             form.save() 
             messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
             login(request, user=form.instance, backend='user.backends.CustomPhoneNumberBackend') 
