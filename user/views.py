@@ -29,7 +29,7 @@ def user_register(request):
             form.save() 
             messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
             login(request, user=form.instance, backend='user.backends.CustomPhoneNumberBackend') 
-            return redirect('page:index') 
+            return redirect('user:verify-phone-number') 
 
 
     context = {
@@ -51,7 +51,9 @@ def office_register(request):
             form.save() 
             messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
             login(request, user=form.instance, backend='user.backends.CustomPhoneNumberBackend') 
-            return redirect('page:index') 
+            # return redirect('page:index') 
+            return redirect('user:verify-phone-number') 
+        
         
 
     context ={ 
@@ -74,7 +76,9 @@ def markter_register(request):
             form.save() 
             messages.add_message(request, messages.SUCCESS, "تم إنشاء حسابك بنجاح، قم بالتحقق من رقم الهاتف للتمتع بمزايا إضافة الإعلانات")
             login(request, user=form.instance, backend='user.backends.CustomPhoneNumberBackend') 
-            return redirect('page:index') 
+            # return redirect('page:index') 
+            return redirect('user:verify-phone-number') 
+
 
             
 

@@ -31,6 +31,37 @@
 
 
 {% block content %}
+
+<style>
+    .messages .success {
+        list-style: none;
+        background: #28a74580;
+        color: white;
+        width: 100%;
+        min-height: 30px;
+        padding: 1rem ;
+        line-height: 30px;
+        text-align: center;
+    }
+    .messages li {
+        transition: all .2s ease-in-out;
+    }
+
+    .intro__title {
+        font-family: "Rakkas", serif; 
+        
+    }
+</style>
+    
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
     <div class="content">
         <div class="container">
             <i class="fa-solid fa-circle-check"></i>
