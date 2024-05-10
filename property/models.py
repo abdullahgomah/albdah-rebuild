@@ -79,6 +79,8 @@ class PropertyDepartment(models.Model):
         return self.display_name 
 
 class Property(models.Model): 
+    license_num= models.CharField(max_length=30, null=True, blank=True, verbose_name='رقم رخصة الإعلان') 
+    fal_number = models.CharField(max_length=30, verbose_name="رقم رخصة فال", null=True, blank=True)      
     visits = models.IntegerField(blank=True, null=True, default=0)
     rented = models.BooleanField(default=False, verbose_name='تم التأجير', null=True, blank=True) 
     sold = models.BooleanField(default=False, verbose_name='تم البيع', null=True, blank=True)

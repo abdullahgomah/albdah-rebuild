@@ -161,6 +161,8 @@ propertyInfoNextPrev.querySelector('.btn-next').addEventListener('click', () => 
         }
     }
 
+    limit+=2; 
+
     // check form validation 
     let inputs = propertyInfoSection.querySelectorAll('.input')
 

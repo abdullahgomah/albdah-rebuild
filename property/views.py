@@ -67,6 +67,8 @@ def add_property(request, property_type, offer_type=None):
     if request.POST: 
 
 
+        license_num = request.POST.get('license_num') 
+        fal_number = request.POST.get('fal_number') 
 
 
         ## payment types 
@@ -204,6 +206,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                license_num = license_num, 
+                fal_number = fal_number, 
                 sale = sell, 
                 interface = interface, 
                 user= user, 
@@ -264,6 +268,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                license_num = license_num, 
+                fal_number = fal_number,
                 sale = sell, 
                 user = user, 
                 p_type = p_type, 
@@ -355,6 +361,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create(
+                license_num = license_num, 
+                fal_number = fal_number,
                 sale = sell, 
                 lat= lat, 
                 lng=lng,
@@ -437,6 +445,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
         
             property_obj = Property.objects.create( 
+                license_num = license_num, 
+                fal_number = fal_number,
                 sale = sell, 
                 user = user, 
                 lat = lat, 
@@ -497,6 +507,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                license_num = license_num, 
+                fal_number = fal_number,
                 sale = sell, 
                 user = user , 
                 lat = lat, 
@@ -544,6 +556,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                license_num = license_num, 
+                fal_number = fal_number,
                 sale = sell, 
                 user = user, 
                 length = length, 
@@ -606,6 +620,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                license_num = license_num, 
+                fal_number = fal_number,
                 sale = sell, 
                 user = user, 
                 lat = lat, 
@@ -650,6 +666,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                license_num = license_num, 
+                fal_number = fal_number,
                 sale = sell, 
                 user = user, 
                 lat = lat, 
@@ -710,6 +728,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                license_num = license_num, 
+                fal_number = fal_number,
                 sale = sell, 
                 lounges= lounges, 
                 floor= floor, 
@@ -760,6 +780,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                license_num = license_num, 
+                fal_number = fal_number,
                 interface = interface, 
                 trees = trees_count, 
                 wells = wells_count, 
@@ -814,6 +836,8 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                license_num = license_num, 
+                fal_number = fal_number,
                 sale = sell, 
                 user = user, 
                 lat = lat, 
