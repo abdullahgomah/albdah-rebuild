@@ -294,6 +294,11 @@ form input {
     height: 100% !important; 
 }
 
+p.sub-text { 
+    opacity: .8 !important; 
+}
+
+
 section.property_list .grid .item {
     border: 1px solid #1e1e1e20; 
     display: flex;

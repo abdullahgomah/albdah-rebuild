@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    تواصل معنا
+{% endblock title %}
+    
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'css/pages/contact.css' %}">
+{% endblock stylesheets %}
+    
+
+{% block content %}
+
+
+<section id="complain-section">
+    <div class="container">
+        
+        <div class="">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+        <h1>للشكاوي والاقتراحات</h1>
+        <p class="sub-text">
+            في حال لديك بلاغ / شكوى / اقتراح يمكنك ابلاغنا به وسيتم التعامل في أسرع وقت
+        </p>
+        <br>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="field">
+                <input type="text" name="name-input" placeholder="الاسم (غير اجباري)">
+            </div>
+            <div class="field">
+                <textarea name="description-input" required placeholder="التفاصيل"></textarea>
+            </div>
+            <button type="submit" class="btn btn-solid">إرسال</button>
+        </form>
+    </div>
+</section>
+
+{% endblock content %}
+    

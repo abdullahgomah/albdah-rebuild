@@ -9,4 +9,5 @@ urlpatterns = [
     path('property-owners/', property_owners, name='property-owners'),
     path('request-contract/', request_contract, name='request-contract'),
     path('favourites/', favourites, name='favourites'),
+    path('contact/', contact_us, name='contact-us'), 
 ]

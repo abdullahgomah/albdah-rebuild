@@ -52,3 +52,25 @@ class PropertyDetails(models.Model):
     class Meta: 
         verbose_name = "صفحة تفاصيل الإعلان" 
         verbose_name_plural = 'صفحة تفاصيل الإعلان'
+
+
+class Complain(models.Model):
+    name = models.CharField(max_length=250, blank=True, null=True, verbose_name="الاسم")
+    description = models.TextField(verbose_name="التفاصيل") 
+    date_time = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+       
+       if not self.name :
+           self.name = str(self.date_time) 
+       
+       super(Complain, self).save(*args, **kwargs) # Call the real save() method
+
+    def __str__(self):
+        return self.name 
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'شكوى'
+        verbose_name_plural = 'الشكاوي'
