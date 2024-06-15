@@ -24,7 +24,9 @@ def index(request):
     v.home +=1 
     v.save() 
 
-    all_properties = Property.objects.all()[::-1]
+    pinned_properties =Property.objects.filter(pin=True)[::-1]
+
+    all_properties = Property.objects.filter(pin=False)[::-1]
     paginator = Paginator(all_properties, 10) 
     page_number = request.GET.get('page') 
     page_obj = paginator.get_page(page_number) 
@@ -50,6 +52,7 @@ def index(request):
         next_five_pages.reverse()
 
     context = {
+        'pinned_properties': pinned_properties, 
         'all_properties': all_properties, 
         'page_obj': page_obj, 
         'paginator': paginator,
