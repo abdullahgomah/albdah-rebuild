@@ -9,7 +9,9 @@ admin.site.register(Favourite)
 
 class PropertyAdmin(ImportExportModelAdmin, admin.ModelAdmin): 
     model = Property
-    search_fields = ('number', 'interface', 'title')
+    search_fields = ('id', 'number', 'interface', 'title')
+
+    list_display = ('title', 'id',) 
 
 admin.site.register(Property, PropertyAdmin)
 
