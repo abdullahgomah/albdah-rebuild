@@ -10,4 +10,5 @@ urlpatterns = [
     path('request-contract/', request_contract, name='request-contract'),
     path('favourites/', favourites, name='favourites'),
     path('contact/', contact_us, name='contact-us'), 
+    path('privacy-policy/', privacy_policy, name='privacy-policy'), 
 ]
