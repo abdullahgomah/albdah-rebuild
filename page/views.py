@@ -116,3 +116,12 @@ def contact_us(request):
 
 
     return render(request, 'pages/contact.html')
+
+
+def privacy_policy(request): 
+    text= PrivacyPolicy.objects.first() 
+
+    context = {
+        'text': text, 
+    } 
+    return render(request, 'pages/privacy-policy.html', context)

@@ -74,3 +74,10 @@ class Complain(models.Model):
         managed = True
         verbose_name = 'شكوى'
         verbose_name_plural = 'الشكاوي'
+
+class PrivacyPolicy(models.Model): 
+    text= CKEditor5Field(config_name="extends")
+
+    class Meta: 
+        verbose_name= "سياسة الخصوصية"
+        verbose_name_plural = "سياسة الخصوصية" 

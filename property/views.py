@@ -13,6 +13,8 @@ import os
 
 @login_required
 def add_property_interface(request):
+    if request.user.is_superuser == False: 
+        return redirect('/')
     user = request.user 
     if user.phone_number_verify_status == False: 
         return redirect('user:verify-phone-number') 
@@ -45,6 +47,8 @@ def property_details(request, number):
 
 @login_required(login_url='/auth/')
 def add_property(request, property_type, offer_type=None): 
+    if request.user.is_superuser == False: 
+        return redirect('/')
     user = request.user 
     if user.phone_number_verify_status == False: 
         return redirect('user:verify-phone-number') 

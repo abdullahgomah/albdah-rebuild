@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+
+سياسة الخصوصية وشروط الاستخدام
+
+{% endblock title %}
+
+
+{% block content %}
+
+<section>
+
+    <div class="container">
+        <h1>سياسة الخصوصية وشروط الاستخدام</h1>
+        {{text.text|safe}}
+    </div>
+
+</section>
+
+{% endblock content %}
