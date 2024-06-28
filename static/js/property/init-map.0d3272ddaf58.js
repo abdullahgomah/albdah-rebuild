@@ -69,33 +69,100 @@ async function initMap() {
 
     const map = new google.maps.Map(document.getElementById("map"), {
         mapId: "6a7f4f4e7a7f5b47",
-        center: { lat: Number(latInput.value), lng: Number(lngInput.value) }, // Coordinates for Saudi Arabia
+        center: { lat: 26.403121781303653, lng: 43.917549974016744 }, // Coordinates for Saudi Arabia
         zoom: 24, 
         zoomControl: false, 
-        mapTypeId: "terrain",
+        mapTypeId: "roadmap",
         mapTypeControl: false, 
         fullscreenControl: false, 
         gestureHandling: "greedy", 
         streetViewControl: false, 
-        draggable: false, 
-        scrollwheel: false 
     });
 
     var userMarker = new google.maps.Marker({
         map: map,
         draggable: false, 
         animation: google.maps.Animation.DROP, 
-        position: {lat: Number(latInput.value), lng: Number(lngInput.value)},
+        position: map.getCenter(),
+    });
+
+    google.maps.event.addListener(map, 'drag', function() {
+        // Update the marker position to the center of the map
+        userMarker.setPosition(map.getCenter());
+        const position = userMarker.position 
+        const lat = position.lat(); // دوائر العرض
+        const lng = position.lng(); // خطوط الطول
+        latInput.value = lat ;
+        lngInput.value = lng; 
+        reverseGeocode(lat, lng) 
     });
 
 
-    userMarker.addListener('click', function () {
-        // Open Google Maps with the clicked location
-        var url = 'https://www.google.com/maps/search/?api=1&query=' + userMarker.getPosition().lat() + ',' + userMarker.getPosition().lng();
-        window.open(url, '_blank');
+    google.maps.event.addListener(map, 'zoom_changed', function () {
+        userMarker.setPosition(map.getCenter());
+        const position = userMarker.position 
+        const lat = position.lat(); // دوائر العرض
+        const lng = position.lng(); // خطوط الطول
+        latInput.value = lat ;
+        lngInput.value = lng; 
+        reverseGeocode(lat, lng) 
     });
+
+
+
+    // userMarker.addListener('dragend', function () {
+    //     const position = userMarker.position 
+    //     const lat = position.lat(); // دوائر العرض
+    //     const lng = position.lng(); // خطوط الطول
+    //     latInput.value = lat ;
+    //     lngInput.value = lng; 
+
+    //     console.log(lat) ;
+    //     console.log(lng) ; 
+        
+    //     reverseGeocode(lat, lng) 
+    // })
+
 
     
+
+    let myLocationButton = document.getElementById('myLocationButton')
+
+    myLocationButton.addEventListener('click', function() {
+        // Check if geolocation is available in the user's browser
+        if (navigator.geolocation) {
+            // Get the user's current location
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var userLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    
+                // Set the map's center to the user's location
+                map.setCenter(userLatLng);
+    
+                // Set the marker's position to the user's location
+                userMarker.setPosition(userLatLng);
+    
+                // Optionally, you can open an info window or perform other actions here
+            }, function(error) {
+                // Handle any errors here, such as permission denied or unable to retrieve location
+                console.error('Error getting user location:', error);
+            });
+        } else {
+            // Geolocation is not supported in this browser
+            alert('Geolocation is not supported in your browser.');
+        }
+    });
+
+
+    let btnTerrain = document.querySelector(".btn-terrain")
+    btnTerrain.addEventListener('click', () => {
+        btnTerrain.classList.toggle('enabled')
+        if (btnTerrain.classList.contains("enabled")) { 
+            map.setMapTypeId(google.maps.MapTypeId.ROADMAP); 
+        } else {  
+            map.setMapTypeId(google.maps.MapTypeId.HYBRID)
+        }
+    })
+  
 
 }
 
