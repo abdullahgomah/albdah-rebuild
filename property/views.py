@@ -823,6 +823,7 @@ def add_property(request, property_type, offer_type=None):
             kitchen = request.POST.get('kitchen') # 8 
             furnished = request.POST.get('furnished') # 9
             single = request.POST.get('single')  # 10 
+            interface = request.POST.get('interface-input') 
 
             features.append(football_field)
             features.append(volly_field)
@@ -840,6 +841,7 @@ def add_property(request, property_type, offer_type=None):
                     features[i] = 0 
 
             property_obj = Property.objects.create( 
+                interface = interface, 
                 license_num = license_num, 
                 fal_number = fal_number,
                 sale = sell, 
