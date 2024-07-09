@@ -30,6 +30,17 @@
         
     {% endblock stylesheets %}
 
+    <style>
+        .btn-scroll-to-top {
+            position: fixed;
+            bottom: 1rem; 
+            left: 1rem; 
+            width: 50px ;
+            border: 1px solid var(--secondary-color) ;
+            display: none ;
+        }
+    </style>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SK051LM5P1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -135,7 +146,9 @@
     <!-- MAIN -->
     {% get_info as info %}
 
-
+    <a class="btn btn-solid  btn-scroll-to-top">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
 
     <div class="body__content">
 
@@ -240,6 +253,34 @@
                 navsSection.classList.remove('show');   
             }
         })
+
+    </script>
+
+    <script>
+
+        let btnScrollToTop = document.querySelector(".btn-scroll-to-top") 
+
+
+        let toTopScrollFunction = () => {
+            if (document.documentElement.scrollTop > 20 || document.body.scrollTop >20) {
+                btnScrollToTop.style.display = 'block';
+            } else {
+                btnScrollToTop.style.display = 'none';
+            }
+        }
+
+        let scrollToTop = ()=> {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+
+            // console.log(document.documentElement.scrollTop)
+        }
+
+
+        btnScrollToTop.addEventListener('click', scrollToTop)
+        window.addEventListener('scroll', toTopScrollFunction)
+
+
 
     </script>
 

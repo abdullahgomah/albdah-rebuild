@@ -54,7 +54,7 @@ let propertyCoverImg = document.querySelectorAll('.property__cover_img img');
 
 propertyCoverImg.forEach((img) => {
     if (img.src == window.location.href) {
-        img.src = img.parentElement.parentElement.querySelector("[name=propertyFirstImgUrl]").value
+        img.src = img.parentElement.parentElement.parentElement.querySelector("[name=propertyFirstImgUrl]").value
     }
 })
 
