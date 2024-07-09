@@ -77,6 +77,8 @@ async function initMap() {
         fullscreenControl: false, 
         gestureHandling: "greedy", 
         streetViewControl: false, 
+        draggable: false, 
+        scrollwheel: false 
     });
 
     var userMarker = new google.maps.Marker({
