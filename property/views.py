@@ -823,6 +823,7 @@ def add_property(request, property_type, offer_type=None):
             kitchen = request.POST.get('kitchen') # 8 
             furnished = request.POST.get('furnished') # 9
             single = request.POST.get('single')  # 10 
+            pool = request.POST.get('pool') # 11 
             interface = request.POST.get('interface-input') 
 
             features.append(football_field)
@@ -833,6 +834,7 @@ def add_property(request, property_type, offer_type=None):
             features.append(kitchen)
             features.append(furnished)
             features.append(single) 
+            features.append(pool) 
 
             for i in range(len(features)) : 
                 if features[i] == 'on': 
@@ -875,6 +877,7 @@ def add_property(request, property_type, offer_type=None):
                 kitchen = features[8], 
                 furnished = features[9], 
                 single= features[10], 
+                pool = features[11],
                 monthly_payment= payments[0] ,
                 quarterly_payment = payments[1], 
                 semi_annual_payment = payments[2], 
