@@ -210,207 +210,97 @@
             <div class="grid property_grid">
                 
                 {% for property in pinned_properties %}
-                <!-- <a href="{% url 'property:property-details' property.number %}"> -->
+
+                <a href="{% url 'property:property-details' property.number %}" style="text-decoration: none;">
+
                     <div class="item property">
                         <input type="hidden" name="propertyFirstImgUrl" value="{{property.imgs.first.img.url}}">
                         <input type="hidden" name="property_type_input" value="{{property.p_type}}">
 
-                        <div class="property__info">
-                            <h4 class="property__title">
-                                <a href="{% url 'property:property-details' property.number %}">{{property.title}}</a>
-                            </h4>
-                            <a href="{% url 'property:property-details' property.number %}" style="text-decoration: none;">
-                            <p class="property__price">
+                        
+                            <div class="property__info">
+                                <h4 class="property__title">
+                                    
+                                     {{property.title}}
+                                </h4>
+                                <!-- <a href="{% url 'property:property-details' property.number %}" style="text-decoration: none;"> -->
+                                <p class="property__price">
 
-                                    {% if property.sale == True %}
-                                    {{property.price|floatformat:"0"}} ريال
-                                    {% else %}
-                                    {{property.price|floatformat:"0"}} ريال / {{property.get_rent_type_display }}
+                                        {% if property.sale == True %}
+                                        {{property.price|floatformat:"0"}} ريال
+                                        {% else %}
+                                        {{property.price|floatformat:"0"}} ريال / {{property.get_rent_type_display }}
+                                        {% endif %}                               
+                                    </p>
+                                <!-- </a> -->
+                                <!-- short info about property -->
+
+                                <div class="property__summary">
+
+                                    
+                                    {% if property.p_type == 'chalet_rent' or property.p_type == 'chalet_sale' or property.p_type == 'resthouse_sale' or property.p_type == 'resthouse_rent' or property.p_type == 'floor_rent' or property.p_type == 'floor_sale' or property.p_type == 'apartment_rent' or property.p_type == 'apartment_sale' or property.p_type == 'villa_rent' or property.p_type == 'villa_sale' %}
+
+                                    <div class="property__summary__item">
+                                        <span>{{property.space}}</span>
+                                        <span>م&sup2;</span>
+                                    </div>
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-bed"></i>
+
+                                        <span>{{property.rooms}}</span>
+                                    </div>
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-couch"></i>
+                                        <span>{{property.lounges}}</span>
+                                    </div>
+
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-bath"></i>
+                                        <span>{{property.bathroom}}</span>
+                                    </div>
+
+                                    {% elif property.p_type == 'shop_rent' or property.p_type == 'shop_sale' or property.p_type == 'commercial_office_rent' or property.p_type == 'farm_sale' or property.p_type == 'building_sale' or property.p_type == 'building_rent' or property.p_type == 'branch_rent' or property.p_type == 'branch_sale' %}
+                                    <div class="property__summary__item">
+                                        <span>{{property.space}}</span>
+                                        <span>م&sup2;</span>
+                                    </div>
+
+                                    {% elif property.p_type == 'land_rent' or property.p_type == 'land_sale' %}
+
+                                    <div class="property__summary__item">
+                                        <span>{{property.space}}</span>
+                                        <span>م&sup2;</span>
+                                    </div>
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-road"></i>
+                                        <span>{{property.street_width}}</span>
+                                    </div>
+
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-tag"></i>        
+                                        <span>{{property.purpose}}</span>
+                                    </div>
+
+
                                     {% endif %}
+                                        
+                                </div>
+
+                                <p class="property__description">
+                                    <!-- {{property.description|safe|truncatewords:5}} -->
                                 </p>
-                            </a>
-                            <!-- short info about property -->
-
-                            <div class="property__summary">
-                                
-                                {% if property.p_type == 'chalet_rent' or property.p_type == 'chalet_sale' or property.p_type == 'resthouse_sale' or property.p_type == 'resthouse_rent' or property.p_type == 'floor_rent' or property.p_type == 'floor_sale' or property.p_type == 'apartment_rent' or property.p_type == 'apartment_sale' or property.p_type == 'villa_rent' or property.p_type == 'villa_sale' %}
-
-                                <div class="property__summary__item">
-                                    <span>{{property.space}}</span>
-                                    <span>م&sup2;</span>
-                                </div>
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-bed"></i>
-
-                                    <span>{{property.rooms}}</span>
-                                </div>
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-couch"></i>
-                                    <span>{{property.lounges}}</span>
-                                </div>
-
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-bath"></i>
-                                    <span>{{property.bathroom}}</span>
-                                </div>
-
-                                {% elif property.p_type == 'shop_rent' or property.p_type == 'shop_sale' or property.p_type == 'commercial_office_rent' or property.p_type == 'farm_sale' or property.p_type == 'building_sale' or property.p_type == 'building_rent' or property.p_type == 'branch_rent' or property.p_type == 'branch_sale' %}
-                                <div class="property__summary__item">
-                                    <span>{{property.space}}</span>
-                                    <span>م&sup2;</span>
-                                </div>
-
-                                {% elif property.p_type == 'land_rent' or property.p_type == 'land_sale' %}
-
-                                <div class="property__summary__item">
-                                    <span>{{property.space}}</span>
-                                    <span>م&sup2;</span>
-                                </div>
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-road"></i>
-                                    <span>{{property.street_width}}</span>
-                                </div>
-
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-tag"></i>        
-                                    <span>{{property.purpose}}</span>
-                                </div>
-
-
-                                {% endif %}
-                                    
-                            </div>
-
-                            <p class="property__description">
-                                <!-- {{property.description|safe|truncatewords:5}} -->
-                            </p>
-                            <p class="property__number">
-                                #<span>{{property.id}}</span>
-                            </p>
-                        </div>
-
-                        <a href="{% url 'property:property-details' property.number %}" style="">
-
-                            <div class="property__cover_img">
-
-                                
-                                {% if property.rented == True %}
-                                    <img src="{% static 'imgs/rented.png' %}" alt="" class="rented">
-                                {% elif property.sold == True %}
-                                <img src="{% static 'imgs/sold.png' %}" alt="" class="sold">
-                                {% endif %}
-                                    
-                            
-                            
-                                <img src="{% for img in property.imgs.all %}{% if img.main %}{{img.img.url}}{% endif %}{% endfor %}" alt="">
-                                
-                                
-                            </div>
-
-                        </a>
-                    </div>
-                <!-- </a> -->
-
-                {% endfor %}
-                    
-            </div>
-            <br>
-
-            <div class="grid property_grid .main-grid">
-                
-                {% for property in page_obj %}
-                
-                <!-- <a href="{% url 'property:property-details' property.number %}"> -->
-                    <div class="item property">
-                        <input type="hidden" name="propertyFirstImgUrl" value="{{property.imgs.first.img.url}}">
-                        <input type="hidden" name="property_type_input" value="{{property.p_type}}">
-                        <div class="property__info">
-                            <h4 class="property__title">
-                                <a href="{% url 'property:property-details' property.number %}">{{property.title}}</a>
-                            </h4>
-                            <a href="{% url 'property:property-details' property.number %}" style="text-decoration: none;">
-                            <p class="property__price">
-
-                                    {% if property.sale == True %}
-                                    {{property.price|floatformat:"0"}} ريال
-                                    {% else %}
-                                    {{property.price|floatformat:"0"}} ريال / {{property.get_rent_type_display }}
-                                    {% endif %}                               
+                                <p class="property__number">
+                                    #<span>{{property.id}}</span>
                                 </p>
-                            </a>
-                            <!-- short info about property -->
-
-                            <div class="property__summary">
-
-                                
-                                {% if property.p_type == 'chalet_rent' or property.p_type == 'chalet_sale' or property.p_type == 'resthouse_sale' or property.p_type == 'resthouse_rent' or property.p_type == 'floor_rent' or property.p_type == 'floor_sale' or property.p_type == 'apartment_rent' or property.p_type == 'apartment_sale' or property.p_type == 'villa_rent' or property.p_type == 'villa_sale' %}
-
-                                <div class="property__summary__item">
-                                    <span>{{property.space}}</span>
-                                    <span>م&sup2;</span>
-                                </div>
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-bed"></i>
-
-                                    <span>{{property.rooms}}</span>
-                                </div>
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-couch"></i>
-                                    <span>{{property.lounges}}</span>
-                                </div>
-
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-bath"></i>
-                                    <span>{{property.bathroom}}</span>
-                                </div>
-
-                                {% elif property.p_type == 'shop_rent' or property.p_type == 'shop_sale' or property.p_type == 'commercial_office_rent' or property.p_type == 'farm_sale' or property.p_type == 'building_sale' or property.p_type == 'building_rent' or property.p_type == 'branch_rent' or property.p_type == 'branch_sale' %}
-                                <div class="property__summary__item">
-                                    <span>{{property.space}}</span>
-                                    <span>م&sup2;</span>
-                                </div>
-
-                                {% elif property.p_type == 'land_rent' or property.p_type == 'land_sale' %}
-
-                                <div class="property__summary__item">
-                                    <span>{{property.space}}</span>
-                                    <span>م&sup2;</span>
-                                </div>
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-road"></i>
-                                    <span>{{property.street_width}}</span>
-                                </div>
-
-
-                                <div class="property__summary__item">
-                                    <i class="fa-solid fa-tag"></i>        
-                                    <span>{{property.purpose}}</span>
-                                </div>
-
-
-                                {% endif %}
-                                    
                             </div>
-
-                            <p class="property__description">
-                                <!-- {{property.description|safe|truncatewords:5}} -->
-                            </p>
-                            <p class="property__number">
-                                #<span>{{property.id}}</span>
-                            </p>
-                        </div>
+                        
 
 
-                        <a href="{% url 'property:property-details' property.number %}" style="">
                             <div class="property__cover_img">
 
                                     {% if property.rented == True %}
@@ -424,9 +314,130 @@
                                     
                                     
                             </div>
-                        </a>                            
+
                     </div>
-                <!-- </a> -->
+
+                    </a>
+
+                {% endfor %}
+                    
+            </div>
+            <br>
+
+            <div class="grid property_grid main_grid">
+                
+                {% for property in page_obj %}
+
+                    <a href="{% url 'property:property-details' property.number %}" style="text-decoration: none;">
+
+                    <div class="item property">
+                        <input type="hidden" name="propertyFirstImgUrl" value="{{property.imgs.first.img.url}}">
+                        <input type="hidden" name="property_type_input" value="{{property.p_type}}">
+
+                        
+                            <div class="property__info">
+                                <h4 class="property__title">
+                                    
+                                     {{property.title}}
+                                </h4>
+                                <!-- <a href="{% url 'property:property-details' property.number %}" style="text-decoration: none;"> -->
+                                <p class="property__price">
+
+                                        {% if property.sale == True %}
+                                        {{property.price|floatformat:"0"}} ريال
+                                        {% else %}
+                                        {{property.price|floatformat:"0"}} ريال / {{property.get_rent_type_display }}
+                                        {% endif %}                               
+                                    </p>
+                                <!-- </a> -->
+                                <!-- short info about property -->
+
+                                <div class="property__summary">
+
+                                    
+                                    {% if property.p_type == 'chalet_rent' or property.p_type == 'chalet_sale' or property.p_type == 'resthouse_sale' or property.p_type == 'resthouse_rent' or property.p_type == 'floor_rent' or property.p_type == 'floor_sale' or property.p_type == 'apartment_rent' or property.p_type == 'apartment_sale' or property.p_type == 'villa_rent' or property.p_type == 'villa_sale' %}
+
+                                    <div class="property__summary__item">
+                                        <span>{{property.space}}</span>
+                                        <span>م&sup2;</span>
+                                    </div>
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-bed"></i>
+
+                                        <span>{{property.rooms}}</span>
+                                    </div>
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-couch"></i>
+                                        <span>{{property.lounges}}</span>
+                                    </div>
+
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-bath"></i>
+                                        <span>{{property.bathroom}}</span>
+                                    </div>
+
+                                    {% elif property.p_type == 'shop_rent' or property.p_type == 'shop_sale' or property.p_type == 'commercial_office_rent' or property.p_type == 'farm_sale' or property.p_type == 'building_sale' or property.p_type == 'building_rent' or property.p_type == 'branch_rent' or property.p_type == 'branch_sale' %}
+                                    <div class="property__summary__item">
+                                        <span>{{property.space}}</span>
+                                        <span>م&sup2;</span>
+                                    </div>
+
+                                    {% elif property.p_type == 'land_rent' or property.p_type == 'land_sale' %}
+
+                                    <div class="property__summary__item">
+                                        <span>{{property.space}}</span>
+                                        <span>م&sup2;</span>
+                                    </div>
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-road"></i>
+                                        <span>{{property.street_width}}</span>
+                                    </div>
+
+
+                                    <div class="property__summary__item">
+                                        <i class="fa-solid fa-tag"></i>        
+                                        <span>{{property.purpose}}</span>
+                                    </div>
+
+
+                                    {% endif %}
+                                        
+                                </div>
+
+                                <p class="property__description">
+                                    <!-- {{property.description|safe|truncatewords:5}} -->
+                                </p>
+                                <p class="property__number">
+                                    #<span>{{property.id}}</span>
+                                </p>
+                            </div>
+                        
+
+
+                            <div class="property__cover_img">
+
+                                    {% if property.rented == True %}
+                                        <img src="{% static 'imgs/rented.png' %}" alt="" class="rented">
+                                    {% elif property.sold == True %}
+                                    <img src="{% static 'imgs/sold.png' %}" alt="" class="sold">
+                                    {% endif %}
+                                    
+                                    
+                                    <img src="{% for img in property.imgs.all %}{% if img.main %}{{img.img.url}}{% endif %}{% endfor %}" alt="">
+                                    
+                                    
+                            </div>
+
+                    </div>
+
+                    </a>
+
+
+
                 {% endfor %}
 
 

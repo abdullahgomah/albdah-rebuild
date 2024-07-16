@@ -201,12 +201,22 @@ input[name=street-width-input]::-webkit-slider-thumb {
 }
 
 
+.item.property .property__title {
+    color: var(--primary-color) !important; 
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+}
+
 .property__summary {
     display: flex;
     justify-content: flex-start;
     column-gap: 1rem;
     font-size: .85rem;
 }
+
+
 
 .property__summary i { 
     color: #1e1e1e80;
