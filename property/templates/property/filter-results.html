@@ -3,6 +3,7 @@
     {% for property in result %}
     
 
+    <a href="{% url 'property:property-details' property.number %}">
     <div class="item property">
         <input type="hidden" name="propertyFirstImgUrl" value="{{property.imgs.first.img.url}}">
         <input type="hidden" name="property_type_input" value="{{property.p_type}}">
@@ -97,6 +98,7 @@
             
         </div>
     </div>
+    </a>
     {% endfor %}
 
     <script>
