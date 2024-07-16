@@ -41,7 +41,7 @@ propertyTypeBtns.forEach((btn) => {
 
                     success: function( response ) 
                     {
-                        let a = $('.property_list .grid'); 
+                        let a = $('.property_list .grid.main-grid'); 
                         a.html(response);
                     }
                  })
