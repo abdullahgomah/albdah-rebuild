@@ -201,6 +201,7 @@ input[name=street-width-input]::-webkit-slider-thumb {
 }
 
 
+
 .item.property .property__title {
     color: var(--primary-color) !important; 
     text-decoration: none !important;

@@ -211,7 +211,7 @@
                 
                 {% for property in pinned_properties %}
 
-                <a href="{% url 'property:property-details' property.number %}" style="text-decoration: none;">
+                <a href="{% url 'property:property-details' property.number %}" style="text-decoration: none; color: var(--primary-color) !important;">
 
                     <div class="item property">
                         <input type="hidden" name="propertyFirstImgUrl" value="{{property.imgs.first.img.url}}">
