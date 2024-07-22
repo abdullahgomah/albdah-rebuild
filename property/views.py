@@ -24,6 +24,8 @@ def add_property_interface(request):
 
 def property_details(request, number): 
     property = Property.objects.get(number = number)
+    if property.draft == True: 
+        return redirect('page:index')
     property.visits+=1 
     property.save() 
     if request.user.is_authenticated: 
