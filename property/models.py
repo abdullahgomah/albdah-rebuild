@@ -79,6 +79,7 @@ class PropertyDepartment(models.Model):
         return self.display_name 
 
 class Property(models.Model): 
+    draft = models.BooleanField(default=False, verbose_name="مسودة") 
     pin = models.BooleanField(default=0, verbose_name="مثبت") 
     license_num= models.CharField(max_length=30, null=True, blank=True, verbose_name='رقم رخصة الإعلان') 
     fal_number = models.CharField(max_length=30, verbose_name="رقم رخصة فال", null=True, blank=True)      

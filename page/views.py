@@ -24,9 +24,9 @@ def index(request):
     v.home +=1 
     v.save() 
 
-    pinned_properties =Property.objects.filter(pin=True)[::-1]
+    pinned_properties =Property.objects.filter(draft=False).filter(pin=True)[::-1]
 
-    all_properties = Property.objects.filter(pin=False)[::-1]
+    all_properties = Property.objects.filter(draft=False).filter(pin=False)[::-1]
     paginator = Paginator(all_properties, 10) 
     page_number = request.GET.get('page') 
     page_obj = paginator.get_page(page_number) 
