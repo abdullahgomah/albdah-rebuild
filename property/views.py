@@ -995,7 +995,7 @@ def filter_properties(request):
 
 def filter_result(request, p_type):
     if p_type != 'all': 
-        properties = Property.objects.filter(p_type=p_type) 
+        properties = Property.objects.filter(draft=False).filter(p_type=p_type) 
     else: 
         properties = Property.objects.all() 
 
