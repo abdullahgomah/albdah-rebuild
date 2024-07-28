@@ -10,7 +10,7 @@
 {% block stylesheets %}
     <link rel="shortcut icon" href="{{property.imgs.first.img.url}}" type="image/x-icon">
 
-    <meta property="og:image" content="{{property.imgs.first.img.url}}" /> <!-- Default image -->
+    <meta name="image" property="og:image" content="{{property.imgs.first.img.url}}" /> <!-- Default image -->
 
     <link rel="stylesheet" href="{% static 'css/property/property-details.css' %}">
 
