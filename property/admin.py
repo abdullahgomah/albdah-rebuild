@@ -18,15 +18,21 @@ def make_draft(modeladmin, request, queryset):
 make_draft.short_description = "تحويل الإعلانات المحددة إلى مسودة"
 
 
+def make_pinned(modeladmin, request, queryset): 
+    queryset.update(pin=True) 
+    modeladmin.message_user(request, _("تم تثبيت الإعلانات المحددة"))
+
+make_pinned.short_description = "تثبيت الإعلانات المحددة"
+
 class PropertyAdmin(ImportExportModelAdmin, admin.ModelAdmin): 
     model = Property
     search_fields = ('id', 'number', 'interface', 'title')
-    list_filter = ('draft', 'interface', )
+    list_filter = ('draft', 'interface', 'pin', )
 
     list_display = ('title', 'id',) 
 
 
-    actions = [make_draft]
+    actions = [make_draft, make_pinned]
 
 admin.site.register(Property, PropertyAdmin)
 
