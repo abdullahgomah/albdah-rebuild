@@ -324,7 +324,7 @@ section.property_list .grid .item {
     font-size: 14px;
     text-decoration: none; 
     /* color: var(--primary-color); */
-    color: black;
+    color: black !important;
     font-weight: 600;
 }
 
