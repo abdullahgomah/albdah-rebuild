@@ -280,3 +280,13 @@ class Favourite(models.Model):
     class Meta:
         verbose_name="المفضلة"
         verbose_name_plural = 'المفضلة' 
+
+
+class Watermark(models.Model):
+    
+    img = models.ImageField( upload_to="watermarks") 
+
+    class Meta: 
+        verbose_name = "علامة مائية"
+        verbose_name_plural = "علامات مائية"
+

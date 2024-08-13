@@ -6,7 +6,9 @@ from .models import *
 # from accounts.models import Favourite
 import uuid 
 import os 
-
+import io 
+from PIL import Image, ImageDraw, ImageFont, ImageEnhance
+from django.core.files.base import ContentFile
 
 # Create your views here.
 
@@ -46,6 +48,42 @@ def property_details(request, number):
             'property': property, 
         } 
     return render(request, 'property/property-details.html', context ) 
+
+
+def add_watermark(image, logo_path, position=(0, 0)):
+    opacity= .5
+    # Open the original image and the logo
+    base_image = Image.open(image)
+    watermark = Image.open(logo_path).convert("RGBA")
+
+    # Resize the watermark to fit the base image (optional)
+    width, height = base_image.size
+    watermark.thumbnail((width // 4, height // 4), Image.ANTIALIAS)
+
+    if opacity < 1:
+        # Split the watermark into its RGB and Alpha channels
+        r, g, b, alpha = watermark.split()
+        
+        # Enhance the alpha channel to reduce opacity
+        alpha = ImageEnhance.Brightness(alpha).enhance(opacity)
+        
+        # Recombine the channels
+        watermark = Image.merge('RGBA', (r, g, b, alpha))
+
+    # Calculate the position to paste the watermark
+    watermark_width, watermark_height = watermark.size
+    if position == 'center':
+        position = ((width - watermark_width) // 2, (height - watermark_height) // 2)
+    elif position == 'bottom_right':
+        position = (width - watermark_width - 10, height - watermark_height - 10)
+
+    # Paste the watermark on the original image
+    base_image.paste(watermark, position, watermark)
+
+    # Save the watermarked image in memory
+    output = io.BytesIO()
+    base_image.save(output, format='JPEG')
+    return ContentFile(output.getvalue())
 
 @login_required(login_url='/auth/')
 def add_property(request, property_type, offer_type=None): 
@@ -888,15 +926,39 @@ def add_property(request, property_type, offer_type=None):
 
 
         # upload images 
-        
+        # logo_path = "logo.jpeg" 
+        logo_path =  Watermark.objects.last().img.path 
+
+        """
         for i in range(len(images)): 
+            watermarked_image = add_watermark(images[i], logo_path, position='bottom_right')
+
+
             PropertyImage.objects.create(
                 property = property_obj, 
-                img = images[i] , 
+                # img = images[i] , 
+                img = watermarked_image, 
                 main = images_status[i]
             ).save() 
 
+        """
 
+
+        for i in range(len(images)):
+            # Add watermark to the image
+            watermarked_image = add_watermark(images[i], logo_path, position='center')
+
+            # Create the PropertyImage object
+            property_image = PropertyImage(
+                property=property_obj,
+                main=images_status[i]
+            )
+
+            # Assign the watermarked image to the img field
+            property_image.img.save(f"{images[i].name}", watermarked_image, save=False)
+            
+            # Save the model instance to the database
+            property_image.save()
         
         ## redirect to sucessfully uploaded ad 
         return redirect(reverse('property:ad-uploaded'))
