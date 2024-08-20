@@ -1053,7 +1053,7 @@
             try { 
                 await navigator.share({
                     title: document.querySelector('#property_title').textContent, 
-                    text: "تفاصيل إعلان رقم ٣٤٥٤", 
+                    text: `البداح للعقارات تفاصيل إعلان رقم {{property.number}}`,
                     url: window.location.href 
                 })
             } catch (err) {
