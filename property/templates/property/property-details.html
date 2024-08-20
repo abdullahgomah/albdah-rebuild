@@ -1044,7 +1044,13 @@
 <script>
     let btnShare = document.querySelector('#btn-share'); 
     btnShare.addEventListener('click', async ()=> {
+        let dataToShare = {
+            title: document.querySelector('#property_title').textContent, 
+            text: "بسم الله الرحمن الرحيم",
+            url: window.location.href 
+        }
         if (navigator.share) { 
+            alert(navigator.canShare()); 
             try { 
                 await navigator.share({
                     title: document.querySelector('#property_title').textContent, 
