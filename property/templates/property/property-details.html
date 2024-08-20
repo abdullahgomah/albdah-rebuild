@@ -1050,15 +1050,14 @@
             url: window.location.href 
         }
         if (navigator.share) { 
-            alert(navigator.canShare()); 
             try { 
                 await navigator.share({
                     title: document.querySelector('#property_title').textContent, 
                     text: "تفاصيل إعلان رقم ٣٤٥٤", 
                     url: window.location.href 
                 })
-            } catch (err) { 
-                alert(err) ;
+            } catch (err) {
+                return 0 ;
             }
         } else {
             var currentURL = window.location.href;

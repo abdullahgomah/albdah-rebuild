@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['198.199.90.212', '*']
 # Application definition
 
 INSTALLED_APPS = [
+
+    'corsheaders',
     'markdownx',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -63,6 +65,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+
+]
+
+
+CORS_ALLOWED_ORIGINS = [
+    "https://albdah.sa",
+    "http://127.0.0.1:8001",
 ]
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
