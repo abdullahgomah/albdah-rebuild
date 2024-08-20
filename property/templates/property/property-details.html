@@ -1043,21 +1043,34 @@
 
 <script>
     let btnShare = document.querySelector('#btn-share'); 
-    btnShare.addEventListener('click', ()=> {
-        var currentURL = window.location.href;
-        // Create a temporary input element to hold the URL
-        var tempInput = document.createElement("input");
-        tempInput.value = currentURL;
-        document.body.appendChild(tempInput);
+    btnShare.addEventListener('click', async ()=> {
+        if (navigator.share) { 
+            try { 
+                await navigator.share({
+                    title: document.querySelector('#property_title').textContent, 
+                    text: "تفاصيل إعلان رقم ٣٤٥٤", 
+                    url: window.location.href 
+                })
+            } catch (err) { 
+                console.log(err) 
+            }
+        } else {
+            var currentURL = window.location.href;
+            // Create a temporary input element to hold the URL
+            var tempInput = document.createElement("input");
+            tempInput.value = currentURL;
+            document.body.appendChild(tempInput);
+    
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+    
+            // Copy the selected text to the clipboard
+            document.execCommand("copy");
+    
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
+        }
 
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); // For mobile devices
-
-        // Copy the selected text to the clipboard
-        document.execCommand("copy");
-
-        // Remove the temporary input element
-        document.body.removeChild(tempInput);
 
     })
 
