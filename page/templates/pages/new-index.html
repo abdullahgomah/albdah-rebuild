@@ -1,0 +1,142 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block title %}
+الصفحة الرئيسية
+{% endblock title %}
+
+
+{% block content %}
+
+
+<style>
+
+
+    main {
+        height: 500px; 
+        width: 100%;
+        background: url(" {% static 'imgs/base2bg.png' %} ");
+    }
+
+</style>
+
+
+
+<main style="">
+    <div class="container">
+        <div class="intro">
+            <h1>{{info.title}}</h1>
+            <p>
+                {{info.slogan}}
+            </p>
+        </div>
+        <div class="search">
+            <form action="">
+                <div class="field">
+                    <input type="text" class="input text-input" placeholder="رقم الإعلان">
+                </div>
+                <div class="field">
+                    <select name="" id="" class="input select-input">
+                        <option value="" disabled selected>المدينة</option>
+                        <option value="city">الرياض</option>
+                        <option value="city">الدمام</option>
+                        <option value="city">الجوف</option>
+                        <option value="city">عفيف</option>
+                        <option value="city">شقرا</option>
+                        <option value="city">بريدة</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <select name="" id="" class="input select-input">
+                        <option value="" selected disabled>نوع العقار</option>
+                        <option value="villa">فيلا</option>
+                        <option value="villa">شقة</option>
+                        <option value="villa">أرض</option>
+                        <option value="villa">مكتب تجاري</option>
+                        <option value="villa">محل</option>
+                        <option value="villa">شاليه</option>
+                        <option value="villa">استراحة</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <select name="" id="" class="input select-input">
+                        <option value="" disabled selected>التصنيف</option>
+                        <option value="">إيجار</option>
+                        <option value="">بيع</option>
+                        <option value="">استثمار</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-solid-primary">بحث</button>
+            </form>
+        </div>
+    </div>
+</main>
+<section class="property__type_section">
+    <div class="container">
+        <div class="property__type">
+            <a href="">ارض</a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                account_balance
+                </span>
+            <a href="">فيلا</a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                home
+                </span>
+            <a href="">شقة</a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                chalet
+                </span>
+            <a href="">شاليه</a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                chalet
+                </span>
+            <a href="">استراحة</a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                meeting_room
+                </span>
+            <a href="">مكتب تجاري</a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                account_balance
+                </span>
+            <a href="">دوبلكس</a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                apartment
+                </span>
+            <a href="">عمارة</a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                storefront
+                </span>
+            <a href="">محل</a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                villa
+                </span>
+            <a href="">فيلا للبيع </a>
+        </div>
+        <div class="property__type">
+            <span class="material-symbols-outlined">
+                villa
+                </span>
+            <a href="">فيلا للإيجار</a>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

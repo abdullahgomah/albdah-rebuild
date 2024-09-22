@@ -125,3 +125,12 @@ def privacy_policy(request):
         'text': text, 
     } 
     return render(request, 'pages/privacy-policy.html', context)
+
+
+
+
+def new_index(request):
+
+    context = {} 
+
+    return render(request, 'pages/new-index.html', context)
