@@ -946,7 +946,8 @@ def add_property(request, property_type, offer_type=None):
 
         for i in range(len(images)):
             # Add watermark to the image
-            watermarked_image = add_watermark(images[i], logo_path, position='center')
+            # watermarked_image = add_watermark(images[i], logo_path, position='center')
+            watermarked_image = images[i]
 
             # Create the PropertyImage object
             property_image = PropertyImage(
