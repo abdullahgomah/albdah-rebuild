@@ -18,6 +18,113 @@
         background: url(" {% static 'imgs/base2bg.png' %} ");
     }
 
+    .properties {
+        margin: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
+
+    .section__heading {
+
+        padding: 1rem 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    .section__heading h3 {
+        border-bottom: 4px solid var(--primary-color);
+        padding-bottom: .6rem;
+        font-weight: 300;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .grid .item {
+        border: 1px solid #12121220;
+    }
+
+    .grid a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .property__cover {
+        height: 200px;
+        position: relative;
+        margin-bottom: 2rem;
+        display: flex; 
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 15px;
+        padding-bottom: 1.5rem;
+
+        background-color:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+ 
+    }
+
+    .property__price {
+        color: red;
+        position: absolute;
+        padding: 0.5rem 1rem;
+        background: var(--primary-color);
+        color: white; 
+        font-size: .6rem;
+        bottom: -15px;
+        right: 15px; 
+        width: fit-content;
+        
+    }
+
+    .property_item__type {
+        width: fit-content;
+        color: white;
+        background: var(--primary-color); 
+        font-size: .8rem; 
+        padding: .5rem .7rem; 
+        position: absolute;
+        right: 15px;
+        top: 15px;
+
+    }
+
+    .property__title {
+        font-size: 0.9rem;
+    }
+
+    .property__location {
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+    }
+
+    .property_item__info {
+
+        display: flex;
+        justify-content: space-around;
+        font-size: .8rem
+    }
+    
+    .property_item__info div p:first-child {
+        opacity: .6;
+    }
+
+    .property_item__footer {
+        padding: 10px 15px;
+        margin-top: 15px;
+        background: #f6f6f6;
+        font-size: .8rem;
+    }
+
+    .fa-angle-left {
+        color: var(--primary-color)
+    }
+
 </style>
 
 
@@ -138,5 +245,183 @@
         </div>
     </div>
 </section>
+
+
+
+
+<!-- property grid sesction -->
+
+<section class="properties">
+
+    <div class="container">
+
+        <div class="section__heading">
+            <h3>عقارات مضافة حديثاً</h3>
+        </div>
+
+        <div class="section__content">
+            <div class="grid">
+                <div class="item property" >
+                    <a href="">
+
+                        <div class="property__cover" style="background: url( '{% static 'imgs/bg.jpg' %}' )">
+                            <p class="property_item__type">بيع</p>
+                            <h4 class="property__title">أرض سكنية</h4>
+                            <p class="property__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                بريدة, حي الريان
+                            </p>
+                            <p class="property__price">10000 ريال / سنوياً</p>
+                        </div>
+                        <div class="property_item__info">
+                            <div>
+                                <p class="feature__title">
+                                    المساحة
+                                </p>
+                                <p>
+                                    522 م٢
+                                </p>
+                            </div>
+                            <div>
+                                <p class="feature__title">
+                                    الحالة
+                                </p>
+                                <p>
+                                    تم البيع
+                                </p>
+                            </div>
+                        </div>
+                        <div class="property_item__footer">
+                            التفاصيل <i class="fa-solid fa-angle-left"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="item property" >
+                    <a href="">
+
+                        <div class="property__cover" style="background: url( '{% static 'imgs/bg.jpg' %}' )">
+                            <p class="property_item__type">بيع</p>
+                            <h4 class="property__title">أرض سكنية</h4>
+                            <p class="property__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                بريدة, حي الريان
+                            </p>
+                            <p class="property__price">10000 ريال / سنوياً</p>
+                        </div>
+                        <div class="property_item__info">
+                            <div>
+                                <p class="feature__title">
+                                    المساحة
+                                </p>
+                                <p>
+                                    522 م٢
+                                </p>
+                            </div>
+                            <div>
+                                <p class="feature__title">
+                                    الحالة
+                                </p>
+                                <p>
+                                    تم البيع
+                                </p>
+                            </div>
+                        </div>
+                        <div class="property_item__footer">
+                            التفاصيل <i class="fa-solid fa-angle-left"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="item property" >
+                    <a href="">
+
+                        <div class="property__cover" style="background: url( '{% static 'imgs/bg.jpg' %}' )">
+                            <p class="property_item__type">بيع</p>
+                            <h4 class="property__title">أرض سكنية</h4>
+                            <p class="property__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                بريدة, حي الريان
+                            </p>
+                            <p class="property__price">10000 ريال / سنوياً</p>
+                        </div>
+                        <div class="property_item__info">
+                            <div>
+                                <p class="feature__title">
+                                    المساحة
+                                </p>
+                                <p>
+                                    522 م٢
+                                </p>
+                            </div>
+                            <div>
+                                <p class="feature__title">
+                                    الحالة
+                                </p>
+                                <p>
+                                    تم البيع
+                                </p>
+                            </div>
+                        </div>
+                        <div class="property_item__footer">
+                            التفاصيل <i class="fa-solid fa-angle-left"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="item property" >
+                    <a href="">
+
+                        <div class="property__cover" style="background: url( '{% static 'imgs/bg.jpg' %}' )">
+                            <p class="property_item__type">بيع</p>
+                            <h4 class="property__title">أرض سكنية</h4>
+                            <p class="property__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                بريدة, حي الريان
+                            </p>
+                            <p class="property__price">10000 ريال / سنوياً</p>
+                        </div>
+                        <div class="property_item__info">
+                            <div>
+                                <p class="feature__title">
+                                    المساحة
+                                </p>
+                                <p>
+                                    522 م٢
+                                </p>
+                            </div>
+                            <div>
+                                <p class="feature__title">
+                                    الحالة
+                                </p>
+                                <p>
+                                    تم البيع
+                                </p>
+                            </div>
+                        </div>
+                        <div class="property_item__footer">
+                            التفاصيل <i class="fa-solid fa-angle-left"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+    
+</section>
+
+
 
 {% endblock content %}
