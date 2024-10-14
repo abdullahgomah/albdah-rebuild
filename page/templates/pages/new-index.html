@@ -16,6 +16,8 @@
         height: 500px; 
         width: 100%;
         background: url(" {% static 'imgs/base2bg.png' %} ");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .properties {
@@ -123,6 +125,63 @@
 
     .fa-angle-left {
         color: var(--primary-color)
+    }
+
+
+    section.services {
+        margin-bottom: 1rem;
+    }
+
+    section.services .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    section.services .grid .item {
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: .5rem;
+        transition: all .1s ease-in-out;
+    }
+
+    section.services .grid .item * {
+        font-weight: normal;
+    }
+
+    section.services .grid .item:hover {
+        background: var(--primary-color);
+        color: white; 
+    }
+
+    section.contact {
+        margin-bottom: 1rem;
+        height: 200px;
+    }
+
+    section.contact .container {
+        padding: 1rem 2rem;
+        height: 100%;
+        background: url(" {% static 'imgs/base2bg.png' %} ");
+        background-size: cover; 
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center ;
+        justify-content: center;
+        color: white;
+        row-gap: 1rem; 
+    }
+
+
+    .btn-solid-light {
+        background: white; 
+        color: black;
+        text-decoration: none;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        font-weight: 300;
     }
 
 </style>
@@ -422,6 +481,63 @@
     
 </section>
 
+
+
+<section class="services">
+
+    <div class="container">
+
+        <div class="section__heading">
+            <h3>خدماتنا</h3>
+        </div>
+
+
+        <div class="section__content">
+
+            <div class="grid">
+                <div class="item">
+                    <h2>طلب عرض عقار</h2>
+                    <h4>سجل عقارك الآن</h4>
+                </div>
+                <div class="item">
+                    <h2>طلب كتابة عقد</h2>
+                    <h4>سجل عقارك الآن</h4>
+                </div>
+                <div class="item">
+                    <h2>إدارة أملاك</h2>
+                    <h4>مهمتنا هي الوصول بك للحياة التي تستحقها</h4>
+                </div>
+                <div class="item">
+                    <h2>تقييم عقاري معتمد</h2>
+                    <h4>قيم قبل أن تقرر</h4>
+                </div>
+                <div class="item">
+                    <h2>استشارات عقارية</h2>
+                </div>
+                <div class="item">
+                    <h2>المزادات</h2>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="contact">
+    <div class="container">
+
+
+
+        <h1>لنبقى على تواصل</h1>
+        <a href="" class="btn btn-solid-light">راسلنا الآن</a>
+
+
+
+    </div>
+</section>
 
 
 {% endblock content %}
