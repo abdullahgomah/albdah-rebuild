@@ -10,6 +10,9 @@
 
 
 {% block stylesheets %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> {% endcomment %}
     <!-- <link rel="stylesheet" href="{% static 'css/pages/main.css' %}"> -->
     <link rel="stylesheet" href="{% static 'css/pages/index.css' %}">
     <link
@@ -20,6 +23,40 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   
   <style>
+
+    .property__type_section { 
+        overflow-x: scroll;
+        background: #f9f9f9;
+        padding: 1rem 0;
+    }
+    
+    .property__type_section .container {
+        overflow-x: scroll;
+        display: flex;
+        column-gap: 1rem;
+        scrollbar-width: none;
+        position: relative;
+    }
+    
+    
+    .property__type {
+        width: 180px;
+        height: 85px; 
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem; 
+        border:  1px solid #21212130;
+        gap: 0.5rem; 
+    }
+    
+    
+    .property__type a, .property__type span {
+        text-decoration: none;
+        color: var(--secondary-color);
+        color: #21212185;
+    }
 
 
 
@@ -344,9 +381,9 @@
 </main>
 -->
 
-<!--
 
-<section class="property__type_section">
+
+<section class="property__type_section" style="display: none;">
     <div class="container">
         <div class="property__type">
             <a href="">ارض</a>
@@ -414,7 +451,9 @@
     </div>
 </section>
 
--->
+
+
+<!--
    
     <section class="property_type">
         <div class="container">
@@ -497,6 +536,77 @@
           </div>
         </div>
       </section>
+
+    --> 
+
+    <section class="property__type_section">
+        <div class="container">
+            <div class="property__type">
+                <a href="">ارض</a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    account_balance
+                    </span>
+                <a href="">فيلا</a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    home
+                    </span>
+                <a href="">شقة</a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    chalet
+                    </span>
+                <a href="">شاليه</a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    chalet
+                    </span>
+                <a href="">استراحة</a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    meeting_room
+                    </span>
+                <a href="">مكتب تجاري</a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    account_balance
+                    </span>
+                <a href="">دوبلكس</a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    apartment
+                    </span>
+                <a href="">عمارة</a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    storefront
+                    </span>
+                <a href="">محل</a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    villa
+                    </span>
+                <a href="">فيلا للبيع </a>
+            </div>
+            <div class="property__type">
+                <span class="material-symbols-outlined">
+                    villa
+                    </span>
+                <a href="">فيلا للإيجار</a>
+            </div>
+        </div>
+    </section>
+    
 
     
     
