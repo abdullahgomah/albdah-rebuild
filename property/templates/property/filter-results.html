@@ -1,28 +1,34 @@
 {% load static %}
 
-    {% for property in result %}
+{% for property in result %}
+
+<a href="{% url 'property:property-details' property.number %}" style="text-decoration: none;">
+
+<div class="item property">
+    <input type="hidden" name="propertyFirstImgUrl" value="{{property.imgs.first.img.url}}">
+    <input type="hidden" name="property_type_input" value="{{property.p_type}}">
+
     
-
-    <a href="{% url 'property:property-details' property.number %}">
-    <div class="item property">
-        <input type="hidden" name="propertyFirstImgUrl" value="{{property.imgs.first.img.url}}">
-        <input type="hidden" name="property_type_input" value="{{property.p_type}}">
         <div class="property__info">
-            <h4 class="property__title">
-                <a href="{% url 'property:property-details' property.number %}">{{property.title}}</a>
-            </h4>
-            <p class="property__price">
+            <h4 class="property__title" style="color: black;">
                 
-                {% if property.sale == True %}
-                {{property.price|floatformat:"0"}} ريال
-                {% else %}
-                {{property.price|floatformat:"0"}} ريال / {{property.get_rent_type_display }}
-                {% endif %}
+                 {{property.title}}
+            </h4>
+            <!-- <a href="{% url 'property:property-details' property.number %}" style="text-decoration: none;"> -->
+            <p class="property__price">
 
-                    
-            </p>
+                    {% if property.sale == True %}
+                    {{property.price|floatformat:"0"}} ريال
+                    {% else %}
+                    {{property.price|floatformat:"0"}} ريال / {{property.get_rent_type_display }}
+                    {% endif %}                               
+                </p>
+            <!-- </a> -->
+            <!-- short info about property -->
+
             <div class="property__summary">
-                            
+
+                
                 {% if property.p_type == 'chalet_rent' or property.p_type == 'chalet_sale' or property.p_type == 'resthouse_sale' or property.p_type == 'resthouse_rent' or property.p_type == 'floor_rent' or property.p_type == 'floor_sale' or property.p_type == 'apartment_rent' or property.p_type == 'apartment_sale' or property.p_type == 'villa_rent' or property.p_type == 'villa_sale' %}
 
                 <div class="property__summary__item">
@@ -79,31 +85,38 @@
             <p class="property__description">
                 <!-- {{property.description|safe|truncatewords:5}} -->
             </p>
-
             <p class="property__number">
                 #<span>{{property.id}}</span>
             </p>
         </div>
+    
+
+
         <div class="property__cover_img">
 
-            {% if property.rented == True %}
-                <img src="{% static 'imgs/rented.png' %}" alt="" class="rented">
-            {% elif property.sold == True %}
+                {% if property.rented == True %}
+                    <img src="{% static 'imgs/rented.png' %}" alt="" class="rented">
+                {% elif property.sold == True %}
                 <img src="{% static 'imgs/sold.png' %}" alt="" class="sold">
-            {% endif %}
-        
-        
-            <img class="property__cover__img" src="{% for img in property.imgs.all %}{% if img.main %}{{img.img.url}}{% endif %}{% endfor %}" alt="">
-            
-            
+                {% endif %}
+                
+                
+                <img src="{% for img in property.imgs.all %}{% if img.main %}{{img.img.url}}{% endif %}{% endfor %}" alt="">
+                
+                
         </div>
-    </div>
-    </a>
-    {% endfor %}
+
+</div>
+
+</a>
+
+
+
+{% endfor %}
 
     <script>
         function update_img_src() { 
-            let propertyCoverImg = document.querySelectorAll('.property__cover__img') 
+            let propertyCoverImg = document.querySelectorAll('.property__cover_img') 
             propertyCoverImg.forEach((img) => {
                 if (img.getAttribute('src') == "") { 
                     img.setAttribute('src', img.parentElement.parentElement.querySelector('[name=propertyFirstImgUrl]').value)
@@ -112,6 +125,9 @@
         }
 
         update_img_src();
+
+        // let propertyCoverImg = document.querySelectorAll('.property__cover_img img'); 
+
 
     </script>
     

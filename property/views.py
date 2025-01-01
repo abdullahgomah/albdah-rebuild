@@ -1058,9 +1058,11 @@ def filter_properties(request):
 
 def filter_result(request, p_type):
     if p_type != 'all': 
-        properties = Property.objects.filter(draft=False).filter(p_type=p_type) 
+        p_type_parent  = str(p_type).split('_')[0]
+        print(p_type_parent)
+        properties = Property.objects.filter(draft=False).filter(p_type__icontains=p_type_parent)[::-1]
     else: 
-        properties = Property.objects.all() 
+        properties = Property.objects.all()[::-1]
 
     context = {
         'result': properties

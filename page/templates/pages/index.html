@@ -28,6 +28,7 @@
         overflow-x: scroll;
         background: #f9f9f9;
         padding: 1rem 0;
+        margin: 0; 
     }
     
     .property__type_section .container {
@@ -40,22 +41,28 @@
     
     
     .property__type {
-        width: 180px;
-        height: 85px; 
+        width: 150px;
+        height: 40px; 
         flex-shrink: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 1rem; 
-        border:  1px solid #21212130;
+        border:  .8px solid #1e2957;
+        border:  .8px solid #888;
+        position: relative;
+
         gap: 0.5rem; 
     }
-    
+
     
     .property__type a, .property__type span {
         text-decoration: none;
         color: var(--secondary-color);
-        color: #21212185;
+        /* color: #21212185; */ 
+        color: #1e2957;
+
+
     }
 
 
@@ -383,73 +390,7 @@
 
 
 
-<section class="property__type_section" style="display: none;">
-    <div class="container">
-        <div class="property__type">
-            <a href="">ارض</a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                account_balance
-                </span>
-            <a href="">فيلا</a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                home
-                </span>
-            <a href="">شقة</a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                chalet
-                </span>
-            <a href="">شاليه</a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                chalet
-                </span>
-            <a href="">استراحة</a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                meeting_room
-                </span>
-            <a href="">مكتب تجاري</a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                account_balance
-                </span>
-            <a href="">دوبلكس</a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                apartment
-                </span>
-            <a href="">عمارة</a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                storefront
-                </span>
-            <a href="">محل</a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                villa
-                </span>
-            <a href="">فيلا للبيع </a>
-        </div>
-        <div class="property__type">
-            <span class="material-symbols-outlined">
-                villa
-                </span>
-            <a href="">فيلا للإيجار</a>
-        </div>
-    </div>
-</section>
+
 
 
 
@@ -541,69 +482,90 @@
 
     <section class="property__type_section">
         <div class="container">
-            <div class="property__type">
-                <a href="">ارض</a>
+            
+            <div class="property__type" data-property_type="all">
+                <a >الكل</a>
             </div>
-            <div class="property__type">
+
+            <div class="property__type" data-property_type="land_rent">
+                <span class="material-symbols-outlined">
+                    landscape
+                    </span>
+                <a >ارض</a>
+            </div>
+            <div class="property__type" data-property_type="villa_rent">
                 <span class="material-symbols-outlined">
                     account_balance
                     </span>
-                <a href="">فيلا</a>
+                <a >فيلا</a>
             </div>
-            <div class="property__type">
+            <div class="property__type" data-property_type="apartment_rent">
                 <span class="material-symbols-outlined">
                     home
                     </span>
-                <a href="">شقة</a>
+                <a >شقة</a>
             </div>
-            <div class="property__type">
+            <div class="property__type" data-property_type="chalet_rent">
                 <span class="material-symbols-outlined">
                     chalet
                     </span>
-                <a href="">شاليه</a>
+                <a >شاليه</a>
             </div>
-            <div class="property__type">
+            <div class="property__type" data-property_type="resthouse_rent">
                 <span class="material-symbols-outlined">
                     chalet
                     </span>
-                <a href="">استراحة</a>
+                <a >استراحة</a>
             </div>
-            <div class="property__type">
+            <div class="property__type" data-property_type="commercial_office_rent">
                 <span class="material-symbols-outlined">
                     meeting_room
                     </span>
-                <a href="">مكتب تجاري</a>
+                <a >مكتب تجاري</a>
             </div>
+            <div class="property__type" data-property_type="floor_rent">
+                <span class="material-symbols-outlined">
+                    floor
+                </span>
+                <a >دور</a>
+            </div>
+            <!--
             <div class="property__type">
                 <span class="material-symbols-outlined">
                     account_balance
                     </span>
                 <a href="">دوبلكس</a>
-            </div>
-            <div class="property__type">
+            </div>--> 
+
+
+            <div class="property__type" data-property_type="building_rent">
                 <span class="material-symbols-outlined">
                     apartment
                     </span>
-                <a href="">عمارة</a>
+                <a >عمارة</a>
             </div>
-            <div class="property__type">
+            <div class="property__type" data-property_type="shop_rent">
                 <span class="material-symbols-outlined">
                     storefront
                     </span>
-                <a href="">محل</a>
+                <a >محل</a>
             </div>
-            <div class="property__type">
+
+            <div class="property__type" data-property_type="branch_rent">
                 <span class="material-symbols-outlined">
-                    villa
+                    storefront
                     </span>
-                <a href="">فيلا للبيع </a>
+                <a >مستودع</a>
             </div>
-            <div class="property__type">
+
+
+            <div class="property__type" data-property_type="farm_rent">
                 <span class="material-symbols-outlined">
-                    villa
+                    agriculture
                     </span>
-                <a href="">فيلا للإيجار</a>
+                <a >مزرعة</a>
             </div>
+
         </div>
     </section>
     
@@ -730,7 +692,7 @@
                 {% endfor %}
                     
             </div>
-            <br>
+            {% comment %} <br> {% endcomment %}
 
             <div class="grid property_grid main_grid">
                 
@@ -3140,6 +3102,7 @@
         update_img_src()
 
 
+        /* 
         document.addEventListener('DOMContentLoaded', (event) => {
             const scrollSection = document.getElementById('scroll-section');
             let isDragging = false;
@@ -3172,6 +3135,8 @@
                 });
             });
         });
+
+        */ 
         
 
 

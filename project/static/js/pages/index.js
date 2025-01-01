@@ -1,4 +1,5 @@
-let propertyTypeBtns = document.querySelectorAll('.swiper-slide .btn') 
+// let propertyTypeBtns = document.querySelectorAll('.swiper-slide .btn') 
+let propertyTypeBtns = document.querySelectorAll('.property__type_section .property__type') 
 let allProperties = document.querySelectorAll('.item.property') 
 
 
@@ -43,7 +44,15 @@ propertyTypeBtns.forEach((btn) => {
                     {
                         let a = $('.property_list .main_grid'); 
                         console.log(a)
+                        
                         a.html(response);
+
+                        let propertyCoverImg = document.querySelectorAll('.property__cover_img img') 
+                        propertyCoverImg.forEach((img) => {
+                            if (img.getAttribute('src') == "") { 
+                                img.setAttribute('src', img.parentElement.parentElement.querySelector('[name=propertyFirstImgUrl]').value)
+                            }
+                        })
                     }
                  })
             
