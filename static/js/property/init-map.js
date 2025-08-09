@@ -22,7 +22,7 @@ function reverseGeocode(lat, lng) {
                 
                 for (var i = 0; i < results[0].address_components.length; i++) {
                     var component = results[0].address_components[i];
-                    if (component.types.includes('neighborhood') || component.types.includes('sublocality')) {
+                    if (component.types.includes('neighborhood') || component.types.includes('sublocality') || component.types.includes('sublocality_level_1')) {
                       neighborhood = component.long_name;
                     } else if (component.types.includes('locality')) {
                       city = component.long_name;
